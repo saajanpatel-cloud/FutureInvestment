@@ -1,0 +1,293 @@
+<section id="scenarios">
+  <h2>Forward-multiple scenario model</h2>
+  <p class="section-purpose"><strong>What is this?</strong> A quantitative bull / base / bear framework for each proposed name. For every ticker: take today's trailing earnings (or revenue per share for pre-profit names), grow them at three rates over 3 years, apply an exit multiple, and compare the implied price to today's price. The weighted column blends all three scenarios by probability. Edit assumptions in <code>scenario_assumptions.csv</code> and re-run the script.</p>
+  <p class="muted">Generated 2026-05-15T22:37:57Z. Not predictions — illustrative scenarios to frame your own research. Verify in filings.</p>
+  <p class="muted" style="margin-bottom:0.5rem;"><strong>How to read this:</strong> <em>CAGR</em> = compound annual growth rate over 3 years. <em>Exit</em> = the P/E (or P/S) multiple you think the market will assign at the end of year 3. <em>Implied</em> = the share price those inputs produce. <em>Δ</em> = percentage change from today's price. <em>Weighted</em> = probability-blended target across all three scenarios.</p>
+  <div class="scroll">
+  <table>
+    <thead>
+      <tr>
+        <th rowspan="2">Ticker</th>
+        <th rowspan="2">Price</th>
+        <th rowspan="2">Metric</th>
+        <th rowspan="2">Current<br>multiple</th>
+        <th colspan="3" style="text-align:center;border-bottom:2px solid var(--accent);">Bull</th>
+        <th colspan="3" style="text-align:center;border-bottom:2px solid var(--fg);">Base</th>
+        <th colspan="3" style="text-align:center;border-bottom:2px solid var(--warn);">Bear</th>
+        <th colspan="2" style="text-align:center;border-bottom:2px solid #a78bfa;">Weighted</th>
+      </tr>
+      <tr>
+        <th>CAGR</th><th>Exit</th><th>Implied / Δ</th>
+        <th>CAGR</th><th>Exit</th><th>Implied / Δ</th>
+        <th>CAGR</th><th>Exit</th><th>Implied / Δ</th>
+        <th>Target</th><th>Δ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>MU</strong></td>
+        <td>$724.66</td>
+        <td>Fwd EPS 102.58</td>
+        <td>7.1x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$4,719 <small>+551%</small></td>
+        <td>12%</td><td>22x</td><td>$3,171 <small>+338%</small></td>
+        <td>4%</td><td>15x</td><td class="">$1,731 <small>+139%</small></td>
+        <td class="s-high"><strong>$3,198</strong></td>
+        <td class="s-high"><strong>+341%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>B</strong></td>
+        <td>$40.61</td>
+        <td>Fwd EPS 4.58</td>
+        <td>8.9x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$210.85 <small>+419%</small></td>
+        <td>12%</td><td>22x</td><td>$141.66 <small>+249%</small></td>
+        <td>4%</td><td>15x</td><td class="">$77.33 <small>+90%</small></td>
+        <td class="s-high"><strong>$142.88</strong></td>
+        <td class="s-high"><strong>+252%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>REGN</strong></td>
+        <td>$698.25</td>
+        <td>Fwd EPS 53.86</td>
+        <td>13.0x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$2,478 <small>+255%</small></td>
+        <td>12%</td><td>22x</td><td>$1,665 <small>+138%</small></td>
+        <td>4%</td><td>15x</td><td class="">$908.83 <small>+30%</small></td>
+        <td class="s-high"><strong>$1,679</strong></td>
+        <td class="s-high"><strong>+140%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>GSK</strong></td>
+        <td>$49.67</td>
+        <td>Fwd EPS 5.23</td>
+        <td>9.5x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$240.77 <small>+385%</small></td>
+        <td>12%</td><td>22x</td><td>$161.76 <small>+226%</small></td>
+        <td>4%</td><td>15x</td><td class="">$88.31 <small>+78%</small></td>
+        <td class="s-high"><strong>$163.15</strong></td>
+        <td class="s-high"><strong>+228%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>CVS</strong></td>
+        <td>$95.89</td>
+        <td>Fwd EPS 8.36</td>
+        <td>11.5x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$384.73 <small>+301%</small></td>
+        <td>12%</td><td>22x</td><td>$258.48 <small>+170%</small></td>
+        <td>4%</td><td>15x</td><td class="">$141.11 <small>+47%</small></td>
+        <td class="s-high"><strong>$260.70</strong></td>
+        <td class="s-high"><strong>+172%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>GMAB.CO</strong></td>
+        <td>$1,684</td>
+        <td>Fwd EPS 107.80</td>
+        <td>15.6x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$4,959 <small>+195%</small></td>
+        <td>12%</td><td>22x</td><td>$3,332 <small>+98%</small></td>
+        <td>4%</td><td>15x</td><td class="">$1,819 <small>+8%</small></td>
+        <td class="s-high"><strong>$3,361</strong></td>
+        <td class="s-high"><strong>+100%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>CHKP</strong></td>
+        <td>$124.03</td>
+        <td>Fwd EPS 11.43</td>
+        <td>10.9x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$525.82 <small>+324%</small></td>
+        <td>12%</td><td>22x</td><td>$353.28 <small>+185%</small></td>
+        <td>4%</td><td>15x</td><td class="">$192.85 <small>+55%</small></td>
+        <td class="s-high"><strong>$356.31</strong></td>
+        <td class="s-high"><strong>+187%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>MPC</strong></td>
+        <td>$255.03</td>
+        <td>Fwd EPS 21.96</td>
+        <td>11.6x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$1,010 <small>+296%</small></td>
+        <td>12%</td><td>22x</td><td>$678.86 <small>+166%</small></td>
+        <td>4%</td><td>15x</td><td class="">$370.59 <small>+45%</small></td>
+        <td class="s-high"><strong>$684.69</strong></td>
+        <td class="s-high"><strong>+168%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>PSX</strong></td>
+        <td>$176.20</td>
+        <td>Fwd EPS 15.80</td>
+        <td>11.2x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$726.88 <small>+313%</small></td>
+        <td>12%</td><td>22x</td><td>$488.36 <small>+177%</small></td>
+        <td>4%</td><td>15x</td><td class="">$266.59 <small>+51%</small></td>
+        <td class="s-high"><strong>$492.55</strong></td>
+        <td class="s-high"><strong>+180%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>EOG</strong></td>
+        <td>$140.26</td>
+        <td>Fwd EPS 14.41</td>
+        <td>9.7x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$662.88 <small>+373%</small></td>
+        <td>12%</td><td>22x</td><td>$445.35 <small>+218%</small></td>
+        <td>4%</td><td>15x</td><td class="">$243.12 <small>+73%</small></td>
+        <td class="s-high"><strong>$449.18</strong></td>
+        <td class="s-high"><strong>+220%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>VST</strong></td>
+        <td>$139.68</td>
+        <td>Fwd EPS 11.29</td>
+        <td>12.4x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$519.25 <small>+272%</small></td>
+        <td>12%</td><td>22x</td><td>$348.86 <small>+150%</small></td>
+        <td>4%</td><td>15x</td><td class="">$190.44 <small>+36%</small></td>
+        <td class="s-high"><strong>$351.85</strong></td>
+        <td class="s-high"><strong>+152%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>GEN</strong></td>
+        <td>$23.45</td>
+        <td>Fwd EPS 3.29</td>
+        <td>7.1x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$151.33 <small>+545%</small></td>
+        <td>12%</td><td>22x</td><td>$101.67 <small>+334%</small></td>
+        <td>4%</td><td>15x</td><td class="">$55.50 <small>+137%</small></td>
+        <td class="s-high"><strong>$102.54</strong></td>
+        <td class="s-high"><strong>+337%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>VLO</strong></td>
+        <td>$250.74</td>
+        <td>Fwd EPS 18.65</td>
+        <td>13.4x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$858.15 <small>+242%</small></td>
+        <td>12%</td><td>22x</td><td>$576.55 <small>+130%</small></td>
+        <td>4%</td><td>15x</td><td class="">$314.74 <small>+26%</small></td>
+        <td class="s-high"><strong>$581.49</strong></td>
+        <td class="s-high"><strong>+132%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>LNG</strong></td>
+        <td>$241.84</td>
+        <td>Fwd EPS 19.27</td>
+        <td>12.6x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$886.43 <small>+267%</small></td>
+        <td>12%</td><td>22x</td><td>$595.55 <small>+146%</small></td>
+        <td>4%</td><td>15x</td><td class="">$325.11 <small>+34%</small></td>
+        <td class="s-high"><strong>$600.66</strong></td>
+        <td class="s-high"><strong>+148%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>TXT</strong></td>
+        <td>$88.77</td>
+        <td>Fwd EPS 7.30</td>
+        <td>12.2x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$335.88 <small>+278%</small></td>
+        <td>12%</td><td>22x</td><td>$225.66 <small>+154%</small></td>
+        <td>4%</td><td>15x</td><td class="">$123.19 <small>+39%</small></td>
+        <td class="s-high"><strong>$227.60</strong></td>
+        <td class="s-high"><strong>+156%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>ZBH</strong></td>
+        <td>$83.70</td>
+        <td>Fwd EPS 8.99</td>
+        <td>9.3x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$413.71 <small>+394%</small></td>
+        <td>12%</td><td>22x</td><td>$277.95 <small>+232%</small></td>
+        <td>4%</td><td>15x</td><td class="">$151.74 <small>+81%</small></td>
+        <td class="s-high"><strong>$280.34</strong></td>
+        <td class="s-high"><strong>+235%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>IONQ</strong></td>
+        <td>$51.95</td>
+        <td>Rev/Sh 0.50</td>
+        <td>103.6x</td>
+        <td>45%</td><td>30x</td><td class="">$45.85 <small>-12%</small></td>
+        <td>28%</td><td>20x</td><td>$21.03 <small>-60%</small></td>
+        <td>10%</td><td>12x</td><td class="s-low">$8.01 <small>-85%</small></td>
+        <td class="s-low"><strong>$21.43</strong></td>
+        <td class="s-low"><strong>-59%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>TSM</strong></td>
+        <td>$404.35</td>
+        <td>Fwd EPS 19.29</td>
+        <td>21.0x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$887.53 <small>+119%</small></td>
+        <td>12%</td><td>22x</td><td>$596.29 <small>+47%</small></td>
+        <td>4%</td><td>15x</td><td class="">$325.52 <small>-19%</small></td>
+        <td class="s-high"><strong>$601.41</strong></td>
+        <td class="s-high"><strong>+49%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>FANG</strong></td>
+        <td>$203.56</td>
+        <td>Fwd EPS 16.96</td>
+        <td>12.0x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$780.41 <small>+283%</small></td>
+        <td>12%</td><td>22x</td><td>$524.32 <small>+158%</small></td>
+        <td>4%</td><td>15x</td><td class="">$286.22 <small>+41%</small></td>
+        <td class="s-high"><strong>$528.82</strong></td>
+        <td class="s-high"><strong>+160%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>NVDA</strong></td>
+        <td>$225.32</td>
+        <td>Fwd EPS 11.43</td>
+        <td>19.7x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$525.79 <small>+133%</small></td>
+        <td>12%</td><td>22x</td><td>$353.25 <small>+57%</small></td>
+        <td>4%</td><td>15x</td><td class="">$192.84 <small>-14%</small></td>
+        <td class="s-high"><strong>$356.28</strong></td>
+        <td class="s-high"><strong>+58%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>QRVO</strong></td>
+        <td>$92.25</td>
+        <td>Fwd EPS 7.82</td>
+        <td>11.8x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$359.83 <small>+290%</small></td>
+        <td>12%</td><td>22x</td><td>$241.75 <small>+162%</small></td>
+        <td>4%</td><td>15x</td><td class="">$131.97 <small>+43%</small></td>
+        <td class="s-high"><strong>$243.83</strong></td>
+        <td class="s-high"><strong>+164%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>PATH</strong></td>
+        <td>$10.27</td>
+        <td>Fwd EPS 0.90</td>
+        <td>11.4x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$41.40 <small>+303%</small></td>
+        <td>12%</td><td>22x</td><td>$27.81 <small>+171%</small></td>
+        <td>4%</td><td>15x</td><td class="">$15.18 <small>+48%</small></td>
+        <td class="s-high"><strong>$28.05</strong></td>
+        <td class="s-high"><strong>+173%</strong></td>
+      </tr>
+      <tr>
+        <td><strong>AVGO</strong></td>
+        <td>$425.19</td>
+        <td>Fwd EPS 18.29</td>
+        <td>23.2x</td>
+        <td>18%</td><td>28x</td><td class="s-high">$841.42 <small>+98%</small></td>
+        <td>12%</td><td>22x</td><td>$565.31 <small>+33%</small></td>
+        <td>4%</td><td>15x</td><td class="">$308.60 <small>-27%</small></td>
+        <td class="s-high"><strong>$570.16</strong></td>
+        <td class="s-high"><strong>+34%</strong></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <details style="margin-top:1rem;">
+    <summary class="muted">Methodology notes</summary>
+    <ul class="muted" style="font-size:0.85rem;">
+      <li><strong>Metric:</strong> Forward EPS (analyst consensus NTM) from yfinance where available, trailing EPS as fallback. Revenue per share for pre-profit names (IONQ). Forward EPS avoids distortions from stock comp, one-offs, or cyclical troughs.</li>
+      <li><strong>Projection:</strong> metric × (1 + CAGR)³ × exit multiple = implied price.</li>
+      <li><strong>Weighted target:</strong> Σ(scenario price × probability). Default split is 25/50/25 bull/base/bear; IONQ uses 20/45/35 given higher uncertainty.</li>
+      <li><strong>Limitations:</strong> Single-metric model; ignores buybacks, dilution, dividends, and balance-sheet changes. Meant for relative comparison across the watchlist, not absolute price targets.</li>
+      <li><strong>Edit:</strong> Change assumptions in <code>research/watchlists/scenario_assumptions.csv</code> and re-run <code>python scripts/fi_scenarios.py</code>.</li>
+    </ul>
+  </details>
+</section>

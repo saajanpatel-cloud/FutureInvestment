@@ -1,0 +1,120 @@
+<style>
+.sentiment-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
+.sentiment-row { display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; }
+.pill { font-size: 0.8rem; font-weight: 600; padding: 0.1rem 0.4rem; border-radius: 3px;
+        background: var(--bg-alt, #f0f0f0); }
+.sentiment-badge { font-size: 0.75rem; padding: 0.15rem 0.4rem; border-radius: 4px; }
+.sentiment-badge.bull { background: color-mix(in srgb, var(--accent) 15%, transparent);
+                        color: var(--accent); }
+.sentiment-badge.bear { background: color-mix(in srgb, var(--warn) 15%, transparent);
+                        color: var(--warn); }
+.sentiment-badge.mixed { background: color-mix(in srgb, var(--muted) 10%, transparent);
+                         color: var(--muted); }
+</style>
+<section id="sentiment">
+  <h2>Social sentiment (7-day)</h2>
+  <p class="section-purpose"><strong>What is this?</strong> Rough mention counts and keyword-based bull/bear classification from Reddit (r/wallstreetbets, r/investing, r/stocks; OAuth via PRAW when configured, else public JSON search) and X/Twitter when <code>TWITTER_BEARER_TOKEN</code> is set. This is not a predictive model — it shows what retail is talking about.</p>
+  <p class="muted">Generated 2026-05-14T19:45:24Z. Not investment advice.</p>
+  <div class="sentiment-badges">
+    <div class="sentiment-row">
+      <span class="pill">NVDA</span>
+      <span class="sentiment-badge bull">Reddit: 35 mentions, 62% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+    <div class="sentiment-row">
+      <span class="pill">TER</span>
+      <span class="sentiment-badge bull">Reddit: 1 mentions, 100% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+    <div class="sentiment-row">
+      <span class="pill">ARGX.BR</span>
+      <span class="sentiment-badge mixed">Reddit: 0 mentions, 0% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+    <div class="sentiment-row">
+      <span class="pill">GMAB.CO</span>
+      <span class="sentiment-badge mixed">Reddit: 0 mentions, 0% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+    <div class="sentiment-row">
+      <span class="pill">MU</span>
+      <span class="sentiment-badge bull">Reddit: 44 mentions, 68% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+    <div class="sentiment-row">
+      <span class="pill">MPWR</span>
+      <span class="sentiment-badge mixed">Reddit: 0 mentions, 0% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+    <div class="sentiment-row">
+      <span class="pill">AVGO</span>
+      <span class="sentiment-badge bull">Reddit: 5 mentions, 78% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+    <div class="sentiment-row">
+      <span class="pill">SNPS</span>
+      <span class="sentiment-badge bear">Reddit: 1 mentions, 0% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+    <div class="sentiment-row">
+      <span class="pill">VEEV</span>
+      <span class="sentiment-badge bear">Reddit: 1 mentions, 0% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+    <div class="sentiment-row">
+      <span class="pill">ANET</span>
+      <span class="sentiment-badge bear">Reddit: 1 mentions, 33% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+    <div class="sentiment-row">
+      <span class="pill">FTNT</span>
+      <span class="sentiment-badge bear">Reddit: 1 mentions, 0% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+    <div class="sentiment-row">
+      <span class="pill">SAF.PA</span>
+      <span class="sentiment-badge mixed">Reddit: 0 mentions, 0% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+    <div class="sentiment-row">
+      <span class="pill">CGNX</span>
+      <span class="sentiment-badge mixed">Reddit: 0 mentions, 0% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+    <div class="sentiment-row">
+      <span class="pill">BE</span>
+      <span class="sentiment-badge bull">Reddit: 234 mentions, 66% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+    <div class="sentiment-row">
+      <span class="pill">UUUU</span>
+      <span class="sentiment-badge mixed">Reddit: 1 mentions, 0% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+    <div class="sentiment-row">
+      <span class="pill">IONQ</span>
+      <span class="sentiment-badge mixed">Reddit: 0 mentions, 0% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+    <div class="sentiment-row">
+      <span class="pill">QUBT</span>
+      <span class="sentiment-badge mixed">Reddit: 0 mentions, 0% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+    <div class="sentiment-row">
+      <span class="pill">APLD</span>
+      <span class="sentiment-badge mixed">Reddit: 0 mentions, 0% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+    <div class="sentiment-row">
+      <span class="pill">VST</span>
+      <span class="sentiment-badge mixed">Reddit: 0 mentions, 0% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+    <div class="sentiment-row">
+      <span class="pill">CHKP</span>
+      <span class="sentiment-badge mixed">Reddit: 0 mentions, 0% bull</span>
+      <span class="sentiment-badge mixed">X: N/A</span>
+    </div>
+  </div>
+</section>

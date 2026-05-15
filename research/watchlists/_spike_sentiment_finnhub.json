@@ -1,0 +1,33 @@
+{
+  "provider": "finnhub",
+  "endpoint": "GET /stock/social-sentiment",
+  "ts": "2026-05-15T15:43:27.035320+00:00",
+  "tickers": [
+    "NVDA",
+    "ARGX.BR",
+    "SAF.PA"
+  ],
+  "results": [
+    {
+      "ticker": "NVDA",
+      "finnhub_symbol": "NVDA",
+      "ok": false,
+      "error": "HTTP 403",
+      "detail": "{\"error\":\"You don't have access to this resource.\"}"
+    },
+    {
+      "ticker": "ARGX.BR",
+      "finnhub_symbol": "ARGX",
+      "ok": false,
+      "error": "HTTP 403",
+      "detail": "{\"error\":\"You don't have access to this resource.\"}"
+    },
+    {
+      "ticker": "SAF.PA",
+      "finnhub_symbol": "SAF",
+      "ok": false,
+      "error": "HTTP 403",
+      "detail": "{\"error\":\"You don't have access to this resource.\"}"
+    }
+  ]
+}

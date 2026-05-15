@@ -1,0 +1,11 @@
+{
+  "provider": "social-stock-sentiment",
+  "ts": "2026-05-15T15:37:55.216284+00:00",
+  "tickers": [
+    "NVDA",
+    "ARGX.BR",
+    "SAF.PA"
+  ],
+  "importable": false,
+  "skipped_reason": "Package not installed; pip install social-stock-sentiment to retry."
+}

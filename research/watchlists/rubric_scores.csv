@@ -1,0 +1,317 @@
+ticker,growth,margins,balance_sheet,durability,tail_risks,valuation,note
+NVDA,5,5,4,5,3,3,"AI accelerators and data-centre GPU exposure · Revenue up 73% year-on-year · Gross margin 75%, operating margin 65%"
+AMD,4,3,4,3,3,3,"CPUs GPUs and AI data-centre share story · Revenue up 34% year-on-year · Gross margin 54%, operating margin 17%"
+AVGO,4,5,4,4,3,3,"Networking and custom silicon for AI and cloud · Revenue up 29% year-on-year · Gross margin 68%, operating margin 45%"
+MU,5,5,4,3,4,4,"High-bandwidth memory and DRAM for AI servers · Revenue up 196% year-on-year · Gross margin 74%, operating margin 68%"
+ANET,4,4,4,4,3,3,"Data-centre switching for AI clusters · Revenue up 35% year-on-year · Gross margin 62%, operating margin 43%"
+VRT,4,3,3,3,3,3,"Power and cooling for AI racks and data centres · Revenue up 30% year-on-year · Gross margin 38%, operating margin 16%"
+LRCX,4,4,4,4,3,3,"Wafer fabrication equipment (WFE) · Revenue up 24% year-on-year · Gross margin 50%, operating margin 35%"
+AMAT,1,4,4,4,3,3,"Deposition etch and broad process equipment · Revenue down 2% year-on-year · Gross margin 49%, operating margin 30%"
+KLAC,3,4,4,4,3,3,"Process control and inspection in WFE · Revenue up 11% year-on-year · Gross margin 61%, operating margin 41%"
+SNPS,5,4,4,4,3,2,"EDA and design software for chip complexity · Revenue up 66% year-on-year · Gross margin 74%, operating margin 13%"
+TSM,4,4,4,5,4,3,Foundry monopoly on advanced nodes 3nm and 2nm · Revenue up 20% year-on-year
+ARM,4,3,4,4,3,1,Chip architecture licensing for AI inference across all devices · Revenue up 26% year-on-year
+MRVL,4,3,2,3,3,3,"Custom AI silicon and high-speed networking ASICs · Revenue up 22% year-on-year · Gross margin 52%, operating margin 19%"
+CDNS,3,5,3,4,2,3,"EDA software duopoly — essential for chip design complexity · Revenue up 19% year-on-year · Gross margin 85%, operating margin 29%"
+ASML,3,4,4,5,3,3,"EUV lithography monopoly — every advanced chip passes through ASML · Revenue up 13% year-on-year · Gross margin 53%, operating margin 36%"
+ALAB,5,4,4,3,3,2,"AI data centre connectivity — PCIe retimers and smart cable modules · Revenue up 93% year-on-year · Gross margin 76%, operating margin 20%"
+MPWR,4,4,5,4,2,2,"Power management ICs for AI server racks and GPUs · Revenue up 26% year-on-year · Gross margin 55%, operating margin 30%"
+COHR,3,3,2,3,3,2,"Optical interconnects and transceivers for AI data centre fabrics · Revenue up 17% year-on-year · Gross margin 37%, operating margin 12%"
+AMKR,4,2,3,3,3,3,"Advanced chip packaging and test — 2.5D and 3D stacking · Revenue up 27% year-on-year · Gross margin 14%, operating margin 6%"
+SMCI,5,1,2,2,5,4,AI server assembly and rack integration — high growth but governance risks · Revenue up 123% year-on-year
+VST,5,3,3,3,4,4,"Nuclear and gas fleet benefiting from AI-driven power demand · Revenue up 43% year-on-year · Gross margin 43%, operating margin 27%"
+NEE,3,3,3,4,3,3,"Regulated utility and renewables developer · Revenue up 7% year-on-year · Gross margin 59%, operating margin 29%"
+XEL,2,3,3,4,3,3,"Regulated electric utility and grid · Revenue up 3% year-on-year · Gross margin 45%, operating margin 18%"
+WEC,3,3,3,4,3,3,Regulated electric and gas utility · Revenue up 11% year-on-year
+SO,3,3,3,4,3,3,"Regulated Southeast electric utility · Revenue up 8% year-on-year · Gross margin 46%, operating margin 24%"
+DUK,3,3,3,4,3,4,"Large regulated electric footprint · Revenue up 11% year-on-year · Gross margin 49%, operating margin 26%"
+CEG,3,2,3,3,4,3,"Independent power and nuclear-heavy angle · Revenue up 13% year-on-year · Gross margin 16%, operating margin 13%"
+ENPH,1,2,2,3,4,3,"Residential solar inverters — cycle downturn hit hard · Revenue down 21% year-on-year · Gross margin 35%, operating margin -9%"
+FSLR,4,3,3,3,4,3,"Utility-scale thin-film solar modules · Revenue up 24% year-on-year · Gross margin 47%, operating margin 33%"
+PWR,4,2,2,4,3,2,"Grid construction and electrical infrastructure — licensed labor moat · Revenue up 26% year-on-year · Gross margin 14%, operating margin 4%"
+GEV,3,2,4,4,3,2,"Gas turbines wind and grid equipment — $163B backlog from GE spinoff · Revenue up 16% year-on-year · Gross margin 19%, operating margin 2%"
+MTZ,4,2,2,3,3,3,"Infrastructure and clean energy construction — fastest growing EPC · Revenue up 34% year-on-year · Gross margin 12%, operating margin 4%"
+CCJ,3,3,4,3,4,1,"Uranium mining and nuclear fuel supply — long-term contracts · Revenue up 7% year-on-year · Gross margin 36%, operating margin 19%"
+FLNC,3,1,3,3,3,1,"Grid-scale battery storage systems — growing but unprofitable · Revenue up 8% year-on-year · Gross margin 10%, operating margin -8%"
+ARRY,1,1,2,3,3,4,"Utility-scale solar tracking — revenue declining; thesis under pressure · Revenue down 18% year-on-year · Gross margin 9%, operating margin -21%"
+PANW,3,3,4,4,3,2,"Enterprise firewall and cloud security platform consolidation · Revenue up 15% year-on-year · Gross margin 74%, operating margin 15%"
+CRWD,4,3,4,4,3,2,"Endpoint and cloud workload protection leader · Revenue up 23% year-on-year · Gross margin 76%, operating margin 1%"
+FTNT,3,4,4,4,2,3,"Network security appliances SD-WAN and SASE · Revenue up 15% year-on-year · Gross margin 80%, operating margin 33%"
+ZS,4,3,3,4,3,2,"Zero-trust SSE and SASE cloud security · Revenue up 26% year-on-year · Gross margin 77%, operating margin -6%"
+OKTA,3,3,3,3,3,3,"Identity and access management · Revenue up 12% year-on-year · Gross margin 78%, operating margin 7%"
+GEN,4,3,2,3,3,4,"Consumer and enterprise security brands rollup · Revenue up 26% year-on-year · Gross margin 78%, operating margin 36%"
+CHKP,2,4,4,4,2,4,"Mature firewall and subscription security — cash generative · Revenue up 5% year-on-year · Gross margin 85%, operating margin 28%"
+QLYS,3,3,3,3,3,3,"Vulnerability management SaaS · Revenue up 10% year-on-year · Gross margin 83%, operating margin 35%"
+TENB,3,3,3,3,3,3,"Exposure management and vulnerability scanning · Revenue up 10% year-on-year · Gross margin 78%, operating margin 4%"
+S,4,2,3,3,4,3,"Endpoint AI security — growth narrative unprofitable · Revenue up 20% year-on-year · Gross margin 73%, operating margin -29%"
+NET,4,3,3,4,3,1,Edge security CDN and zero-trust networking — developer ecosystem · Revenue up 34% year-on-year
+ROK,3,3,4,4,2,3,"Factory automation PLCs and industrial software · Revenue up 12% year-on-year · Gross margin 50%, operating margin 21%"
+ETN,3,3,4,4,2,3,"Electrical gear and power management for data centres · Revenue up 17% year-on-year · Gross margin 36%, operating margin 16%"
+HON,2,3,4,4,2,3,"Controls and diversified industrial automation · Revenue up 2% year-on-year · Gross margin 39%, operating margin 19%"
+CAT,3,3,3,4,3,3,Heavy machinery and services attach · Revenue up 18% year-on-year
+DE,3,3,3,4,3,3,"Agricultural equipment and precision ag software · Revenue up 13% year-on-year · Gross margin 33%, operating margin 14%"
+EMR,2,3,3,4,2,4,"Automation and climate-industrial mix · Revenue up 3% year-on-year · Gross margin 53%, operating margin 20%"
+PH,3,3,3,4,2,3,"Hydraulics and motion control — aerospace exposure · Revenue up 11% year-on-year · Gross margin 37%, operating margin 21%"
+IR,3,2,3,3,2,3,"Industrial compressors and tools · Revenue up 8% year-on-year · Gross margin 43%, operating margin 17%"
+ITW,2,3,4,4,2,4,Diversified industrial components · Revenue up 4% year-on-year
+TT,3,3,3,4,2,3,"HVAC and commercial climate systems · Revenue up 6% year-on-year · Gross margin 35%, operating margin 16%"
+TER,5,4,5,4,3,3,"Semiconductor test duopoly plus Universal Robots collaborative robotics · Revenue up 87% year-on-year · Gross margin 61%, operating margin 37%"
+CGNX,3,4,5,4,2,2,"Machine vision for factory automation — deep learning edge · Revenue up 10% year-on-year · Gross margin 66%, operating margin 14%"
+LLY,5,5,4,4,4,2,"GLP-1 dominance (Mounjaro/Zepbound) and oncology pipeline · Revenue up 56% year-on-year · Gross margin 82%, operating margin 49%"
+ISRG,4,4,4,4,3,3,"Da Vinci and Ion robotic surgery systems — procedure growth · Revenue up 23% year-on-year · Gross margin 66%, operating margin 31%"
+VRTX,3,5,4,4,3,3,"Cystic fibrosis franchise and pipeline diversification into pain · Revenue up 8% year-on-year · Gross margin 87%, operating margin 38%"
+BSX,3,4,3,4,2,3,"Structural heart devices WATCHMAN and cardiology tech · Revenue up 12% year-on-year · Gross margin 69%, operating margin 21%"
+DXCM,3,4,3,4,3,3,"Continuous glucose monitoring — G7 and Stelo platforms · Revenue up 15% year-on-year · Gross margin 63%, operating margin 21%"
+AMGN,3,4,1,4,3,4,"Biosimilars Repatha and MariTide GLP-1 pipeline — high leverage · Revenue up 6% year-on-year · Gross margin 68%, operating margin 31%"
+REGN,3,5,4,4,3,4,"Dupixent franchise Libtayo and obesity pipeline — net cash fortress · Revenue up 19% year-on-year · Gross margin 81%, operating margin 21%"
+SYK,3,4,2,4,2,3,"Mako robotic surgery and orthopedic device install base · Revenue up 11% year-on-year · Gross margin 65%, operating margin 25%"
+TMO,3,3,1,4,2,3,"Life sciences tools and instruments — essential but heavily leveraged · Revenue up 6% year-on-year · Gross margin 40%, operating margin 17%"
+VEEV,3,5,5,4,2,3,"Cloud software for pharma and life sciences — quality SaaS compounder · Revenue up 16% year-on-year · Gross margin 74%, operating margin 29%"
+EW,3,4,4,4,3,3,Transcatheter heart valves TAVR leader — structural growth · Revenue up 13% year-on-year
+PODD,4,4,2,4,3,3,"Omnipod insulin pump ecosystem — Mobi next generation · Revenue up 34% year-on-year · Gross margin 69%, operating margin 16%"
+MRNA,5,1,4,2,5,1,"mRNA platform vaccines and therapeutics — binary pipeline risk · Revenue up 264% year-on-year · Gross margin -146%, operating margin -357%"
+ET,4,2,2,3,4,4,"Midstream pipelines; check UK ISA tax treatment · Revenue up 30% year-on-year · Gross margin 17%, operating margin 9%"
+IONQ,5,1,4,2,5,1,"Trapped-ion quantum hardware — largest cash runway in pure-play quantum · Revenue up 429% year-on-year · Gross margin 30%, operating margin -369%"
+RGTI,1,1,1,2,5,1,"Superconducting quantum systems — minimal revenue · Revenue down 18% year-on-year · Gross margin 35%, operating margin -1210%"
+QBTS,3,1,3,2,5,1,"D-Wave annealing and quantum systems · Revenue up 19% year-on-year · Gross margin 65%, operating margin -1266%"
+ARQQ,1,1,1,2,5,1,Quantum encryption software small cap
+LAES,1,1,1,2,5,1,Post-quantum and semiconductor security angle
+HOLO,1,1,1,2,5,1,Micro-cap hardware; highly speculative
+IBM,3,3,3,4,3,3,"Services plus small quantum research franchise · Revenue up 9% year-on-year · Gross margin 56%, operating margin 14%"
+APLD,5,1,2,2,5,1,"HPC and data-centre hosting — AI-adjacent play · Revenue up 139% year-on-year · Gross margin 42%, operating margin -20%"
+FORM,4,3,3,4,3,3,"Semi probe cards; quantum test equipment niche · Revenue up 32% year-on-year · Gross margin 38%, operating margin 10%"
+RR.L,3,3,3,4,3,3,Small modular nuclear reactors and aerospace engines (LSE)
+NGG,2,3,2,4,3,3,UK and US electricity and gas transmission grid operator (NYSE ADR)
+SSE.L,3,3,2,4,3,3,UK renewables developer and regulated network operator (LSE)
+ENR.DE,3,2,3,4,4,2,"Grid transformers offshore wind and gas turbines (Xetra) · Revenue up 8% year-on-year · Gross margin 22%, operating margin 9%"
+SU.PA,3,4,3,5,2,2,Energy management and industrial automation — global leader (Euronext Paris)
+SIE.DE,2,4,3,4,2,3,"Digital Industries factory automation and smart infrastructure (Xetra) · Revenue up 4% year-on-year · Gross margin 40%, operating margin 13%"
+ABB,3,4,4,4,2,3,Robotics drives and electrification technology (NYSE)
+NVO,4,5,4,5,4,2,"GLP-1 agonist leader Ozempic and Wegovy — LLY rival (NYSE ADR) · Revenue up 24% year-on-year · Gross margin 86%, operating margin 62%"
+AZN,3,4,3,4,3,3,"Oncology and immunology pipeline — UK-listed dual NYSE (NASDAQ ADR) · Revenue up 13% year-on-year · Gross margin 82%, operating margin 28%"
+GSK,2,4,3,3,3,4,"Vaccines HIV franchise and specialty pharma (NYSE ADR) · Revenue up 2% year-on-year · Gross margin 75%, operating margin 30%"
+IFX.DE,3,4,3,4,3,3,"Power semiconductors for AI auto and industrial (Xetra) · Revenue up 7% year-on-year · Gross margin 40%, operating margin 11%"
+ASM.AS,3,4,4,4,2,2,"ALD and CVD deposition equipment for advanced chips (Amsterdam) · Revenue up 7% year-on-year · Gross margin 53%, operating margin 32%"
+BESI.AS,3,4,4,3,3,1,Die bonding and advanced packaging equipment (Amsterdam) · Revenue up 6% year-on-year
+SOITEC.PA,2,3,3,3,3,3,SOI wafers for RF power and photonics (Euronext Paris)
+AIXA.DE,1,2,3,3,4,1,"MOCVD deposition for compound semiconductors (Xetra) · Revenue down 74% year-on-year · Gross margin 18%, operating margin -38%"
+VAT.SW,3,4,4,5,2,2,Vacuum valves for semiconductor fabs — monopoly niche (Swiss)
+NOD.OL,4,4,4,3,3,1,"Ultra-low power wireless chip design for IoT (Oslo) · Revenue up 28% year-on-year · Gross margin 52%, operating margin 5%"
+MEL.BR,3,4,4,4,3,3,Automotive and industrial sensor ICs (Brussels)
+XFAB.PA,2,2,3,3,3,3,"Specialty analog and mixed-signal foundry (Euronext Paris) · Revenue up 4% year-on-year · Gross margin 16%, operating margin -0%"
+STM,4,3,3,3,3,3,"European semiconductor — auto industrial IoT power (NYSE) · Revenue up 23% year-on-year · Gross margin 34%, operating margin 3%"
+ORSTED.CO,4,3,2,4,4,3,"Offshore wind global leader (Copenhagen) · Revenue up 39% year-on-year · Gross margin 36%, operating margin 28%"
+IBE.MC,1,4,2,4,3,3,"Worlds largest renewables operator by capacity (Madrid) · Revenue down 46% year-on-year · Gross margin 53%, operating margin 22%"
+VWS.CO,3,1,3,4,4,2,"Wind turbine manufacturer — global leader (Copenhagen) · Revenue up 14% year-on-year · Gross margin 12%, operating margin 3%"
+RWE.DE,1,4,3,3,3,3,"German utility pivoting to renewables (Xetra) · Revenue down 47% year-on-year · Gross margin 63%, operating margin -22%"
+ENEL.MI,1,3,2,4,3,4,"Italian utility and renewables developer (Milan) · Revenue down 1% year-on-year · Gross margin 34%, operating margin 9%"
+ENGI.PA,2,3,2,3,3,4,French utility gas and renewables (Euronext Paris)
+CNA.L,2,3,3,3,3,4,British Gas parent — UK retail energy and nuclear (LSE)
+EDP.LS,2,3,2,3,3,3,"Portuguese utility and renewables (Lisbon) · Revenue up 0% year-on-year · Gross margin 34%, operating margin 15%"
+EDPR.LS,3,5,2,3,3,2,"EDP Renovaveis — pure-play renewables developer (Lisbon) · Gross margin 84%, operating margin -34%"
+NDX1.DE,5,2,2,3,4,2,Nordex wind turbine manufacturer (Xetra) · Revenue up 52% year-on-year
+PRY.MI,3,3,3,4,3,2,"Submarine and power cables for grid buildout (Milan) · Revenue up 12% year-on-year · Gross margin 35%, operating margin 6%"
+LR.PA,2,4,3,4,2,2,"Electrical infrastructure for data centres and grids (Euronext Paris) · Revenue up 5% year-on-year · Gross margin 51%, operating margin 19%"
+NEX.PA,3,3,3,3,3,3,Power and fibre optic cables — electrification play (Euronext Paris)
+DRX.L,2,3,3,3,4,3,UK biomass and flexible generation (LSE)
+NEOEN.PA,3,3,2,3,3,3,French renewable energy developer solar wind storage (Euronext Paris)
+NCC.L,2,2,3,3,3,3,UK cyber consulting and managed security (LSE)
+WS1V.HE,2,2,3,3,3,3,WithSecure endpoint and cloud security — formerly F-Secure (Helsinki)
+YSN.DE,3,4,4,3,2,2,German IT security for public sector and critical infra (Xetra)
+ATCO-A.ST,1,4,4,5,2,2,"Compressors vacuum and power tools — Swedish industrial (Stockholm) · Revenue down 12% year-on-year · Gross margin 42%, operating margin 20%"
+HEXA-B.ST,1,4,3,4,3,3,"Measurement sensors and geospatial — Swedish (Stockholm) · Revenue down 33% year-on-year · Gross margin 63%, operating margin 24%"
+DSY.PA,1,5,3,5,2,2,"3DEXPERIENCE industrial software platform (Euronext Paris) · Revenue down 4% year-on-year · Gross margin 84%, operating margin 23%"
+RSW.L,3,3,4,4,2,2,Precision measurement and additive manufacturing (LSE)
+IMI.L,3,3,3,3,2,3,Flow control and automation for critical processes (LSE)
+SPX.L,2,4,3,4,2,3,Spirax Group — steam thermal and peristaltic pumps (LSE)
+HLMA.L,3,4,3,4,2,1,Safety environmental and health sensors (LSE)
+SXS.L,2,3,3,3,2,3,Precision instrumentation and controls (LSE)
+KNEBV.HE,1,4,4,4,2,3,"Elevators escalators and maintenance services (Helsinki) · Revenue down 9% year-on-year · Gross margin 14%, operating margin 10%"
+ALFA.ST,1,4,3,4,2,2,"Heat transfer separation and fluid handling (Stockholm) · Revenue down 13% year-on-year · Gross margin 39%, operating margin 17%"
+SAND.ST,1,4,3,4,2,2,"Machining tools mining equipment and digital (Stockholm) · Revenue down 5% year-on-year · Gross margin 40%, operating margin 17%"
+EPIR.ST,3,4,4,4,2,2,Mining equipment automation and digital services (Stockholm)
+KION.DE,2,2,2,3,3,3,Forklift warehouse automation and supply chain (Xetra)
+GEA.DE,3,3,3,3,2,3,Process engineering and food automation (Xetra)
+SMIN.L,3,3,3,3,2,3,Detection threat and contraband screening (LSE)
+BA.L,4,3,3,4,3,3,Defence electronics cyber and space systems (LSE)
+RHM.DE,1,4,3,4,3,2,"German defence vehicles and ammunition — fastest growing (Xetra) · Revenue down 31% year-on-year · Gross margin 52%, operating margin 40%"
+AIR.PA,1,2,3,5,3,3,"Aerospace and defence — commercial and military aircraft (Euronext Paris) · Revenue down 7% year-on-year · Gross margin 12%, operating margin 1%"
+HO.PA,4,3,3,4,2,3,Defence electronics radar and cybersecurity systems (Euronext Paris)
+SAF.PA,4,4,3,5,2,2,Aerospace engines and equipment — CFM International (Euronext Paris)
+LDO.MI,1,2,2,3,3,3,"Italian defence helicopters electronics and cyber (Milan) · Revenue down 22% year-on-year · Gross margin 10%, operating margin 6%"
+ROG.SW,2,4,3,5,3,3,Diagnostics and oncology pharma — global leader (Swiss)
+NOVN.SW,1,4,3,4,3,3,"Diversified pharma pipeline — cardiovascular oncology neuro (Swiss) · Revenue down 1% year-on-year · Gross margin 74%, operating margin 31%"
+SAN.PA,3,4,3,3,3,5,"French pharma — rare disease vaccines consumer (Euronext Paris) · Revenue up 6% year-on-year · Gross margin 72%, operating margin 20%"
+SN.L,2,3,2,3,3,4,Surgical devices orthopaedics and wound management (LSE)
+LONN.SW,3,4,3,4,2,2,CDMO for biotech and pharma manufacturing (Swiss)
+AFX.DE,3,4,4,4,2,3,"Ophthalmic surgical devices and microsurgery (Xetra) · Revenue up 8% year-on-year · Gross margin 53%, operating margin 11%"
+STMN.SW,3,4,4,4,2,2,Dental implants and digital dentistry (Swiss)
+COLO-B.CO,2,4,3,4,2,3,"Ostomy continence and wound care devices (Copenhagen) · Revenue up 1% year-on-year · Gross margin 67%, operating margin 26%"
+DEMANT.CO,3,3,3,4,2,3,Hearing aids and audiological instruments (Copenhagen)
+SRT3.DE,1,4,2,4,3,1,"Lab equipment and bioprocessing — pharma supply chain (Xetra) · Revenue down 1% year-on-year · Gross margin 46%, operating margin 17%"
+HIK.L,2,3,3,3,3,5,Generics injectables and branded pharma — UK-listed (LSE)
+UCB.BR,4,4,3,4,3,3,Neurology and immunology pharma — Bimzelx (Brussels)
+GMAB.CO,5,5,4,4,3,3,"Antibody engineering platform — bispecific and ADC (Copenhagen) · Revenue up 42% year-on-year · Gross margin 92%, operating margin 23%"
+BANB.SW,4,3,3,4,3,2,Peptide CDMO — critical GLP-1 supply chain node (Swiss)
+ARGX.BR,5,5,4,4,3,2,"Autoimmune biotech — Vyvgart (Brussels — also NASDAQ) · Revenue up 64% year-on-year · Gross margin 91%, operating margin 30%"
+OXIG.L,3,3,3,4,3,2,Cryogenics and quantum components — enabling hardware (LSE)
+IQE.L,1,1,2,2,4,2,Compound semiconductor wafers — photonics and quantum (LSE)
+TXN,3,3,3,3,3,3,"Analog and embedded semis — broad industrial + auto exposure · Revenue up 19% year-on-year · Gross margin 58%, operating margin 38%"
+QCOM,1,3,3,3,3,3,"Handset RF plus AI edge inference — licensing mix · Revenue down 3% year-on-year · Gross margin 54%, operating margin 22%"
+ADI,4,3,3,3,3,3,"High-performance analog and mixed signal for data paths · Revenue up 30% year-on-year · Gross margin 65%, operating margin 33%"
+ON,2,3,3,3,3,3,"Power discretes and SiC for electrification and DC systems · Revenue up 5% year-on-year · Gross margin 39%, operating margin 18%"
+SWKS,1,3,3,3,3,3,"RF front-end modules — handset cyclicality vs content gains · Revenue down 1% year-on-year · Gross margin 41%, operating margin 6%"
+QRVO,3,3,3,3,3,3,RF connectivity and defense/aerospace semi exposure · Revenue up 8% year-on-year
+ENTG,3,3,3,3,3,3,"Materials purity for wafer fabs and advanced packaging · Revenue up 5% year-on-year · Gross margin 47%, operating margin 17%"
+OLED,1,3,3,3,3,3,"Universal display materials — OLED emitter chemistry · Revenue down 14% year-on-year · Gross margin 75%, operating margin 30%"
+LSCC,5,3,3,3,3,3,"Low-power FPGAs for edge and industrial acceleration · Revenue up 42% year-on-year · Gross margin 69%, operating margin 16%"
+RMBS,3,3,3,3,3,3,"Memory interface IP and chips — HBM ecosystem adjacency · Revenue up 8% year-on-year · Gross margin 80%, operating margin 34%"
+CRUS,2,3,3,3,3,3,"Audio and high-precision mixed-signal for consumer and auto · Revenue up 4% year-on-year · Gross margin 53%, operating margin 26%"
+SLAB,4,3,3,3,3,3,"IoT MCUs and mesh — industrial connectivity · Revenue up 20% year-on-year · Gross margin 59%, operating margin -8%"
+DIOD,3,3,3,3,3,3,"Discrete and analog components — broad cyclical semi · Revenue up 15% year-on-year · Gross margin 31%, operating margin 3%"
+POWI,1,3,3,3,3,3,"Power conversion ICs — efficiency regulation tailwind · Revenue down 2% year-on-year · Gross margin 53%, operating margin 9%"
+WOLF,3,3,3,3,3,3,"SiC substrates and devices — EV and power switching · Gross margin -46%, operating margin -81%"
+INOD,4,3,3,3,3,3,"Data engineering / AI data prep software microcap · Revenue up 22% year-on-year · Gross margin 38%, operating margin 15%"
+NVMI,3,3,3,3,3,3,"Metrology for advanced packaging and CMP process control · Revenue up 14% year-on-year · Gross margin 58%, operating margin 27%"
+ICHR,1,3,3,3,3,3,Fluid delivery systems for semiconductor manufacturing · Revenue down 4% year-on-year
+PLAB,3,3,3,3,3,3,"Photomasks — lithography consumables · Revenue up 6% year-on-year · Gross margin 35%, operating margin 24%"
+UEIC,1,3,3,3,3,3,"Universal remotes and smart home control chips · Revenue down 21% year-on-year · Gross margin 30%, operating margin 1%"
+SITM,5,3,3,3,3,3,"MEMS timing — precision clocks for comms and DC · Revenue up 88% year-on-year · Gross margin 59%, operating margin -4%"
+ACLS,1,3,3,3,3,3,"Axcelis ion implant equipment for WFE · Revenue down 6% year-on-year · Gross margin 47%, operating margin 15%"
+AOSL,1,3,3,3,3,3,"Power discretes and small-signal — diversified semi · Revenue down 1% year-on-year · Gross margin 21%, operating margin -9%"
+FLEX,3,3,3,3,3,3,EMS / JDM manufacturing for hyperscale and networking gear · Revenue up 8% year-on-year
+JBL,4,3,3,3,3,3,"EMS diversified — AI server and appliance builds · Revenue up 23% year-on-year · Gross margin 9%, operating margin 5%"
+TTMI,4,3,3,3,3,3,"PCB fabrication for networking and compute boards · Revenue up 30% year-on-year · Gross margin 21%, operating margin 9%"
+VSH,3,3,3,3,3,3,"Diodes resistors inductors — passive components · Revenue up 12% year-on-year · Gross margin 20%, operating margin 2%"
+APH,5,3,3,3,3,3,"Interconnect for harsh environments — data centre cabling · Revenue up 58% year-on-year · Gross margin 37%, operating margin 26%"
+PI,1,3,3,3,3,3,"Wireless power and GaN — consumer and industrial · Revenue down 0% year-on-year · Gross margin 49%, operating margin -20%"
+MXL,5,3,3,3,3,3,"Broadband and connectivity mixed-signal — DOCSIS and fiber · Revenue up 43% year-on-year · Gross margin 58%, operating margin -12%"
+CVX,1,3,3,3,3,3,Integrated oil — cash returns and LNG optionality · Revenue down 5% year-on-year
+COP,1,3,3,3,3,3,"US shale plus Alaska — production growth discipline · Revenue down 5% year-on-year · Gross margin 27%, operating margin 21%"
+OXY,1,3,3,3,3,3,"Permian operator plus carbon capture narrative · Revenue down 8% year-on-year · Gross margin 36%, operating margin 18%"
+DVN,1,3,3,3,3,3,"Delaware Basin oil — variable dividend framework · Revenue down 6% year-on-year · Gross margin 24%, operating margin 20%"
+HAL,1,3,3,3,3,3,"Oilfield services pressure pumping — cycle leverage · Revenue down 0% year-on-year · Gross margin 14%, operating margin 13%"
+SLB,2,3,3,3,3,3,"OFSP digital drilling international mix · Revenue up 3% year-on-year · Gross margin 15%, operating margin 12%"
+MPC,3,3,3,3,3,3,"Refining and midstream logistics — crack spread exposure · Revenue up 9% year-on-year · Gross margin 6%, operating margin 3%"
+VLO,3,3,3,3,3,3,"Independent refiner — renewable diesel projects · Revenue up 7% year-on-year · Gross margin 6%, operating margin 5%"
+PSX,3,3,3,3,3,3,"Phillips 66 refining plus midstream CPChem · Revenue up 7% year-on-year · Gross margin 9%, operating margin 0%"
+FANG,2,3,3,3,3,3,"Permian pure-play — shareholder returns focus · Revenue up 4% year-on-year · Gross margin 38%, operating margin 36%"
+EOG,3,3,3,3,3,3,"Premier shale operator — returns over growth · Revenue up 16% year-on-year · Gross margin 66%, operating margin 37%"
+NRG,3,3,3,3,3,3,Retail power plus generation — merchant spread · Revenue up 14% year-on-year
+EXC,1,3,3,3,3,3,Nuclear-heavy utility — PJM exposure · Revenue down 1% year-on-year
+FE,3,3,3,3,3,3,"Transmission investment story — regulatory lag risk · Revenue up 12% year-on-year · Gross margin 62%, operating margin 20%"
+ED,3,3,3,3,3,3,"NYC-centric wires — dense load pocket · Revenue up 9% year-on-year · Gross margin 51%, operating margin 13%"
+AWK,3,3,3,3,3,3,"Regulated water utility — infrastructure replacement · Revenue up 6% year-on-year · Gross margin 59%, operating margin 32%"
+WTRG,3,3,3,3,3,3,"Essential utilities water gas electric bundle · Revenue up 16% year-on-year · Gross margin 51%, operating margin 32%"
+ATO,3,3,3,3,3,3,"Texas gas distribution — rate base growth · Revenue up 14% year-on-year · Gross margin 61%, operating margin 38%"
+LNG,4,3,3,3,3,3,"Cheniere LNG export tolling — long-term contracts · Revenue up 23% year-on-year · Gross margin 72%, operating margin 70%"
+KMI,3,3,3,3,3,3,"Natural gas pipelines — fee-based cash flows · Revenue up 14% year-on-year · Gross margin 51%, operating margin 30%"
+WMB,1,3,3,3,3,3,"Gas gathering and processing — Gulf exposure · Revenue down 1% year-on-year · Gross margin 62%, operating margin 38%"
+OKE,3,3,3,3,3,3,"NGL fractionation and midstream services · Revenue up 20% year-on-year · Gross margin 23%, operating margin 15%"
+TRGP,1,3,3,3,3,3,"Gathering and processing Permian Delaware · Revenue down 10% year-on-year · Gross margin 31%, operating margin 21%"
+SMR,1,3,3,3,3,3,"SMR developer — licensing and power purchase risk · Revenue down 95% year-on-year · Gross margin -3%, operating margin -4022%"
+OKLO,3,3,3,3,3,3,Advanced fission developer — milestone equity story
+BWXT,4,3,3,3,3,3,"Naval reactors and nuclear components — defense mix · Revenue up 26% year-on-year · Gross margin 23%, operating margin 10%"
+LEU,1,3,3,3,3,3,Uranium conversion and HALEU — policy sensitive · Revenue down 4% year-on-year
+UEC,1,3,3,3,3,3,"US ISR uranium developer — spot price leverage · Revenue down 59% year-on-year · Gross margin 50%, operating margin -116%"
+UUUU,5,3,3,3,3,3,"ISR uranium plus rare earths optionality · Revenue up 112% year-on-year · Gross margin 40%, operating margin -41%"
+URG,1,3,3,3,3,3,"ISR uranium producer — small cap volatility · Revenue down 54% year-on-year · Gross margin 14%, operating margin -172%"
+DNN,2,3,3,3,3,3,ISR uranium developer — pre-production · Revenue up 4% year-on-year · Operating margin -1879%
+BEP,1,3,3,3,3,3,"Brookfield Renewable yieldCo — hydro wind solar mix · Revenue down 4% year-on-year · Gross margin 49%, operating margin 8%"
+BE,5,3,3,3,3,3,"Fuel cells and electrolyzers — cash burn risk · Revenue up 130% year-on-year · Gross margin 30%, operating margin 10%"
+BIP,3,3,3,3,3,3,"Brookfield Infrastructure — toll roads utilities pipelines · Revenue up 17% year-on-year · Gross margin 27%, operating margin 25%"
+NEP,3,3,3,3,3,3,NextEra Energy Partners renewables dropdown story
+CYBR,3,3,3,3,3,3,Privileged access management — identity security
+MNDY,4,3,3,3,3,3,"Monday work OS — workflow automation with security posture · Revenue up 25% year-on-year · Gross margin 89%, operating margin 1%"
+DDOG,4,3,3,3,3,3,"Observability and cloud security telemetry · Revenue up 32% year-on-year · Gross margin 79%, operating margin 1%"
+SNOW,4,3,3,3,3,3,"Data cloud — governance and sharing workloads · Revenue up 30% year-on-year · Gross margin 67%, operating margin -25%"
+ESTC,3,3,3,3,3,3,"Search analytics security SIEM competitor set · Revenue up 18% year-on-year · Gross margin 76%, operating margin 0%"
+MDB,4,3,3,3,3,3,"Document database — developer-led adoption · Revenue up 27% year-on-year · Gross margin 73%, operating margin 0%"
+PATH,3,3,3,3,3,3,"RPA plus process mining — enterprise automation · Revenue up 14% year-on-year · Gross margin 85%, operating margin 17%"
+CFLT,4,3,3,3,3,3,"Streaming data platform — real-time pipelines · Revenue up 21% year-on-year · Gross margin 75%, operating margin -32%"
+FRSH,3,3,3,3,3,3,"Freshservice / ITSM cloud — SMB upmarket · Revenue up 14% year-on-year · Gross margin 86%, operating margin 18%"
+DT,3,3,3,3,3,3,"Dynatrace observability — enterprise APM · Revenue up 18% year-on-year · Gross margin 81%, operating margin 14%"
+PD,2,3,3,3,3,3,"PagerDuty incident response — SRE tooling · Revenue up 3% year-on-year · Gross margin 86%, operating margin 4%"
+ZI,3,3,3,3,3,3,ZoomInfo go-to-market data — privacy/reg risk
+NOW,4,3,3,3,3,3,"ServiceNow workflow and GRC digitization · Revenue up 22% year-on-year · Gross margin 75%, operating margin 13%"
+WDAY,3,3,3,3,3,3,"Workday HCM and financials cloud ERP · Revenue up 15% year-on-year · Gross margin 76%, operating margin 12%"
+LMT,2,3,3,3,3,3,"Defense prime — missiles space and aero structures · Revenue up 0% year-on-year · Gross margin 12%, operating margin 11%"
+NOC,2,3,3,3,3,3,"Defense prime — bombers UAVs and space · Revenue up 4% year-on-year · Gross margin 20%, operating margin 10%"
+LHX,3,3,3,3,3,3,"Defense electronics post-L3Harris merger integration · Revenue up 12% year-on-year · Gross margin 24%, operating margin 11%"
+RTX,3,3,3,3,3,3,"Pratt engines plus Raytheon missiles mix · Revenue up 9% year-on-year · Gross margin 21%, operating margin 12%"
+GD,3,3,3,3,3,3,"Gulfstream plus combat systems shipbuilding · Revenue up 10% year-on-year · Gross margin 16%, operating margin 11%"
+HII,3,3,3,3,3,3,"US Navy shipbuilding — carrier submarine backlog · Revenue up 13% year-on-year · Gross margin 13%, operating margin 5%"
+TXT,3,3,3,3,3,3,"Bell aviation plus industrial and Textron Systems · Revenue up 12% year-on-year · Gross margin 18%, operating margin 6%"
+JCI,3,3,3,3,3,3,Building controls and OpenBlue smart buildings · Revenue up 7% year-on-year
+NDSN,3,3,3,3,3,3,"Nordson precision dispensing and industrial coatings · Revenue up 9% year-on-year · Gross margin 55%, operating margin 25%"
+WSO,1,3,3,3,3,3,HVAC distribution scale — North America residential mix · Revenue down 10% year-on-year
+ALLE,3,3,3,3,3,3,"Allegion security hardware — commercial doors · Revenue up 10% year-on-year · Gross margin 44%, operating margin 19%"
+PNR,2,3,3,3,3,3,"Pentair water treatment and pool equipment · Revenue up 3% year-on-year · Gross margin 42%, operating margin 23%"
+GGG,2,3,3,3,3,3,"Graco fluid handling pumps — industrial coatings · Revenue up 2% year-on-year · Gross margin 52%, operating margin 26%"
+IEX,3,3,3,3,3,3,"IDEX precision pumps and dispensing · Revenue up 9% year-on-year · Gross margin 45%, operating margin 20%"
+XYL,2,3,3,3,3,3,"Xylem water infrastructure — acquisition synergies · Revenue up 3% year-on-year · Gross margin 38%, operating margin 13%"
+ROP,3,3,3,3,3,3,"Roper software rollup — niche vertical SaaS · Revenue up 11% year-on-year · Gross margin 69%, operating margin 27%"
+FLS,1,3,3,3,3,3,"Flowserve pumps valves — energy capex cycle · Revenue down 7% year-on-year · Gross margin 36%, operating margin 11%"
+CMI,2,3,3,3,3,3,"Cummins engines plus Accelera hydrogen bet · Revenue up 3% year-on-year · Gross margin 27%, operating margin 12%"
+B,5,3,3,3,3,3,"Barnes aerospace and automation components · Revenue up 65% year-on-year · Gross margin 55%, operating margin 50%"
+FTV,3,3,3,3,3,3,"Fortive industrial instrumentation and healthcare diagnostics spin mix · Revenue up 8% year-on-year · Gross margin 63%, operating margin 18%"
+ITT,3,3,3,3,3,3,Motion flow control — defense and industrial · Revenue up 13% year-on-year
+DHR,2,3,3,3,3,3,"Life sciences tools plus industrial diagnostics · Revenue up 4% year-on-year · Gross margin 60%, operating margin 23%"
+AOS,1,3,3,3,3,3,"Water heaters and boilers — residential cycle · Revenue down 2% year-on-year · Gross margin 39%, operating margin 17%"
+DOV,3,3,3,3,3,3,"Diversified industrial pumps and fueling · Revenue up 10% year-on-year · Gross margin 39%, operating margin 15%"
+FAST,3,3,3,3,3,3,"Fastenal vending and onsite inventory · Revenue up 12% year-on-year · Gross margin 45%, operating margin 20%"
+GNRC,3,3,3,3,3,3,"Backup generators — outage and grid fragility · Revenue up 12% year-on-year · Gross margin 39%, operating margin 11%"
+LECO,3,3,3,3,3,3,"Lincoln Electric welding automation · Revenue up 12% year-on-year · Gross margin 36%, operating margin 17%"
+SWK,2,3,3,3,3,3,"Stanley Black & Decker tools — margin reset · Revenue up 3% year-on-year · Gross margin 30%, operating margin 6%"
+WWD,4,3,3,3,3,3,"Woodward aircraft and industrial actuation controls · Revenue up 23% year-on-year · Gross margin 29%, operating margin 15%"
+TDY,3,3,3,3,3,3,"Teledyne imaging instruments and defense · Revenue up 8% year-on-year · Gross margin 43%, operating margin 19%"
+AME,3,3,3,3,3,3,"Ametek precision instruments and power · Revenue up 11% year-on-year · Gross margin 37%, operating margin 27%"
+ZBRA,3,3,3,3,3,3,"Zebra mobile computing and RFID tracking · Revenue up 11% year-on-year · Gross margin 47%, operating margin 15%"
+ZBH,3,3,3,3,3,3,"Zimmer Biomed — robotics knee mix · Revenue up 9% year-on-year · Gross margin 72%, operating margin 19%"
+OTIS,3,3,3,3,3,3,"Elevators service moat — China mix · Revenue up 6% year-on-year · Gross margin 30%, operating margin 15%"
+WAB,3,3,3,3,3,3,"Wabtec rail and freight electronics · Revenue up 13% year-on-year · Gross margin 36%, operating margin 18%"
+VMI,3,3,3,3,3,3,"Valmont infrastructure irrigation poles · Revenue up 6% year-on-year · Gross margin 31%, operating margin 15%"
+JNJ,3,3,3,3,3,3,"Pharma medtech consumer diversified — patent cliffs matter · Revenue up 10% year-on-year · Gross margin 66%, operating margin 27%"
+PFE,3,3,3,3,3,3,"Post-COVID oncology pipeline rebuild — execution risk · Revenue up 5% year-on-year · Gross margin 75%, operating margin 29%"
+MRK,2,3,3,3,3,3,"Keytruda franchise duration — oncology concentration · Revenue up 5% year-on-year · Gross margin 74%, operating margin -20%"
+ABT,3,3,3,3,3,3,"Devices plus diagnostics — Libre and structural heart · Revenue up 8% year-on-year · Gross margin 56%, operating margin 12%"
+BAX,2,3,3,3,3,3,"MedSurg and pharmaceuticals hospital supply chain · Revenue up 3% year-on-year · Gross margin 33%, operating margin 2%"
+MDT,3,3,3,3,3,3,"Medtronic devices — GLP-1 overhang on obesity devices · Revenue up 9% year-on-year · Gross margin 64%, operating margin 18%"
+HOLX,2,3,3,3,3,3,"Diagnostics imaging and surgical women's health · Revenue up 3% year-on-year · Gross margin 56%, operating margin 23%"
+UNH,2,3,3,3,3,3,"UnitedHealthcare plus Optum vertical integration · Revenue up 2% year-on-year · Gross margin 23%, operating margin 8%"
+CVS,3,3,3,3,3,3,"Retail pharmacy plus Aetna — reimbursement pressure · Revenue up 6% year-on-year · Gross margin 16%, operating margin 5%"
+CI,2,3,3,3,3,3,Cigna Evernorth pharmacy benefits mix · Revenue up 5% year-on-year
+HUM,4,3,3,3,3,3,Medicare Advantage star ratings risk · Revenue up 23% year-on-year · Operating margin 5%
+ELV,2,3,3,3,3,3,Anthem rebrand — commercial and gov mix · Revenue up 3% year-on-year · Operating margin 5%
+CNC,3,3,3,3,3,3,"Centene Medicaid exposure — state budget cycles · Revenue up 7% year-on-year · Gross margin 11%, operating margin 4%"
+MOH,1,3,3,3,3,3,"Molina Medicaid pure-play — regulatory cap · Revenue down 3% year-on-year · Gross margin 9%, operating margin 2%"
+XRAY,2,3,3,3,3,3,"Dentsply Sirona dental equipment — channel inventory · Revenue up 0% year-on-year · Gross margin 49%, operating margin 3%"
+ALGN,3,3,3,3,3,3,Align Invisalign — consumer discretionary sensitivity · Revenue up 5% year-on-year
+TECH,1,3,3,3,3,3,Bio-Techne reagents — biologics tools recurring · Revenue down 0% year-on-year
+DGX,3,3,3,3,3,3,"Quest Diagnostics lab volumes — pricing · Revenue up 9% year-on-year · Gross margin 33%, operating margin 14%"
+LH,3,3,3,3,3,3,"LabCorp diagnostics plus drug development · Revenue up 6% year-on-year · Gross margin 29%, operating margin 11%"
+A,3,3,3,3,3,3,"Agilent instruments and diagnostics services · Revenue up 7% year-on-year · Gross margin 53%, operating margin 20%"
+ILMN,2,3,3,3,3,3,"Sequencing installed base — consumable pull-through · Revenue up 5% year-on-year · Gross margin 66%, operating margin 19%"
+TDOC,1,3,3,3,3,3,"Teladoc virtual care — profitability path · Revenue down 2% year-on-year · Gross margin 68%, operating margin -8%"
+RMD,3,3,3,3,3,3,"ResMed sleep apnea devices — GLP-1 competitive readthrough · Revenue up 11% year-on-year · Gross margin 62%, operating margin 35%"
+BIIB,2,3,3,3,3,3,"Neuroscience and biosimilars — Leqembi and franchise resets · Revenue up 2% year-on-year · Gross margin 73%, operating margin 19%"
+BNTX,1,3,3,3,3,3,"BioNTech oncology plus Pfizer partnership economics · Revenue down 35% year-on-year · Gross margin 40%, operating margin -574%"
+SRPT,1,3,3,3,3,3,"Sarepta gene therapy — regulatory binary · Revenue down 33% year-on-year · Gross margin 10%, operating margin -93%"
+EXAS,4,3,3,3,3,3,"Exact Sciences CRC screening — guideline adoption · Revenue up 23% year-on-year · Gross margin 70%, operating margin -9%"
+NVAX,5,3,3,3,3,3,"Novavax vaccine platform — funding and execution · Revenue up 67% year-on-year · Gross margin 85%, operating margin 10%"
+SWTX,3,3,3,3,3,3,SpringWorks oncology rare disease — trial readouts
+DNA,1,3,3,3,3,3,"Ginkgo cell engineering — revenue quality debate · Revenue down 49% year-on-year · Gross margin 84%, operating margin -367%"
+RXRX,1,3,3,3,3,3,"Recursion AI drug discovery — compute spend · Revenue down 57% year-on-year · Gross margin -98%, operating margin -2039%"
+ACMR,3,3,3,3,3,3,"ACM Research China WFE — geopolitical listing risk · Revenue up 9% year-on-year · Gross margin 41%, operating margin 9%"
+KLIC,4,3,3,3,3,3,"Kulicke & Soffa wire bond packaging equipment · Revenue up 20% year-on-year · Gross margin 50%, operating margin 9%"
+ONTO,3,3,3,3,3,3,"Onto metrology and inspection for advanced nodes · Revenue up 10% year-on-year · Gross margin 50%, operating margin 13%"
+BRKS,3,3,3,3,3,3,Brooks automation cryogenics and vacuum
+CAMT,3,3,3,3,3,3,"Camtek inspection for advanced packaging · Revenue up 9% year-on-year · Gross margin 50%, operating margin 25%"
+COHU,4,3,3,3,3,3,"Cohu handler and test interface equipment · Revenue up 29% year-on-year · Gross margin 46%, operating margin -8%"
+AEHR,1,3,3,3,3,3,"Aehr wafer-level burn-in for SiC reliability · Revenue down 44% year-on-year · Gross margin 33%, operating margin -41%"
+VPG,3,3,3,3,3,3,"Vishay precision foil resistors — metrology niche · Revenue up 11% year-on-year · Gross margin 37%, operating margin 2%"
+SMTC,3,3,3,3,3,3,"Semtech LoRa plus signal integrity — mixed cycles · Revenue up 9% year-on-year · Gross margin 50%, operating margin 10%"
+INDI,1,3,3,3,3,3,"indie Semiconductor auto edge — ADAS content · Revenue down 0% year-on-year · Gross margin 37%, operating margin -57%"
+LASR,5,3,3,3,3,3,"Luminar lidar — auto OEM design-in path · Revenue up 71% year-on-year · Gross margin 31%, operating margin -6%"
+MVIS,1,3,3,3,3,3,"MicroVision lidar MEMS — speculative liquidity · Revenue down 86% year-on-year · Gross margin -7221%, operating margin -12542%"
+QUBT,5,2,2,2,4,2,"Quantum computing micro-cap hardware · Revenue up 219% year-on-year · Gross margin -49%, operating margin -11220%"

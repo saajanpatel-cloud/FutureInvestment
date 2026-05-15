@@ -1,0 +1,2850 @@
+{
+  "as_of": "2026-05-15",
+  "disclaimer": "Education and research only. Not personalized investment advice. Verify all data. pillar encodes sleeve_theme_slug \u2014 label from universe_manifest.csv.",
+  "items": [
+    {
+      "ticker": "NVDA",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "AI accelerators and data-centre GPU exposure",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "AMD",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "CPUs GPUs and AI data-centre share story",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "AVGO",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Networking and custom silicon for AI and cloud",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "MU",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "High-bandwidth memory and DRAM for AI servers",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ANET",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Data-centre switching for AI clusters",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "VRT",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Power and cooling for AI racks and data centres",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "LRCX",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Wafer fabrication equipment (WFE)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "AMAT",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Deposition etch and broad process equipment",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "KLAC",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Process control and inspection in WFE",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SNPS",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "EDA and design software for chip complexity",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "TSM",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Foundry monopoly on advanced nodes 3nm and 2nm",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ARM",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Chip architecture licensing for AI inference across all devices",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "MRVL",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Custom AI silicon and high-speed networking ASICs",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "CDNS",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "EDA software duopoly \u2014 essential for chip design complexity",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ASML",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "EUV lithography monopoly \u2014 every advanced chip passes through ASML",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ALAB",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "AI data centre connectivity \u2014 PCIe retimers and smart cable modules",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "MPWR",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Power management ICs for AI server racks and GPUs",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "COHR",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Optical interconnects and transceivers for AI data centre fabrics",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "AMKR",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Advanced chip packaging and test \u2014 2.5D and 3D stacking",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SMCI",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "AI server assembly and rack integration \u2014 high growth but governance risks",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "VST",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Nuclear and gas fleet benefiting from AI-driven power demand",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "NEE",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Regulated utility and renewables developer",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "XEL",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Regulated electric utility and grid",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "WEC",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Regulated electric and gas utility",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SO",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Regulated Southeast electric utility",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "DUK",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Large regulated electric footprint",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "CEG",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Independent power and nuclear-heavy angle",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ENPH",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Residential solar inverters \u2014 cycle downturn hit hard",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "FSLR",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Utility-scale thin-film solar modules",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "PWR",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Grid construction and electrical infrastructure \u2014 licensed labor moat",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "GEV",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Gas turbines wind and grid equipment \u2014 $163B backlog from GE spinoff",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "MTZ",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Infrastructure and clean energy construction \u2014 fastest growing EPC",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "CCJ",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Uranium mining and nuclear fuel supply \u2014 long-term contracts",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "FLNC",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Grid-scale battery storage systems \u2014 growing but unprofitable",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ARRY",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Utility-scale solar tracking \u2014 revenue declining; thesis under pressure",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "PANW",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Enterprise firewall and cloud security platform consolidation",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "CRWD",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Endpoint and cloud workload protection leader",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "FTNT",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Network security appliances SD-WAN and SASE",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ZS",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Zero-trust SSE and SASE cloud security",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "OKTA",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Identity and access management",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "GEN",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Consumer and enterprise security brands rollup",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "CHKP",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Mature firewall and subscription security \u2014 cash generative",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "QLYS",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Vulnerability management SaaS",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "TENB",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Exposure management and vulnerability scanning",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "S",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Endpoint AI security \u2014 growth narrative unprofitable",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "NET",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Edge security CDN and zero-trust networking \u2014 developer ecosystem",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ROK",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Factory automation PLCs and industrial software",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ETN",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Electrical gear and power management for data centres",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "HON",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Controls and diversified industrial automation",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "CAT",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Heavy machinery and services attach",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "DE",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Agricultural equipment and precision ag software",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "EMR",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Automation and climate-industrial mix",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "PH",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Hydraulics and motion control \u2014 aerospace exposure",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "IR",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Industrial compressors and tools",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ITW",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Diversified industrial components",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "TT",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "HVAC and commercial climate systems",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "TER",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Semiconductor test duopoly plus Universal Robots collaborative robotics",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "CGNX",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Machine vision for factory automation \u2014 deep learning edge",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "LLY",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "GLP-1 dominance (Mounjaro/Zepbound) and oncology pipeline",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ISRG",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Da Vinci and Ion robotic surgery systems \u2014 procedure growth",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "VRTX",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Cystic fibrosis franchise and pipeline diversification into pain",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "BSX",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Structural heart devices WATCHMAN and cardiology tech",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "DXCM",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Continuous glucose monitoring \u2014 G7 and Stelo platforms",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "AMGN",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Biosimilars Repatha and MariTide GLP-1 pipeline \u2014 high leverage",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "REGN",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Dupixent franchise Libtayo and obesity pipeline \u2014 net cash fortress",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SYK",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Mako robotic surgery and orthopedic device install base",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "TMO",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Life sciences tools and instruments \u2014 essential but heavily leveraged",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "VEEV",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Cloud software for pharma and life sciences \u2014 quality SaaS compounder",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "EW",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Transcatheter heart valves TAVR leader \u2014 structural growth",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "PODD",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Omnipod insulin pump ecosystem \u2014 Mobi next generation",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "MRNA",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "mRNA platform vaccines and therapeutics \u2014 binary pipeline risk",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "IONQ",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "Trapped-ion quantum hardware \u2014 largest cash runway in pure-play quantum",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "RGTI",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "Superconducting quantum systems \u2014 minimal revenue",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "QBTS",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "D-Wave annealing and quantum systems",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "QUBT",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "Quantum computing micro-cap hardware",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ARQQ",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "Quantum encryption software small cap",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "LAES",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "Post-quantum and semiconductor security angle",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "HOLO",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "Micro-cap hardware; highly speculative",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "IBM",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "Services plus small quantum research franchise",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "APLD",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "HPC and data-centre hosting \u2014 AI-adjacent play",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "FORM",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "Semi probe cards; quantum test equipment niche",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ET",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Midstream pipelines; check UK ISA tax treatment",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "RR.L",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Small modular nuclear reactors and aerospace engines (LSE)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "NGG",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "UK and US electricity and gas transmission grid operator (NYSE ADR)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SSE.L",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "UK renewables developer and regulated network operator (LSE)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ENR.DE",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Grid transformers offshore wind and gas turbines (Xetra)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SU.PA",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Energy management and industrial automation \u2014 global leader (Euronext Paris)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SIE.DE",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Digital Industries factory automation and smart infrastructure (Xetra)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ABB",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Robotics drives and electrification technology (NYSE)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "NVO",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "GLP-1 agonist leader Ozempic and Wegovy \u2014 LLY rival (NYSE ADR)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "AZN",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Oncology and immunology pipeline \u2014 UK-listed dual NYSE (NASDAQ ADR)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "GSK",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Vaccines HIV franchise and specialty pharma (NYSE ADR)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "IFX.DE",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Power semiconductors for AI auto and industrial (Xetra)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ASM.AS",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "ALD and CVD deposition equipment for advanced chips (Amsterdam)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "BESI.AS",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Die bonding and advanced packaging equipment (Amsterdam)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SOITEC.PA",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "SOI wafers for RF power and photonics (Euronext Paris)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "AIXA.DE",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "MOCVD deposition for compound semiconductors (Xetra)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "VAT.SW",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Vacuum valves for semiconductor fabs \u2014 monopoly niche (Swiss)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "NOD.OL",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Ultra-low power wireless chip design for IoT (Oslo)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "MEL.BR",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Automotive and industrial sensor ICs (Brussels)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "XFAB.PA",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Specialty analog and mixed-signal foundry (Euronext Paris)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "STM",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "European semiconductor \u2014 auto industrial IoT power (NYSE)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ORSTED.CO",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Offshore wind global leader (Copenhagen)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "IBE.MC",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Worlds largest renewables operator by capacity (Madrid)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "VWS.CO",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Wind turbine manufacturer \u2014 global leader (Copenhagen)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "RWE.DE",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "German utility pivoting to renewables (Xetra)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ENEL.MI",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Italian utility and renewables developer (Milan)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ENGI.PA",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "French utility gas and renewables (Euronext Paris)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "CNA.L",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "British Gas parent \u2014 UK retail energy and nuclear (LSE)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "EDP.LS",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Portuguese utility and renewables (Lisbon)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "EDPR.LS",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "EDP Renovaveis \u2014 pure-play renewables developer (Lisbon)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "NDX1.DE",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Nordex wind turbine manufacturer (Xetra)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "PRY.MI",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Submarine and power cables for grid buildout (Milan)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "LR.PA",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Electrical infrastructure for data centres and grids (Euronext Paris)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "NEX.PA",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Power and fibre optic cables \u2014 electrification play (Euronext Paris)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "DRX.L",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "UK biomass and flexible generation (LSE)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "NEOEN.PA",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "French renewable energy developer solar wind storage (Euronext Paris)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "NCC.L",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "UK cyber consulting and managed security (LSE)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "WS1V.HE",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "WithSecure endpoint and cloud security \u2014 formerly F-Secure (Helsinki)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "YSN.DE",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "German IT security for public sector and critical infra (Xetra)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ATCO-A.ST",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Compressors vacuum and power tools \u2014 Swedish industrial (Stockholm)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "HEXA-B.ST",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Measurement sensors and geospatial \u2014 Swedish (Stockholm)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "DSY.PA",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "3DEXPERIENCE industrial software platform (Euronext Paris)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "RSW.L",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Precision measurement and additive manufacturing (LSE)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "IMI.L",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Flow control and automation for critical processes (LSE)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SPX.L",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Spirax Group \u2014 steam thermal and peristaltic pumps (LSE)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "HLMA.L",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Safety environmental and health sensors (LSE)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SXS.L",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Precision instrumentation and controls (LSE)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "KNEBV.HE",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Elevators escalators and maintenance services (Helsinki)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ALFA.ST",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Heat transfer separation and fluid handling (Stockholm)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SAND.ST",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Machining tools mining equipment and digital (Stockholm)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "EPIR.ST",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Mining equipment automation and digital services (Stockholm)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "KION.DE",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Forklift warehouse automation and supply chain (Xetra)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "GEA.DE",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Process engineering and food automation (Xetra)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SMIN.L",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Detection threat and contraband screening (LSE)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ROG.SW",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Diagnostics and oncology pharma \u2014 global leader (Swiss)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "NOVN.SW",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Diversified pharma pipeline \u2014 cardiovascular oncology neuro (Swiss)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SAN.PA",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "French pharma \u2014 rare disease vaccines consumer (Euronext Paris)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SN.L",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Surgical devices orthopaedics and wound management (LSE)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "LONN.SW",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "CDMO for biotech and pharma manufacturing (Swiss)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "AFX.DE",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Ophthalmic surgical devices and microsurgery (Xetra)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "STMN.SW",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Dental implants and digital dentistry (Swiss)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "COLO-B.CO",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Ostomy continence and wound care devices (Copenhagen)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "DEMANT.CO",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Hearing aids and audiological instruments (Copenhagen)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SRT3.DE",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Lab equipment and bioprocessing \u2014 pharma supply chain (Xetra)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "HIK.L",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Generics injectables and branded pharma \u2014 UK-listed (LSE)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "UCB.BR",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Neurology and immunology pharma \u2014 Bimzelx (Brussels)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "GMAB.CO",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Antibody engineering platform \u2014 bispecific and ADC (Copenhagen)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "BANB.SW",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Peptide CDMO \u2014 critical GLP-1 supply chain node (Swiss)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ARGX.BR",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Autoimmune biotech \u2014 Vyvgart (Brussels \u2014 also NASDAQ)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "OXIG.L",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "Cryogenics and quantum components \u2014 enabling hardware (LSE)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "IQE.L",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "Compound semiconductor wafers \u2014 photonics and quantum (LSE)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "BA.L",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Defence electronics cyber and space systems (LSE)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "RHM.DE",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "German defence vehicles and ammunition \u2014 fastest growing (Xetra)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "AIR.PA",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Aerospace and defence \u2014 commercial and military aircraft (Euronext Paris)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "HO.PA",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Defence electronics radar and cybersecurity systems (Euronext Paris)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SAF.PA",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Aerospace engines and equipment \u2014 CFM International (Euronext Paris)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "LDO.MI",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Italian defence helicopters electronics and cyber (Milan)",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "TXN",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Analog and embedded semis \u2014 broad industrial + auto exposure",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "QCOM",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Handset RF plus AI edge inference \u2014 licensing mix",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ADI",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "High-performance analog and mixed signal for data paths",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ON",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Power discretes and SiC for electrification and DC systems",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SWKS",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "RF front-end modules \u2014 handset cyclicality vs content gains",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "QRVO",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "RF connectivity and defense/aerospace semi exposure",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ENTG",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Materials purity for wafer fabs and advanced packaging",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "OLED",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Universal display materials \u2014 OLED emitter chemistry",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "LSCC",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Low-power FPGAs for edge and industrial acceleration",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "RMBS",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Memory interface IP and chips \u2014 HBM ecosystem adjacency",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "CRUS",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Audio and high-precision mixed-signal for consumer and auto",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SLAB",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "IoT MCUs and mesh \u2014 industrial connectivity",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "DIOD",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Discrete and analog components \u2014 broad cyclical semi",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "POWI",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Power conversion ICs \u2014 efficiency regulation tailwind",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "WOLF",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "SiC substrates and devices \u2014 EV and power switching",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "INOD",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Data engineering / AI data prep software microcap",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "NVMI",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Metrology for advanced packaging and CMP process control",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ICHR",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Fluid delivery systems for semiconductor manufacturing",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "PLAB",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Photomasks \u2014 lithography consumables",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "UEIC",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Universal remotes and smart home control chips",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SITM",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "MEMS timing \u2014 precision clocks for comms and DC",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ACLS",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Axcelis ion implant equipment for WFE",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "AOSL",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Power discretes and small-signal \u2014 diversified semi",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "FLEX",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "EMS / JDM manufacturing for hyperscale and networking gear",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "JBL",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "EMS diversified \u2014 AI server and appliance builds",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "TTMI",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "PCB fabrication for networking and compute boards",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "VSH",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Diodes resistors inductors \u2014 passive components",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "APH",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Interconnect for harsh environments \u2014 data centre cabling",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "PI",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Wireless power and GaN \u2014 consumer and industrial",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "MXL",
+      "pillar": "ai \u2014 AI infra & compute",
+      "tier": "watch",
+      "why_flagged": "Broadband and connectivity mixed-signal \u2014 DOCSIS and fiber",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "CVX",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Integrated oil \u2014 cash returns and LNG optionality",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "COP",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "US shale plus Alaska \u2014 production growth discipline",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "OXY",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Permian operator plus carbon capture narrative",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "DVN",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Delaware Basin oil \u2014 variable dividend framework",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "HAL",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Oilfield services pressure pumping \u2014 cycle leverage",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SLB",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "OFSP digital drilling international mix",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "MPC",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Refining and midstream logistics \u2014 crack spread exposure",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "VLO",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Independent refiner \u2014 renewable diesel projects",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "PSX",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Phillips 66 refining plus midstream CPChem",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "FANG",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Permian pure-play \u2014 shareholder returns focus",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "EOG",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Premier shale operator \u2014 returns over growth",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "NRG",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Retail power plus generation \u2014 merchant spread",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "EXC",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Nuclear-heavy utility \u2014 PJM exposure",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "FE",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Transmission investment story \u2014 regulatory lag risk",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ED",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "NYC-centric wires \u2014 dense load pocket",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "AWK",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Regulated water utility \u2014 infrastructure replacement",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "WTRG",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Essential utilities water gas electric bundle",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ATO",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Texas gas distribution \u2014 rate base growth",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "LNG",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Cheniere LNG export tolling \u2014 long-term contracts",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "KMI",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Natural gas pipelines \u2014 fee-based cash flows",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "WMB",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Gas gathering and processing \u2014 Gulf exposure",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "OKE",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "NGL fractionation and midstream services",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "TRGP",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Gathering and processing Permian Delaware",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SMR",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "SMR developer \u2014 licensing and power purchase risk",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "OKLO",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Advanced fission developer \u2014 milestone equity story",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "BWXT",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Naval reactors and nuclear components \u2014 defense mix",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "LEU",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Uranium conversion and HALEU \u2014 policy sensitive",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "UEC",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "US ISR uranium developer \u2014 spot price leverage",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "UUUU",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "ISR uranium plus rare earths optionality",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "URG",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "ISR uranium producer \u2014 small cap volatility",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "DNN",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "ISR uranium developer \u2014 pre-production",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "BEP",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Brookfield Renewable yieldCo \u2014 hydro wind solar mix",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "BE",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Fuel cells and electrolyzers \u2014 cash burn risk",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "BIP",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "Brookfield Infrastructure \u2014 toll roads utilities pipelines",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "NEP",
+      "pillar": "energy \u2014 Energy transition & grids",
+      "tier": "watch",
+      "why_flagged": "NextEra Energy Partners renewables dropdown story",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "CYBR",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Privileged access management \u2014 identity security",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "MNDY",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Monday work OS \u2014 workflow automation with security posture",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "DDOG",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Observability and cloud security telemetry",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SNOW",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Data cloud \u2014 governance and sharing workloads",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ESTC",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Search analytics security SIEM competitor set",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "MDB",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Document database \u2014 developer-led adoption",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "PATH",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "RPA plus process mining \u2014 enterprise automation",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "CFLT",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Streaming data platform \u2014 real-time pipelines",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "FRSH",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Freshservice / ITSM cloud \u2014 SMB upmarket",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "DT",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Dynatrace observability \u2014 enterprise APM",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "PD",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "PagerDuty incident response \u2014 SRE tooling",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ZI",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "ZoomInfo go-to-market data \u2014 privacy/reg risk",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "NOW",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "ServiceNow workflow and GRC digitization",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "WDAY",
+      "pillar": "cyber \u2014 Cybersecurity & digital trust",
+      "tier": "watch",
+      "why_flagged": "Workday HCM and financials cloud ERP",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "LMT",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Defense prime \u2014 missiles space and aero structures",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "NOC",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Defense prime \u2014 bombers UAVs and space",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "LHX",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Defense electronics post-L3Harris merger integration",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "RTX",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Pratt engines plus Raytheon missiles mix",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "GD",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Gulfstream plus combat systems shipbuilding",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "HII",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "US Navy shipbuilding \u2014 carrier submarine backlog",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "TXT",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Bell aviation plus industrial and Textron Systems",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "JCI",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Building controls and OpenBlue smart buildings",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "NDSN",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Nordson precision dispensing and industrial coatings",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "WSO",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "HVAC distribution scale \u2014 North America residential mix",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ALLE",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Allegion security hardware \u2014 commercial doors",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "PNR",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Pentair water treatment and pool equipment",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "GGG",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Graco fluid handling pumps \u2014 industrial coatings",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "IEX",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "IDEX precision pumps and dispensing",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "XYL",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Xylem water infrastructure \u2014 acquisition synergies",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ROP",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Roper software rollup \u2014 niche vertical SaaS",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "FLS",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Flowserve pumps valves \u2014 energy capex cycle",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "CMI",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Cummins engines plus Accelera hydrogen bet",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "B",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Barnes aerospace and automation components",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "FTV",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Fortive industrial instrumentation and healthcare diagnostics spin mix",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ITT",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Motion flow control \u2014 defense and industrial",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "DHR",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Life sciences tools plus industrial diagnostics",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "AOS",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Water heaters and boilers \u2014 residential cycle",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "DOV",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Diversified industrial pumps and fueling",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "FAST",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Fastenal vending and onsite inventory",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "GNRC",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Backup generators \u2014 outage and grid fragility",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "LECO",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Lincoln Electric welding automation",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SWK",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Stanley Black & Decker tools \u2014 margin reset",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "WWD",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Woodward aircraft and industrial actuation controls",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "TDY",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Teledyne imaging instruments and defense",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "AME",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Ametek precision instruments and power",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ZBRA",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Zebra mobile computing and RFID tracking",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ZBH",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Zimmer Biomed \u2014 robotics knee mix",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "OTIS",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Elevators service moat \u2014 China mix",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "WAB",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Wabtec rail and freight electronics",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "VMI",
+      "pillar": "auto \u2014 Industrial automation & robotics",
+      "tier": "watch",
+      "why_flagged": "Valmont infrastructure irrigation poles",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "JNJ",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Pharma medtech consumer diversified \u2014 patent cliffs matter",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "PFE",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Post-COVID oncology pipeline rebuild \u2014 execution risk",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "MRK",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Keytruda franchise duration \u2014 oncology concentration",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ABT",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Devices plus diagnostics \u2014 Libre and structural heart",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "BAX",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "MedSurg and pharmaceuticals hospital supply chain",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "MDT",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Medtronic devices \u2014 GLP-1 overhang on obesity devices",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "HOLX",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Diagnostics imaging and surgical women's health",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "UNH",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "UnitedHealthcare plus Optum vertical integration",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "CVS",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Retail pharmacy plus Aetna \u2014 reimbursement pressure",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "CI",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Cigna Evernorth pharmacy benefits mix",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "HUM",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Medicare Advantage star ratings risk",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ELV",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Anthem rebrand \u2014 commercial and gov mix",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "CNC",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Centene Medicaid exposure \u2014 state budget cycles",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "MOH",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Molina Medicaid pure-play \u2014 regulatory cap",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "XRAY",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Dentsply Sirona dental equipment \u2014 channel inventory",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ALGN",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Align Invisalign \u2014 consumer discretionary sensitivity",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "TECH",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Bio-Techne reagents \u2014 biologics tools recurring",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "DGX",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Quest Diagnostics lab volumes \u2014 pricing",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "LH",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "LabCorp diagnostics plus drug development",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "A",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Agilent instruments and diagnostics services",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ILMN",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Sequencing installed base \u2014 consumable pull-through",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "TDOC",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Teladoc virtual care \u2014 profitability path",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "RMD",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "ResMed sleep apnea devices \u2014 GLP-1 competitive readthrough",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "BIIB",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Neuroscience and biosimilars \u2014 Leqembi and franchise resets",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "BNTX",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "BioNTech oncology plus Pfizer partnership economics",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SRPT",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Sarepta gene therapy \u2014 regulatory binary",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "EXAS",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Exact Sciences CRC screening \u2014 guideline adoption",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "NVAX",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Novavax vaccine platform \u2014 funding and execution",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SWTX",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "SpringWorks oncology rare disease \u2014 trial readouts",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "DNA",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Ginkgo cell engineering \u2014 revenue quality debate",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "RXRX",
+      "pillar": "health \u2014 Health Tech",
+      "tier": "watch",
+      "why_flagged": "Recursion AI drug discovery \u2014 compute spend",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ACMR",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "ACM Research China WFE \u2014 geopolitical listing risk",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "KLIC",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "Kulicke & Soffa wire bond packaging equipment",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "ONTO",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "Onto metrology and inspection for advanced nodes",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "BRKS",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "Brooks automation cryogenics and vacuum",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "CAMT",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "Camtek inspection for advanced packaging",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "COHU",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "Cohu handler and test interface equipment",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "AEHR",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "Aehr wafer-level burn-in for SiC reliability",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "VPG",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "Vishay precision foil resistors \u2014 metrology niche",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "SMTC",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "Semtech LoRa plus signal integrity \u2014 mixed cycles",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "INDI",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "indie Semiconductor auto edge \u2014 ADAS content",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "LASR",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "Luminar lidar \u2014 auto OEM design-in path",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    },
+    {
+      "ticker": "MVIS",
+      "pillar": "quantum \u2014 Quantum / frontier compute",
+      "tier": "watch",
+      "why_flagged": "MicroVision lidar MEMS \u2014 speculative liquidity",
+      "notes": "",
+      "sentiment_mentions_csv": "research/watchlists/mentions.csv",
+      "sentiment_note": ""
+    }
+  ]
+}

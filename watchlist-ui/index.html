@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FutureInvestment watchlist</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0f1419;
+      --fg: #e8ecf1;
+      --muted: #9aa7b5;
+      --border: #2a3442;
+      --accent: #4f8cff;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f6f8fb;
+        --fg: #131922;
+        --muted: #5c6776;
+        --border: #d8dee9;
+        --accent: #1b63f5;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.45;
+    }
+    header {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    button, label.file {
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--fg);
+      padding: 0.45rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      cursor: pointer;
+    }
+    button.primary {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    label.file input { display: none; }
+    .banner {
+      padding: 0.75rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+    main { padding: 1rem 1.5rem 2rem; overflow-x: auto; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+      min-width: 720px;
+    }
+    th, td {
+      border-bottom: 1px solid var(--border);
+      padding: 0.55rem 0.5rem;
+      vertical-align: top;
+      text-align: left;
+    }
+    th {
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+    }
+    td:nth-child(3) { white-space: nowrap; }
+    input.txt, textarea {
+      width: 100%;
+      background: transparent;
+      color: var(--fg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.35rem 0.45rem;
+      font: inherit;
+    }
+    textarea { min-height: 4rem; resize: vertical; }
+    .hint {
+      margin-top: 1rem;
+      font-size: 0.8125rem;
+      color: var(--muted);
+      max-width: 62rem;
+    }
+    code { font-size: 0.85em; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FutureInvestment watchlist</h1>
+    <div class="toolbar">
+      <label class="file">Load JSON<input id="fileIn" type="file" accept=".json,application/json" /></label>
+      <button type="button" class="primary" id="btnExport">Export JSON</button>
+      <button type="button" id="btnReset">Load example schema</button>
+    </div>
+  </header>
+  <div class="banner" id="meta"></div>
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th>Ticker</th>
+          <th>Pillar</th>
+          <th>Tier</th>
+          <th>Why flagged</th>
+          <th>Notes</th>
+          <th>Sentiment (secondary)<br/><span style="font-weight:400;text-transform:none">CSV path / counts</span></th>
+          <th>Sentiment note</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <p class="hint">
+      Secondary sentiment stays manual or from <code>scripts/fi_mentions.py</code>. Save exports into <code>research/watchlists/</code>.
+      This page runs locally in your browser; nothing is uploaded.
+    </p>
+  </main>
+  <script>
+    const DEFAULT_DOC = {
+      as_of: new Date().toISOString().slice(0, 10),
+      disclaimer:
+        "Education and research only. Not personalized investment advice. Verify all data.",
+      items: [
+        {
+          ticker: "",
+          pillar: "",
+          tier: "watch",
+          why_flagged: "",
+          notes: "",
+          sentiment_mentions_csv: "",
+          sentiment_note: "",
+        },
+      ],
+    };
+
+    let doc = structuredClone(DEFAULT_DOC);
+
+    const elMeta = document.getElementById("meta");
+    const elRows = document.getElementById("rows");
+
+    function renderMeta() {
+      elMeta.textContent = `as_of: ${doc.as_of || "(unset)"} — ${doc.disclaimer || ""}`;
+    }
+
+    function rowTemplate(item, idx) {
+      const tr = document.createElement("tr");
+      tr.dataset.idx = String(idx);
+
+      function cellInput(value, field, singleLine) {
+        const td = document.createElement("td");
+        const tag = singleLine ? "input" : "textarea";
+        const node = document.createElement(tag);
+        node.className = "txt";
+        if (singleLine) node.type = "text";
+        node.value = value ?? "";
+        node.addEventListener("input", () => {
+          doc.items[idx][field] = node.value;
+        });
+        td.appendChild(node);
+        return td;
+      }
+
+      tr.appendChild(cellInput(item.ticker, "ticker", true));
+      tr.appendChild(cellInput(item.pillar, "pillar", true));
+      tr.appendChild(cellInput(item.tier, "tier", true));
+      tr.appendChild(cellInput(item.why_flagged, "why_flagged", false));
+      tr.appendChild(cellInput(item.notes, "notes", false));
+      tr.appendChild(cellInput(item.sentiment_mentions_csv, "sentiment_mentions_csv", true));
+      tr.appendChild(cellInput(item.sentiment_note, "sentiment_note", false));
+
+      return tr;
+    }
+
+    function render() {
+      elRows.innerHTML = "";
+      doc.items.forEach((item, idx) => elRows.appendChild(rowTemplate(item, idx)));
+      renderMeta();
+    }
+
+    function mergeLoaded(data) {
+      if (!data || typeof data !== "object") throw new Error("Invalid JSON");
+      doc.as_of = data.as_of || doc.as_of;
+      doc.disclaimer = data.disclaimer || doc.disclaimer;
+      doc.items = Array.isArray(data.items) && data.items.length ? data.items : DEFAULT_DOC.items;
+      doc.items = doc.items.map((it) => ({
+        ticker: it.ticker ?? "",
+        pillar: it.pillar ?? "",
+        tier: it.tier ?? "watch",
+        why_flagged: it.why_flagged ?? "",
+        notes: it.notes ?? "",
+        sentiment_mentions_csv: it.sentiment_mentions_csv ?? "",
+        sentiment_note: it.sentiment_note ?? "",
+      }));
+    }
+
+    document.getElementById("fileIn").addEventListener("change", async (e) => {
+      const file = e.target.files?.[0];
+      if (!file) return;
+      const text = await file.text();
+      mergeLoaded(JSON.parse(text));
+      render();
+      e.target.value = "";
+    });
+
+    document.getElementById("btnExport").addEventListener("click", () => {
+      const blob = new Blob([JSON.stringify(doc, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `watchlist-${doc.as_of || "export"}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    document.getElementById("btnReset").addEventListener("click", () => {
+      doc = structuredClone(DEFAULT_DOC);
+      render();
+    });
+
+    fetch("./watchlist.example.json")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (data) {
+          mergeLoaded(data);
+          render();
+        } else {
+          render();
+        }
+      })
+      .catch(() => render());
+  </script>
+</body>
+</html>

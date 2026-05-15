@@ -1,0 +1,161 @@
+<section id="risk-metrics">
+  <h2>Historical risk metrics</h2>
+  <p class="section-purpose"><strong>What is this?</strong> How each name has behaved historically — volatility, drawdown, and market sensitivity. Past behaviour is not a forecast, but it helps size positions and set expectations.</p>
+  <p class="muted">Generated 2026-05-11T21:04:48Z. Not investment advice.</p>
+  <div class="scroll">
+  <table>
+    <thead>
+      <tr>
+        <th>Ticker</th>
+        <th>Beta</th>
+        <th>Ann. vol</th>
+        <th>Max DD</th>
+        <th>1Y return</th>
+        <th>Sharpe</th>
+        <th>SPY corr</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>NVDA</strong></td>
+        <td class="s-low">1.99</td>
+        <td>+48.6%</td>
+        <td>-36.9%</td>
+        <td>+88.2%</td>
+        <td class="s-high">1.72</td>
+        <td>0.69</td>
+      </tr>
+      <tr>
+        <td><strong>AMAT</strong></td>
+        <td class="s-low">1.88</td>
+        <td>+47.2%</td>
+        <td class="s-low">-49.9%</td>
+        <td>+187.6%</td>
+        <td class="s-high">3.88</td>
+        <td>0.66</td>
+      </tr>
+      <tr>
+        <td><strong>ANET</strong></td>
+        <td class="s-low">1.78</td>
+        <td>+52.7%</td>
+        <td class="s-low">-50.4%</td>
+        <td>+57.7%</td>
+        <td class="s-high">1.01</td>
+        <td>0.56</td>
+      </tr>
+      <tr>
+        <td><strong>NEE</strong></td>
+        <td>0.29</td>
+        <td>+26.6%</td>
+        <td>-23.8%</td>
+        <td>+38.9%</td>
+        <td class="s-high">1.30</td>
+        <td>0.18</td>
+      </tr>
+      <tr>
+        <td><strong>VST</strong></td>
+        <td class="s-low">1.93</td>
+        <td>+63.2%</td>
+        <td class="s-low">-48.8%</td>
+        <td>+12.6%</td>
+        <td>0.13</td>
+        <td>0.51</td>
+      </tr>
+      <tr>
+        <td><strong>FSLR</strong></td>
+        <td>1.02</td>
+        <td>+59.9%</td>
+        <td class="s-low">-60.0%</td>
+        <td>+65.8%</td>
+        <td class="s-high">1.02</td>
+        <td>0.29</td>
+      </tr>
+      <tr>
+        <td><strong>PANW</strong></td>
+        <td>1.17</td>
+        <td>+36.1%</td>
+        <td>-36.0%</td>
+        <td>+14.3%</td>
+        <td>0.27</td>
+        <td>0.54</td>
+      </tr>
+      <tr>
+        <td><strong>FTNT</strong></td>
+        <td>1.02</td>
+        <td>+42.9%</td>
+        <td>-35.1%</td>
+        <td>+18.5%</td>
+        <td>0.33</td>
+        <td>0.40</td>
+      </tr>
+      <tr>
+        <td><strong>ETN</strong></td>
+        <td>1.44</td>
+        <td>+35.0%</td>
+        <td>-34.5%</td>
+        <td>+36.8%</td>
+        <td>0.92</td>
+        <td>0.69</td>
+      </tr>
+      <tr>
+        <td><strong>ROK</strong></td>
+        <td>1.22</td>
+        <td>+32.6%</td>
+        <td>-27.8%</td>
+        <td>+57.3%</td>
+        <td class="s-high">1.62</td>
+        <td>0.63</td>
+      </tr>
+      <tr>
+        <td><strong>LLY</strong></td>
+        <td>0.72</td>
+        <td>+38.0%</td>
+        <td>-34.5%</td>
+        <td>+32.6%</td>
+        <td>0.74</td>
+        <td>0.32</td>
+      </tr>
+      <tr>
+        <td><strong>ISRG</strong></td>
+        <td>1.15</td>
+        <td>+32.2%</td>
+        <td>-31.2%</td>
+        <td>-21.7%</td>
+        <td>-0.81</td>
+        <td>0.60</td>
+      </tr>
+      <tr>
+        <td><strong>IBM</strong></td>
+        <td>0.75</td>
+        <td>+30.5%</td>
+        <td>-28.7%</td>
+        <td>-8.0%</td>
+        <td>-0.41</td>
+        <td>0.41</td>
+      </tr>
+      <tr>
+        <td><strong>IONQ</strong></td>
+        <td class="s-low">2.84</td>
+        <td>+110.3%</td>
+        <td class="s-low">-67.6%</td>
+        <td>+81.9%</td>
+        <td>0.70</td>
+        <td>0.43</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <details style="margin-top:1rem;">
+    <summary class="muted">Methodology notes</summary>
+    <ul class="muted" style="font-size:0.85rem;">
+      <li><strong>Lookback:</strong> 2 years of daily closing prices from yfinance.</li>
+      <li><strong>Returns:</strong> Simple daily returns (close-to-close).</li>
+      <li><strong>Beta:</strong> Cov(stock, SPY) / Var(SPY) over the full 2-year window.</li>
+      <li><strong>Annualised volatility:</strong> Std(daily returns) × √252.</li>
+      <li><strong>Max drawdown:</strong> Worst peak-to-trough decline in the 2-year window.</li>
+      <li><strong>Sharpe-like ratio:</strong> (annualised return − 4.5% risk-free) / annualised vol. Uses a 4.5% risk-free proxy (approximate T-bill yield).</li>
+      <li><strong>Correlation:</strong> Pearson correlation of daily returns vs SPY.</li>
+      <li><strong>Limitations:</strong> Backward-looking only; survivorship bias applies. Vol and drawdown regimes change. Not a predictor of future risk.</li>
+    </ul>
+  </details>
+</section>

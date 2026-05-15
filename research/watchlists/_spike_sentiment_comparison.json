@@ -1,0 +1,24 @@
+{
+  "ts": "2026-05-15T00:00:00Z",
+  "winner": "finnhub",
+  "rationale": "Finnhub social-sentiment API fits refresh_watchlists.sh (single FINNHUB_API_KEY, no Reddit Responsible Builder or X pay-per-use). social-stock-sentiment PyPI not required for v1.",
+  "spike_files": [
+    "_spike_sentiment_finnhub.json",
+    "_spike_sentiment_social_stock_sentiment.json"
+  ],
+  "scores": {
+    "finnhub": {
+      "coverage": "pending_key",
+      "note": "Spike run without FINNHUB_API_KEY; add key and re-run fi_sentiment_spike.py"
+    },
+    "social-stock-sentiment": {
+      "coverage": "skipped",
+      "note": "Package not installed; optional compare only"
+    },
+    "reddit_x": {
+      "coverage": "deprecated",
+      "note": "Legacy --provider reddit_x; X off unless --use-x"
+    }
+  },
+  "v1_integration": "fi_sentiment.py --provider auto (default in refresh_watchlists.sh)"
+}

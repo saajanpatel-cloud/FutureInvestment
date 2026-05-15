@@ -1,0 +1,8 @@
+{
+  "scenario": 0.30,
+  "rubric": 0.25,
+  "risk": 0.20,
+  "monte_carlo": 0.15,
+  "dcf": 0.10,
+  "_note": "Percentile blend for universe shortlist pool. Tunable without code changes."
+}
