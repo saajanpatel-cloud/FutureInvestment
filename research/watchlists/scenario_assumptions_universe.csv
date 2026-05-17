@@ -18,6 +18,7 @@ AMD,AMD,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after f
 AME,AME,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 AMGN,AMGN,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 AMKR,AMKR,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+AMZN,AMZN,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 ANET,ANET,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 AOS,AOS,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 AOSL,AOSL,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
@@ -29,13 +30,17 @@ ARQQ,ARQQ,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after 
 ARRY,ARRY,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 ASM.AS,ASM.AS,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 ASML,ASML,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+ASTS,ASTS,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 ATCO-A.ST,ATCO-A.ST,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 ATO,ATO,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+ATRO,ATRO,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 AVGO,AVGO,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 AWK,AWK,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 AZN,AZN,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 B,B,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+BA,BA,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 BA.L,BA.L,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+BAESY,BAESY,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 BANB.SW,BANB.SW,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 BAX,BAX,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 BE,BE,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
@@ -43,12 +48,14 @@ BEP,BEP,Energy transition & grids,eps,Fwd EPS (placeholder — replace after fil
 BESI.AS,BESI.AS,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 BIIB,BIIB,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 BIP,BIP,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+BKSY,BKSY,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 BNTX,BNTX,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 BRKS,BRKS,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 BSX,BSX,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 BWXT,BWXT,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 CAMT,CAMT,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 CAT,CAT,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+CBRS,CBRS,Cybersecurity & digital trust,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 CCJ,CCJ,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 CDNS,CDNS,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 CEG,CEG,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
@@ -83,6 +90,7 @@ DT,DT,Cybersecurity & digital trust,eps,Fwd EPS (placeholder — replace after f
 DUK,DUK,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 DVN,DVN,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 DXCM,DXCM,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+EADSY,EADSY,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 ED,ED,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 EDP.LS,EDP.LS,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 EDPR.LS,EDPR.LS,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
@@ -95,6 +103,7 @@ ENR.DE,ENR.DE,Energy transition & grids,eps,Fwd EPS (placeholder — replace aft
 ENTG,ENTG,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 EOG,EOG,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 EPIR.ST,EPIR.ST,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+ESLT,ESLT,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 ESTC,ESTC,Cybersecurity & digital trust,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 ET,ET,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 ETN,ETN,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
@@ -107,20 +116,24 @@ FE,FE,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filin
 FLEX,FLEX,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 FLNC,FLNC,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 FLS,FLS,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+FLY,FLY,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 FORM,FORM,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 FRSH,FRSH,Cybersecurity & digital trust,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 FSLR,FSLR,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 FTNT,FTNT,Cybersecurity & digital trust,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 FTV,FTV,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 GD,GD,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+GE,GE,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 GEA.DE,GEA.DE,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 GEN,GEN,Cybersecurity & digital trust,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 GEV,GEV,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 GGG,GGG,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 GMAB.CO,GMAB.CO,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 GNRC,GNRC,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+GSAT,GSAT,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 GSK,GSK,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 HAL,HAL,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+HEI.A,HEI.A,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 HEXA-B.ST,HEXA-B.ST,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 HII,HII,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 HIK.L,HIK.L,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
@@ -130,6 +143,7 @@ HOLO,HOLO,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after 
 HOLX,HOLX,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 HON,HON,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 HUM,HUM,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+HXL,HXL,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 IBE.MC,IBE.MC,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 IBM,IBM,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 ICHR,ICHR,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
@@ -142,6 +156,7 @@ INOD,INOD,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after
 IONQ,IONQ,Quantum / frontier compute,ps,Rev/Sh (placeholder — pre-profit template),0.45,0.28,0.10,30,20,12,0.20,0.45,0.35
 IQE.L,IQE.L,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 IR,IR,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+IRDM,IRDM,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 ISRG,ISRG,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 ITT,ITT,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 ITW,ITW,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
@@ -153,9 +168,12 @@ KLAC,KLAC,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after
 KLIC,KLIC,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 KMI,KMI,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 KNEBV.HE,KNEBV.HE,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+KTOS,KTOS,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+KULR,KULR,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 LAES,LAES,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 LASR,LASR,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 LDO.MI,LDO.MI,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+LDOS,LDOS,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 LECO,LECO,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 LEU,LEU,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 LH,LH,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
@@ -167,10 +185,13 @@ LONN.SW,LONN.SW,Health Tech,eps,Fwd EPS (placeholder — replace after filings p
 LR.PA,LR.PA,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 LRCX,LRCX,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 LSCC,LSCC,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+LUNR,LUNR,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+LWLG,LWLG,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 MDB,MDB,Cybersecurity & digital trust,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 MDT,MDT,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 MEL.BR,MEL.BR,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 MNDY,MNDY,Cybersecurity & digital trust,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+MNTS,MNTS,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 MOH,MOH,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 MPC,MPC,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 MPWR,MPWR,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
@@ -215,7 +236,9 @@ PD,PD,Cybersecurity & digital trust,eps,Fwd EPS (placeholder — replace after f
 PFE,PFE,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 PH,PH,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 PI,PI,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+PL,PL,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 PLAB,PLAB,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+PLTR,PLTR,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 PNR,PNR,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 PODD,PODD,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 POWI,POWI,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
@@ -227,9 +250,11 @@ QCOM,QCOM,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after
 QLYS,QLYS,Cybersecurity & digital trust,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 QRVO,QRVO,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 QUBT,QUBT,Quantum / frontier compute,ps,Rev/Sh (placeholder — pre-profit template),0.45,0.28,0.10,30,20,12,0.20,0.45,0.35
+RDW,RDW,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 REGN,REGN,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 RGTI,RGTI,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 RHM.DE,RHM.DE,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+RKLB,RKLB,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 RMBS,RMBS,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 RMD,RMD,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 ROG.SW,ROG.SW,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
@@ -244,6 +269,9 @@ S,S,Cybersecurity & digital trust,eps,Fwd EPS (placeholder — replace after fil
 SAF.PA,SAF.PA,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 SAN.PA,SAN.PA,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 SAND.ST,SAND.ST,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+SATL,SATL,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+SATS,SATS,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+SIDU,SIDU,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 SIE.DE,SIE.DE,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 SITM,SITM,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 SLAB,SLAB,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
@@ -257,6 +285,8 @@ SNOW,SNOW,Cybersecurity & digital trust,eps,Fwd EPS (placeholder — replace aft
 SNPS,SNPS,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 SO,SO,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 SOITEC.PA,SOITEC.PA,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+SPCE,SPCE,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+SPIR,SPIR,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 SPX.L,SPX.L,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 SRPT,SRPT,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 SRT3.DE,SRT3.DE,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
@@ -276,6 +306,8 @@ TENB,TENB,Cybersecurity & digital trust,eps,Fwd EPS (placeholder — replace aft
 TER,TER,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 TMO,TMO,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 TRGP,TRGP,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+TRMB,TRMB,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+TSAT,TSAT,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 TSM,TSM,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 TT,TT,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 TTMI,TTMI,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
@@ -291,9 +323,11 @@ VAT.SW,VAT.SW,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace a
 VEEV,VEEV,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 VLO,VLO,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 VMI,VMI,Industrial automation & robotics,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+VOYG,VOYG,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 VPG,VPG,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 VRT,VRT,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 VRTX,VRTX,Health Tech,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
+VSAT,VSAT,Quantum / frontier compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 VSH,VSH,AI infrastructure & compute,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 VST,VST,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25
 VWS.CO,VWS.CO,Energy transition & grids,eps,Fwd EPS (placeholder — replace after filings pass),0.18,0.12,0.04,28,22,15,0.25,0.50,0.25

@@ -13,17 +13,25 @@ import argparse
 import csv
 import json
 import re
+import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 W = ROOT / "research" / "watchlists"
+ADV_PACKS = W / "adversarial_packs.json"
 UI = ROOT / "watchlist-ui"
 CORE_JSON = UI / "core-shortlist.json"
 CORE_TXT = W / "report_core_tickers.txt"
 HTML = W / "SINGLE_SCREEN_REPORT.html"
+MAN = W / "universe_manifest.csv"
+ERN = W / "earnings_data.csv"
+RUB = W / "rubric_scores.csv"
 FH_CSV = W / "finnhub_context.csv"
 EXAMPLE = UI / "watchlist.example.json"
+DIM_COLS = ("growth", "margins", "balance_sheet", "durability", "tail_risks", "valuation")
+PLACEHOLDER_NOTE = "Placeholder rubric"
 
 MIN_WHY = 40
 MIN_KILL = 25
@@ -117,6 +125,114 @@ def meta_js_keys(html: str) -> set[str]:
     return set(re.findall(r'\n\s*"([A-Z0-9.\-]+)":', block))
 
 
+def manifest_tickers(path: Path) -> list[str]:
+    if not path.is_file():
+        return []
+    out: list[str] = []
+    with path.open(encoding="utf-8", newline="") as f:
+        for r in csv.DictReader(f):
+            t = (r.get("ticker") or "").strip().upper()
+            if t:
+                out.append(t)
+    return out
+
+
+def check_rubric_coverage() -> tuple[list[str], list[str]]:
+    """Hard failures and warnings for earnings + rubric grid."""
+    errors: list[str] = []
+    warns: list[str] = []
+    manifest = manifest_tickers(MAN)
+    if not manifest:
+        errors.append(f"No tickers in {MAN.name}")
+        return errors, warns
+
+    earn_set: set[str] = set()
+    if ERN.is_file():
+        with ERN.open(encoding="utf-8", newline="") as f:
+            for r in csv.DictReader(f):
+                t = (r.get("ticker") or "").strip().upper()
+                if t and not (r.get("error") or "").strip():
+                    earn_set.add(t)
+    missing_earn = [t for t in manifest if t not in earn_set]
+    if missing_earn:
+        errors.append(
+            f"earnings_data.csv missing {len(missing_earn)}/{len(manifest)} manifest tickers "
+            f"(e.g. {', '.join(missing_earn[:8])})"
+        )
+
+    rub_by: dict[str, dict[str, str]] = {}
+    if RUB.is_file():
+        with RUB.open(encoding="utf-8", newline="") as f:
+            for r in csv.DictReader(f):
+                t = (r.get("ticker") or "").strip().upper()
+                if t:
+                    rub_by[t] = r
+
+    for t in manifest:
+        row = rub_by.get(t)
+        if not row:
+            errors.append(f"rubric_scores.csv missing row for {t}")
+            continue
+        note = (row.get("note") or "").strip()
+        if PLACEHOLDER_NOTE in note or not note:
+            errors.append(f"{t}: rubric note still placeholder or empty")
+        for c in DIM_COLS:
+            v = (row.get(c) or "").strip()
+            if not v.isdigit() or not (1 <= int(v) <= 5):
+                errors.append(f"{t}: invalid rubric dim {c}={v!r}")
+
+    return errors, warns
+
+
+def node_check_value_js(html: str) -> str | None:
+    m = re.search(
+        r"/\* FI_VALUE_JS_START \*/([\s\S]*?)/\* FI_VALUE_JS_END \*/",
+        html,
+    )
+    if not m:
+        return "FI_VALUE_JS_START/END block missing in SINGLE_SCREEN_REPORT.html"
+    snippet = "(function(){\n" + m.group(1) + "\n})();\n"
+    with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False, encoding="utf-8") as tf:
+        tf.write(snippet)
+        path = tf.name
+    try:
+        proc = subprocess.run(
+            ["node", "--check", path],
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+    except FileNotFoundError:
+        return None
+    finally:
+        Path(path).unlink(missing_ok=True)
+    if proc.returncode != 0:
+        err = (proc.stderr or proc.stdout or "node --check failed").strip()
+        return f"Value JS syntax error (node --check): {err[:400]}"
+    return None
+
+
+def growth_review_warns(items: list[dict], rub_by: dict[str, dict[str, str]]) -> list[str]:
+    warns: list[str] = []
+    for it in items:
+        t = (it.get("ticker") or "").strip().upper()
+        if not t:
+            continue
+        g = (rub_by.get(t, {}).get("growth") or "").strip()
+        if g != "1":
+            continue
+        memo = (it.get("selection_memo") or {}) if isinstance(it.get("selection_memo"), dict) else {}
+        if memo.get("exception"):
+            continue
+        sw = (it.get("why_this_name") or "").lower()
+        if "tier 3" in sw or "weak scorecard" in sw:
+            warns.append(
+                f"{t}: core shortlist has Growth=1 with weak tier signal — quarterly swap review "
+                "(see CLAUDE.md growth policy)"
+            )
+    return warns
+
+
 def finnhub_context_tickers(path: Path) -> set[str]:
     if not path.is_file():
         return set()
@@ -150,6 +266,17 @@ def main() -> int:
     strict_ctx = args.strict_market_context or args.strict_sentiment
     errors: list[str] = []
     warns: list[str] = []
+
+    try:
+        from fi_yahoo import ping as yahoo_ping
+
+        yp = yahoo_ping()
+        if yp.ok:
+            print(f"OK: Yahoo Finance (yfinance {yp.version}) probe {yp.probe_ticker}")
+        else:
+            warns.append(f"Yahoo Finance unreachable: {yp.error}")
+    except Exception as exc:
+        warns.append(f"Yahoo Finance check skipped: {exc}")
 
     if not CORE_JSON.is_file():
         errors.append(f"Missing {CORE_JSON.relative_to(ROOT)}")
@@ -223,6 +350,34 @@ def main() -> int:
         errors.extend(missing_fields[:25])
         if len(missing_fields) > 25:
             errors.append(f"... and {len(missing_fields) - 25} more field issues")
+
+    if ADV_PACKS.is_file():
+        try:
+            adv_doc = json.loads(ADV_PACKS.read_text(encoding="utf-8"))
+            adv_packs = adv_doc.get("packs") if isinstance(adv_doc, dict) else {}
+            if not isinstance(adv_packs, dict):
+                adv_packs = {}
+        except json.JSONDecodeError:
+            adv_packs = {}
+            warns.append(f"Could not parse {ADV_PACKS.name}")
+        for t in set_js:
+            p = adv_packs.get(t) if isinstance(adv_packs.get(t), dict) else None
+            if not p or not p.get("workflow_e_complete"):
+                warns.append(
+                    f"{t}: missing completed Workflow E pack in {ADV_PACKS.name} "
+                    "(re-run refresh without FI_SKIP_ADVERSARIAL=1)"
+                )
+        for it in items:
+            t = (it.get("ticker") or "").strip().upper()
+            prem = (it.get("research_premortem") or "").strip()
+            if t in set_js and "[Auto stub]" in prem:
+                warns.append(
+                    f"{t}: research_premortem still auto-stub — adversarial pack may not be merged (re-run enrich)"
+                )
+    else:
+        warns.append(
+            f"Missing {ADV_PACKS.name} — run refresh without FI_SKIP_ADVERSARIAL=1 for Workflow E packs"
+        )
 
     fh_cov = finnhub_context_tickers(FH_CSV)
     if fh_cov:
@@ -327,19 +482,37 @@ def main() -> int:
                 "Value deep-dive JS not regenerated — run fi_embed_value_js.py after refresh"
             )
 
+        if "FINNHUB_BY_TICKER" not in html:
+            warns.append("FINNHUB_BY_TICKER missing — re-run fi_embed_value_js.py after fi_finnhub_context.py")
+        elif "var CORE_TICKERS" not in html:
+            warns.append("CORE_TICKERS missing — re-run fi_embed_value_js.py")
+        if 'id="monitor"' not in html and 'id="stock-deep-dive"' in html:
+            errors.append("Monitor section still id=stock-deep-dive — re-run fi_embed_deep_dive_layout.py")
         if "<!-- FI_MARKET_CONTEXT_EMBED_START -->" in html:
-            frag = html.split("<!-- FI_MARKET_CONTEXT_EMBED_START -->", 1)[-1]
-            frag = frag.split("<!-- FI_MARKET_CONTEXT_EMBED_END -->", 1)[0]
-            mon = {x.upper() for x in re.findall(r"<strong>([A-Z0-9.\-]+)</strong>", frag)}
-            if mon and set_js - mon:
-                msg = f"Monitor Finnhub fragment missing core tickers: {sorted(set_js - mon)[:6]}"
-                if strict_ctx:
-                    errors.append(msg)
-                else:
-                    warns.append(msg)
+            warns.append(
+                "Legacy aggregate Finnhub embed still present — re-run fi_embed_single_screen.py"
+            )
 
     if not EXAMPLE.is_file():
         warns.append(f"Missing {EXAMPLE.relative_to(ROOT)} (copy step from refresh?)")
+
+    cov_err, cov_warn = check_rubric_coverage()
+    errors.extend(cov_err)
+    warns.extend(cov_warn)
+
+    if HTML.is_file():
+        js_err = node_check_value_js(HTML.read_text(encoding="utf-8", errors="replace"))
+        if js_err:
+            errors.append(js_err)
+
+    rub_by: dict[str, dict[str, str]] = {}
+    if RUB.is_file():
+        with RUB.open(encoding="utf-8", newline="") as f:
+            for r in csv.DictReader(f):
+                t = (r.get("ticker") or "").strip().upper()
+                if t:
+                    rub_by[t] = r
+    warns.extend(growth_review_warns(items, rub_by))
 
     for w in warns:
         print(f"WARN: {w}", file=sys.stderr)

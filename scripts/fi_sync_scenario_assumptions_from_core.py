@@ -166,7 +166,13 @@ def write_universe_assumptions(manifest: Path, rub_path: Path, out_path: Path, d
     """Template scenario rows for manifest ∩ rubric (valuation-first pipeline)."""
     man = load_manifest(manifest)
     rub_t = load_rubric_tickers(rub_path)
-    tickers = sorted([t for t in man if t in rub_t])
+    tickers = sorted(
+        [
+            t
+            for t in man
+            if t in rub_t and (man[t].get("model_tier") or "full").strip().lower() == "full"
+        ]
+    )
     if not tickers:
         print("No tickers in manifest ∩ rubric_scores.csv", file=sys.stderr)
         return 2

@@ -94,8 +94,10 @@ def main() -> None:
     fieldnames = list(rows[0].keys()) if rows else []
     n_note = n_growth = 0
     for row in rows:
+        t = (row.get("ticker") or "").strip().upper()
+        if not t:
+            continue
         note = (row.get("note") or "").strip()
-        t = row["ticker"].strip().upper()
         e = earn_by.get(t, {})
         link = linkage.get(t, "")
         if args.rewrite_notes:

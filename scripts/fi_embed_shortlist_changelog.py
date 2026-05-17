@@ -30,79 +30,6 @@ def _intro_paragraphs(_delta: dict) -> str:
     )
 
 
-def _mover_change_two_sentences(m: dict) -> str:
-    """Exactly two sentences: (1) what moved vs prior snapshot, (2) how to read it for this refresh."""
-    dr = m.get("delta_rubric")
-    db = m.get("delta_borda")
-    dy = m.get("delta_yoy_pct")
-    ins = bool(m.get("in_shortlist"))
-    db_n = float(db) if db is not None else None
-    dr_n = int(dr) if dr is not None else None
-
-    frag: list[str] = []
-    if dr is not None and dr != 0:
-        frag.append(f"scorecard total shifted by {dr:+d} point(s)")
-    if db_n is not None and abs(db_n) >= 1.0:
-        frag.append(f"combined rank score moved by {db_n:+.1f}")
-    if dy is not None and abs(float(dy)) >= 1.0:
-        frag.append(f"revenue YoY pace moved by {float(dy):+.1f} percentage points")
-
-    if frag:
-        s1 = (
-            "Since the prior snapshot, the main signal changes for this ticker are "
-            + ", ".join(frag)
-            + "."
-        )
-    else:
-        s1 = (
-            "Since the prior snapshot, rank and scorecard inputs moved only modestly for this name."
-        )
-
-    if ins:
-        if (db_n is not None and db_n < 0) or (dr_n is not None and dr_n < 0):
-            s2 = (
-                "It still sits on the Decide shortlist, but the drift argues for re-reading thesis, "
-                "kill triggers, and scenario tables before changing conviction or size."
-            )
-        elif (db_n is not None and db_n > 0) or (dr_n is not None and dr_n > 0):
-            s2 = (
-                "It remains on the shortlist with stronger composite or scorecard signals than last run—"
-                "treat that as a diligence nudge, not a timing signal by itself."
-            )
-        else:
-            s2 = (
-                "It remains on the shortlist; cross-check the rubric and models because net drift is mixed."
-            )
-    else:
-        if db_n is not None and db_n < 0:
-            s2 = (
-                "It is off the current shortlist largely because combined ranking slipped versus peers under the same theme caps—"
-                "decide whether that is a temporary cap squeeze or a thesis change before you write it off."
-            )
-        else:
-            s2 = (
-                "It is off the current shortlist this refresh because peer ordering, pool membership, or theme caps shifted—"
-                "compare to cap_casualties in the selection memo if the name still matters strategically."
-            )
-
-    return f"{s1} {s2}"
-
-
-def _quality_movers_table(movers: list[dict]) -> str:
-    rows = "".join(
-        f"<tr><td><strong>{html.escape(str(m['ticker']))}</strong></td>"
-        f'<td class="mover-change-cell">{_cell(_mover_change_two_sentences(m))}</td>'
-        f"<td>{'Yes' if m.get('in_shortlist') else 'No'}</td></tr>"
-        for m in movers
-    )
-    return (
-        "<h4>Quality movers</h4>"
-        '<div class="shortlist-movers-scroll"><table class="print-table-rubric shortlist-movers-table">'
-        '<thead><tr><th>Ticker</th><th>Change (this refresh)</th><th>On shortlist?</th></tr></thead>'
-        f"<tbody>{rows}</tbody></table></div>"
-    )
-
-
 def build_html(delta: dict) -> str:
     intro = _intro_paragraphs(delta)
 
@@ -110,7 +37,7 @@ def build_html(delta: dict) -> str:
         body = (
             intro
             + '<p class="muted">No prior snapshot — baseline established this refresh. '
-            "Next run will show adds, drops, and quality movers.</p>"
+            "Next run will show adds and drops.</p>"
         )
     else:
         prior = delta.get("prior_as_of") or "last refresh"
@@ -156,9 +83,6 @@ def build_html(delta: dict) -> str:
                 "<th>Rubric</th><th>Note</th></tr></thead>"
                 f"<tbody>{rows}</tbody></table></div>"
             )
-        movers = delta.get("quality_movers") or []
-        if movers:
-            sections.append(_quality_movers_table(movers))
         if len(sections) == 2:
             sections.append('<p class="muted">Shortlist unchanged vs prior snapshot.</p>')
         body = "\n".join(sections)

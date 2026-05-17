@@ -117,6 +117,7 @@ def main() -> int:
     risk_js = js_object_keys(html, "RISK")
     mc_js = js_object_keys(html, "MC")
     dcf_js = js_object_keys(html, "DCF")
+    narr_js = js_object_keys(html, "NARRATIVE")
 
     checks = [
         ("proposed-shares", proposed),
@@ -128,7 +129,15 @@ def main() -> int:
         ("RISK js", risk_js),
         ("MC js", mc_js),
         ("DCF js", dcf_js),
+        ("NARRATIVE js", narr_js),
     ]
+
+    if "openDeepDive" not in html:
+        errors.append("deep-dive: openDeepDive() not in report JS")
+    if "dd-meta-banner" not in html:
+        errors.append("deep-dive: freshness banner CSS missing")
+    if "Quality movers" in html:
+        errors.append("shortlist: Quality movers block still present")
 
     for label, found in checks:
         if not found and label.endswith("js"):

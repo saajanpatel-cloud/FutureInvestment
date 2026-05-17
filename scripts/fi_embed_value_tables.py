@@ -23,6 +23,7 @@ from fi_embed_core import (
     patch_tbody_scroll_data_after_marker,
     restore_print_risk_def_table,
 )
+from fi_embed_shortlist_proposed import sort_tickers_by_theme_then_symbol
 
 SCEN = W / "scenario_results.csv"
 RISK = W / "risk_metrics.csv"
@@ -124,8 +125,23 @@ def build_mc_rows(tickers: list[str], by_t: dict[str, dict]) -> str:
     return "\n".join(rows) + "\n"
 
 
+def load_manifest_map() -> dict[str, dict[str, str]]:
+    import csv
+
+    man_path = W / "universe_manifest.csv"
+    out: dict[str, dict[str, str]] = {}
+    if not man_path.is_file():
+        return out
+    with man_path.open(encoding="utf-8", newline="") as f:
+        for r in csv.DictReader(f):
+            t = (r.get("ticker") or "").strip().upper()
+            if t:
+                out[t] = r
+    return out
+
+
 def main() -> None:
-    tickers = load_core_tickers()
+    tickers = sort_tickers_by_theme_then_symbol(load_core_tickers(), load_manifest_map())
     if not tickers:
         print(f"No tickers in {CORE_TXT}", file=sys.stderr)
         sys.exit(2)

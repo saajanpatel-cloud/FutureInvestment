@@ -34,6 +34,11 @@ ROWS: list[tuple[str, str, str]] = [
     ),
     ("cyber", "Cybersecurity &amp; digital trust", "Blocking hacks and keeping data and systems safe"),
     (
+        "fintech",
+        "Fintech &amp; digital money",
+        "Payments, neobanks, exchanges, and financial infrastructure software",
+    ),
+    (
         "quantum",
         "Quantum / frontier compute",
         'Very early "next" computers—not yet a big business for most names',

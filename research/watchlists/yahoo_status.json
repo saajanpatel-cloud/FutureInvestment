@@ -1,0 +1,9 @@
+{
+  "source": "yahoo_finance",
+  "client": "yfinance",
+  "version": "1.2.0",
+  "probe_ticker": "SPY",
+  "last_price": 739.1699829101562,
+  "currency": "USD",
+  "checked_at_utc": "2026-05-17T13:08:53Z"
+}

@@ -4,8 +4,9 @@
 # Usage: ./scripts/refresh_watchlists.sh
 # Requires: .venv with scripts/requirements.txt (yfinance).
 #
-# Compute order: snapshot → rubric sync (--rewrite-notes) → universe valuation → shortlist →
-#   Finnhub context → fi_enrich → rubric HTML rows → embeds (Value/Research/Decide/Monitor) → verify → prior snapshot.
+# Compute order: snapshot → earnings pull → rubric score (6 dims) → rubric notes → universe valuation →
+#   adversarial review (Workflow E) → shortlist → Finnhub context → fi_enrich → embeds → verify → prior snapshot.
+# Set FI_SKIP_ADVERSARIAL=1 to skip LLM/heuristic adversarial pass before shortlist.
 # Definition of done: same core tickers + fresh rubric/models/narratives in Research, Value, Decide, Monitor.
 # Optional LLM polish: scripts/fi_narrative_polish.py (manual).
 # Set FI_SKIP_UNIVERSE_VALUATION=1 to skip the heavy universe pass (legacy Borda shortlist).
@@ -14,17 +15,23 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 PY="${PY:-python3}"
 if [ -x .venv/bin/python ]; then PY=.venv/bin/python; fi
+"$PY" scripts/fi_yahoo_health.py || echo "WARN: Yahoo Finance (yfinance) unreachable — snapshot/earnings may fail" >&2
 MAN="research/watchlists/universe_manifest.csv"
 CSV="research/watchlists/rubric_universe.csv"
+
 MD="research/watchlists/rubric_universe.md"
 CORE_TXT="research/watchlists/report_core_tickers.txt"
 SCEN_U="research/watchlists/scenario_assumptions_universe.csv"
 
 "$PY" scripts/fi_snapshot.py --manifest "$MAN" --csv "$CSV" --md "$MD"
+# Default table order: company name A–Z, then theme label A–Z (uses rubric_universe short_name).
+"$PY" scripts/fi_sort_manifest_order.py --manifest "$MAN" --names-csv "$CSV"
 "$PY" scripts/fi_universe_html_rows.py --manifest "$MAN" --csv "$CSV" \
   > research/watchlists/_universe_table_rows.inc.html
 "$PY" scripts/fi_snapshot_html_rows.py --manifest "$MAN" --csv "$CSV" \
   > research/watchlists/_snapshot_table_rows.inc.html
+"$PY" scripts/fi_earnings_pull.py || echo "WARN: fi_earnings_pull had failures — see stderr" >&2
+"$PY" scripts/fi_score_rubric_from_financials.py
 "$PY" scripts/fi_sync_rubric_from_earnings.py --rewrite-notes
 
 "$PY" scripts/fi_sync_scenario_assumptions_from_core.py --write-universe --universe-out "$SCEN_U"
@@ -48,6 +55,9 @@ else
   "$PY" scripts/fi_composite_universe_rank.py || true
 fi
 
+if [ "${FI_SKIP_ADVERSARIAL:-}" != "1" ]; then
+  "$PY" scripts/fi_adversarial_review.py || echo "WARN: fi_adversarial_review had failures — see stderr" >&2
+fi
 "$PY" scripts/fi_select_shortlist_growth.py
 "$PY" scripts/fi_sync_scenario_assumptions_from_core.py
 
@@ -66,19 +76,24 @@ fi
 
 "$PY" scripts/fi_finnhub_context.py --tickers-file "$CORE_TXT" \
   --csv research/watchlists/finnhub_context.csv \
-  --html research/watchlists/finnhub_context_fragment.html || true
+  --html research/watchlists/finnhub_context_fragment.html \
+  --news-json research/watchlists/finnhub_news.json || true
+"$PY" scripts/fi_company_profile.py || true
 "$PY" scripts/fi_enrich_core_shortlist.py
 "$PY" scripts/fi_rubric_html_rows.py --manifest "$MAN" \
   --scores research/watchlists/rubric_scores.csv \
   > research/watchlists/_rubric_table_rows.inc.html
 "$PY" scripts/fi_export_watchlist_example.py
 "$PY" scripts/fi_embed_single_screen.py
-"$PY" scripts/fi_embed_chart_ticker_core.py
+"$PY" scripts/fi_embed_discover_weights.py || true
+"$PY" scripts/fi_embed_industry_themes.py || true
 "$PY" scripts/fi_tag_rubric_report_core.py
 "$PY" scripts/fi_embed_shortlist_proposed.py
 "$PY" scripts/fi_embed_qualitative_core.py
 "$PY" scripts/fi_embed_value_tables.py
 "$PY" scripts/fi_embed_value_js.py
+"$PY" scripts/fi_embed_deep_dive_runtime.py
+"$PY" scripts/fi_embed_deep_dive_layout.py
 "$PY" scripts/fi_embed_deep_dive_select.py
 "$PY" scripts/fi_embed_decide_matrix.py
 "$PY" scripts/fi_embed_shortlist_changelog.py

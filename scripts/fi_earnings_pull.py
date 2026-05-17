@@ -25,7 +25,7 @@ WATCHLIST_DIR = SCRIPT_DIR.parent / "research" / "watchlists"
 MANIFEST_PATH = WATCHLIST_DIR / "universe_manifest.csv"
 OUTPUT_PATH = WATCHLIST_DIR / "earnings_data.csv"
 
-# All tickers: existing universe + new additions
+# Legacy curated adds (used only by fi_setup_universe_tiers.py expansion, not refresh pull)
 NEW_TICKERS = {
     "ai": [
         ("TSM", "TSMC", "Foundry monopoly on advanced nodes"),
@@ -247,35 +247,35 @@ def pull_ticker_data(ticker_symbol):
         return {"ticker": ticker_symbol, "error": str(e)}
 
 
+def load_manifest_tickers() -> list[str]:
+    if not MANIFEST_PATH.exists():
+        print(f"Missing manifest: {MANIFEST_PATH}", file=sys.stderr)
+        sys.exit(2)
+    tickers: list[str] = []
+    with MANIFEST_PATH.open(encoding="utf-8", newline="") as f:
+        for row in csv.DictReader(f):
+            t = (row.get("ticker") or "").strip().upper()
+            if t:
+                tickers.append(t)
+    return tickers
+
+
 def main():
-    # Load existing tickers from manifest
-    existing_tickers = set()
-    if MANIFEST_PATH.exists():
-        with open(MANIFEST_PATH) as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                existing_tickers.add(row["ticker"])
+    all_tickers = load_manifest_tickers()
+    if not all_tickers:
+        print("No tickers in universe_manifest.csv", file=sys.stderr)
+        sys.exit(2)
 
-    # Combine existing + new
-    all_tickers = list(existing_tickers)
-    new_ticker_set = set()
-    for theme_tickers in NEW_TICKERS.values():
-        for t, _, _ in theme_tickers:
-            new_ticker_set.add(t)
-            if t not in existing_tickers:
-                all_tickers.append(t)
-
-    all_tickers.sort()
-    print(f"Pulling data for {len(all_tickers)} tickers...")
-    print(f"  Existing: {len(existing_tickers)}, New: {len(new_ticker_set - existing_tickers)}")
+    print(f"Pulling earnings for {len(all_tickers)} manifest tickers...")
 
     results = []
+    failed: list[str] = []
     for i, ticker in enumerate(all_tickers):
-        tag = " [NEW]" if ticker in new_ticker_set and ticker not in existing_tickers else ""
-        print(f"  [{i+1}/{len(all_tickers)}] {ticker}{tag}...", end=" ", flush=True)
+        print(f"  [{i+1}/{len(all_tickers)}] {ticker}...", end=" ", flush=True)
         data = pull_ticker_data(ticker)
         results.append(data)
         if "error" in data:
+            failed.append(ticker)
             print(f"FAILED: {data['error']}")
         else:
             rev_str = fmt_num(data.get("latest_q_rev"))
@@ -285,7 +285,7 @@ def main():
     # Write CSV
     if not results:
         print("No data pulled.")
-        return
+        sys.exit(1)
 
     fieldnames = [
         "ticker", "price", "mkt_cap", "fwd_pe", "trail_pe",
@@ -304,19 +304,27 @@ def main():
             writer.writerow(r)
 
     print(f"\nWrote {len(results)} rows to {OUTPUT_PATH}")
+    if failed:
+        print(f"WARN: {len(failed)} ticker(s) failed: {', '.join(failed[:20])}", file=sys.stderr)
+        if len(failed) > 20:
+            print(f"  ... and {len(failed) - 20} more", file=sys.stderr)
 
-    # Print summary of top growers
     growers = [r for r in results if r.get("rev_yoy_pct") is not None]
     growers.sort(key=lambda x: x["rev_yoy_pct"], reverse=True)
     print("\n=== TOP 15 BY REVENUE GROWTH (YoY) ===")
     for r in growers[:15]:
-        new_tag = " *NEW*" if r["ticker"] in new_ticker_set else ""
-        print(f"  {r['ticker']:6s} {fmt_pct(r['rev_yoy_pct']):>8s}  Rev={fmt_num(r.get('latest_q_rev'))}  GM={fmt_pct(r.get('gross_margin_pct'))}  P/E(fwd)={r.get('fwd_pe', 'N/A')}{new_tag}")
+        print(
+            f"  {r['ticker']:6s} {fmt_pct(r['rev_yoy_pct']):>8s}  "
+            f"Rev={fmt_num(r.get('latest_q_rev'))}  GM={fmt_pct(r.get('gross_margin_pct'))}  "
+            f"P/E(fwd)={r.get('fwd_pe', 'N/A')}"
+        )
 
     print("\n=== BOTTOM 5 (DECLINING REVENUE) ===")
     for r in growers[-5:]:
         print(f"  {r['ticker']:6s} {fmt_pct(r['rev_yoy_pct']):>8s}  Rev={fmt_num(r.get('latest_q_rev'))}")
 
+    sys.exit(1 if failed else 0)
+
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

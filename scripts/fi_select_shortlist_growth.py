@@ -176,6 +176,7 @@ def ensure_theme_seat(
     min_rubric_total: int,
     ck: dict[str, dict[str, str]] | None = None,
     rk: dict[str, dict[str, str]] | None = None,
+    packs: dict[str, dict] | None = None,
 ) -> list[str]:
     """
     If `theme_slug` has cap ≥1 and no picked name uses that sleeve, swap in the first
@@ -189,23 +190,58 @@ def ensure_theme_seat(
     """
     out = list(picked)
     protect = set(ANCHOR_TICKERS)
+    use_pure = theme_slug == "quantum"
+    adv = packs or {}
     if caps.get(theme_slug, 0) < 1:
         return out
-    if any(theme_by.get(t) == theme_slug for t in out):
+
+    def seat_blocked(t: str) -> bool:
+        from fi_adversarial import is_seat_blocked
+
+        return is_seat_blocked(adv, t)
+
+    def seated_bad(t: str) -> bool:
+        if seat_blocked(t):
+            return True
+        if use_pure:
+            p = adv.get(t, {}) or {}
+            if p.get("shortlist_gate") == "reject_seat" or p.get("linkage_grade") == "weak":
+                return True
+            if t not in QUANTUM_COMPUTE_PURE and not p.get("quantum_pure"):
+                return True
+        return False
+
+    seated = [t for t in out if theme_by.get(t) == theme_slug]
+    if seated and not any(seated_bad(t) for t in seated):
         return out
+    for t in seated:
+        if seated_bad(t) and t in out:
+            out.remove(t)
+
+    def seat_rank_key(t: str) -> tuple:
+        p = adv.get(t.upper()) or {}
+        qp = 1 if p.get("quantum_pure") or t in QUANTUM_COMPUTE_PURE else 0
+        seat = int(p.get("seat_score") or 0)
+        try:
+            pos = consensus_order.index(t)
+        except ValueError:
+            pos = 9999
+        return (qp, seat, -pos)
 
     def qualifies(t: str) -> bool:
         if theme_by.get(t) != theme_slug:
             return False
+        if seat_blocked(t):
+            return False
         tot = rubric_total(rub_by.get(t, {}))
         return tot is not None and tot >= min_rubric_total
 
-    use_pure = theme_slug == "quantum"
     chosen: str | None = None
 
     in_pool_q = [t for t in consensus_order if t in pool_set and qualifies(t)]
+    in_pool_q.sort(key=seat_rank_key, reverse=True)
     if use_pure:
-        pure_ordered = [t for t in in_pool_q if t in QUANTUM_COMPUTE_PURE]
+        pure_ordered = [t for t in in_pool_q if t in QUANTUM_COMPUTE_PURE or (adv.get(t, {}).get("quantum_pure"))]
         chosen = pure_ordered[0] if pure_ordered else (in_pool_q[0] if in_pool_q else None)
     else:
         chosen = in_pool_q[0] if in_pool_q else None
@@ -216,18 +252,14 @@ def ensure_theme_seat(
             if not qualifies(t):
                 continue
             outside.append(t)
-        outside.sort(
-            key=lambda t: (
-                float(ck[t].get("composite_score") or 0.0),
-                rubric_total(rub_by[t]) or 0,
-                listing_tie_bonus(t),
-                t,
-            ),
-            reverse=True,
-        )
+        outside.sort(key=seat_rank_key, reverse=True)
         if outside:
             if use_pure:
-                pure_out = [t for t in outside if t in QUANTUM_COMPUTE_PURE]
+                pure_out = [
+                    t
+                    for t in outside
+                    if t in QUANTUM_COMPUTE_PURE or (adv.get(t, {}).get("quantum_pure"))
+                ]
                 chosen = pure_out[0] if pure_out else outside[0]
             else:
                 chosen = outside[0]
@@ -557,7 +589,11 @@ def extend_shortlist_by_tier(
 
 
 def main() -> None:
+    from fi_adversarial import filter_pool_rejects, load_packs
     from fi_theme_targets import caps_from_weights, load_theme_weights
+
+    adversarial_packs = load_packs()
+    adversarial_disqualified: list[dict[str, str]] = []
 
     theme_target_weights = load_theme_weights()
     caps_budget = caps_from_weights(theme_target_weights, SHORTLIST_MAX)
@@ -610,6 +646,16 @@ def main() -> None:
 
     if use_composite:
         pool, pool_set = composite_pool(rub_by, theme_by, ck, POOL_TOP)
+        pool, adv_dropped = filter_pool_rejects(pool, adversarial_packs)
+        pool_set = set(pool)
+        for t in adv_dropped:
+            p = adversarial_packs.get(t, {})
+            adversarial_disqualified.append(
+                {
+                    "ticker": t,
+                    "reason": f"adversarial shortlist_gate={p.get('shortlist_gate', 'reject')}",
+                }
+            )
         pool_by_total = pool[:POOL_BY_TOTAL]
         pool_rescue_tickers: list[str] = []
         model_orders = rank_pool(pool, rub_by, earn, theme_by)
@@ -664,10 +710,21 @@ def main() -> None:
             min_rubric_total=MIN_THEME_SEAT_RUBRIC_TOTAL,
             ck=ck,
             rk=rk,
+            packs=adversarial_packs,
         )
         picked = ensure_anchor_tickers(picked, pool_set, rub_by, theme_by, scores, caps_budget)
     elif use_valuation:
         pool, pool_set = valuation_pool(rub_by, theme_by, rk, POOL_TOP)
+        pool, adv_dropped = filter_pool_rejects(pool, adversarial_packs)
+        pool_set = set(pool)
+        for t in adv_dropped:
+            p = adversarial_packs.get(t, {})
+            adversarial_disqualified.append(
+                {
+                    "ticker": t,
+                    "reason": f"adversarial shortlist_gate={p.get('shortlist_gate', 'reject')}",
+                }
+            )
         pool_by_total = pool[:POOL_BY_TOTAL]
         pool_rescue_tickers: list[str] = []
         model_orders = rank_pool(pool, rub_by, earn, theme_by)
@@ -720,6 +777,7 @@ def main() -> None:
             min_rubric_total=MIN_THEME_SEAT_RUBRIC_TOTAL,
             ck=ck,
             rk=rk,
+            packs=adversarial_packs,
         )
         picked = ensure_anchor_tickers(picked, pool_set, rub_by, theme_by, scores, caps_budget)
     else:
@@ -738,7 +796,16 @@ def main() -> None:
         rescue_tickers = [t for t, _y in rescue[:POOL_YOY_RESCUE]]
 
         pool = list(pool_by_total) + list(rescue_tickers)
+        pool, adv_dropped = filter_pool_rejects(pool, adversarial_packs)
         pool_set = set(pool)
+        for t in adv_dropped:
+            p = adversarial_packs.get(t, {})
+            adversarial_disqualified.append(
+                {
+                    "ticker": t,
+                    "reason": f"adversarial shortlist_gate={p.get('shortlist_gate', 'reject')}",
+                }
+            )
         idx = POOL_BY_TOTAL
         while len(pool) < POOL_TOP and idx < len(universe):
             t = universe[idx][0]
@@ -785,8 +852,22 @@ def main() -> None:
             min_rubric_total=MIN_THEME_SEAT_RUBRIC_TOTAL,
             ck=ck,
             rk=rk,
+            packs=adversarial_packs,
         )
         picked = ensure_anchor_tickers(picked, pool_set, rub_by, theme_by, scores, caps_budget)
+
+    quantum_seat_rationale = ""
+    for t in picked:
+        if theme_by.get(t) == THEME_SEAT_SLUG:
+            p = adversarial_packs.get(t, {})
+            quantum_seat_rationale = (p.get("seat_rationale") or f"{t} seated for {THEME_SEAT_SLUG} sleeve").strip()
+            break
+
+    adversarial_pending = [
+        t
+        for t in pool
+        if t not in adversarial_packs or not adversarial_packs[t].get("workflow_e_complete")
+    ]
 
     if len(picked) < SHORTLIST_MIN:
         print(
@@ -908,6 +989,12 @@ def main() -> None:
     memo = {
         "method": method_str,
         "shortlist_delta": shortlist_delta,
+        "adversarial_pass_n": sum(
+            1 for t in picked if adversarial_packs.get(t, {}).get("workflow_e_complete")
+        ),
+        "adversarial_pending": adversarial_pending[:20],
+        "adversarial_disqualified": adversarial_disqualified,
+        "quantum_seat_rationale": quantum_seat_rationale,
         "pool_breakdown": pool_breakdown,
         "why_not_top_20_by_rubric_alone": (
             "A single rubric total hides trade-offs between growth, quality, valuation scenario, risk, and distribution. "

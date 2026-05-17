@@ -1,9 +1,10 @@
 {
   "_comment": "Policy sleeve weights (sum = 1.0). Keys match universe_manifest theme_slug.",
-  "ai": 0.3,
-  "energy": 0.28,
-  "health": 0.15,
-  "auto": 0.12,
-  "cyber": 0.1,
+  "ai": 0.27,
+  "energy": 0.26,
+  "health": 0.14,
+  "auto": 0.11,
+  "cyber": 0.09,
+  "fintech": 0.08,
   "quantum": 0.05
 }

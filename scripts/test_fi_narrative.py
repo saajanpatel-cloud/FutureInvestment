@@ -6,12 +6,15 @@ import unittest
 
 from fi_narrative import (
     BULLET,
+    compute_research_status,
+    format_deep_dive_sections,
     format_kill,
     format_market_context,
     format_rubric_note,
     format_verdict_summary,
     format_why,
     join_bullets,
+    research_status_label,
 )
 
 
@@ -60,6 +63,39 @@ class TestFiNarrative(unittest.TestCase):
         it = {"model_ranks_in_pool": {"growth": 4}}
         out = format_verdict_summary(rub, sc, mc, rk, it)
         self.assertIn("adversarial", out.lower())
+
+    def test_research_status_quantum(self):
+        rub = {"growth": "2", "tail_risks": "4", "margins": "2", "balance_sheet": "3", "durability": "2", "valuation": "2"}
+        self.assertEqual(compute_research_status(rub, "quantum", ""), "theme_only")
+        self.assertIn("theme only", research_status_label("theme_only").lower())
+
+    def test_research_status_adversarial_complete(self):
+        rub = {"growth": "5", "margins": "5", "balance_sheet": "4", "durability": "5", "tail_risks": "2", "valuation": "2"}
+        pack = {"workflow_e_complete": True, "shortlist_gate": "pass"}
+        self.assertEqual(
+            compute_research_status(rub, "ai", "[Auto stub] x", pack=pack),
+            "adversarial_complete",
+        )
+        self.assertIn("on file", research_status_label("adversarial_complete").lower())
+
+    def test_deep_dive_sections_keys(self):
+        rub = {"growth": "5", "margins": "4", "balance_sheet": "4", "durability": "4", "tail_risks": "2", "valuation": "3"}
+        sections = format_deep_dive_sections(
+            item={"qual_bull": "A", "qual_bear": "B", "qual_watch": "W", "key_risk_kill": "K", "market_context": "M"},
+            rub=rub,
+            man={"theme_slug": "ai", "theme_label": "AI", "linkage_one_liner": "GPU exposure"},
+            profile={"business_summary": "Chip designer", "holders_top": "Vanguard"},
+            earn={"rev_yoy_pct": "50"},
+            scen={"price": "100", "weighted_upside": "30"},
+            mc={"current_price": "100", "median_price": "130", "p10": "80", "p90": "160"},
+            risk=None,
+            alloc_pct="4.5%",
+            prior_as_of="2026-01-01",
+            baseline=False,
+        )
+        self.assertIn("executive_summary", sections)
+        self.assertIn("2026-01-01", sections["signals_intro"])
+        self.assertIn("GPU", sections["strategic_plays"])
 
 
 if __name__ == "__main__":

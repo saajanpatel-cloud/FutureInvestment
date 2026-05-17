@@ -15,8 +15,9 @@ import re
 import sys
 from pathlib import Path
 
+from fi_embed_chart_ticker_core import load_exchanges, tv_symbol
 from fi_embed_core import HTML, W, load_core_tickers, load_csv_index
-from fi_narrative import format_verdict_summary, rubric_total, ri
+from fi_narrative import format_verdict_summary, research_status_label, rubric_total, ri
 
 ROOT = Path(__file__).resolve().parents[1]
 CORE_JSON = ROOT / "watchlist-ui" / "core-shortlist.json"
@@ -26,6 +27,39 @@ RISK = W / "risk_metrics.csv"
 MC = W / "monte_carlo_results.csv"
 DCF = W / "dcf_sensitivity.csv"
 RUB = W / "rubric_scores.csv"
+PROFILE_CSV = W / "company_profile.csv"
+FH_CSV = W / "finnhub_context.csv"
+FH_NEWS_JSON = W / "finnhub_news.json"
+ERN_CSV = W / "earnings_data.csv"
+RU = W / "rubric_universe.csv"
+
+NARRATIVE_KEYS = (
+    "executive_summary",
+    "what_company",
+    "key_products",
+    "strategic_plays",
+    "theme_linkage",
+    "demand_outlook",
+    "holders",
+    "market_context",
+    "bull_case",
+    "bear_case",
+    "watch",
+    "kill",
+    "model_zones",
+    "links",
+    "signals_intro",
+    "at_a_glance",
+    "explain_price_chart",
+    "explain_scenario",
+    "explain_risk",
+    "explain_dcf",
+    "explain_monte_carlo",
+    "explain_rubric",
+    "explain_market_context",
+    "website",
+    "sec_edgar_url",
+)
 
 MARK_S = "/* FI_VALUE_JS_START */"
 MARK_E = "/* FI_VALUE_JS_END */"
@@ -50,10 +84,14 @@ def load_manifest() -> dict[str, dict[str, str]]:
     return out
 
 
-def load_items() -> dict[str, dict]:
+def load_core_doc() -> dict:
     if not CORE_JSON.is_file():
         return {}
-    doc = json.loads(CORE_JSON.read_text(encoding="utf-8"))
+    return json.loads(CORE_JSON.read_text(encoding="utf-8"))
+
+
+def load_items() -> dict[str, dict]:
+    doc = load_core_doc()
     return {
         (it.get("ticker") or "").strip().upper(): it
         for it in (doc.get("items") or [])
@@ -61,8 +99,27 @@ def load_items() -> dict[str, dict]:
     }
 
 
+def sort_tickers(tickers: list[str], man: dict[str, dict[str, str]]) -> list[str]:
+    def key(t: str) -> tuple[str, str]:
+        m = man.get(t, {})
+        theme = (m.get("theme_label") or m.get("theme_slug") or "").lower()
+        return (theme, t)
+
+    return sorted(tickers, key=key)
+
+
 def js_str(s: str) -> str:
     return json.dumps(s, ensure_ascii=False)
+
+
+def sanitize_narrative_text(s: str) -> str:
+    if not s:
+        return "—"
+    t = str(s).replace("\r\n", "\n").replace("\r", "\n")
+    t = t.replace("\u2028", " ").replace("\u2029", " ")
+    if any(ord(c) < 32 for c in t):
+        t = "".join(c if ord(c) >= 32 or c == "\n" else " " for c in t)
+    return t.replace("\n", " ").strip() or "—"
 
 
 def build_dcf(ticker: str, dcf_rows: list[dict[str, str]]) -> str | None:
@@ -113,13 +170,142 @@ def scenario_entry(t: str, r: dict[str, str]) -> str:
     )
 
 
+def mc_median_upside(mc_row: dict[str, str] | None) -> str:
+    if not mc_row:
+        return "—"
+    try:
+        cur = float(mc_row.get("current_price") or 0)
+        med = float(mc_row.get("median_price") or 0)
+        if cur <= 0:
+            return "—"
+        return f"{(med / cur - 1) * 100:+.0f}%"
+    except (TypeError, ValueError):
+        return "—"
+
+
+def load_finnhub_news() -> dict[str, list[dict]]:
+    if not FH_NEWS_JSON.is_file():
+        return {}
+    try:
+        raw = json.loads(FH_NEWS_JSON.read_text(encoding="utf-8"))
+        return {str(k).upper(): v for k, v in raw.items() if isinstance(v, list)}
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def build_finnhub_by_ticker(core: list[str], fh: dict[str, dict[str, str]], news: dict[str, list]) -> str:
+    lines = ["  var FINNHUB_BY_TICKER = {"]
+    for t in core:
+        row = fh.get(t, {})
+        arts = news.get(t, [])
+        arts_js = json.dumps(arts, ensure_ascii=False)
+        lines.append(
+            f"    {js_str(t)}: {{"
+            f"analyst_skew:{js_str(row.get('analyst_skew') or '—')},"
+            f"insider_mspr:{js_str(row.get('insider_mspr') or '—')},"
+            f"news_7d:{js_str(str(row.get('news_7d') or '—'))},"
+            f"next_earnings:{js_str(row.get('next_earnings') or '—')},"
+            f"context_line:{js_str(row.get('context_line') or '')},"
+            f"articles:{arts_js}"
+            f"}},"
+        )
+    lines.append("  };")
+    return "\n".join(lines)
+
+
+def build_meta_all(man: dict[str, dict[str, str]], order: list[str] | None = None) -> str:
+    lines = ["  var META_ALL = {"]
+    keys = order if order else sorted(man.keys())
+    for t in keys:
+        if t not in man:
+            continue
+        m = man[t]
+        name = (
+            m.get("name")
+            or m.get("company")
+            or (m.get("linkage_one_liner") or "").split("—")[0].strip()
+            or t
+        ).strip()[:48]
+        theme_lbl = (m.get("theme_label") or m.get("theme_slug") or "—").strip()
+        if "—" in theme_lbl:
+            theme_lbl = theme_lbl.split("—")[0].strip()
+        link = (m.get("linkage_one_liner") or m.get("link") or "").strip()[:200]
+        lines.append(
+            f"    {js_str(t)}: {{ name: {js_str(name)}, theme: {js_str(theme_lbl)}, "
+            f"link: {js_str(link)} }},"
+        )
+    lines.append("  };")
+    return "\n".join(lines)
+
+
+def build_core_tickers_set(tickers: list[str]) -> str:
+    inner = ",".join(js_str(t) for t in tickers)
+    return f"  var CORE_TICKERS = new Set([{inner}]);\n"
+
+
+def build_peers_by_theme(
+    tickers: list[str],
+    man: dict[str, dict[str, str]],
+    rub: dict[str, dict[str, str]],
+    scen: dict[str, dict[str, str]],
+    mc: dict[str, dict[str, str]],
+) -> str:
+    from collections import defaultdict
+
+    by_theme: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for t in tickers:
+        slug = (man.get(t, {}).get("theme_slug") or "").strip()
+        if not slug:
+            continue
+        rb = rub.get(t, {})
+        tot = rubric_total(rb)
+        wt = scen.get(t, {})
+        wt_up = ""
+        if wt:
+            try:
+                wt_up = f"{float(wt.get('weighted_upside') or 0):+.0f}%"
+            except (TypeError, ValueError):
+                wt_up = str(wt.get("weighted_upside") or "—")
+        by_theme[slug].append(
+            {
+                "ticker": t,
+                "rubric": f"{tot}/24" if tot is not None else "—",
+                "wt": wt_up or "—",
+                "mc": mc_median_upside(mc.get(t)),
+            }
+        )
+    parts: list[str] = []
+    for slug, rows in sorted(by_theme.items()):
+        row_js = ",".join(
+            "{ticker:"
+            + js_str(r["ticker"])
+            + ",rubric:"
+            + js_str(r["rubric"])
+            + ",wt:"
+            + js_str(r["wt"])
+            + ",mc:"
+            + js_str(r["mc"])
+            + "}"
+            for r in rows
+        )
+        parts.append(f"    {js_str(slug)}: [{row_js}]")
+    return "  var PEERS_BY_THEME = {\n" + ",\n".join(parts) + "\n  };\n"
+
+
 def build_data_vars(tickers: list[str]) -> str:
     man = load_manifest()
     items = load_items()
+    core_doc = load_core_doc()
+    as_of = (core_doc.get("as_of") or "").strip()
     scen = load_csv_index(SCEN)
     risk = load_csv_index(RISK)
     mc = load_csv_index(MC)
     rub = load_csv_index(RUB)
+    profile = load_csv_index(PROFILE_CSV)
+    fh = load_csv_index(FH_CSV)
+    earn = load_csv_index(ERN_CSV)
+    ex_by = load_exchanges()
+    tickers = sort_tickers(tickers, man)
 
     dcf_by: dict[str, list[dict[str, str]]] = {}
     if DCF.is_file():
@@ -137,6 +323,10 @@ def build_data_vars(tickers: list[str]) -> str:
     rub_lines = ["  var RUBRIC = {"]
     sowhat_lines = ["  var SOWHAT = {"]
     adv_lines = ["  var ADV = {"]
+    narrative_lines = ["  var NARRATIVE = {"]
+    fresh_lines = ["  var FRESHNESS = {"]
+    signals_lines = ["  var REFRESH_SIGNALS = {"]
+    tv_lines = ["  var TV_MAP = {"]
 
     rub_parts: list[str] = []
     for t in tickers:
@@ -150,7 +340,17 @@ def build_data_vars(tickers: list[str]) -> str:
         theme_lbl = (m.get("theme_label") or m.get("theme_slug") or "—").strip()
         if "—" in theme_lbl:
             theme_lbl = theme_lbl.split("—")[0].strip()
-        meta_lines.append(f"    {js_str(t)}: {{ name: {js_str(name)}, theme: {js_str(theme_lbl)} }},")
+        slug = (m.get("theme_slug") or "").strip()
+        it = items.get(t, {})
+        rs = (it.get("research_status") or "stub").strip()
+        rs_lbl = research_status_label(rs)
+        alloc = (it.get("alloc_pct") or "").strip()
+        meta_lines.append(
+            f"    {js_str(t)}: {{ name: {js_str(name)}, theme: {js_str(theme_lbl)}, "
+            f"theme_slug: {js_str(slug)}, alloc: {js_str(alloc)}, "
+            f"research_status: {js_str(rs)}, research_label: {js_str(rs_lbl)} }},"
+        )
+        tv_lines.append(f"    {js_str(t)}: {js_str(tv_symbol(t, ex_by))},")
 
         if t in scen:
             scen_lines.append(scenario_entry(t, scen[t]))
@@ -181,7 +381,6 @@ def build_data_vars(tickers: list[str]) -> str:
                 f"{rubric_total(rb) or 0}]"
             )
 
-        it = items.get(t, {})
         verdict = format_verdict_summary(rb, scen.get(t), mc.get(t), risk.get(t), it)
         if len(verdict) > 320:
             verdict = verdict[:317] + "…"
@@ -210,6 +409,30 @@ def build_data_vars(tickers: list[str]) -> str:
             f"    {js_str(t)}: {{bull:{js_str(bull)},bear:{js_str(bear)},kill:{js_str(kill)}}},"
         )
 
+        dd = it.get("deep_dive") or {}
+        nar_obj = {k: sanitize_narrative_text(dd.get(k) or "—") for k in NARRATIVE_KEYS}
+        nar_json = json.dumps(nar_obj, ensure_ascii=False)
+        narrative_lines.append(f"    {js_str(t)}: JSON.parse({js_str(nar_json)}),")
+
+        fh_row = fh.get(t, {})
+        prof = profile.get(t, {})
+        fh_line = (fh_row.get("context_line") or "").strip()
+        fh_ok = bool(fh_line and "not configured" not in fh_line.lower())
+        prof_date = (prof.get("as_of") or prof.get("pulled_at") or "").strip()
+        if "T" in prof_date:
+            prof_date = prof_date.split("T")[0]
+        earn_date = (earn.get(t, {}).get("last_earnings_date") or earn.get(t, {}).get("as_of") or "").strip()
+        fresh_lines.append(
+            f"    {js_str(t)}: {{ models_as_of: {js_str(as_of)}, finnhub: {js_str(fh_line or 'missing')}, "
+            f"finnhub_ok: {'true' if fh_ok else 'false'}, earnings: {js_str(earn_date or '—')}, "
+            f"profile: {js_str(prof_date or '—')}, profile_ok: {'true' if prof_date else 'false'} }},"
+        )
+
+        sig = it.get("refresh_signals") or {"bullish": [], "bearish": []}
+        bull = json.dumps(sig.get("bullish") or [], ensure_ascii=False)
+        bear = json.dumps(sig.get("bearish") or [], ensure_ascii=False)
+        signals_lines.append(f"    {js_str(t)}: {{ bullish: {bull}, bearish: {bear} }},")
+
     meta_lines.append("  };")
     scen_lines.append("  };")
     risk_lines.append("  };")
@@ -218,6 +441,15 @@ def build_data_vars(tickers: list[str]) -> str:
     rub_lines.append("  " + ",".join(rub_parts) + "\n  };")
     sowhat_lines.append("  };")
     adv_lines.append("  };")
+    narrative_lines.append("  };")
+    fresh_lines.append("  };")
+    signals_lines.append("  };")
+    tv_lines.append("  };")
+    peers_block = build_peers_by_theme(tickers, man, rub, scen, mc)
+    fh_news = load_finnhub_news()
+    finnhub_block = build_finnhub_by_ticker(tickers, fh, fh_news)
+    meta_all_block = build_meta_all(man, tickers)
+    core_set_block = build_core_tickers_set(tickers)
 
     return (
         "  /* ── Ticker metadata (core shortlist — auto-generated) ── */\n"
@@ -235,9 +467,24 @@ def build_data_vars(tickers: list[str]) -> str:
         + "\n".join(rub_lines)
         + "\n\n  /* ── So-what synthesis ──────────────────────────────── */\n"
         + "\n".join(sowhat_lines)
-        + "\n\n  /* ── Adversarial summaries ──────────────────────────── */\n"
+        + "\n\n  /* ── Adversarial summaries (legacy / memos) ────────── */\n"
         + "\n".join(adv_lines)
-        + "\n"
+        + "\n\n  /* ── Executive narrative sections ─────────────────── */\n"
+        + "\n".join(narrative_lines)
+        + "\n\n  /* ── Data freshness ─────────────────────────────────── */\n"
+        + "\n".join(fresh_lines)
+        + "\n\n  /* ── Refresh signals ──────────────────────────────── */\n"
+        + "\n".join(signals_lines)
+        + "\n\n  /* ── TradingView symbols ──────────────────────────── */\n"
+        + "\n".join(tv_lines)
+        + "\n\n  /* ── Peers by theme ───────────────────────────────── */\n"
+        + peers_block
+        + "\n\n  /* ── Finnhub per ticker (core) ────────────────────── */\n"
+        + finnhub_block
+        + "\n\n  /* ── Universe metadata (picker) ───────────────────── */\n"
+        + meta_all_block
+        + "\n\n  /* ── Core shortlist set ───────────────────────────── */\n"
+        + core_set_block
     )
 
 
@@ -308,8 +555,8 @@ def main() -> None:
         "<code>report_core_tickers.txt</code> sleeve)"
     )
     intro_new = (
-        "The dropdown lists the live <strong>Decide shortlist</strong> "
-        "(<code>report_core_tickers.txt</code>) — refreshed on each full watchlist refresh"
+        "The dropdown lists the <strong>Decide shortlist</strong> "
+        "(<code>report_core_tickers.txt</code>) — theme order, refreshed each watchlist refresh"
     )
     doc = doc.replace(intro_old, intro_new)
 

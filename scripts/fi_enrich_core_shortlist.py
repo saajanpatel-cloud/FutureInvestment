@@ -14,7 +14,10 @@ import json
 import sys
 from pathlib import Path
 
+from fi_adversarial import apply_pack_to_item, load_packs, pack_complete
 from fi_narrative import (
+    compute_research_status,
+    format_deep_dive_sections,
     format_kill,
     format_premortem_stub,
     format_qual_bull_bear_watch,
@@ -22,6 +25,8 @@ from fi_narrative import (
     format_research_thesis,
     format_why,
 )
+from fi_refresh_signals import enrich_all as enrich_refresh_signals
+from fi_theme_targets import load_theme_weights
 
 ROOT = Path(__file__).resolve().parents[1]
 W = ROOT / "research" / "watchlists"
@@ -31,6 +36,12 @@ RUB = W / "rubric_scores.csv"
 MAN = W / "universe_manifest.csv"
 ERN = W / "earnings_data.csv"
 FH_CSV = W / "finnhub_context.csv"
+PROFILE_CSV = W / "company_profile.csv"
+SCEN = W / "scenario_results.csv"
+MC = W / "monte_carlo_results.csv"
+RISK = W / "risk_metrics.csv"
+DCF = W / "dcf_sensitivity.csv"
+OVERRIDES = W / "company_overrides.json"
 
 
 def load_csv_map(path: Path, key: str) -> dict[str, dict[str, str]]:
@@ -56,6 +67,37 @@ def format_market_context_row(fh: dict[str, str] | None) -> str:
     )
 
 
+def theme_weighted_alloc_strings(
+    tickers: list[str], man: dict[str, dict[str, str]], weights: dict[str, float]
+) -> dict[str, str]:
+    from collections import Counter
+
+    if not tickers:
+        return {}
+    cnt = Counter((man.get(t, {}).get("theme_slug") or "").strip() for t in tickers)
+    cnt = {k: v for k, v in cnt.items() if k}
+    present = set(cnt.keys())
+    wp = sum(weights.get(s, 0.0) for s in present)
+    out: dict[str, str] = {}
+    if wp <= 1e-9:
+        base = 100.0 / len(tickers)
+        for t in tickers:
+            out[t] = f"{base:.2f}%"
+        return out
+    raw: list[float] = []
+    for t in tickers:
+        s = (man.get(t, {}).get("theme_slug") or "").strip()
+        theme_pts = 100.0 * weights.get(s, 0.0) / wp
+        raw.append(theme_pts / cnt[s])
+    rounded = [round(x, 2) for x in raw]
+    drift = round(100.0 - sum(rounded), 2)
+    if tickers and abs(drift) >= 0.001:
+        rounded[-1] = round(rounded[-1] + drift, 2)
+    for t, r in zip(tickers, rounded):
+        out[t] = f"{r:.2f}%"
+    return out
+
+
 def main() -> None:
     if not CORE_JSON.is_file():
         print(f"Missing {CORE_JSON}", file=sys.stderr)
@@ -69,13 +111,33 @@ def main() -> None:
 
     rub_by = load_csv_map(RUB, "ticker")
     man_by = load_csv_map(MAN, "ticker")
-    earn: dict[str, dict[str, str]] = {}
-    if ERN.is_file():
-        with ERN.open(encoding="utf-8", newline="") as f:
-            for r in csv.DictReader(f):
-                earn[(r.get("ticker") or "").strip().upper()] = r
-
     fh_by = load_csv_map(FH_CSV, "ticker")
+    prof_by = load_csv_map(PROFILE_CSV, "ticker")
+    scen_by = load_csv_map(SCEN, "ticker")
+    mc_by = load_csv_map(MC, "ticker")
+    risk_by = load_csv_map(RISK, "ticker")
+    earn: dict[str, dict[str, str]] = load_csv_map(ERN, "ticker")
+    dcf_by: dict[str, list[dict[str, str]]] = {}
+    if DCF.is_file():
+        with DCF.open(encoding="utf-8", newline="") as f:
+            for row in csv.DictReader(f):
+                t = (row.get("ticker") or "").strip().upper()
+                if t:
+                    dcf_by.setdefault(t, []).append(row)
+
+    ov: dict = {}
+    if OVERRIDES.is_file():
+        ov = json.loads(OVERRIDES.read_text(encoding="utf-8"))
+
+    adversarial_packs = load_packs()
+
+    tickers = [(it.get("ticker") or "").strip().upper() for it in items if it.get("ticker")]
+    weights = load_theme_weights()
+    allocs = theme_weighted_alloc_strings(tickers, man_by, weights)
+
+    delta = (doc.get("selection_memo") or {}).get("shortlist_delta") or {}
+    prior_as_of = str(delta.get("prior_as_of") or doc.get("as_of") or "")
+    baseline = bool(delta.get("baseline_established"))
 
     for it in items:
         t = (it.get("ticker") or "").strip().upper()
@@ -96,14 +158,49 @@ def main() -> None:
         it["key_risk_kill"] = kill
         it["research_kill"] = kill
         it["research_thesis"] = format_research_thesis(link, e, rub)
-        it["research_premortem"] = format_premortem_stub(rub, slug)
+        prem = format_premortem_stub(rub, slug)
+        it["research_premortem"] = prem
         it["research_glance"] = format_research_glance(link, theme_lbl, kill)
         bull, bear, watch = format_qual_bull_bear_watch(rub, link, slug)
         it["qual_bull"] = bull
         it["qual_bear"] = bear
         it["qual_watch"] = watch
+        it["alloc_pct"] = allocs.get(t, "")
+
+        pack = adversarial_packs.get(t)
+        if pack_complete(pack):
+            apply_pack_to_item(it, pack)
+
+        ovr = (ov.get(t) or {}) if isinstance(ov, dict) else {}
+        prem_for_status = (it.get("research_premortem") or prem).strip()
+        it["research_status"] = compute_research_status(
+            rub,
+            slug,
+            prem_for_status,
+            ovr.get("research_status"),
+            pack=pack,
+        )
+        profile = prof_by.get(t, {})
+        if ovr.get("business_summary"):
+            profile = {**profile, "business_summary": ovr["business_summary"]}
+        it["deep_dive"] = format_deep_dive_sections(
+            item=it,
+            rub=rub,
+            man=man,
+            profile=profile,
+            earn=e,
+            scen=scen_by.get(t),
+            mc=mc_by.get(t),
+            risk=risk_by.get(t),
+            alloc_pct=allocs.get(t, ""),
+            prior_as_of=prior_as_of,
+            baseline=baseline,
+            dcf_rows=dcf_by.get(t),
+            fh_row=fh_by.get(t),
+        )
 
     CORE_JSON.write_text(json.dumps(doc, indent=2) + "\n", encoding="utf-8")
+    enrich_refresh_signals()
     print(f"Enriched {len(items)} items → {CORE_JSON}", file=sys.stderr)
 
 

@@ -220,9 +220,13 @@ def build_tbody(
         verdict = html.escape(verdict_text)
         vcls = verdict_cell_class(tot, sharpe_v, dd_frac)
 
+        t_link = (
+            f'<a href="#monitor" class="dd-jump" data-ticker="{html.escape(t)}">'
+            f"<strong>{html.escape(t)}</strong></a>"
+        )
         lines.append(
             "            <tr>\n"
-            f"              <td><strong>{html.escape(t)}</strong></td>\n"
+            f"              <td>{t_link}</td>\n"
             f"              <td>{th}</td>\n"
             f"              <td{rcls}>{html.escape(tot_s)}</td>\n"
             f"              <td>{html.escape(fmt_pct_signed(w_up))}</td>\n"

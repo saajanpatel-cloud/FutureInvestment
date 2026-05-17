@@ -1,317 +1,482 @@
-ticker,theme_slug,theme_label,linkage_one_liner
-NVDA,ai,AI infra & compute,AI accelerators and data-centre GPU exposure
-AMD,ai,AI infra & compute,CPUs GPUs and AI data-centre share story
-AVGO,ai,AI infra & compute,Networking and custom silicon for AI and cloud
-MU,ai,AI infra & compute,High-bandwidth memory and DRAM for AI servers
-ANET,ai,AI infra & compute,Data-centre switching for AI clusters
-VRT,ai,AI infra & compute,Power and cooling for AI racks and data centres
-LRCX,ai,AI infra & compute,Wafer fabrication equipment (WFE)
-AMAT,ai,AI infra & compute,Deposition etch and broad process equipment
-KLAC,ai,AI infra & compute,Process control and inspection in WFE
-SNPS,ai,AI infra & compute,EDA and design software for chip complexity
-TSM,ai,AI infra & compute,Foundry monopoly on advanced nodes 3nm and 2nm
-ARM,ai,AI infra & compute,Chip architecture licensing for AI inference across all devices
-MRVL,ai,AI infra & compute,Custom AI silicon and high-speed networking ASICs
-CDNS,ai,AI infra & compute,EDA software duopoly — essential for chip design complexity
-ASML,ai,AI infra & compute,EUV lithography monopoly — every advanced chip passes through ASML
-ALAB,ai,AI infra & compute,AI data centre connectivity — PCIe retimers and smart cable modules
-MPWR,ai,AI infra & compute,Power management ICs for AI server racks and GPUs
-COHR,ai,AI infra & compute,Optical interconnects and transceivers for AI data centre fabrics
-AMKR,ai,AI infra & compute,Advanced chip packaging and test — 2.5D and 3D stacking
-SMCI,ai,AI infra & compute,AI server assembly and rack integration — high growth but governance risks
-VST,energy,Energy transition & grids,Nuclear and gas fleet benefiting from AI-driven power demand
-NEE,energy,Energy transition & grids,Regulated utility and renewables developer
-XEL,energy,Energy transition & grids,Regulated electric utility and grid
-WEC,energy,Energy transition & grids,Regulated electric and gas utility
-SO,energy,Energy transition & grids,Regulated Southeast electric utility
-DUK,energy,Energy transition & grids,Large regulated electric footprint
-CEG,energy,Energy transition & grids,Independent power and nuclear-heavy angle
-ENPH,energy,Energy transition & grids,Residential solar inverters — cycle downturn hit hard
-FSLR,energy,Energy transition & grids,Utility-scale thin-film solar modules
-PWR,energy,Energy transition & grids,Grid construction and electrical infrastructure — licensed labor moat
-GEV,energy,Energy transition & grids,Gas turbines wind and grid equipment — $163B backlog from GE spinoff
-MTZ,energy,Energy transition & grids,Infrastructure and clean energy construction — fastest growing EPC
-CCJ,energy,Energy transition & grids,Uranium mining and nuclear fuel supply — long-term contracts
-FLNC,energy,Energy transition & grids,Grid-scale battery storage systems — growing but unprofitable
-ARRY,energy,Energy transition & grids,Utility-scale solar tracking — revenue declining; thesis under pressure
-PANW,cyber,Cybersecurity & digital trust,Enterprise firewall and cloud security platform consolidation
-CRWD,cyber,Cybersecurity & digital trust,Endpoint and cloud workload protection leader
-FTNT,cyber,Cybersecurity & digital trust,Network security appliances SD-WAN and SASE
-ZS,cyber,Cybersecurity & digital trust,Zero-trust SSE and SASE cloud security
-OKTA,cyber,Cybersecurity & digital trust,Identity and access management
-GEN,cyber,Cybersecurity & digital trust,Consumer and enterprise security brands rollup
-CHKP,cyber,Cybersecurity & digital trust,Mature firewall and subscription security — cash generative
-QLYS,cyber,Cybersecurity & digital trust,Vulnerability management SaaS
-TENB,cyber,Cybersecurity & digital trust,Exposure management and vulnerability scanning
-S,cyber,Cybersecurity & digital trust,Endpoint AI security — growth narrative unprofitable
-NET,cyber,Cybersecurity & digital trust,Edge security CDN and zero-trust networking — developer ecosystem
-ROK,auto,Industrial automation & robotics,Factory automation PLCs and industrial software
-ETN,auto,Industrial automation & robotics,Electrical gear and power management for data centres
-HON,auto,Industrial automation & robotics,Controls and diversified industrial automation
-CAT,auto,Industrial automation & robotics,Heavy machinery and services attach
-DE,auto,Industrial automation & robotics,Agricultural equipment and precision ag software
-EMR,auto,Industrial automation & robotics,Automation and climate-industrial mix
-PH,auto,Industrial automation & robotics,Hydraulics and motion control — aerospace exposure
-IR,auto,Industrial automation & robotics,Industrial compressors and tools
-ITW,auto,Industrial automation & robotics,Diversified industrial components
-TT,auto,Industrial automation & robotics,HVAC and commercial climate systems
-TER,auto,Industrial automation & robotics,Semiconductor test duopoly plus Universal Robots collaborative robotics
-CGNX,auto,Industrial automation & robotics,Machine vision for factory automation — deep learning edge
-LLY,health,Health Tech,GLP-1 dominance (Mounjaro/Zepbound) and oncology pipeline
-ISRG,health,Health Tech,Da Vinci and Ion robotic surgery systems — procedure growth
-VRTX,health,Health Tech,Cystic fibrosis franchise and pipeline diversification into pain
-BSX,health,Health Tech,Structural heart devices WATCHMAN and cardiology tech
-DXCM,health,Health Tech,Continuous glucose monitoring — G7 and Stelo platforms
-AMGN,health,Health Tech,Biosimilars Repatha and MariTide GLP-1 pipeline — high leverage
-REGN,health,Health Tech,Dupixent franchise Libtayo and obesity pipeline — net cash fortress
-SYK,health,Health Tech,Mako robotic surgery and orthopedic device install base
-TMO,health,Health Tech,Life sciences tools and instruments — essential but heavily leveraged
-VEEV,health,Health Tech,Cloud software for pharma and life sciences — quality SaaS compounder
-EW,health,Health Tech,Transcatheter heart valves TAVR leader — structural growth
-PODD,health,Health Tech,Omnipod insulin pump ecosystem — Mobi next generation
-MRNA,health,Health Tech,mRNA platform vaccines and therapeutics — binary pipeline risk
-IONQ,quantum,Quantum / frontier compute,Trapped-ion quantum hardware — largest cash runway in pure-play quantum
-RGTI,quantum,Quantum / frontier compute,Superconducting quantum systems — minimal revenue
-QBTS,quantum,Quantum / frontier compute,D-Wave annealing and quantum systems
-QUBT,quantum,Quantum / frontier compute,Quantum computing micro-cap hardware
-ARQQ,quantum,Quantum / frontier compute,Quantum encryption software small cap
-LAES,quantum,Quantum / frontier compute,Post-quantum and semiconductor security angle
-HOLO,quantum,Quantum / frontier compute,Micro-cap hardware; highly speculative
-IBM,quantum,Quantum / frontier compute,Services plus small quantum research franchise
-APLD,quantum,Quantum / frontier compute,HPC and data-centre hosting — AI-adjacent play
-FORM,quantum,Quantum / frontier compute,Semi probe cards; quantum test equipment niche
-ET,energy,Energy transition & grids,Midstream pipelines; check UK ISA tax treatment
-RR.L,energy,Energy transition & grids,Small modular nuclear reactors and aerospace engines (LSE)
-NGG,energy,Energy transition & grids,UK and US electricity and gas transmission grid operator (NYSE ADR)
-SSE.L,energy,Energy transition & grids,UK renewables developer and regulated network operator (LSE)
-ENR.DE,energy,Energy transition & grids,Grid transformers offshore wind and gas turbines (Xetra)
-SU.PA,auto,Industrial automation & robotics,Energy management and industrial automation — global leader (Euronext Paris)
-SIE.DE,auto,Industrial automation & robotics,Digital Industries factory automation and smart infrastructure (Xetra)
-ABB,auto,Industrial automation & robotics,Robotics drives and electrification technology (NYSE)
-NVO,health,Health Tech,GLP-1 agonist leader Ozempic and Wegovy — LLY rival (NYSE ADR)
-AZN,health,Health Tech,Oncology and immunology pipeline — UK-listed dual NYSE (NASDAQ ADR)
-GSK,health,Health Tech,Vaccines HIV franchise and specialty pharma (NYSE ADR)
-IFX.DE,ai,AI infra & compute,Power semiconductors for AI auto and industrial (Xetra)
-ASM.AS,ai,AI infra & compute,ALD and CVD deposition equipment for advanced chips (Amsterdam)
-BESI.AS,ai,AI infra & compute,Die bonding and advanced packaging equipment (Amsterdam)
-SOITEC.PA,ai,AI infra & compute,SOI wafers for RF power and photonics (Euronext Paris)
-AIXA.DE,ai,AI infra & compute,MOCVD deposition for compound semiconductors (Xetra)
-VAT.SW,ai,AI infra & compute,Vacuum valves for semiconductor fabs — monopoly niche (Swiss)
-NOD.OL,ai,AI infra & compute,Ultra-low power wireless chip design for IoT (Oslo)
-MEL.BR,ai,AI infra & compute,Automotive and industrial sensor ICs (Brussels)
-XFAB.PA,ai,AI infra & compute,Specialty analog and mixed-signal foundry (Euronext Paris)
-STM,ai,AI infra & compute,European semiconductor — auto industrial IoT power (NYSE)
-ORSTED.CO,energy,Energy transition & grids,Offshore wind global leader (Copenhagen)
-IBE.MC,energy,Energy transition & grids,Worlds largest renewables operator by capacity (Madrid)
-VWS.CO,energy,Energy transition & grids,Wind turbine manufacturer — global leader (Copenhagen)
-RWE.DE,energy,Energy transition & grids,German utility pivoting to renewables (Xetra)
-ENEL.MI,energy,Energy transition & grids,Italian utility and renewables developer (Milan)
-ENGI.PA,energy,Energy transition & grids,French utility gas and renewables (Euronext Paris)
-CNA.L,energy,Energy transition & grids,British Gas parent — UK retail energy and nuclear (LSE)
-EDP.LS,energy,Energy transition & grids,Portuguese utility and renewables (Lisbon)
-EDPR.LS,energy,Energy transition & grids,EDP Renovaveis — pure-play renewables developer (Lisbon)
-NDX1.DE,energy,Energy transition & grids,Nordex wind turbine manufacturer (Xetra)
-PRY.MI,energy,Energy transition & grids,Submarine and power cables for grid buildout (Milan)
-LR.PA,energy,Energy transition & grids,Electrical infrastructure for data centres and grids (Euronext Paris)
-NEX.PA,energy,Energy transition & grids,Power and fibre optic cables — electrification play (Euronext Paris)
-DRX.L,energy,Energy transition & grids,UK biomass and flexible generation (LSE)
-NEOEN.PA,energy,Energy transition & grids,French renewable energy developer solar wind storage (Euronext Paris)
-NCC.L,cyber,Cybersecurity & digital trust,UK cyber consulting and managed security (LSE)
-WS1V.HE,cyber,Cybersecurity & digital trust,WithSecure endpoint and cloud security — formerly F-Secure (Helsinki)
-YSN.DE,cyber,Cybersecurity & digital trust,German IT security for public sector and critical infra (Xetra)
-ATCO-A.ST,auto,Industrial automation & robotics,Compressors vacuum and power tools — Swedish industrial (Stockholm)
-HEXA-B.ST,auto,Industrial automation & robotics,Measurement sensors and geospatial — Swedish (Stockholm)
-DSY.PA,auto,Industrial automation & robotics,3DEXPERIENCE industrial software platform (Euronext Paris)
-RSW.L,auto,Industrial automation & robotics,Precision measurement and additive manufacturing (LSE)
-IMI.L,auto,Industrial automation & robotics,Flow control and automation for critical processes (LSE)
-SPX.L,auto,Industrial automation & robotics,Spirax Group — steam thermal and peristaltic pumps (LSE)
-HLMA.L,auto,Industrial automation & robotics,Safety environmental and health sensors (LSE)
-SXS.L,auto,Industrial automation & robotics,Precision instrumentation and controls (LSE)
-KNEBV.HE,auto,Industrial automation & robotics,Elevators escalators and maintenance services (Helsinki)
-ALFA.ST,auto,Industrial automation & robotics,Heat transfer separation and fluid handling (Stockholm)
-SAND.ST,auto,Industrial automation & robotics,Machining tools mining equipment and digital (Stockholm)
-EPIR.ST,auto,Industrial automation & robotics,Mining equipment automation and digital services (Stockholm)
-KION.DE,auto,Industrial automation & robotics,Forklift warehouse automation and supply chain (Xetra)
-GEA.DE,auto,Industrial automation & robotics,Process engineering and food automation (Xetra)
-SMIN.L,auto,Industrial automation & robotics,Detection threat and contraband screening (LSE)
-ROG.SW,health,Health Tech,Diagnostics and oncology pharma — global leader (Swiss)
-NOVN.SW,health,Health Tech,Diversified pharma pipeline — cardiovascular oncology neuro (Swiss)
-SAN.PA,health,Health Tech,French pharma — rare disease vaccines consumer (Euronext Paris)
-SN.L,health,Health Tech,Surgical devices orthopaedics and wound management (LSE)
-LONN.SW,health,Health Tech,CDMO for biotech and pharma manufacturing (Swiss)
-AFX.DE,health,Health Tech,Ophthalmic surgical devices and microsurgery (Xetra)
-STMN.SW,health,Health Tech,Dental implants and digital dentistry (Swiss)
-COLO-B.CO,health,Health Tech,Ostomy continence and wound care devices (Copenhagen)
-DEMANT.CO,health,Health Tech,Hearing aids and audiological instruments (Copenhagen)
-SRT3.DE,health,Health Tech,Lab equipment and bioprocessing — pharma supply chain (Xetra)
-HIK.L,health,Health Tech,Generics injectables and branded pharma — UK-listed (LSE)
-UCB.BR,health,Health Tech,Neurology and immunology pharma — Bimzelx (Brussels)
-GMAB.CO,health,Health Tech,Antibody engineering platform — bispecific and ADC (Copenhagen)
-BANB.SW,health,Health Tech,Peptide CDMO — critical GLP-1 supply chain node (Swiss)
-ARGX.BR,health,Health Tech,Autoimmune biotech — Vyvgart (Brussels — also NASDAQ)
-OXIG.L,quantum,Quantum / frontier compute,Cryogenics and quantum components — enabling hardware (LSE)
-IQE.L,quantum,Quantum / frontier compute,Compound semiconductor wafers — photonics and quantum (LSE)
-BA.L,auto,Industrial automation & robotics,Defence electronics cyber and space systems (LSE)
-RHM.DE,auto,Industrial automation & robotics,German defence vehicles and ammunition — fastest growing (Xetra)
-AIR.PA,auto,Industrial automation & robotics,Aerospace and defence — commercial and military aircraft (Euronext Paris)
-HO.PA,auto,Industrial automation & robotics,Defence electronics radar and cybersecurity systems (Euronext Paris)
-SAF.PA,auto,Industrial automation & robotics,Aerospace engines and equipment — CFM International (Euronext Paris)
-LDO.MI,auto,Industrial automation & robotics,Italian defence helicopters electronics and cyber (Milan)
-TXN,ai,AI infra & compute,Analog and embedded semis — broad industrial + auto exposure
-QCOM,ai,AI infra & compute,Handset RF plus AI edge inference — licensing mix
-ADI,ai,AI infra & compute,High-performance analog and mixed signal for data paths
-ON,ai,AI infra & compute,Power discretes and SiC for electrification and DC systems
-SWKS,ai,AI infra & compute,RF front-end modules — handset cyclicality vs content gains
-QRVO,ai,AI infra & compute,RF connectivity and defense/aerospace semi exposure
-ENTG,ai,AI infra & compute,Materials purity for wafer fabs and advanced packaging
-OLED,ai,AI infra & compute,Universal display materials — OLED emitter chemistry
-LSCC,ai,AI infra & compute,Low-power FPGAs for edge and industrial acceleration
-RMBS,ai,AI infra & compute,Memory interface IP and chips — HBM ecosystem adjacency
-CRUS,ai,AI infra & compute,Audio and high-precision mixed-signal for consumer and auto
-SLAB,ai,AI infra & compute,IoT MCUs and mesh — industrial connectivity
-DIOD,ai,AI infra & compute,Discrete and analog components — broad cyclical semi
-POWI,ai,AI infra & compute,Power conversion ICs — efficiency regulation tailwind
-WOLF,ai,AI infra & compute,SiC substrates and devices — EV and power switching
-INOD,ai,AI infra & compute,Data engineering / AI data prep software microcap
-NVMI,ai,AI infra & compute,Metrology for advanced packaging and CMP process control
-ICHR,ai,AI infra & compute,Fluid delivery systems for semiconductor manufacturing
-PLAB,ai,AI infra & compute,Photomasks — lithography consumables
-UEIC,ai,AI infra & compute,Universal remotes and smart home control chips
-SITM,ai,AI infra & compute,MEMS timing — precision clocks for comms and DC
-ACLS,ai,AI infra & compute,Axcelis ion implant equipment for WFE
-AOSL,ai,AI infra & compute,Power discretes and small-signal — diversified semi
-FLEX,ai,AI infra & compute,EMS / JDM manufacturing for hyperscale and networking gear
-JBL,ai,AI infra & compute,EMS diversified — AI server and appliance builds
-TTMI,ai,AI infra & compute,PCB fabrication for networking and compute boards
-VSH,ai,AI infra & compute,Diodes resistors inductors — passive components
-APH,ai,AI infra & compute,Interconnect for harsh environments — data centre cabling
-PI,ai,AI infra & compute,Wireless power and GaN — consumer and industrial
-MXL,ai,AI infra & compute,Broadband and connectivity mixed-signal — DOCSIS and fiber
-CVX,energy,Energy transition & grids,Integrated oil — cash returns and LNG optionality
-COP,energy,Energy transition & grids,US shale plus Alaska — production growth discipline
-OXY,energy,Energy transition & grids,Permian operator plus carbon capture narrative
-DVN,energy,Energy transition & grids,Delaware Basin oil — variable dividend framework
-HAL,energy,Energy transition & grids,Oilfield services pressure pumping — cycle leverage
-SLB,energy,Energy transition & grids,OFSP digital drilling international mix
-MPC,energy,Energy transition & grids,Refining and midstream logistics — crack spread exposure
-VLO,energy,Energy transition & grids,Independent refiner — renewable diesel projects
-PSX,energy,Energy transition & grids,Phillips 66 refining plus midstream CPChem
-FANG,energy,Energy transition & grids,Permian pure-play — shareholder returns focus
-EOG,energy,Energy transition & grids,Premier shale operator — returns over growth
-NRG,energy,Energy transition & grids,Retail power plus generation — merchant spread
-EXC,energy,Energy transition & grids,Nuclear-heavy utility — PJM exposure
-FE,energy,Energy transition & grids,Transmission investment story — regulatory lag risk
-ED,energy,Energy transition & grids,NYC-centric wires — dense load pocket
-AWK,energy,Energy transition & grids,Regulated water utility — infrastructure replacement
-WTRG,energy,Energy transition & grids,Essential utilities water gas electric bundle
-ATO,energy,Energy transition & grids,Texas gas distribution — rate base growth
-LNG,energy,Energy transition & grids,Cheniere LNG export tolling — long-term contracts
-KMI,energy,Energy transition & grids,Natural gas pipelines — fee-based cash flows
-WMB,energy,Energy transition & grids,Gas gathering and processing — Gulf exposure
-OKE,energy,Energy transition & grids,NGL fractionation and midstream services
-TRGP,energy,Energy transition & grids,Gathering and processing Permian Delaware
-SMR,energy,Energy transition & grids,SMR developer — licensing and power purchase risk
-OKLO,energy,Energy transition & grids,Advanced fission developer — milestone equity story
-BWXT,energy,Energy transition & grids,Naval reactors and nuclear components — defense mix
-LEU,energy,Energy transition & grids,Uranium conversion and HALEU — policy sensitive
-UEC,energy,Energy transition & grids,US ISR uranium developer — spot price leverage
-UUUU,energy,Energy transition & grids,ISR uranium plus rare earths optionality
-URG,energy,Energy transition & grids,ISR uranium producer — small cap volatility
-DNN,energy,Energy transition & grids,ISR uranium developer — pre-production
-BEP,energy,Energy transition & grids,Brookfield Renewable yieldCo — hydro wind solar mix
-BE,energy,Energy transition & grids,Fuel cells and electrolyzers — cash burn risk
-BIP,energy,Energy transition & grids,Brookfield Infrastructure — toll roads utilities pipelines
-NEP,energy,Energy transition & grids,NextEra Energy Partners renewables dropdown story
-CYBR,cyber,Cybersecurity & digital trust,Privileged access management — identity security
-MNDY,cyber,Cybersecurity & digital trust,Monday work OS — workflow automation with security posture
-DDOG,cyber,Cybersecurity & digital trust,Observability and cloud security telemetry
-SNOW,cyber,Cybersecurity & digital trust,Data cloud — governance and sharing workloads
-ESTC,cyber,Cybersecurity & digital trust,Search analytics security SIEM competitor set
-MDB,cyber,Cybersecurity & digital trust,Document database — developer-led adoption
-PATH,cyber,Cybersecurity & digital trust,RPA plus process mining — enterprise automation
-CFLT,cyber,Cybersecurity & digital trust,Streaming data platform — real-time pipelines
-FRSH,cyber,Cybersecurity & digital trust,Freshservice / ITSM cloud — SMB upmarket
-DT,cyber,Cybersecurity & digital trust,Dynatrace observability — enterprise APM
-PD,cyber,Cybersecurity & digital trust,PagerDuty incident response — SRE tooling
-ZI,cyber,Cybersecurity & digital trust,ZoomInfo go-to-market data — privacy/reg risk
-NOW,cyber,Cybersecurity & digital trust,ServiceNow workflow and GRC digitization
-WDAY,cyber,Cybersecurity & digital trust,Workday HCM and financials cloud ERP
-LMT,auto,Industrial automation & robotics,Defense prime — missiles space and aero structures
-NOC,auto,Industrial automation & robotics,Defense prime — bombers UAVs and space
-LHX,auto,Industrial automation & robotics,Defense electronics post-L3Harris merger integration
-RTX,auto,Industrial automation & robotics,Pratt engines plus Raytheon missiles mix
-GD,auto,Industrial automation & robotics,Gulfstream plus combat systems shipbuilding
-HII,auto,Industrial automation & robotics,US Navy shipbuilding — carrier submarine backlog
-TXT,auto,Industrial automation & robotics,Bell aviation plus industrial and Textron Systems
-JCI,auto,Industrial automation & robotics,Building controls and OpenBlue smart buildings
-NDSN,auto,Industrial automation & robotics,Nordson precision dispensing and industrial coatings
-WSO,auto,Industrial automation & robotics,HVAC distribution scale — North America residential mix
-ALLE,auto,Industrial automation & robotics,Allegion security hardware — commercial doors
-PNR,auto,Industrial automation & robotics,Pentair water treatment and pool equipment
-GGG,auto,Industrial automation & robotics,Graco fluid handling pumps — industrial coatings
-IEX,auto,Industrial automation & robotics,IDEX precision pumps and dispensing
-XYL,auto,Industrial automation & robotics,Xylem water infrastructure — acquisition synergies
-ROP,auto,Industrial automation & robotics,Roper software rollup — niche vertical SaaS
-FLS,auto,Industrial automation & robotics,Flowserve pumps valves — energy capex cycle
-CMI,auto,Industrial automation & robotics,Cummins engines plus Accelera hydrogen bet
-B,auto,Industrial automation & robotics,Barnes aerospace and automation components
-FTV,auto,Industrial automation & robotics,Fortive industrial instrumentation and healthcare diagnostics spin mix
-ITT,auto,Industrial automation & robotics,Motion flow control — defense and industrial
-DHR,auto,Industrial automation & robotics,Life sciences tools plus industrial diagnostics
-AOS,auto,Industrial automation & robotics,Water heaters and boilers — residential cycle
-DOV,auto,Industrial automation & robotics,Diversified industrial pumps and fueling
-FAST,auto,Industrial automation & robotics,Fastenal vending and onsite inventory
-GNRC,auto,Industrial automation & robotics,Backup generators — outage and grid fragility
-LECO,auto,Industrial automation & robotics,Lincoln Electric welding automation
-SWK,auto,Industrial automation & robotics,Stanley Black & Decker tools — margin reset
-WWD,auto,Industrial automation & robotics,Woodward aircraft and industrial actuation controls
-TDY,auto,Industrial automation & robotics,Teledyne imaging instruments and defense
-AME,auto,Industrial automation & robotics,Ametek precision instruments and power
-ZBRA,auto,Industrial automation & robotics,Zebra mobile computing and RFID tracking
-ZBH,auto,Industrial automation & robotics,Zimmer Biomed — robotics knee mix
-OTIS,auto,Industrial automation & robotics,Elevators service moat — China mix
-WAB,auto,Industrial automation & robotics,Wabtec rail and freight electronics
-VMI,auto,Industrial automation & robotics,Valmont infrastructure irrigation poles
-JNJ,health,Health Tech,Pharma medtech consumer diversified — patent cliffs matter
-PFE,health,Health Tech,Post-COVID oncology pipeline rebuild — execution risk
-MRK,health,Health Tech,Keytruda franchise duration — oncology concentration
-ABT,health,Health Tech,Devices plus diagnostics — Libre and structural heart
-BAX,health,Health Tech,MedSurg and pharmaceuticals hospital supply chain
-MDT,health,Health Tech,Medtronic devices — GLP-1 overhang on obesity devices
-HOLX,health,Health Tech,Diagnostics imaging and surgical women's health
-UNH,health,Health Tech,UnitedHealthcare plus Optum vertical integration
-CVS,health,Health Tech,Retail pharmacy plus Aetna — reimbursement pressure
-CI,health,Health Tech,Cigna Evernorth pharmacy benefits mix
-HUM,health,Health Tech,Medicare Advantage star ratings risk
-ELV,health,Health Tech,Anthem rebrand — commercial and gov mix
-CNC,health,Health Tech,Centene Medicaid exposure — state budget cycles
-MOH,health,Health Tech,Molina Medicaid pure-play — regulatory cap
-XRAY,health,Health Tech,Dentsply Sirona dental equipment — channel inventory
-ALGN,health,Health Tech,Align Invisalign — consumer discretionary sensitivity
-TECH,health,Health Tech,Bio-Techne reagents — biologics tools recurring
-DGX,health,Health Tech,Quest Diagnostics lab volumes — pricing
-LH,health,Health Tech,LabCorp diagnostics plus drug development
-A,health,Health Tech,Agilent instruments and diagnostics services
-ILMN,health,Health Tech,Sequencing installed base — consumable pull-through
-TDOC,health,Health Tech,Teladoc virtual care — profitability path
-RMD,health,Health Tech,ResMed sleep apnea devices — GLP-1 competitive readthrough
-BIIB,health,Health Tech,Neuroscience and biosimilars — Leqembi and franchise resets
-BNTX,health,Health Tech,BioNTech oncology plus Pfizer partnership economics
-SRPT,health,Health Tech,Sarepta gene therapy — regulatory binary
-EXAS,health,Health Tech,Exact Sciences CRC screening — guideline adoption
-NVAX,health,Health Tech,Novavax vaccine platform — funding and execution
-SWTX,health,Health Tech,SpringWorks oncology rare disease — trial readouts
-DNA,health,Health Tech,Ginkgo cell engineering — revenue quality debate
-RXRX,health,Health Tech,Recursion AI drug discovery — compute spend
-ACMR,quantum,Quantum / frontier compute,ACM Research China WFE — geopolitical listing risk
-KLIC,quantum,Quantum / frontier compute,Kulicke & Soffa wire bond packaging equipment
-ONTO,quantum,Quantum / frontier compute,Onto metrology and inspection for advanced nodes
-BRKS,quantum,Quantum / frontier compute,Brooks automation cryogenics and vacuum
-CAMT,quantum,Quantum / frontier compute,Camtek inspection for advanced packaging
-COHU,quantum,Quantum / frontier compute,Cohu handler and test interface equipment
-AEHR,quantum,Quantum / frontier compute,Aehr wafer-level burn-in for SiC reliability
-VPG,quantum,Quantum / frontier compute,Vishay precision foil resistors — metrology niche
-SMTC,quantum,Quantum / frontier compute,Semtech LoRa plus signal integrity — mixed cycles
-INDI,quantum,Quantum / frontier compute,indie Semiconductor auto edge — ADAS content
-LASR,quantum,Quantum / frontier compute,Luminar lidar — auto OEM design-in path
-MVIS,quantum,Quantum / frontier compute,MicroVision lidar MEMS — speculative liquidity
+ticker,theme_slug,theme_label,linkage_one_liner,model_tier
+MMM,auto,Industrial automation & robotics,Industrial materials — litigation and spin focus,screen_only
+AOS,auto,Industrial automation & robotics,Water heaters and boilers — residential cycle,full
+ABB,auto,Industrial automation & robotics,Robotics drives and electrification technology (NYSE),full
+ABT,health,Health Tech,Devices plus diagnostics — Libre and structural heart,full
+IBE.MC,energy,Energy transition & grids,Worlds largest renewables operator by capacity (Madrid),full
+ACMR,quantum,Quantum / frontier compute,ACM Research China WFE — geopolitical listing risk,full
+ADBE,ai,AI infra & compute,Creative and document AI — Firefly monetisation,screen_only
+AMD,ai,AI infra & compute,CPUs GPUs and AI data-centre share story,full
+ADYEN,fintech,Fintech & digital money,Adyen — unified commerce payments EU,screen_only
+AEHR,quantum,Quantum / frontier compute,Aehr wafer-level burn-in for SiC reliability,full
+AFRM,fintech,Fintech & digital money,BNPL — credit loss and funding cost sensitivity,screen_only
+A,health,Health Tech,Agilent instruments and diagnostics services,full
+ABNB,fintech,Fintech & digital money,Travel marketplace — supply and regulation,screen_only
+AIR.PA,auto,Industrial automation & robotics,Aerospace and defence — commercial and military aircraft (Euronext Paris),full
+EADSY,auto,Industrial automation & robotics,Airbus ADR — commercial jet backlog and helicopter mix,full
+AIXA.DE,ai,AI infra & compute,MOCVD deposition for compound semiconductors (Xetra),full
+ALFA.ST,auto,Industrial automation & robotics,Heat transfer separation and fluid handling (Stockholm),full
+BABA,ai,AI infra & compute,China cloud and commerce — regulatory overhang,screen_only
+ALGN,health,Health Tech,Align Invisalign — consumer discretionary sensitivity,full
+ALLE,auto,Industrial automation & robotics,Allegion security hardware — commercial doors,full
+AOSL,ai,AI infra & compute,Power discretes and small-signal — diversified semi,full
+AMZN,ai,AI infra & compute,AWS and retail — hyperscaler capex and AI services optionality,full
+AEP,energy,Energy transition & grids,Regulated utility — transmission investment,screen_only
+AWK,energy,Energy transition & grids,Regulated water utility — infrastructure replacement,full
+AME,auto,Industrial automation & robotics,Ametek precision instruments and power,full
+AMGN,health,Health Tech,Biosimilars Repatha and MariTide GLP-1 pipeline — high leverage,full
+AMKR,ai,AI infra & compute,Advanced chip packaging and test — 2.5D and 3D stacking,full
+APH,ai,AI infra & compute,Interconnect for harsh environments — data centre cabling,full
+ADI,ai,AI infra & compute,High-performance analog and mixed signal for data paths,full
+ANGO,health,Healthcare innovation & AI in medicine,AngioDynamics — med devices vascular access,screen_only
+APLD,quantum,Quantum / frontier compute,HPC and data-centre hosting — AI-adjacent play,full
+AMAT,ai,AI infra & compute,Deposition etch and broad process equipment,full
+APP,ai,AI infra & compute,AppLovin — mobile ad tech and AI,screen_only
+ARGX.BR,health,Health Tech,Autoimmune biotech — Vyvgart (Brussels — also NASDAQ),full
+ANET,ai,AI infra & compute,Data-centre switching for AI clusters,full
+ARM,ai,AI infra & compute,Chip architecture licensing for AI inference across all devices,full
+ARQQ,quantum,Quantum / frontier compute,Quantum encryption software small cap,full
+ARRY,energy,Energy transition & grids,Utility-scale solar tracking — revenue declining; thesis under pressure,full
+ASM.AS,ai,AI infra & compute,ALD and CVD deposition equipment for advanced chips (Amsterdam),full
+ASML,ai,AI infra & compute,EUV lithography monopoly — every advanced chip passes through ASML,full
+ASTS,quantum,Quantum / frontier compute,AST SpaceMobile — direct-to-cell satellite broadband,full
+ALAB,ai,AI infra & compute,AI data centre connectivity — PCIe retimers and smart cable modules,full
+AZN,health,Health Tech,Oncology and immunology pipeline — UK-listed dual NYSE (NASDAQ ADR),full
+ATRO,auto,Industrial automation & robotics,Astronics — aircraft lighting and power distribution,full
+T,cyber,Cybersecurity & digital trust,Telco — fibre and wireless cash flow,screen_only
+ATCO-A.ST,auto,Industrial automation & robotics,Compressors vacuum and power tools — Swedish industrial (Stockholm),full
+TEAM,cyber,Cybersecurity & digital trust,Atlassian — dev collaboration software,screen_only
+ATO,energy,Energy transition & grids,Texas gas distribution — rate base growth,full
+ACLS,ai,AI infra & compute,Axcelis ion implant equipment for WFE,full
+BANB.SW,health,Health Tech,Peptide CDMO — critical GLP-1 supply chain node (Swiss),full
+BAESY,auto,Industrial automation & robotics,UK defense prime — electronic systems and US exposure,full
+BA.L,auto,Industrial automation & robotics,Defence electronics cyber and space systems (LSE),full
+BKR,energy,Energy transition & grids,LNG equipment and OFS diversification,screen_only
+BAC,fintech,Fintech & digital money,Consumer and commercial bank — rate sensitivity,screen_only
+B,auto,Industrial automation & robotics,Barnes aerospace and automation components,full
+BAX,health,Health Tech,MedSurg and pharmaceuticals hospital supply chain,full
+BESI.AS,ai,AI infra & compute,Die bonding and advanced packaging equipment (Amsterdam),full
+BEAM,quantum,Quantum / frontier compute,Base editing — delivery and pipeline,screen_only
+BRK-B,fintech,Fintech & digital money,Conglomerate — insurance float and industrials,screen_only
+TECH,health,Health Tech,Bio-Techne reagents — biologics tools recurring,full
+BIIB,health,Health Tech,Neuroscience and biosimilars — Leqembi and franchise resets,full
+BNTX,health,Health Tech,BioNTech oncology plus Pfizer partnership economics,full
+BLK,fintech,Fintech & digital money,Asset management — ETF and aladdin platform,screen_only
+BKSY,quantum,Quantum / frontier compute,BlackSky — geospatial intelligence satellites,full
+BE,energy,Energy transition & grids,Fuel cells and electrolyzers — cash burn risk,full
+BA,auto,Industrial automation & robotics,Commercial aerospace duopoly — delivery ramp and balance sheet,full
+BKNG,fintech,Fintech & digital money,Online travel — take rate and alternative accommodation,screen_only
+BSX,health,Health Tech,Structural heart devices WATCHMAN and cardiology tech,full
+BP,energy,Energy transition & grids,Integrated oil — transition spend and yield,screen_only
+BMY,health,Healthcare innovation & AI in medicine,Oncology IO — patent cliffs and M&A,screen_only
+BRKS,quantum,Quantum / frontier compute,Brooks automation cryogenics and vacuum,full
+AVGO,ai,AI infra & compute,Networking and custom silicon for AI and cloud,full
+BIP,energy,Energy transition & grids,Brookfield Infrastructure — toll roads utilities pipelines,full
+BEP,energy,Energy transition & grids,Brookfield Renewable yieldCo — hydro wind solar mix,full
+BWXT,energy,Energy transition & grids,Naval reactors and nuclear components — defense mix,full
+CDNS,ai,AI infra & compute,EDA software duopoly — essential for chip design complexity,full
+CCJ,energy,Energy transition & grids,Uranium mining and nuclear fuel supply — long-term contracts,full
+CAMT,quantum,Quantum / frontier compute,Camtek inspection for advanced packaging,full
+CNI,auto,Industrial automation & robotics,Canadian National — precision railroading,screen_only
+CP,auto,Industrial automation & robotics,Canadian Pacific Kansas City merger synergies,screen_only
+AFX.DE,health,Health Tech,Ophthalmic surgical devices and microsurgery (Xetra),full
+CCL,fintech,Fintech & digital money,Cruise recovery — leverage and yields,screen_only
+CARR,energy,Energy transition & grids,HVAC and refrigeration — heat pump tailwind,screen_only
+CAT,auto,Industrial automation & robotics,Heavy machinery and services attach,full
+CNC,health,Health Tech,Centene Medicaid exposure — state budget cycles,full
+CNA.L,energy,Energy transition & grids,British Gas parent — UK retail energy and nuclear (LSE),full
+LEU,energy,Energy transition & grids,Uranium conversion and HALEU — policy sensitive,full
+CBRS,cyber,Cybersecurity & digital trust,Ciber / verify — IT services and security,full
+SCHW,fintech,Fintech & digital money,Retail brokerage — rate on cash balances,screen_only
+CHKP,cyber,Cybersecurity & digital trust,Mature firewall and subscription security — cash generative,full
+LNG,energy,Energy transition & grids,Cheniere LNG export tolling — long-term contracts,full
+CVX,energy,Energy transition & grids,Integrated oil — cash returns and LNG optionality,full
+CRUS,ai,AI infra & compute,Audio and high-precision mixed-signal for consumer and auto,full
+NET,cyber,Cybersecurity & digital trust,Edge security CDN and zero-trust networking — developer ecosystem,full
+CME,fintech,Fintech & digital money,Derivatives clearing — vol and rates volume,screen_only
+CGNX,auto,Industrial automation & robotics,Machine vision for factory automation — deep learning edge,full
+COHR,ai,AI infra & compute,Optical interconnects and transceivers for AI data centre fabrics,full
+COHU,quantum,Quantum / frontier compute,Cohu handler and test interface equipment,full
+COIN,fintech,Fintech & digital money,Crypto exchange — regulatory and volume cyclicality,screen_only
+COLO-B.CO,health,Health Tech,Ostomy continence and wound care devices (Copenhagen),full
+CMCSA,cyber,Cybersecurity & digital trust,Cable broadband — capital return focus,screen_only
+CFLT,cyber,Cybersecurity & digital trust,Streaming data platform — real-time pipelines,full
+COP,energy,Energy transition & grids,US shale plus Alaska — production growth discipline,full
+ED,energy,Energy transition & grids,NYC-centric wires — dense load pocket,full
+CEG,energy,Energy transition & grids,Independent power and nuclear-heavy angle,full
+CRWV,ai,AI infra & compute,CoreWeave — GPU cloud for AI workloads,screen_only
+GLW,ai,AI infra & compute,Corning — optical fibre and display glass for DC builds,screen_only
+CPNG,fintech,Fintech & digital money,Korea e-commerce — logistics and margin path,screen_only
+CRSP,quantum,Quantum / frontier compute,CRISPR — sickle cell and oncology,screen_only
+CRWD,cyber,Cybersecurity & digital trust,Endpoint and cloud workload protection leader,full
+CSX,auto,Industrial automation & robotics,Eastern rail — industrial and intermodal,screen_only
+CMI,auto,Industrial automation & robotics,Cummins engines plus Accelera hydrogen bet,full
+CVS,health,Health Tech,Retail pharmacy plus Aetna — reimbursement pressure,full
+CYBR,cyber,Cybersecurity & digital trust,Privileged access management — identity security,full
+QBTS,quantum,Quantum / frontier compute,D-Wave annealing and quantum systems,full
+DHR,auto,Industrial automation & robotics,Life sciences tools plus industrial diagnostics,full
+DSY.PA,auto,Industrial automation & robotics,3DEXPERIENCE industrial software platform (Euronext Paris),full
+DDOG,cyber,Cybersecurity & digital trust,Observability and cloud security telemetry,full
+SRE,energy,Energy transition & grids,Sempra — LNG and California utilities,screen_only
+DE,auto,Industrial automation & robotics,Agricultural equipment and precision ag software,full
+DAL,fintech,Fintech & digital money,Airline — corporate travel and fleet,screen_only
+DEMANT.CO,health,Health Tech,Hearing aids and audiological instruments (Copenhagen),full
+DNN,energy,Energy transition & grids,ISR uranium developer — pre-production,full
+XRAY,health,Health Tech,Dentsply Sirona dental equipment — channel inventory,full
+DVN,energy,Energy transition & grids,Delaware Basin oil — variable dividend framework,full
+DXCM,health,Health Tech,Continuous glucose monitoring — G7 and Stelo platforms,full
+FANG,energy,Energy transition & grids,Permian pure-play — shareholder returns focus,full
+DIOD,ai,AI infra & compute,Discrete and analog components — broad cyclical semi,full
+D,energy,Energy transition & grids,Dominion — Virginia data centre load,screen_only
+DASH,fintech,Fintech & digital money,DoorDash — delivery take-rate and ads,screen_only
+DOV,auto,Industrial automation & robotics,Diversified industrial pumps and fueling,full
+DRX.L,energy,Energy transition & grids,UK biomass and flexible generation (LSE),full
+DUK,energy,Energy transition & grids,Large regulated electric footprint,full
+DT,cyber,Cybersecurity & digital trust,Dynatrace observability — enterprise APM,full
+ETN,auto,Industrial automation & robotics,Electrical gear and power management for data centres,full
+SATS,quantum,Quantum / frontier compute,EchoStar / satellite connectivity — verify segment mix,full
+EIX,energy,Energy transition & grids,California utility — wildfire mitigation,screen_only
+EDIT,quantum,Quantum / frontier compute,Gene editing — ocular and liver,screen_only
+EDPR.LS,energy,Energy transition & grids,EDP Renovaveis — pure-play renewables developer (Lisbon),full
+EDP.LS,energy,Energy transition & grids,Portuguese utility and renewables (Lisbon),full
+EW,health,Health Tech,Transcatheter heart valves TAVR leader — structural growth,full
+ESTC,cyber,Cybersecurity & digital trust,Search analytics security SIEM competitor set,full
+ESLT,auto,Industrial automation & robotics,Elbit Systems — defense electronics Israel and export,full
+EA,ai,AI infra & compute,Video games — live services,screen_only
+ELV,health,Health Tech,Anthem rebrand — commercial and gov mix,full
+LLY,health,Health Tech,GLP-1 dominance (Mounjaro/Zepbound) and oncology pipeline,full
+EMR,auto,Industrial automation & robotics,Automation and climate-industrial mix,full
+ENB,energy,Energy transition & grids,Canadian midstream — Mainline tolls,screen_only
+ENEL.MI,energy,Energy transition & grids,Italian utility and renewables developer (Milan),full
+UUUU,energy,Energy transition & grids,ISR uranium plus rare earths optionality,full
+ET,energy,Energy transition & grids,Midstream pipelines; check UK ISA tax treatment,full
+ENGI.PA,energy,Energy transition & grids,French utility gas and renewables (Euronext Paris),full
+ENPH,energy,Energy transition & grids,Residential solar inverters — cycle downturn hit hard,full
+ENTG,ai,AI infra & compute,Materials purity for wafer fabs and advanced packaging,full
+EPD,energy,Energy transition & grids,MLP — NGL exports and storage,screen_only
+EOG,energy,Energy transition & grids,Premier shale operator — returns over growth,full
+EPIR.ST,auto,Industrial automation & robotics,Mining equipment automation and digital services (Stockholm),full
+EQNR,energy,Energy transition & grids,Norway state oil — dividend policy,screen_only
+WTRG,energy,Energy transition & grids,Essential utilities water gas electric bundle,full
+ES,energy,Energy transition & grids,New England utility — offshore wind stakes,screen_only
+MRAM,ai,AI infra & compute,Everspin MRAM — persistent memory niche,screen_only
+EXAS,health,Health Tech,Exact Sciences CRC screening — guideline adoption,full
+EXC,energy,Energy transition & grids,Nuclear-heavy utility — PJM exposure,full
+EXPE,fintech,Fintech & digital money,OTA — B2B and loyalty recovery,screen_only
+FAST,auto,Industrial automation & robotics,Fastenal vending and onsite inventory,full
+FDX,auto,Industrial automation & robotics,Express and freight — DRIVE cost program,screen_only
+FI,fintech,Fintech & digital money,Fiserv — merchant acquiring and issuer processing,screen_only
+FIS,fintech,Fintech & digital money,Banking and capital markets technology,screen_only
+FLY,auto,Industrial automation & robotics,Fly Leasing / verify ticker — aircraft lessor exposure,full
+FSLR,energy,Energy transition & grids,Utility-scale thin-film solar modules,full
+FE,energy,Energy transition & grids,Transmission investment story — regulatory lag risk,full
+FLEX,ai,AI infra & compute,EMS / JDM manufacturing for hyperscale and networking gear,full
+FLS,auto,Industrial automation & robotics,Flowserve pumps valves — energy capex cycle,full
+FLNC,energy,Energy transition & grids,Grid-scale battery storage systems — growing but unprofitable,full
+FORM,quantum,Quantum / frontier compute,Semi probe cards; quantum test equipment niche,full
+FTNT,cyber,Cybersecurity & digital trust,Network security appliances SD-WAN and SASE,full
+FTV,auto,Industrial automation & robotics,Fortive industrial instrumentation and healthcare diagnostics spin mix,full
+FRSH,cyber,Cybersecurity & digital trust,Freshservice / ITSM cloud — SMB upmarket,full
+FCEL,energy,Energy transition & grids,Fuel cells — stationary power niche,screen_only
+GE,auto,Industrial automation & robotics,Aerospace engines and power — LEAP cycle and services mix,full
+GEV,energy,Energy transition & grids,Gas turbines wind and grid equipment — $163B backlog from GE spinoff,full
+GEA.DE,auto,Industrial automation & robotics,Process engineering and food automation (Xetra),full
+GEN,cyber,Cybersecurity & digital trust,Consumer and enterprise security brands rollup,full
+GNRC,auto,Industrial automation & robotics,Backup generators — outage and grid fragility,full
+GD,auto,Industrial automation & robotics,Gulfstream plus combat systems shipbuilding,full
+GMAB.CO,health,Health Tech,Antibody engineering platform — bispecific and ADC (Copenhagen),full
+GILD,health,Healthcare innovation & AI in medicine,HIV and liver — cell therapy option,screen_only
+DNA,health,Health Tech,Ginkgo cell engineering — revenue quality debate,full
+GPN,fintech,Fintech & digital money,Global Payments — Genius and B2B software,screen_only
+GSAT,quantum,Quantum / frontier compute,Globalstar — satellite IoT and Apple partnership,full
+GS,fintech,Fintech & digital money,Investment bank — trading and advisory cycle,screen_only
+GGG,auto,Industrial automation & robotics,Graco fluid handling pumps — industrial coatings,full
+GSK,health,Health Tech,Vaccines HIV franchise and specialty pharma (NYSE ADR),full
+HAL,energy,Energy transition & grids,Oilfield services pressure pumping — cycle leverage,full
+HLMA.L,auto,Industrial automation & robotics,Safety environmental and health sensors (LSE),full
+HEI.A,auto,Industrial automation & robotics,Heico — aerospace aftermarket parts and acquisitions,full
+HES,energy,Energy transition & grids,Guyana growth — Chevron merger,screen_only
+HEXA-B.ST,auto,Industrial automation & robotics,Measurement sensors and geospatial — Swedish (Stockholm),full
+HXL,auto,Industrial automation & robotics,Carbon fibre composites for aerospace structures,full
+HIK.L,health,Health Tech,Generics injectables and branded pharma — UK-listed (LSE),full
+HLT,fintech,Fintech & digital money,Premium hotels — fee stream and pipeline,screen_only
+HOLX,health,Health Tech,Diagnostics imaging and surgical women's health,full
+HON,auto,Industrial automation & robotics,Controls and diversified industrial automation,full
+HUBS,cyber,Cybersecurity & digital trust,HubSpot — SMB CRM and marketing,screen_only
+HUM,health,Health Tech,Medicare Advantage star ratings risk,full
+HII,auto,Industrial automation & robotics,US Navy shipbuilding — carrier submarine backlog,full
+ICHR,ai,AI infra & compute,Fluid delivery systems for semiconductor manufacturing,full
+IEX,auto,Industrial automation & robotics,IDEX precision pumps and dispensing,full
+ITW,auto,Industrial automation & robotics,Diversified industrial components,full
+ILMN,health,Health Tech,Sequencing installed base — consumable pull-through,full
+IMI.L,auto,Industrial automation & robotics,Flow control and automation for critical processes (LSE),full
+IMO,energy,Energy transition & grids,Canadian refining and upstream,screen_only
+PI,ai,AI infra & compute,Wireless power and GaN — consumer and industrial,full
+INDI,quantum,Quantum / frontier compute,indie Semiconductor auto edge — ADAS content,full
+IFX.DE,ai,AI infra & compute,Power semiconductors for AI auto and industrial (Xetra),full
+IR,auto,Industrial automation & robotics,Industrial compressors and tools,full
+INOD,ai,AI infra & compute,Data engineering / AI data prep software microcap,full
+PODD,health,Health Tech,Omnipod insulin pump ecosystem — Mobi next generation,full
+INTC,ai,AI infra & compute,CPU and foundry turnaround — AI PC and custom silicon option,screen_only
+NTLA,quantum,Quantum / frontier compute,CRISPR gene editing — in vivo programs,screen_only
+ICE,fintech,Fintech & digital money,Exchanges and data — mortgage tech,screen_only
+IBM,quantum,Quantum / frontier compute,Services plus small quantum research franchise,full
+INTU,fintech,Fintech & digital money,SMB tax and accounting AI assistants,screen_only
+LUNR,quantum,Quantum / frontier compute,Intuitive Machines — lunar lander programs,full
+ISRG,health,Health Tech,Da Vinci and Ion robotic surgery systems — procedure growth,full
+IONQ,quantum,Quantum / frontier compute,Trapped-ion quantum hardware — largest cash runway in pure-play quantum,full
+IQE.L,quantum,Quantum / frontier compute,Compound semiconductor wafers — photonics and quantum (LSE),full
+IREN,energy,Energy transition & grids,Bitcoin miner pivoting to AI data centre power,screen_only
+IRDM,quantum,Quantum / frontier compute,Iridium — LEO voice and IoT constellation,full
+ITT,auto,Industrial automation & robotics,Motion flow control — defense and industrial,full
+JBL,ai,AI infra & compute,EMS diversified — AI server and appliance builds,full
+JD,fintech,Fintech & digital money,China retail logistics and health spin,screen_only
+JNJ,health,Health Tech,Pharma medtech consumer diversified — patent cliffs matter,full
+JCI,auto,Industrial automation & robotics,Building controls and OpenBlue smart buildings,full
+JPM,fintech,Fintech & digital money,Money centre bank — NII and investment banking,screen_only
+KMI,energy,Energy transition & grids,Natural gas pipelines — fee-based cash flows,full
+KION.DE,auto,Industrial automation & robotics,Forklift warehouse automation and supply chain (Xetra),full
+KLAC,ai,AI infra & compute,Process control and inspection in WFE,full
+KNEBV.HE,auto,Industrial automation & robotics,Elevators escalators and maintenance services (Helsinki),full
+KTOS,auto,Industrial automation & robotics,Unmanned systems and C5ISR — defense tech integrator,full
+KLIC,quantum,Quantum / frontier compute,Kulicke & Soffa wire bond packaging equipment,full
+KULR,quantum,Quantum / frontier compute,Thermal management for batteries and space hardware,full
+LHX,auto,Industrial automation & robotics,Defense electronics post-L3Harris merger integration,full
+LH,health,Health Tech,LabCorp diagnostics plus drug development,full
+LRCX,ai,AI infra & compute,Wafer fabrication equipment (WFE),full
+LSCC,ai,AI infra & compute,Low-power FPGAs for edge and industrial acceleration,full
+LR.PA,energy,Energy transition & grids,Electrical infrastructure for data centres and grids (Euronext Paris),full
+LDOS,auto,Industrial automation & robotics,Leidos — defense IT and engineering services,full
+LDO.MI,auto,Industrial automation & robotics,Italian defence helicopters electronics and cyber (Milan),full
+LWLG,ai,AI infra & compute,Lightwave Logic — photonic polymers for interconnect,full
+LECO,auto,Industrial automation & robotics,Lincoln Electric welding automation,full
+LMT,auto,Industrial automation & robotics,Defense prime — missiles space and aero structures,full
+LONN.SW,health,Health Tech,CDMO for biotech and pharma manufacturing (Swiss),full
+LITE,ai,AI infra & compute,Lumentum — optical components for AI networking,screen_only
+MPC,energy,Energy transition & grids,Refining and midstream logistics — crack spread exposure,full
+MAR,fintech,Fintech & digital money,Hotel franchisor — net rooms growth,screen_only
+MRVL,ai,AI infra & compute,Custom AI silicon and high-speed networking ASICs,full
+MTZ,energy,Energy transition & grids,Infrastructure and clean energy construction — fastest growing EPC,full
+MXL,ai,AI infra & compute,Broadband and connectivity mixed-signal — DOCSIS and fiber,full
+MDT,health,Health Tech,Medtronic devices — GLP-1 overhang on obesity devices,full
+MEL.BR,ai,AI infra & compute,Automotive and industrial sensor ICs (Brussels),full
+MELI,fintech,Fintech & digital money,MercadoLibre — commerce and fintech flywheel,screen_only
+MRK,health,Health Tech,Keytruda franchise duration — oncology concentration,full
+HOLO,quantum,Quantum / frontier compute,Micro-cap hardware; highly speculative,full
+MU,ai,AI infra & compute,High-bandwidth memory and DRAM for AI servers,full
+MVIS,quantum,Quantum / frontier compute,MicroVision lidar MEMS — speculative liquidity,full
+MRNA,health,Health Tech,mRNA platform vaccines and therapeutics — binary pipeline risk,full
+MOH,health,Health Tech,Molina Medicaid pure-play — regulatory cap,full
+MNTS,quantum,Quantum / frontier compute,Momentus — in-space transportation — high dilution risk,full
+MNDY,cyber,Cybersecurity & digital trust,Monday work OS — workflow automation with security posture,full
+MDB,cyber,Cybersecurity & digital trust,Document database — developer-led adoption,full
+MPWR,ai,AI infra & compute,Power management ICs for AI server racks and GPUs,full
+MCO,fintech,Fintech & digital money,Moody's — ratings cycle and KYC analytics,screen_only
+MS,fintech,Fintech & digital money,Wealth management — AUM and banking,screen_only
+MPLX,energy,Energy transition & grids,Marathon midstream — dropdown MLP,screen_only
+MSCI,fintech,Fintech & digital money,Indexes and ESG analytics — subscription model,screen_only
+NGG,energy,Energy transition & grids,UK and US electricity and gas transmission grid operator (NYSE ADR),full
+NVTS,ai,AI infra & compute,Navitas — GaN power ICs for data centre and EV,screen_only
+NCC.L,cyber,Cybersecurity & digital trust,UK cyber consulting and managed security (LSE),full
+NBIS,ai,AI infra & compute,Nebius — AI cloud GPU infrastructure spin narrative,screen_only
+NEOEN.PA,energy,Energy transition & grids,French renewable energy developer solar wind storage (Euronext Paris),full
+NEP,energy,Energy transition & grids,NextEra Energy Partners renewables dropdown story,full
+NFLX,ai,AI infra & compute,Streaming — content ROI and ad tier,screen_only
+NEX.PA,energy,Energy transition & grids,Power and fibre optic cables — electrification play (Euronext Paris),full
+NEE,energy,Energy transition & grids,Regulated utility and renewables developer,full
+LASR,quantum,Quantum / frontier compute,Luminar lidar — auto OEM design-in path,full
+NDX1.DE,energy,Energy transition & grids,Nordex wind turbine manufacturer (Xetra),full
+NOD.OL,ai,AI infra & compute,Ultra-low power wireless chip design for IoT (Oslo),full
+NDSN,auto,Industrial automation & robotics,Nordson precision dispensing and industrial coatings,full
+NSC,auto,Industrial automation & robotics,East coast rail — service recovery,screen_only
+NOC,auto,Industrial automation & robotics,Defense prime — bombers UAVs and space,full
+NOV,energy,Energy transition & grids,Offshore rig equipment — cycle leverage,screen_only
+NVMI,ai,AI infra & compute,Metrology for advanced packaging and CMP process control,full
+NVS,health,Healthcare innovation & AI in medicine,Radioligand and neuroscience pipeline,screen_only
+NOVN.SW,health,Health Tech,Diversified pharma pipeline — cardiovascular oncology neuro (Swiss),full
+NVAX,health,Health Tech,Novavax vaccine platform — funding and execution,full
+NVO,health,Health Tech,GLP-1 agonist leader Ozempic and Wegovy — LLY rival (NYSE ADR),full
+NRG,energy,Energy transition & grids,Retail power plus generation — merchant spread,full
+NU,fintech,Fintech & digital money,LatAm neobank — Brazil and Mexico expansion,screen_only
+SMR,energy,Energy transition & grids,SMR developer — licensing and power purchase risk,full
+NVDA,ai,AI infra & compute,AI accelerators and data-centre GPU exposure,full
+OXY,energy,Energy transition & grids,Permian operator plus carbon capture narrative,full
+OKLO,energy,Energy transition & grids,Advanced fission developer — milestone equity story,full
+OKTA,cyber,Cybersecurity & digital trust,Identity and access management,full
+ON,ai,AI infra & compute,Power discretes and SiC for electrification and DC systems,full
+ONDAS,quantum,Quantum / frontier compute,Ondas — autonomous systems and rail wireless,screen_only
+OKE,energy,Energy transition & grids,NGL fractionation and midstream services,full
+ONTO,quantum,Quantum / frontier compute,Onto metrology and inspection for advanced nodes,full
+ORCL,ai,AI infra & compute,OCI GPU cloud and database AI workloads,screen_only
+ORSTED.CO,energy,Energy transition & grids,Offshore wind global leader (Copenhagen),full
+OTIS,auto,Industrial automation & robotics,Elevators service moat — China mix,full
+OXIG.L,quantum,Quantum / frontier compute,Cryogenics and quantum components — enabling hardware (LSE),full
+PACB,quantum,Quantum / frontier compute,Long-read sequencing — competitive pressure,screen_only
+PCG,energy,Energy transition & grids,PG&E — California load and safety,screen_only
+PD,cyber,Cybersecurity & digital trust,PagerDuty incident response — SRE tooling,full
+PLTR,auto,Industrial automation & robotics,Gov and enterprise AI platforms — contract wins and margins,full
+PANW,cyber,Cybersecurity & digital trust,Enterprise firewall and cloud security platform consolidation,full
+PH,auto,Industrial automation & robotics,Hydraulics and motion control — aerospace exposure,full
+PYPL,fintech,Fintech & digital money,Payments scale — margin and take-rate recovery,screen_only
+PDD,ai,AI infra & compute,Temur — cross-border commerce growth,screen_only
+PNR,auto,Industrial automation & robotics,Pentair water treatment and pool equipment,full
+PFE,health,Health Tech,Post-COVID oncology pipeline rebuild — execution risk,full
+PSX,energy,Energy transition & grids,Phillips 66 refining plus midstream CPChem,full
+PLAB,ai,AI infra & compute,Photomasks — lithography consumables,full
+PL,quantum,Quantum / frontier compute,Planet Labs — daily Earth observation data,full
+PLUG,energy,Energy transition & grids,Hydrogen — cash burn and green H2,screen_only
+POWI,ai,AI infra & compute,Power conversion ICs — efficiency regulation tailwind,full
+PPL,energy,Energy transition & grids,Kentucky and Pennsylvania wires,screen_only
+PRY.MI,energy,Energy transition & grids,Submarine and power cables for grid buildout (Milan),full
+QRVO,ai,AI infra & compute,RF connectivity and defense/aerospace semi exposure,full
+QCOM,ai,AI infra & compute,Handset RF plus AI edge inference — licensing mix,full
+QLYS,cyber,Cybersecurity & digital trust,Vulnerability management SaaS,full
+PWR,energy,Energy transition & grids,Grid construction and electrical infrastructure — licensed labor moat,full
+QUBT,quantum,Quantum / frontier compute,Quantum computing micro-cap hardware,full
+QS,quantum,Quantum / frontier compute,Solid-state battery — technical milestone risk,screen_only
+DGX,health,Health Tech,Quest Diagnostics lab volumes — pricing,full
+RMBS,ai,AI infra & compute,Memory interface IP and chips — HBM ecosystem adjacency,full
+RXRX,health,Health Tech,Recursion AI drug discovery — compute spend,full
+RDW,auto,Industrial automation & robotics,Space systems integrator — NASA and defense missions,full
+REGN,health,Health Tech,Dupixent franchise Libtayo and obesity pipeline — net cash fortress,full
+RSW.L,auto,Industrial automation & robotics,Precision measurement and additive manufacturing (LSE),full
+RSG,energy,Energy transition & grids,Waste collection pricing — route density,screen_only
+RMD,health,Health Tech,ResMed sleep apnea devices — GLP-1 competitive readthrough,full
+RHM.DE,auto,Industrial automation & robotics,German defence vehicles and ammunition — fastest growing (Xetra),full
+RGTI,quantum,Quantum / frontier compute,Superconducting quantum systems — minimal revenue,full
+HOOD,fintech,Fintech & digital money,Retail brokerage and crypto trading,screen_only
+RBLX,ai,AI infra & compute,Roblox — UGC platform engagement,screen_only
+ROG.SW,health,Health Tech,Diagnostics and oncology pharma — global leader (Swiss),full
+RKLB,quantum,Quantum / frontier compute,Rocket Lab — launch and space systems,full
+ROK,auto,Industrial automation & robotics,Factory automation PLCs and industrial software,full
+RR.L,energy,Energy transition & grids,Small modular nuclear reactors and aerospace engines (LSE),full
+ROP,auto,Industrial automation & robotics,Roper software rollup — niche vertical SaaS,full
+RCL,fintech,Fintech & digital money,Cruise — pricing power post-pandemic,screen_only
+RTX,auto,Industrial automation & robotics,Pratt engines plus Raytheon missiles mix,full
+RWE.DE,energy,Energy transition & grids,German utility pivoting to renewables (Xetra),full
+SPGI,fintech,Fintech & digital money,Ratings and market data — Mobility spin,screen_only
+SAF.PA,auto,Industrial automation & robotics,Aerospace engines and equipment — CFM International (Euronext Paris),full
+CRM,ai,AI infra & compute,Enterprise AI agents on CRM data cloud,screen_only
+005930.KS,ai,AI infra & compute,Samsung — memory and foundry,screen_only
+SAND.ST,auto,Industrial automation & robotics,Machining tools mining equipment and digital (Stockholm),full
+SAN.PA,health,Health Tech,French pharma — rare disease vaccines consumer (Euronext Paris),full
+SNY,health,Healthcare innovation & AI in medicine,Vaccines and immunology — Dupixent partner,screen_only
+SAP,cyber,Cybersecurity & digital trust,Enterprise ERP and cloud — European software,screen_only
+SRPT,health,Health Tech,Sarepta gene therapy — regulatory binary,full
+SRT3.DE,health,Health Tech,Lab equipment and bioprocessing — pharma supply chain (Xetra),full
+SATL,quantum,Quantum / frontier compute,Satellogic — EO constellation operator,full
+SU.PA,auto,Industrial automation & robotics,Energy management and industrial automation — global leader (Euronext Paris),full
+SDGR,quantum,Quantum / frontier compute,Schrodinger — physics-based drug design,screen_only
+SE,fintech,Fintech & digital money,Sea Limited — gaming and Shopee fintech,screen_only
+LAES,quantum,Quantum / frontier compute,Post-quantum and semiconductor security angle,full
+YSN.DE,cyber,Cybersecurity & digital trust,German IT security for public sector and critical infra (Xetra),full
+SMTC,quantum,Quantum / frontier compute,Semtech LoRa plus signal integrity — mixed cycles,full
+S,cyber,Cybersecurity & digital trust,Endpoint AI security — growth narrative unprofitable,full
+NOW,cyber,Cybersecurity & digital trust,ServiceNow workflow and GRC digitization,full
+SHEL,energy,Energy transition & grids,LNG and chemicals — capital framework,screen_only
+SHOP,fintech,Fintech & digital money,Commerce platform — merchant solutions,screen_only
+SIDU,quantum,Quantum / frontier compute,Sidus Space — small satellite and space services microcap,full
+SIE.DE,auto,Industrial automation & robotics,Digital Industries factory automation and smart infrastructure (Xetra),full
+ENR.DE,energy,Energy transition & grids,Grid transformers offshore wind and gas turbines (Xetra),full
+SLAB,ai,AI infra & compute,IoT MCUs and mesh — industrial connectivity,full
+SITM,ai,AI infra & compute,MEMS timing — precision clocks for comms and DC,full
+SWKS,ai,AI infra & compute,RF front-end modules — handset cyclicality vs content gains,full
+SLB,energy,Energy transition & grids,OFSP digital drilling international mix,full
+SN.L,health,Health Tech,Surgical devices orthopaedics and wound management (LSE),full
+SMIN.L,auto,Industrial automation & robotics,Detection threat and contraband screening (LSE),full
+SNOW,cyber,Cybersecurity & digital trust,Data cloud — governance and sharing workloads,full
+SOFI,fintech,Fintech & digital money,Digital bank — member growth and NIM,screen_only
+SOITEC.PA,ai,AI infra & compute,SOI wafers for RF power and photonics (Euronext Paris),full
+SEDG,energy,Energy transition & grids,Solar inverters — inventory and competition,screen_only
+SLDP,quantum,Quantum / frontier compute,Solid-state battery developer,screen_only
+6758.T,ai,AI infra & compute,Sony Japan listing — verify local ticker,screen_only
+SONY,ai,AI infra & compute,Sony — gaming and sensors,screen_only
+SO,energy,Energy transition & grids,Regulated Southeast electric utility,full
+LUV,fintech,Fintech & digital money,Domestic leisure airline — cost advantage,screen_only
+SPX.L,auto,Industrial automation & robotics,Spirax Group — steam thermal and peristaltic pumps (LSE),full
+SPIR,quantum,Quantum / frontier compute,Spire Global — space-based data and analytics,full
+SQ,fintech,Fintech & digital money,Block — seller ecosystem and bitcoin optionality,screen_only
+SSE.L,energy,Energy transition & grids,UK renewables developer and regulated network operator (LSE),full
+SWK,auto,Industrial automation & robotics,Stanley Black & Decker tools — margin reset,full
+STEM,energy,Energy transition & grids,Battery storage software — project finance,screen_only
+STM,ai,AI infra & compute,European semiconductor — auto industrial IoT power (NYSE),full
+STMN.SW,health,Health Tech,Dental implants and digital dentistry (Swiss),full
+SYK,health,Health Tech,Mako robotic surgery and orthopedic device install base,full
+SU,energy,Energy transition & grids,Canadian integrated — oil sands and refining,screen_only
+RUN,energy,Energy transition & grids,Residential solar — loan and attach,screen_only
+SMCI,ai,AI infra & compute,AI server assembly and rack integration — high growth but governance risks,full
+SWTX,health,Health Tech,SpringWorks oncology rare disease — trial readouts,full
+SXS.L,auto,Industrial automation & robotics,Precision instrumentation and controls (LSE),full
+SNPS,ai,AI infra & compute,EDA and design software for chip complexity,full
+TMUS,cyber,Cybersecurity & digital trust,US wireless share gains — integration synergies,screen_only
+TSM,ai,AI infra & compute,Foundry monopoly on advanced nodes 3nm and 2nm,full
+TTWO,ai,AI infra & compute,Take-Two — GTA pipeline,screen_only
+TRGP,energy,Energy transition & grids,Gathering and processing Permian Delaware,full
+TRP,energy,Energy transition & grids,Gas pipelines and power — Bruce Power,screen_only
+FTI,energy,Energy transition & grids,Subsea — offshore wind and oil,screen_only
+TDOC,health,Health Tech,Teladoc virtual care — profitability path,full
+TDY,auto,Industrial automation & robotics,Teledyne imaging instruments and defense,full
+TSAT,quantum,Quantum / frontier compute,Telesat — LEO constellation development,full
+TENB,cyber,Cybersecurity & digital trust,Exposure management and vulnerability scanning,full
+TER,auto,Industrial automation & robotics,Semiconductor test duopoly plus Universal Robots collaborative robotics,full
+TXN,ai,AI infra & compute,Analog and embedded semis — broad industrial + auto exposure,full
+TXT,auto,Industrial automation & robotics,Bell aviation plus industrial and Textron Systems,full
+HO.PA,auto,Industrial automation & robotics,Defence electronics radar and cybersecurity systems (Euronext Paris),full
+CI,health,Health Tech,Cigna Evernorth pharmacy benefits mix,full
+TTD,ai,AI infra & compute,Programmatic ads — CTV growth,screen_only
+WISE,fintech,Fintech & digital money,Wise — cross-border transfers and hold,screen_only
+TMO,health,Health Tech,Life sciences tools and instruments — essential but heavily leveraged,full
+TTE,energy,Energy transition & grids,European major — LNG and renewables,screen_only
+TT,auto,Industrial automation & robotics,HVAC and commercial climate systems,full
+RIG,energy,Energy transition & grids,Offshore drilling — day rates,screen_only
+TRMB,auto,Industrial automation & robotics,Precision agriculture and construction positioning tech,full
+TTMI,ai,AI infra & compute,PCB fabrication for networking and compute boards,full
+TWST,quantum,Quantum / frontier compute,Twist Bioscience — DNA synthesis,screen_only
+UBER,fintech,Fintech & digital money,Mobility and delivery — profitability and autonomy,screen_only
+UCB.BR,health,Health Tech,Neurology and immunology pharma — Bimzelx (Brussels),full
+PATH,cyber,Cybersecurity & digital trust,RPA plus process mining — enterprise automation,full
+UNP,auto,Industrial automation & robotics,Western US rail — pricing and efficiency,screen_only
+UAL,fintech,Fintech & digital money,Airline — transatlantic and Pacific mix,screen_only
+UPS,auto,Industrial automation & robotics,Parcel logistics — yield and union contract,screen_only
+UNH,health,Health Tech,UnitedHealthcare plus Optum vertical integration,full
+U,ai,AI infra & compute,Unity — game engine and ads,screen_only
+OLED,ai,AI infra & compute,Universal display materials — OLED emitter chemistry,full
+UEIC,ai,AI infra & compute,Universal remotes and smart home control chips,full
+URG,energy,Energy transition & grids,ISR uranium producer — small cap volatility,full
+UEC,energy,Energy transition & grids,US ISR uranium developer — spot price leverage,full
+VAL,energy,Energy transition & grids,Offshore drilling — fleet quality,screen_only
+VLO,energy,Energy transition & grids,Independent refiner — renewable diesel projects,full
+VMI,auto,Industrial automation & robotics,Valmont infrastructure irrigation poles,full
+VAT.SW,ai,AI infra & compute,Vacuum valves for semiconductor fabs — monopoly niche (Swiss),full
+VEEV,health,Health Tech,Cloud software for pharma and life sciences — quality SaaS compounder,full
+VZ,cyber,Cybersecurity & digital trust,Wireless duopoly — dividend yield play,screen_only
+VRTX,health,Health Tech,Cystic fibrosis franchise and pipeline diversification into pain,full
+VRT,ai,AI infra & compute,Power and cooling for AI racks and data centres,full
+VERV,quantum,Quantum / frontier compute,Cardiovascular gene editing,screen_only
+VWS.CO,energy,Energy transition & grids,Wind turbine manufacturer — global leader (Copenhagen),full
+VSAT,quantum,Quantum / frontier compute,Viasat — satellite broadband and Inmarsat integration,full
+SPCE,quantum,Quantum / frontier compute,Suborbital tourism — cash burn and commercialization risk,full
+VSH,ai,AI infra & compute,Diodes resistors inductors — passive components,full
+VPG,quantum,Quantum / frontier compute,Vishay precision foil resistors — metrology niche,full
+VST,energy,Energy transition & grids,Nuclear and gas fleet benefiting from AI-driven power demand,full
+VOYG,quantum,Quantum / frontier compute,Voyager Technologies — defense and space systems,full
+DIS,ai,AI infra & compute,Media parks and streaming — ESPN option,screen_only
+WM,energy,Energy transition & grids,Waste — landfill gas and recycling,screen_only
+WAT,health,Healthcare innovation & AI in medicine,Waters — biologics QA and LC-MS,screen_only
+WSO,auto,Industrial automation & robotics,HVAC distribution scale — North America residential mix,full
+WEC,energy,Energy transition & grids,Regulated electric and gas utility,full
+WFC,fintech,Fintech & digital money,Retail bank turnaround — expense and asset cap,screen_only
+WES,energy,Energy transition & grids,Western Midstream — Permian G&P,screen_only
+WAB,auto,Industrial automation & robotics,Wabtec rail and freight electronics,full
+WMB,energy,Energy transition & grids,Gas gathering and processing — Gulf exposure,full
+WOLF,ai,AI infra & compute,SiC substrates and devices — EV and power switching,full
+WWD,auto,Industrial automation & robotics,Woodward aircraft and industrial actuation controls,full
+WDAY,cyber,Cybersecurity & digital trust,Workday HCM and financials cloud ERP,full
+WS1V.HE,cyber,Cybersecurity & digital trust,WithSecure endpoint and cloud security — formerly F-Secure (Helsinki),full
+XFAB.PA,ai,AI infra & compute,Specialty analog and mixed-signal foundry (Euronext Paris),full
+XEL,energy,Energy transition & grids,Regulated electric utility and grid,full
+XYL,auto,Industrial automation & robotics,Xylem water infrastructure — acquisition synergies,full
+ZBRA,auto,Industrial automation & robotics,Zebra mobile computing and RFID tracking,full
+ZI,cyber,Cybersecurity & digital trust,ZoomInfo go-to-market data — privacy/reg risk,full
+ZBH,auto,Industrial automation & robotics,Zimmer Biomed — robotics knee mix,full
+ZS,cyber,Cybersecurity & digital trust,Zero-trust SSE and SASE cloud security,full

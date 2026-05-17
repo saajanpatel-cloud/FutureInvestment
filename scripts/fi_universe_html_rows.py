@@ -25,7 +25,8 @@ _SCRIPTS_DIR = Path(__file__).resolve().parent
 if str(_SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS_DIR))
 
-from fi_manifest import fmt_mcap, fmt_num, load_manifest
+from fi_manifest import fmt_mcap, fmt_num, load_manifest, sort_manifest_rows
+from fi_sort_manifest_order import load_company_names
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_MANIFEST = ROOT / "research" / "watchlists" / "universe_manifest.csv"
@@ -36,6 +37,7 @@ def row_html(
     theme_label: str,
     link: str,
     r: dict[str, str],
+    sort_index: int,
 ) -> str:
     t = r["ticker"].strip().upper()
     sec = r.get("sec_company_search_url") or ""
@@ -43,7 +45,7 @@ def row_html(
         f"{t} {r.get('short_name', '')} {slug} {theme_label} {link} {r.get('sector', '')} {r.get('industry', '')}"
     ).lower()
     parts = [
-        f'            <tr class="universe-row" data-theme="{html.escape(slug)}" data-search="{html.escape(search_blob)}">',
+        f'            <tr class="universe-row" data-theme="{html.escape(slug)}" data-sort-index="{sort_index}" data-search="{html.escape(search_blob)}">',
         f"              <td>{html.escape(theme_label)}</td>",
         f"              <td><strong>{html.escape(t)}</strong></td>",
         f"              <td>{html.escape(r.get('short_name', '') or '')}</td>",
@@ -77,12 +79,13 @@ def main() -> None:
         print(f"Manifest not found: {manifest_path}", file=sys.stderr)
         sys.exit(2)
 
-    ordered = load_manifest(manifest_path)
+    names = load_company_names(args.csv.resolve())
+    ordered = sort_manifest_rows(load_manifest(manifest_path), name_by_ticker=names)
     snap_rows = list(csv.DictReader(args.csv.open(encoding="utf-8", newline="")))
     by_ticker = {r["ticker"].strip().upper(): r for r in snap_rows}
 
     lines: list[str] = []
-    for m in ordered:
+    for idx, m in enumerate(ordered):
         t = m["ticker"]
         r = by_ticker.get(t)
         if not r:
@@ -94,6 +97,7 @@ def main() -> None:
                 m["theme_label"],
                 m["linkage_one_liner"],
                 r,
+                idx,
             )
         )
     print("\n".join(lines))

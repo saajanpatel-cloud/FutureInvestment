@@ -23,12 +23,14 @@ _SCRIPTS_DIR = Path(__file__).resolve().parent
 if str(_SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS_DIR))
 
-from fi_manifest import load_manifest
+from fi_manifest import load_manifest, sort_manifest_rows
+from fi_sort_manifest_order import load_company_names
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_MANIFEST = ROOT / "research" / "watchlists" / "universe_manifest.csv"
 DEFAULT_SCORES = ROOT / "research" / "watchlists" / "rubric_scores.csv"
 DEFAULT_CORE_TICKERS = ROOT / "research" / "watchlists" / "report_core_tickers.txt"
+DEFAULT_NAMES_CSV = ROOT / "research" / "watchlists" / "rubric_universe.csv"
 
 
 def load_core_tickers(path: Path) -> set[str]:
@@ -150,12 +152,12 @@ def note_td(sc: dict[str, str], note: str) -> str:
     return f'<td class="{cls}">{html.escape(note)}</td>'
 
 
-def row_html(slug: str, theme_label: str, sc: dict[str, str], core: set[str]) -> str:
+def row_html(slug: str, theme_label: str, sc: dict[str, str], core: set[str], sort_index: int) -> str:
     t = sc["ticker"].strip().upper()
     note = clean_note_display(sc.get("note", "") or "")
     core_attr = ' data-report-core="1"' if t in core else ""
     return (
-        f'            <tr{core_attr} data-theme="{html.escape(slug)}">'
+        f'            <tr{core_attr} data-theme="{html.escape(slug)}" data-sort-index="{sort_index}">'
         f"<td>{html.escape(theme_label)}</td>"
         f"<td>{html.escape(t)}</td>"
         f"{dim_td(sc.get('growth', ''))}"
@@ -189,7 +191,8 @@ def main() -> None:
             print(f"Missing file: {p}", file=sys.stderr)
             sys.exit(2)
 
-    ordered = load_manifest(manifest_path)
+    names = load_company_names(DEFAULT_NAMES_CSV)
+    ordered = sort_manifest_rows(load_manifest(manifest_path), name_by_ticker=names)
     score_rows = list(csv.DictReader(scores_path.open(encoding="utf-8", newline="")))
     by_ticker = {r["ticker"].strip().upper(): r for r in score_rows}
     core = load_core_tickers(args.core_tickers.resolve())
@@ -202,13 +205,13 @@ def main() -> None:
         )
 
     lines: list[str] = []
-    for m in ordered:
+    for idx, m in enumerate(ordered):
         t = m["ticker"]
         sc = by_ticker.get(t)
         if not sc:
             print(f"warning: no rubric_scores row for {t}", file=sys.stderr)
             continue
-        lines.append(row_html(m["theme_slug"], m["theme_label"], sc, core))
+        lines.append(row_html(m["theme_slug"], m["theme_label"], sc, core, idx))
     print("\n".join(lines))
 
 

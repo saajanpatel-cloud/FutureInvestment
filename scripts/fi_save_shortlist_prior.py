@@ -16,6 +16,9 @@ RUB = W / "rubric_scores.csv"
 ERN = W / "earnings_data.csv"
 RANK = W / "universe_valuation_rank.csv"
 COMPOSITE = W / "universe_composite_rank.csv"
+FH = W / "finnhub_context.csv"
+SCEN = W / "scenario_results.csv"
+MC = W / "monte_carlo_results.csv"
 
 
 def main() -> int:
@@ -28,6 +31,9 @@ def main() -> int:
     earn = load_csv_index(ERN)
     rk = load_csv_index(RANK)
     ck = load_csv_index(COMPOSITE)
+    fh = load_csv_index(FH)
+    scen = load_csv_index(SCEN)
+    mc = load_csv_index(MC)
 
     scores: dict[str, float] = {}
     if CORE_JSON.is_file():
@@ -61,6 +67,15 @@ def main() -> int:
                 v = (ck[t].get(k) or "").strip()
                 if v:
                     row[k] = v
+        if t in fh:
+            row["analyst_skew"] = (fh[t].get("analyst_skew") or "").strip()
+            row["insider_mspr"] = (fh[t].get("insider_mspr") or "").strip()
+        if t in scen:
+            row["weighted_upside"] = (scen[t].get("weighted_upside") or "").strip()
+        if t in mc:
+            row["prob_50pct_up"] = (mc[t].get("prob_50pct_up") or "").strip()
+            row["prob_30pct_down"] = (mc[t].get("prob_30pct_down") or "").strip()
+        row["rubric_tail"] = r.get("tail_risks", "")
         by_ticker[t] = row
 
     payload = {

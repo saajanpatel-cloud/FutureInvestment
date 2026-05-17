@@ -25,9 +25,16 @@ RU = ROOT / "research" / "watchlists" / "rubric_universe.csv"
 
 STALE_NOTE = (
     '<p class="muted" style="margin-top:0.5rem;">'
-    "<strong>Live shortlist.</strong> Rows match the Shortlist / Decide core set and refresh on each full pipeline run. "
-    "Use this table as the source of truth.</p>"
+    "<strong>Live shortlist.</strong> Bull, bear, watch, and kill criteria are in "
+    '<a href="#monitor">Monitor</a> per ticker.</p>'
 )
+
+
+def dd_link(ticker: str) -> str:
+    return (
+        f'<a href="#monitor" class="dd-jump" data-ticker="{html.escape(ticker)}">'
+        "Deep dive</a>"
+    )
 
 
 def load_core_tickers() -> list[str]:
@@ -97,22 +104,11 @@ def build_tbody(
         company = (names.get(t) or t).strip()
         if len(company) > 56:
             company = company[:53] + "…"
-        bull = (it.get("qual_bull") or "—").strip()
-        bear = (it.get("qual_bear") or "—").strip()
-        watch = (it.get("qual_watch") or "—").strip()
-        if len(bull) > 220:
-            bull = bull[:217] + "…"
-        if len(bear) > 220:
-            bear = bear[:217] + "…"
-        if len(watch) > 220:
-            watch = watch[:217] + "…"
         rows.append(
-            f"            <tr><td>{html.escape(t)}</td>"
+            f"            <tr><td><strong>{html.escape(t)}</strong></td>"
             f"<td>{html.escape(theme)}</td>"
             f"<td>{html.escape(company)}</td>"
-            f"<td>{html.escape(bull)}</td>"
-            f"<td>{html.escape(bear)}</td>"
-            f"<td>{html.escape(watch)}</td></tr>"
+            f"<td>{dd_link(t)}</td></tr>"
         )
     return "\n".join(rows) + "\n"
 
@@ -120,7 +116,7 @@ def build_tbody(
 TABLE_HEAD = (
     '<table class="print-value-qual-table print-table-rubric">\n'
     "          <thead><tr><th>Ticker</th><th>Theme</th><th>Company</th>"
-    "<th>Bull</th><th>Bear</th><th>Watch</th></tr></thead>\n"
+    "<th>Deep dive</th></tr></thead>\n"
     "          <tbody>\n"
 )
 

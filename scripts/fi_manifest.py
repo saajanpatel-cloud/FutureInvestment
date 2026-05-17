@@ -44,6 +44,26 @@ def manifest_by_ticker(path: Path) -> dict[str, dict[str, str]]:
     return {r["ticker"]: r for r in load_manifest(path)}
 
 
+def manifest_sort_key(
+    row: dict[str, str],
+    name_by_ticker: dict[str, str] | None = None,
+) -> tuple[str, str, str]:
+    """Default table order: company name A–Z, then theme label A–Z, then ticker."""
+    t = row["ticker"].strip().upper()
+    names = name_by_ticker or {}
+    name = (names.get(t) or t).strip().upper()
+    theme = (row.get("theme_label") or row.get("theme_slug") or "").strip().upper()
+    return (name, theme, t)
+
+
+def sort_manifest_rows(
+    rows: list[dict[str, str]],
+    *,
+    name_by_ticker: dict[str, str] | None = None,
+) -> list[dict[str, str]]:
+    return sorted(rows, key=lambda r: manifest_sort_key(r, name_by_ticker))
+
+
 def fmt_mcap(x: str) -> str:
     try:
         v = float(x)

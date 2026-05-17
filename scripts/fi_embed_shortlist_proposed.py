@@ -24,6 +24,7 @@ ROOT = Path(__file__).resolve().parents[1]
 HTML = ROOT / "research" / "watchlists" / "SINGLE_SCREEN_REPORT.html"
 CORE_TXT = ROOT / "research" / "watchlists" / "report_core_tickers.txt"
 MAN = ROOT / "research" / "watchlists" / "universe_manifest.csv"
+RU = ROOT / "research" / "watchlists" / "rubric_universe.csv"
 CORE_JSON = ROOT / "watchlist-ui" / "core-shortlist.json"
 
 CHANGELOG_MARK_S = "<!-- FI_SHORTLIST_CHANGELOG_START -->"
@@ -31,6 +32,23 @@ CHANGELOG_MARK_E = "<!-- FI_SHORTLIST_CHANGELOG_END -->"
 CHANGELOG_PLACEHOLDER = "<!-- FI_CHANGELOG_SLOT_PLACEHOLDER -->"
 
 FOOTNOTE_MARK = "<!-- FI_SHORTLIST_ALLOC_FOOTNOTE -->"
+
+PROPOSED_HEAD = (
+    "            <tr>\n"
+    "              <th>Ticker</th>\n"
+    "              <th>Company</th>\n"
+    "              <th>Theme</th>\n"
+    "              <th>~Alloc %</th>\n"
+    "              <th>Deep dive</th>\n"
+    "            </tr>"
+)
+
+
+def dd_link(ticker: str) -> str:
+    return (
+        f'<a href="#monitor" class="dd-jump" data-ticker="{html.escape(ticker)}">'
+        "Deep dive</a>"
+    )
 
 
 def _detach_changelog(doc: str) -> tuple[str, str | None]:
@@ -71,6 +89,17 @@ def sort_tickers_by_theme_then_symbol(
         return (theme, sym.upper())
 
     return sorted(tickers, key=key)
+
+
+def load_short_names() -> dict[str, str]:
+    if not RU.is_file():
+        return {}
+    with RU.open(encoding="utf-8", newline="") as f:
+        return {
+            (r.get("ticker") or "").strip().upper(): (r.get("short_name") or "").strip()
+            for r in csv.DictReader(f)
+            if (r.get("ticker") or "").strip()
+        }
 
 
 def load_manifest() -> dict[str, dict[str, str]]:
@@ -179,33 +208,20 @@ def build_proposed_tbody(
 ) -> str:
     allocs, _empties = theme_weighted_alloc_strings(tickers, man, weights)
     rows: list[str] = []
+    names = load_short_names()
     for i, t in enumerate(tickers):
         row = man.get(t, {})
         theme = (row.get("theme_label") or row.get("theme_slug") or "—").strip()
-        link = (row.get("linkage_one_liner") or "").strip()
-        it = items.get(t, {})
-        why = (it.get("why_this_name") or it.get("notes") or link or "—").strip()
-        social = (
-            it.get("market_context")
-            or it.get("social_sentiment")
-            or it.get("sentiment_note")
-            or "—"
-        ).strip()
-        kill = (it.get("key_risk_kill") or "—").strip()
-        why = clamp_two_sentences(why)
-        if len(social) > 420:
-            social = social[:417] + "…"
-        if len(kill) > 420:
-            kill = kill[:417] + "…"
+        company = (names.get(t) or t).strip()
+        if len(company) > 48:
+            company = company[:45] + "…"
         rows.append(
             "<tr>\n"
             f"              <td><strong>{html.escape(t)}</strong></td>\n"
-            f"              <td>{html.escape(t)}</td>\n"
+            f"              <td>{html.escape(company)}</td>\n"
             f"              <td>{html.escape(theme)}</td>\n"
             f"              <td>{html.escape(allocs[i])}</td>\n"
-            f"              <td>{html.escape(why)}</td>\n"
-            f"              <td>{html.escape(social)}</td>\n"
-            f"              <td>{html.escape(kill)}</td>\n"
+            f"              <td>{dd_link(t)}</td>\n"
             "            </tr>"
         )
     return "\n".join(rows)
@@ -240,7 +256,7 @@ def build_research_combined_rows(tickers: list[str], man: dict[str, dict[str, st
 
 def patch_proposed_shares(doc: str, tbody: str) -> str:
     pat = re.compile(
-        r'(<table class="proposed-shares print-table-rubric">\s*<thead>[\s\S]*?</thead>\s*<tbody>\s*\n)'
+        r'(<table class="proposed-shares print-table-rubric">\s*<thead>\s*<tr>)[\s\S]*?(</tr>\s*</thead>\s*<tbody>\s*\n)'
         r"[\s\S]*?"
         r"(\s*</tbody>\s*\n\s*</table>)",
         re.MULTILINE,
@@ -249,7 +265,7 @@ def patch_proposed_shares(doc: str, tbody: str) -> str:
     if not m:
         print("Could not find proposed-shares table", file=sys.stderr)
         sys.exit(2)
-    return pat.sub(r"\1" + tbody + r"\2", doc, count=1)
+    return pat.sub(r"\1\n" + PROPOSED_HEAD + r"\n          " + r"\2" + tbody + r"\3", doc, count=1)
 
 
 def patch_alloc_footnote(doc: str, inner_html: str) -> str:
@@ -352,17 +368,31 @@ def patch_copy_counts(doc: str, n: int) -> str:
     return doc
 
 
+MONITOR_THESIS_NOTE = (
+    '<p class="muted"><strong>Full thesis, market context, and kill criteria</strong> '
+    'for each name are in <a href="#monitor">Monitor</a> '
+    "(select ticker or use Deep dive links in the table).</p>"
+)
+
+_MONITOR_NOTE_RE = re.compile(
+    r'\s*<p class="muted"><strong>Full thesis, market context, and kill criteria</strong>.*?</p>',
+    re.DOTALL,
+)
+
+
 def patch_shortlist_header(doc: str) -> str:
-    doc = doc.replace(
-        "<th>Social sentiment<br /><small>Reddit + X directional</small></th>",
-        "<th>Market context<br /><small>Finnhub: analyst / insider / news</small></th>",
+    method_anchor = (
+        '<p class="muted"><strong>Method:</strong> Names with stronger balance-sheet'
     )
-    doc = doc.replace(
-        "<p>Social sentiment signals from r/wallstreetbets, r/stocks, r/semiconductors, "
-        "and X/Twitter finance accounts. Used as a directional input, not a trading signal.</p>",
-        "<p>Finnhub free-tier context: analyst recommendation mix, insider MSPR, "
-        "recent headline count, earnings timing. Not retail social sentiment.</p>",
-    )
+    doc = _MONITOR_NOTE_RE.sub("", doc)
+    if method_anchor in doc:
+        doc = doc.replace(
+            method_anchor,
+            MONITOR_THESIS_NOTE + "\n      " + method_anchor,
+            1,
+        )
+    while doc.count(MONITOR_THESIS_NOTE) > 1:
+        doc = doc.replace(MONITOR_THESIS_NOTE, "", 1)
     return doc
 
 

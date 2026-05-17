@@ -462,3 +462,445 @@ def format_verdict_summary(
 
     bits.append("Adversarial review before sizing — not a buy signal.")
     return join_bullets(bits, 400)
+
+
+THEME_DEMAND: dict[str, str] = {
+    "ai": (
+        "Hyperscaler and enterprise AI capex remains the primary demand driver for accelerators, "
+        "high-bandwidth memory, networking, and custom silicon. Watch customer concentration and "
+        "capex digestion cycles."
+    ),
+    "cyber": (
+        "Security spend tends to be more resilient than discretionary IT, but refresh cycles can "
+        "elongate when budgets tighten. Platform consolidation favours vendors with broad suites."
+    ),
+    "energy": (
+        "Power demand from data centres, electrification, and grid upgrades supports utilities, "
+        "gas/nuclear baseload, and grid equipment. Commodity and rate-case outcomes still matter."
+    ),
+    "health": (
+        "Innovation in biologics, devices, and services can outgrow macro, but payer pressure and "
+        "clinical setbacks are ever-present risks."
+    ),
+    "quantum": (
+        "Commercial quantum revenue remains early and uneven; demand is long-dated optionality. "
+        "Funding runway and dilution dominate near-term narratives."
+    ),
+    "auto": (
+        "Automation, aerospace, and reshoring capex support industrial names, but orders are "
+        "cyclical — book-to-bill and backlog conversion are key checkpoints."
+    ),
+}
+
+
+def bullets_to_html(text: str) -> str:
+    """Turn middle-dot bullets into HTML paragraphs."""
+    t = (text or "").strip()
+    if not t or t == "—":
+        return "<p class=\"muted\">—</p>"
+    parts = [p.strip() for p in t.split(BULLET) if p.strip()]
+    if len(parts) <= 1:
+        return f"<p>{t}</p>"
+    return "".join(f"<p>{html.escape(p)}</p>" for p in parts)
+
+
+def html_escape(s: str) -> str:
+    import html as html_mod
+
+    return html_mod.escape(s)
+
+
+def compute_research_status(
+    rub: dict[str, str],
+    theme_slug: str,
+    premortem: str,
+    override: str | None = None,
+    *,
+    pack: dict | None = None,
+) -> str:
+    if override in ("complete", "theme_only", "stub", "adversarial_complete"):
+        return override
+    if pack and pack.get("workflow_e_complete"):
+        return "adversarial_complete"
+    if theme_slug in ("quantum", "space"):
+        return "theme_only"
+    prem = (premortem or "").strip()
+    if "[Auto stub]" in prem:
+        return "stub"
+    tot = rubric_total(rub)
+    if tot is not None and tot >= 16:
+        return "complete"
+    return "stub"
+
+
+def research_status_label(status: str) -> str:
+    return {
+        "complete": "Research: adversarial pack recommended",
+        "adversarial_complete": "Research: adversarial pack on file — verify before sizing",
+        "theme_only": "Research: theme only — full adversarial pack required",
+        "stub": "Research: stub — complete adversarial review before sizing",
+    }.get(status, "Research: status unknown")
+
+
+def format_model_zones(
+    scen: dict[str, str] | None,
+    mc: dict[str, str] | None,
+    dcf_mid: tuple[float, float] | None,
+) -> str:
+    parts: list[str] = []
+    if scen:
+        try:
+            price = float(scen.get("price") or 0)
+            wt = float(scen.get("weighted_upside") or 0)
+            base = float(scen.get("base_upside") or scen.get("base_price") or 0)
+            parts.append(f"Spot at export: ${price:.2f}.")
+            parts.append(f"Scenario weighted implied change: {wt:+.0f}% vs spot.")
+            bp = scen.get("base_price") or scen.get("bull_price")
+            if bp:
+                parts.append(f"Base case implied price ${float(scen.get('base_price', 0)):.2f}.")
+        except (TypeError, ValueError):
+            pass
+    if mc:
+        try:
+            cur = float(mc["current_price"])
+            med = float(mc["median_price"])
+            p10 = float(mc["p10"])
+            p90 = float(mc["p90"])
+            med_up = (med / cur - 1) * 100 if cur > 0 else 0
+            parts.append(
+                f"Monte Carlo: P10 ${p10:.2f}, median ${med:.2f} ({med_up:+.0f}% vs spot), P90 ${p90:.2f}."
+            )
+        except (KeyError, ValueError, ZeroDivisionError):
+            pass
+    if dcf_mid and dcf_mid[0] > 0:
+        p, u = dcf_mid
+        parts.append(f"DCF mid growth × mid WACC anchor: ${p:.2f} ({u:+.0f}% vs spot).")
+    if not parts:
+        return "Model zones unavailable — re-run valuation refresh."
+    read = ""
+    if scen:
+        try:
+            wt = float(scen.get("weighted_upside") or 0)
+            if wt < -15:
+                read = " Spot is above weighted scenario — patience if you need margin of safety."
+            elif wt > 30:
+                read = " Models imply material upside vs spot — verify assumptions in filings."
+        except (TypeError, ValueError):
+            pass
+    return join_bullets(parts, 900) + read
+
+
+def format_section_prose(parts: list[str], max_chars: int = 1600) -> str:
+    """Join clauses into one or two readable paragraphs for Monitor."""
+    parts = [p.strip() for p in parts if p and p.strip()]
+    if not parts:
+        return "—"
+    if len(parts) <= 2:
+        return " ".join(parts)
+    mid = max(1, len(parts) // 2)
+    p1 = " ".join(parts[:mid])
+    p2 = " ".join(parts[mid:])
+    out = p1 + "\n\n" + p2
+    if len(out) > max_chars:
+        return out[: max_chars - 1] + "…"
+    return out
+
+
+def format_what_company_long(
+    profile: dict[str, str], man: dict[str, str], earn: dict[str, str]
+) -> str:
+    summary = (profile.get("business_summary") or "").strip()
+    link = (man.get("linkage_one_liner") or "").strip()
+    theme_lbl = (man.get("theme_label") or man.get("theme_slug") or "").strip()
+    bits: list[str] = []
+    if summary:
+        bits.append(summary)
+    elif link:
+        bits.append(link)
+    if theme_lbl:
+        bits.append(f"It sits in the {theme_lbl} sleeve of this research pack.")
+    yoy = human_yoy(earn)
+    if yoy:
+        bits.append(yoy + ".")
+    return format_section_prose(bits, 2000)
+
+
+def format_explain_price_chart(scen: dict[str, str] | None, theme: str) -> str:
+    parts: list[str] = [
+        "This chart shows daily price candles from TradingView — useful for timing and volatility, not a buy signal on its own."
+    ]
+    if scen:
+        try:
+            price = float(scen.get("price") or 0)
+            if price > 0:
+                parts.append(f"Spot at last model export was about ${price:.2f}.")
+        except (TypeError, ValueError):
+            pass
+    if theme:
+        parts.append(f"Theme context: {theme}.")
+    return format_section_prose(parts, 900)
+
+
+def format_explain_scenario(scen: dict[str, str] | None) -> str:
+    if not scen:
+        return "Scenario model not available for this ticker — run a full refresh after it joins the core shortlist."
+    try:
+        wt = float(scen.get("weighted_upside") or 0)
+        bear = float(scen.get("bear_upside") or 0)
+        bull = float(scen.get("bull_upside") or 0)
+        price = float(scen.get("price") or 0)
+        wt_px = float(scen.get("weighted_price") or 0)
+    except (TypeError, ValueError):
+        return "Scenario outputs could not be read — check scenario_results.csv."
+    parts = [
+        "The bar spans bear, base, and bull implied prices from forward-earnings growth and exit multiples.",
+        f"Probability-weighted case implies {wt:+.0f}% vs spot"
+        + (f" (about ${wt_px:.2f})" if wt_px > 0 else "")
+        + ".",
+        f"Bear leg {bear:+.0f}% · bull leg {bull:+.0f}% — use the spread to see how much optimism is in the base case.",
+    ]
+    if wt < -10:
+        parts.append("Weighted upside is negative: the market may already price a strong outcome.")
+    elif wt > 25:
+        parts.append("Weighted upside is high: confirm assumptions in the next filing before trusting the base case.")
+    return format_section_prose(parts, 1100)
+
+
+def format_explain_risk(risk: dict[str, str] | None) -> str:
+    if not risk:
+        return "Risk metrics need price history — available for core shortlist names after refresh."
+    try:
+        beta = float(risk.get("beta") or 0)
+        vol = float(risk.get("volatility") or 0) * 100
+        mdd = float(risk.get("max_drawdown") or 0) * 100
+        sharpe = float(risk.get("sharpe") or 0)
+        corr = float(risk.get("spy_correlation") or 0)
+    except (TypeError, ValueError):
+        return "Risk metrics could not be parsed."
+    parts = [
+        f"Beta {beta:.2f} measures sensitivity to the broad market; annualised volatility was about {vol:.0f}%.",
+        f"Maximum drawdown over the lookback window was {mdd:.0f}% — how far the stock fell from peak to trough.",
+        f"Sharpe {sharpe:.2f} summarises return per unit of risk; correlation with the S&P 500 was {corr:.2f}.",
+    ]
+    if beta > 1.4:
+        parts.append("High beta: expect amplified moves versus the index in risk-on and risk-off days.")
+    if corr < 0.35:
+        parts.append("Low correlation can help diversification if the thesis is uncorrelated to mega-cap tech.")
+    return format_section_prose(parts, 1100)
+
+
+def format_explain_dcf(dcf_mid: tuple[float, float] | None, spot: float) -> str:
+    if not dcf_mid or dcf_mid[0] <= 0:
+        return (
+            "The grid tests five growth rates against five discount rates (WACC). "
+            "Each cell is an implied share price from a simplified cash-flow model — compare cells to spot; not a formal fair value."
+        )
+    p, u = dcf_mid
+    parts = [
+        "Each cell is an implied price from a discounted cash-flow sketch (growth × WACC).",
+        f"Mid-grid anchor is about ${p:.2f} ({u:+.0f}% vs spot at export).",
+        "Greener cells mean higher implied upside; red cells mean the model sees overvaluation under those assumptions.",
+    ]
+    return format_section_prose(parts, 1000)
+
+
+def format_explain_monte_carlo(mc: dict[str, str] | None) -> str:
+    if not mc:
+        return "Monte Carlo paths are run for core names — 10,000 simulated prices using recent volatility."
+    try:
+        cur = float(mc.get("current_price") or 0)
+        med = float(mc.get("median_price") or 0)
+        p10 = float(mc.get("p10") or 0)
+        p90 = float(mc.get("p90") or 0)
+        p50 = float(mc.get("prob_50pct_up") or 0) * 100
+        p30 = float(mc.get("prob_30pct_down") or 0) * 100
+        med_up = (med / cur - 1) * 100 if cur > 0 else 0
+    except (TypeError, ValueError):
+        return "Monte Carlo outputs could not be read."
+    parts = [
+        f"The band runs from P10 ${p10:.2f} to P90 ${p90:.2f}; median path about ${med:.2f} ({med_up:+.0f}% vs spot).",
+        f"Across simulated paths, {p50:.0f}% finished more than 50% above today's price and {p30:.0f}% fell more than 30%.",
+        "This is a statistical summary of recent volatility — not a forecast of the thesis playing out.",
+    ]
+    return format_section_prose(parts, 1100)
+
+
+def format_explain_rubric(rub: dict[str, str]) -> str:
+    if not rub:
+        return "Rubric scores not found — add a row in rubric_scores.csv."
+    tot = rubric_total(rub)
+    dims = [
+        ("Growth", ri(rub, "growth")),
+        ("Margins", ri(rub, "margins")),
+        ("Balance sheet", ri(rub, "balance_sheet")),
+        ("Durability", ri(rub, "durability")),
+        ("Valuation", ri(rub, "valuation")),
+        ("Tail risks", ri(rub, "tail_risks")),
+    ]
+    bits = [f"{label} {score}/5" for label, score in dims]
+    lead = f"Composite rubric total {tot}/24 before tail-risk penalty." if tot is not None else "Six-dimension rubric:"
+    return format_section_prose([lead, "Scores: " + ", ".join(bits) + "."], 900)
+
+
+def format_explain_market_context(fh_line: str, earnings: str) -> str:
+    parts = []
+    if fh_line and fh_line != "—":
+        parts.append(fh_line)
+    if earnings and earnings not in ("no data", "N/A", "—"):
+        if earnings.startswith("last "):
+            parts.append(f"Earnings: last reported {earnings[5:].strip()}.")
+        else:
+            parts.append(f"Next earnings date on file: {earnings}.")
+    parts.append("Headlines below are from Finnhub (last seven days) — verify material news in primary sources.")
+    return format_section_prose(parts, 1000)
+
+
+def format_at_a_glance(
+    sw_tier: str,
+    scen: dict[str, str] | None,
+    mc: dict[str, str] | None,
+    dcf_mid: tuple[float, float] | None,
+    rub_total: int | None,
+) -> str:
+    bits: list[str] = []
+    if sw_tier:
+        bits.append(sw_tier)
+    if rub_total is not None:
+        bits.append(f"Rubric {rub_total}/24")
+    if scen:
+        try:
+            bits.append(f"Scenario wt {float(scen.get('weighted_upside') or 0):+.0f}%")
+        except (TypeError, ValueError):
+            pass
+    if mc:
+        try:
+            cur = float(mc.get("current_price") or 0)
+            med = float(mc.get("median_price") or 0)
+            if cur > 0:
+                bits.append(f"MC median {(med / cur - 1) * 100:+.0f}%")
+        except (TypeError, ValueError):
+            pass
+    if dcf_mid and dcf_mid[1]:
+        bits.append(f"DCF mid {dcf_mid[1]:+.0f}%")
+    return " · ".join(bits) if bits else "—"
+
+
+def dcf_mid_from_rows(rows: list[dict[str, str]]) -> tuple[float, float] | None:
+    if not rows:
+        return None
+    try:
+        growths = sorted({round(float(r["growth_rate"]), 6) for r in rows if r.get("growth_rate")})
+        waccs = sorted({round(float(r["wacc"]), 6) for r in rows if r.get("wacc")})
+        if not growths or not waccs:
+            return None
+        g_mid = growths[len(growths) // 2]
+        w_mid = waccs[len(waccs) // 2]
+        for r in rows:
+            if round(float(r.get("growth_rate") or 0), 6) == g_mid and round(
+                float(r.get("wacc") or 0), 6
+            ) == w_mid:
+                return (float(r.get("implied_price") or 0), float(r.get("upside_pct") or 0))
+    except (TypeError, ValueError, KeyError):
+        return None
+    return None
+
+
+def format_deep_dive_sections(
+    *,
+    item: dict[str, Any],
+    rub: dict[str, str],
+    man: dict[str, str],
+    profile: dict[str, str],
+    earn: dict[str, str],
+    scen: dict[str, str] | None,
+    mc: dict[str, str] | None,
+    risk: dict[str, str] | None,
+    alloc_pct: str,
+    prior_as_of: str,
+    baseline: bool,
+    dcf_rows: list[dict[str, str]] | None = None,
+    fh_row: dict[str, str] | None = None,
+) -> dict[str, str]:
+    link = (man.get("linkage_one_liner") or "").strip()
+    theme_slug = (man.get("theme_slug") or "").strip()
+    theme_lbl = (man.get("theme_label") or theme_slug or "—").strip()
+    summary = (profile.get("business_summary") or "").strip()
+    products = (profile.get("key_products") or link or summary[:200] or "—").strip()
+    website = (profile.get("website") or "").strip()
+    sec = (profile.get("sec_edgar_url") or "").strip()
+    holders = (profile.get("holders_top") or "—").strip()
+    demand = THEME_DEMAND.get(theme_slug, THEME_DEMAND.get("ai", ""))
+
+    verdict = format_verdict_summary(rub, scen, mc, risk, item)
+    exec_text = verdict
+    if len(exec_text) < 120:
+        exec_text = verdict + " " + (item.get("why_this_name") or "")[:400]
+
+    dcf_mid = dcf_mid_from_rows(dcf_rows or [])
+    spot = 0.0
+    if scen:
+        try:
+            spot = float(scen.get("price") or 0)
+        except (TypeError, ValueError):
+            pass
+    tot = rubric_total(rub)
+    tier = "Tier 2"
+    if tot is not None:
+        if tot >= 20:
+            tier = "Tier 1"
+        elif tot <= 12:
+            tier = "Tier 3"
+    fh_earn = (fh_row or {}).get("next_earnings") or ""
+
+    sections = {
+        "executive_summary": format_section_prose([exec_text, item.get("why_this_name") or ""], 1800),
+        "what_company": format_what_company_long(profile, man, earn),
+        "key_products": format_section_prose([products, link], 1200),
+        "strategic_plays": format_section_prose(
+            [item.get("why_this_name") or "", item.get("research_thesis") or link], 1500
+        ),
+        "theme_linkage": format_section_prose(
+            [
+                f"This name is mapped to the {theme_lbl} sleeve.",
+                demand,
+                link,
+                f"Indicative allocation within sleeve: {alloc_pct}" if alloc_pct else "",
+            ],
+            1200,
+        ),
+        "demand_outlook": format_section_prose([demand, human_yoy(earn) or ""], 1200),
+        "holders": holders,
+        "market_context": format_explain_market_context(
+            (item.get("market_context") or "—")[:900], str(fh_earn)
+        ),
+        "bull_case": format_section_prose([(item.get("qual_bull") or "—")], 1500),
+        "bear_case": format_section_prose([(item.get("qual_bear") or "—")], 1500),
+        "watch": format_section_prose([(item.get("qual_watch") or "—")], 1000),
+        "kill": format_section_prose(
+            [(item.get("key_risk_kill") or item.get("research_kill") or "—")], 1200
+        ),
+        "premortem": (item.get("research_premortem") or "")[:800],
+        "links": join_bullets(
+            [f"Website: {website}" if website else "", f"SEC filings: {sec}" if sec else ""],
+            500,
+        ),
+        "signals_intro": (
+            "First snapshot — signal deltas appear after the next full refresh."
+            if baseline
+            else f"Compared to prior refresh: {prior_as_of or 'last run'}."
+        ),
+        "model_zones": format_model_zones(scen, mc, dcf_mid),
+        "at_a_glance": format_at_a_glance(tier, scen, mc, dcf_mid, tot),
+        "explain_price_chart": format_explain_price_chart(scen, theme_lbl),
+        "explain_scenario": format_explain_scenario(scen),
+        "explain_risk": format_explain_risk(risk),
+        "explain_dcf": format_explain_dcf(dcf_mid, spot),
+        "explain_monte_carlo": format_explain_monte_carlo(mc),
+        "explain_rubric": format_explain_rubric(rub),
+        "explain_market_context": format_explain_market_context(
+            (item.get("market_context") or "—"), str(fh_earn)
+        ),
+        "website": website,
+        "sec_edgar_url": sec,
+    }
+    return sections

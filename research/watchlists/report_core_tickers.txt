@@ -1,26 +1,28 @@
-# 23 core tickers — five-signal composite pool (60) + tier expansion.
+# 25 core tickers — five-signal composite pool (60) + tier expansion.
 # Dashboard / rubric subset (data-report-core). Regenerate rows: fi_rubric_html_rows.py + fi_embed_single_screen.py + fi_tag_rubric_report_core.py
 
 MU
 B
-REGN
-GSK
-CVS
-GMAB.CO
-CHKP
-MPC
 PSX
+MPC
+FSLR
+CVS
+PFE
 EOG
-VST
-GEN
-VLO
-LNG
-TXT
-ZBH
-IONQ
-TSM
-FANG
-NVDA
-QRVO
 PATH
-AVGO
+GEN
+SMCI
+ZBH
+VLO
+TENB
+QUBT
+VST
+SAN.PA
+QRVO
+VWS.CO
+TXT
+NVDA
+TSM
+PLAB
+CRUS
+DIOD

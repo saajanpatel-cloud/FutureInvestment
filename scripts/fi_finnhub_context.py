@@ -30,6 +30,7 @@ from pathlib import Path
 from typing import Any
 
 NEWS_LOOKBACK_DAYS = 7
+NEWS_ARTICLE_CAP = 20
 INSIDER_LOOKBACK_MONTHS = 18
 SLEEP_BETWEEN_TICKERS = 0.35
 
@@ -180,7 +181,7 @@ def _insider_mspr(symbol: str) -> str:
     return f"neutral MSPR {v:.0f}"
 
 
-def _news_count_7d(symbol: str) -> int | str:
+def _fetch_company_news(symbol: str) -> list[dict[str, Any]] | None:
     end = date.today()
     start = end - timedelta(days=NEWS_LOOKBACK_DAYS)
     data = _fetch(
@@ -188,8 +189,38 @@ def _news_count_7d(symbol: str) -> int | str:
         {"symbol": symbol, "from": start.isoformat(), "to": end.isoformat()},
     )
     if not isinstance(data, list):
+        return None
+    return [x for x in data if isinstance(x, dict)]
+
+
+def _normalize_article(row: dict[str, Any]) -> dict[str, str]:
+    dt_raw = row.get("datetime")
+    date_s = ""
+    if dt_raw is not None:
+        try:
+            ts = int(dt_raw)
+            date_s = datetime.fromtimestamp(ts, tz=timezone.utc).strftime("%Y-%m-%d")
+        except (TypeError, ValueError, OSError):
+            date_s = ""
+    headline = str(row.get("headline") or "").strip()[:240]
+    url = str(row.get("url") or "").strip()
+    source = str(row.get("source") or row.get("category") or "").strip()[:80]
+    return {"date": date_s, "source": source, "headline": headline, "url": url}
+
+
+def _news_articles_7d(symbol: str) -> tuple[list[dict[str, str]], bool]:
+    rows = _fetch_company_news(symbol)
+    if rows is None:
+        return [], False
+    articles = [_normalize_article(r) for r in rows if (r.get("headline") or "").strip()]
+    articles.sort(key=lambda a: a.get("date") or "", reverse=True)
+    return articles[:NEWS_ARTICLE_CAP], True
+
+
+def _news_count_from_articles(articles: list[dict[str, str]], raw_fetched: bool) -> int | str:
+    if not raw_fetched:
         return "N/A"
-    return len(data)
+    return len(articles)
 
 
 def _next_earnings(symbol: str) -> str:
@@ -243,7 +274,8 @@ def _context_for_ticker(ticker: str) -> dict[str, Any]:
     sym = _finnhub_symbol(ticker)
     analyst = _analyst_skew(sym)
     insider = _insider_mspr(sym)
-    news = _news_count_7d(sym)
+    articles, news_ok = _news_articles_7d(sym)
+    news: int | str = _news_count_from_articles(articles, news_ok)
     earnings = _next_earnings(sym)
     scan_day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     line = _build_context_line(analyst, insider, news, earnings, scan_day)
@@ -255,6 +287,7 @@ def _context_for_ticker(ticker: str) -> dict[str, Any]:
         "news_7d": news,
         "next_earnings": earnings,
         "context_line": line,
+        "news_articles": articles,
         "last_updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
     }
 
@@ -390,10 +423,15 @@ def main() -> None:
     ap.add_argument("--tickers-file", type=Path, help="One ticker per line")
     ap.add_argument("--csv", help="Output CSV path")
     ap.add_argument("--html", help="Output HTML fragment path")
+    ap.add_argument(
+        "--news-json",
+        type=Path,
+        help="Sidecar JSON map ticker -> article list (for Monitor embed)",
+    )
     args = ap.parse_args()
 
-    if not args.csv and not args.html:
-        ap.error("Provide at least one of --csv or --html")
+    if not args.csv and not args.html and not args.news_json:
+        ap.error("Provide at least one of --csv, --html, or --news-json")
 
     tickers: list[str] = []
     if args.tickers_file:
@@ -428,11 +466,23 @@ def main() -> None:
                 "news_7d": "N/A",
                 "next_earnings": "N/A",
                 "context_line": "FINNHUB_API_KEY not configured.",
+                "news_articles": [],
                 "last_updated": ts,
             })
 
+    if args.news_json:
+        news_map = {
+            str(r["ticker"]): r.get("news_articles") or []
+            for r in rows
+        }
+        outp = args.news_json.resolve()
+        outp.parent.mkdir(parents=True, exist_ok=True)
+        outp.write_text(json.dumps(news_map, indent=2), encoding="utf-8")
+        print(f"  ✓ Wrote {outp}", file=sys.stderr)
+
     if args.csv:
-        _write_csv(rows, Path(args.csv))
+        csv_rows = [{k: v for k, v in r.items() if k != "news_articles"} for r in rows]
+        _write_csv(csv_rows, Path(args.csv))
     if args.html:
         html_out = _build_html(rows, ts, has_key)
         outp = Path(args.html)
