@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-05-17T12:37:52.507942+00:00",
+  "updated_at": "2026-05-17T15:58:54.285612+00:00",
   "packs": {
     "ACMR": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -34,7 +34,7 @@
     "AEHR": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -65,7 +65,7 @@
     "AMGN": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -94,7 +94,7 @@
     "APLD": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -124,7 +124,7 @@
     "ARQQ": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -155,7 +155,7 @@
     "ASTS": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -185,7 +185,7 @@
     "B": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -214,7 +214,7 @@
     "BEAM": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -244,7 +244,7 @@
     "BIIB": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -273,7 +273,7 @@
     "BKSY": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -303,7 +303,7 @@
     "BRKS": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -333,7 +333,7 @@
     "CAMT": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -363,7 +363,7 @@
     "CHKP": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -392,7 +392,7 @@
     "CNC": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -421,7 +421,7 @@
     "COHU": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -451,7 +451,7 @@
     "CRSP": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -481,7 +481,7 @@
     "CRUS": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -510,7 +510,7 @@
     "CVS": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -539,7 +539,7 @@
     "DIOD": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -568,7 +568,7 @@
     "DVN": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "watch",
@@ -626,7 +626,7 @@
     "EDIT": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -686,7 +686,7 @@
     "ENEL.MI": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "watch",
@@ -715,7 +715,7 @@
     "ENGI.PA": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "watch",
@@ -744,7 +744,7 @@
     "EOG": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -773,7 +773,7 @@
     "ET": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -802,7 +802,7 @@
     "FANG": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -831,7 +831,7 @@
     "FORM": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -861,7 +861,7 @@
     "FRSH": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -890,7 +890,7 @@
     "FSLR": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -919,7 +919,7 @@
     "GEN": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -948,7 +948,7 @@
     "GMAB.CO": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -977,7 +977,7 @@
     "GSAT": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -1007,7 +1007,7 @@
     "GSK": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -1036,7 +1036,7 @@
     "HII": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -1065,7 +1065,7 @@
     "HOLO": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -1096,7 +1096,7 @@
     "HUM": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -1125,7 +1125,7 @@
     "IBM": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -1155,7 +1155,7 @@
     "INDI": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -1186,7 +1186,7 @@
     "IONQ": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -1217,7 +1217,7 @@
     "IQE.L": {
       "workflow_e_complete": true,
       "as_of": "2026-05-17",
-      "earnings_mtime": 1779021129.0722697,
+      "earnings_mtime": 1779032421.6745968,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -3293,11 +3293,40 @@
         "Material guidance cut vs consensus on revenue or margins"
       ],
       "seat_rationale": "ZBRA: gate=pass, quantum_pure=False, seat_score=70, linkage=mixed"
+    },
+    "TSM": {
+      "workflow_e_complete": true,
+      "as_of": "2026-05-17",
+      "earnings_mtime": 1779032421.6745968,
+      "source": "heuristic",
+      "verdict": "pass",
+      "shortlist_gate": "pass",
+      "linkage_grade": "mixed",
+      "quantum_pure": false,
+      "seat_score": 71,
+      "bear_bullets": [
+        "Macro or cycle turns against the name [soft]",
+        "Execution miss vs guidance [soft]",
+        "Second-order customer or capex dependency not fully visible in snapshot [soft]",
+        "Second-order customer or capex dependency not fully visible in snapshot [soft]"
+      ],
+      "premortem": "If this is a poor outcome in five years, the likely reason is growth stalls or the multiple resets lower.",
+      "rebuttal": [
+        {
+          "bear": "Macro or cycle turns against the name [soft]",
+          "response": "rebuttal",
+          "note": "Verify in 10-K/10-Q before sizing"
+        }
+      ],
+      "kill_criteria": [
+        "Material guidance cut vs consensus on revenue or margins"
+      ],
+      "seat_rationale": "TSM: gate=pass, quantum_pure=False, seat_score=71, linkage=mixed"
     }
   },
   "meta": {
-    "last_run_reviewed": 40,
+    "last_run_reviewed": 1,
     "last_run_failed": [],
-    "batch_size": 40
+    "batch_size": 1
   }
 }

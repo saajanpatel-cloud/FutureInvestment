@@ -93,10 +93,13 @@ fi
 "$PY" scripts/fi_embed_value_tables.py
 "$PY" scripts/fi_embed_value_js.py
 "$PY" scripts/fi_embed_deep_dive_runtime.py
+"$PY" scripts/fi_embed_chart_ticker_core.py || true
 "$PY" scripts/fi_embed_deep_dive_layout.py
 "$PY" scripts/fi_embed_deep_dive_select.py
+"$PY" scripts/fi_restructure_monitor_html.py
 "$PY" scripts/fi_embed_decide_matrix.py
 "$PY" scripts/fi_embed_shortlist_changelog.py
+"$PY" scripts/fi_embed_executive_summary.py
 if [ -f research/watchlists/dcf_sensitivity.csv ]; then
   "$PY" scripts/fi_embed_dcf_grids.py || true
 fi

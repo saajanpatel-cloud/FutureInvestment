@@ -18,6 +18,8 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+from fi_embed_executive_summary import tier_from_total
+from fi_narrative import rubric_total
 from fi_theme_targets import load_theme_weights
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -25,6 +27,7 @@ HTML = ROOT / "research" / "watchlists" / "SINGLE_SCREEN_REPORT.html"
 CORE_TXT = ROOT / "research" / "watchlists" / "report_core_tickers.txt"
 MAN = ROOT / "research" / "watchlists" / "universe_manifest.csv"
 RU = ROOT / "research" / "watchlists" / "rubric_universe.csv"
+RUB = ROOT / "research" / "watchlists" / "rubric_scores.csv"
 CORE_JSON = ROOT / "watchlist-ui" / "core-shortlist.json"
 
 CHANGELOG_MARK_S = "<!-- FI_SHORTLIST_CHANGELOG_START -->"
@@ -38,6 +41,7 @@ PROPOSED_HEAD = (
     "              <th>Ticker</th>\n"
     "              <th>Company</th>\n"
     "              <th>Theme</th>\n"
+    "              <th>Tier</th>\n"
     "              <th>~Alloc %</th>\n"
     "              <th>Deep dive</th>\n"
     "            </tr>"
@@ -120,6 +124,20 @@ def slug_labels_from_manifest(man: dict[str, dict[str, str]]) -> dict[str, str]:
         if slug and slug not in out:
             out[slug] = lbl
     return out
+
+
+def load_rubric() -> dict[str, dict[str, str]]:
+    if not RUB.is_file():
+        return {}
+    with RUB.open(encoding="utf-8", newline="") as f:
+        return {(r.get("ticker") or "").strip().upper(): r for r in csv.DictReader(f)}
+
+
+def tier_cell(ticker: str, rub_by: dict[str, dict[str, str]]) -> str:
+    tot = rubric_total(rub_by.get(ticker) or {})
+    n = tier_from_total(tot)
+    label = f"Tier {n}"
+    return f'<td class="shortlist-tier shortlist-tier-{n}">{html.escape(label)}</td>'
 
 
 def load_shortlist_items() -> dict[str, dict[str, str]]:
@@ -205,6 +223,7 @@ def build_proposed_tbody(
     man: dict[str, dict[str, str]],
     items: dict[str, dict[str, str]],
     weights: dict[str, float],
+    rub_by: dict[str, dict[str, str]],
 ) -> str:
     allocs, _empties = theme_weighted_alloc_strings(tickers, man, weights)
     rows: list[str] = []
@@ -220,6 +239,7 @@ def build_proposed_tbody(
             f"              <td><strong>{html.escape(t)}</strong></td>\n"
             f"              <td>{html.escape(company)}</td>\n"
             f"              <td>{html.escape(theme)}</td>\n"
+            f"              {tier_cell(t, rub_by)}\n"
             f"              <td>{html.escape(allocs[i])}</td>\n"
             f"              <td>{dd_link(t)}</td>\n"
             "            </tr>"
@@ -256,7 +276,9 @@ def build_research_combined_rows(tickers: list[str], man: dict[str, dict[str, st
 
 def patch_proposed_shares(doc: str, tbody: str) -> str:
     pat = re.compile(
-        r'(<table class="proposed-shares print-table-rubric">\s*<thead>\s*<tr>)[\s\S]*?(</tr>\s*</thead>\s*<tbody>\s*\n)'
+        r'(<table class="proposed-shares print-table-rubric">\s*<thead>\s*)'
+        r"<tr>[\s\S]*?</tr>"
+        r"(\s*</thead>\s*<tbody>\s*\n)"
         r"[\s\S]*?"
         r"(\s*</tbody>\s*\n\s*</table>)",
         re.MULTILINE,
@@ -265,7 +287,84 @@ def patch_proposed_shares(doc: str, tbody: str) -> str:
     if not m:
         print("Could not find proposed-shares table", file=sys.stderr)
         sys.exit(2)
-    return pat.sub(r"\1\n" + PROPOSED_HEAD + r"\n          " + r"\2" + tbody + r"\3", doc, count=1)
+    return pat.sub(r"\1" + PROPOSED_HEAD + r"\2" + tbody + r"\3", doc, count=1)
+
+
+def patch_proposed_table_css(doc: str) -> str:
+    """Keep column widths aligned after Tier column (col 4)."""
+    old_screen = (
+        "    table.proposed-shares td:nth-child(4),\n"
+        "    table.proposed-shares th:nth-child(4) { min-width: 7.5rem; max-width: none; white-space: nowrap; }\n"
+        "    table.proposed-shares td:nth-child(5),\n"
+        "    table.proposed-shares th:nth-child(5) { min-width: 20rem; max-width: 48rem; white-space: normal; line-height: 1.45; }"
+    )
+    new_screen = (
+        "    table.proposed-shares td:nth-child(4),\n"
+        "    table.proposed-shares th:nth-child(4) { min-width: 4.5rem; max-width: none; white-space: nowrap; }\n"
+        "    table.proposed-shares td:nth-child(5),\n"
+        "    table.proposed-shares th:nth-child(5) { min-width: 7.5rem; max-width: none; white-space: nowrap; }\n"
+        "    table.proposed-shares td:nth-child(6),\n"
+        "    table.proposed-shares th:nth-child(6) { min-width: 5.5rem; white-space: nowrap; }\n"
+        "    .shortlist-tier-1 { font-weight: 600; color: var(--accent); }\n"
+        "    .shortlist-tier-2 { color: var(--fg); }\n"
+        "    .shortlist-tier-3 { color: var(--warn); font-weight: 600; }"
+    )
+    if old_screen in doc:
+        doc = doc.replace(old_screen, new_screen, 1)
+    elif ".shortlist-tier-1" not in doc:
+        doc = doc.replace(
+            "    table.proposed-shares th,\n    table.proposed-shares td { vertical-align: top; }",
+            "    table.proposed-shares th,\n    table.proposed-shares td { vertical-align: top; }\n"
+            + new_screen,
+            1,
+        )
+    old_print = (
+        "      table.proposed-shares td:nth-child(4),\n"
+        "      table.proposed-shares th:nth-child(4) {\n"
+        "        min-width: 11mm !important;\n"
+        "        width: 7% !important;\n"
+        "        white-space: nowrap !important;\n"
+        "      }\n"
+        "      table.proposed-shares td:nth-child(5),\n"
+        "      table.proposed-shares th:nth-child(5) {\n"
+        "        min-width: 42mm !important;\n"
+        "        width: 26% !important;\n"
+        "        max-width: none !important;\n"
+        "      }\n"
+        "      table.proposed-shares td:nth-child(6),\n"
+        "      table.proposed-shares th:nth-child(6) {\n"
+        "        min-width: 28mm !important;\n"
+        "        width: 18% !important;\n"
+        "      }\n"
+        "      table.proposed-shares td:nth-child(7),\n"
+        "      table.proposed-shares th:nth-child(7) {\n"
+        "        min-width: 28mm !important;\n"
+        "        width: 22% !important;\n"
+        "      }"
+    )
+    new_print = (
+        "      table.proposed-shares td:nth-child(4),\n"
+        "      table.proposed-shares th:nth-child(4) {\n"
+        "        min-width: 14mm !important;\n"
+        "        width: 8% !important;\n"
+        "        white-space: nowrap !important;\n"
+        "      }\n"
+        "      table.proposed-shares td:nth-child(5),\n"
+        "      table.proposed-shares th:nth-child(5) {\n"
+        "        min-width: 11mm !important;\n"
+        "        width: 7% !important;\n"
+        "        white-space: nowrap !important;\n"
+        "      }\n"
+        "      table.proposed-shares td:nth-child(6),\n"
+        "      table.proposed-shares th:nth-child(6) {\n"
+        "        min-width: 16mm !important;\n"
+        "        width: 10% !important;\n"
+        "        white-space: nowrap !important;\n"
+        "      }"
+    )
+    if old_print in doc:
+        doc = doc.replace(old_print, new_print, 1)
+    return doc
 
 
 def patch_alloc_footnote(doc: str, inner_html: str) -> str:
@@ -412,7 +511,11 @@ def main() -> None:
 
     text = HTML.read_text(encoding="utf-8")
     text, changelog_block = _detach_changelog(text)
-    text = patch_proposed_shares(text, build_proposed_tbody(tickers, man, items, weights) + "\n")
+    rub_by = load_rubric()
+    text = patch_proposed_shares(
+        text, build_proposed_tbody(tickers, man, items, weights, rub_by) + "\n"
+    )
+    text = patch_proposed_table_css(text)
     text = patch_alloc_footnote(text, foot_html)
     text = patch_print_research_combined(
         text, build_research_combined_rows(tickers, man, items) + "\n", n

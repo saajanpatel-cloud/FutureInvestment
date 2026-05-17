@@ -164,6 +164,19 @@ def sync_count_labels(text: str, stats: dict, core_n: int) -> str:
     text = re.sub(r"\d{2,3} fully modelled", f"{m} fully modelled", text)
     text = re.sub(r"~\d{2,3} modelled", f"~{m} modelled", text)
     text = re.sub(r"~\d{2,3} screen", f"~{u} screen", text)
+    # Legacy v1 copy that predates dynamic labels (316 / 6 themes)
+    text = re.sub(r"\b316 tickers\b", f"{u} tickers", text)
+    text = re.sub(r"\b316 companies\b", f"{u} companies", text)
+    text = re.sub(r"\b316-name\b", f"{u}-name", text)
+    text = re.sub(r"\b316 names\b", f"{u} names", text)
+    text = re.sub(r"\b316 tickers\b", f"{u} tickers", text)
+    text = re.sub(r"6 themes on US", f"{t} themes on US", text)
+    text = re.sub(r"6 themes\b", f"{t} themes", text)
+    text = re.sub(
+        r"not the first \d{1,2} you stopped",
+        f"not the first {c} you stopped",
+        text,
+    )
     return text
 
 
@@ -190,6 +203,14 @@ def main() -> None:
         text,
         count=1,
     )
+
+    if '<table id="universe-table"' in text:
+        text = re.sub(
+            r'(<table[^>]*\bid="universe-table"[^>]*>[\s\S]*?<tbody>\s*)([\s\S]*?)(\s*</tbody>)',
+            r"\1" + uni_rows + r"\3",
+            text,
+            count=1,
+        )
 
     stats = load_manifest_stats(MAN)
     core_n = load_core_n(CORE_TXT)

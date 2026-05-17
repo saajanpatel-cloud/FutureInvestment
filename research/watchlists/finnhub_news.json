@@ -3,6 +3,18 @@
     {
       "date": "2026-05-17",
       "source": "Yahoo",
+      "headline": "BIT Capital Dumps 1.24 Million Lemonade (LMND) Shares Worth $86 Million",
+      "url": "https://finnhub.io/api/news?id=7f586d62ca8b76db47c2c08ad2fae8db6dd28de6c5aa8f4c29aaa9e719473470"
+    },
+    {
+      "date": "2026-05-17",
+      "source": "Yahoo",
+      "headline": "Skyworks Solutions, IPG Photonics, and Lam Research Shares Are Soaring, What You Need To Know",
+      "url": "https://finnhub.io/api/news?id=39edc120006f44d3c2adf1205f6963aebf50dad303201fff14b753dd8afb28e5"
+    },
+    {
+      "date": "2026-05-17",
+      "source": "Yahoo",
       "headline": "Is It Too Late to Buy Micron?",
       "url": "https://finnhub.io/api/news?id=dbfdd9bbde5e477b7db506afde6ec8c2fff359e9d7954d02d17c02a638b6884f"
     },
@@ -11,6 +23,12 @@
       "source": "Yahoo",
       "headline": "'This is borderline mania': Wall Street sees bubble-like euphoria in AI-fueled semiconductor rally",
       "url": "https://finnhub.io/api/news?id=150a901e95cde2349c7569af2a3767b8d3f999b8fdb6e0e755735fe23d565afd"
+    },
+    {
+      "date": "2026-05-17",
+      "source": "SeekingAlpha",
+      "headline": "Micron Has Completely Proven Me Wrong (Rating Upgrade)",
+      "url": "https://finnhub.io/api/news?id=3534f74b1434046c490ba062521ff534ae0b70fc461556746eba39a199633e85"
     },
     {
       "date": "2026-05-17",
@@ -101,24 +119,6 @@
       "source": "ChartMill",
       "headline": "What's going on in today's session: S&P500 movers",
       "url": "https://finnhub.io/api/news?id=008e54ca226761b88817c6a2fbe9e235d5e1dd8f33aea89fa2576aadfd994ad0"
-    },
-    {
-      "date": "2026-05-15",
-      "source": "Yahoo",
-      "headline": "Marvell Technology Has a Hidden Growth Engine That Could Cause MRVL Stock to Skyrocket",
-      "url": "https://finnhub.io/api/news?id=352aeac3f62b53551cadd0d069798181156fe1e4f0ad999465545b33fbfa1b74"
-    },
-    {
-      "date": "2026-05-15",
-      "source": "Yahoo",
-      "headline": "The DRAM ETF Holds 73% in Just Three Companies, And That\u2019s the Real Problem",
-      "url": "https://finnhub.io/api/news?id=e2887e6f95cf2971c835959dccd97d8192f1ccd9905d05ab3c94f92285e1d259"
-    },
-    {
-      "date": "2026-05-15",
-      "source": "ChartMill",
-      "headline": "These S&P500 stocks are the most active in today's session",
-      "url": "https://finnhub.io/api/news?id=fb9a553d3c10b3fa1e873b652142dc2222c1ab4fe7b436ec52ccafd4424771c5"
     }
   ],
   "B": [
@@ -991,6 +991,220 @@
       "url": "https://finnhub.io/api/news?id=43bcfc31d6a3ca150f58a1440e1017bcaa0af7e77118a4b6df67add3c12dc755"
     }
   ],
+  "VLO": [
+    {
+      "date": "2026-05-16",
+      "source": "SeekingAlpha",
+      "headline": "Investors Brace For Blockbuster Nvidia Earnings Next Week",
+      "url": "https://finnhub.io/api/news?id=7415bee0b718b75faaef9d0c3e07ae4cec17f435ae9baa992be37e18a43b112f"
+    },
+    {
+      "date": "2026-05-15",
+      "source": "Yahoo",
+      "headline": "Does Valero (VLO) Dividend and Director Grants Clarify Its Long\u2011Term Capital Allocation Priorities?",
+      "url": "https://finnhub.io/api/news?id=6acc98eca76d3be68558d031721ba3a32a4de073a11d09e3edbbc2e6bb8bb9f0"
+    },
+    {
+      "date": "2026-05-15",
+      "source": "Yahoo",
+      "headline": "Stocks Settle Sharply Lower as Bond Yields Jump on Inflation Fears",
+      "url": "https://finnhub.io/api/news?id=e0f4d68a52f7e6c1e24096702828260d3751aa40ad8cc335246fa1cc077203d2"
+    },
+    {
+      "date": "2026-05-15",
+      "source": "Yahoo",
+      "headline": "Valero Jumps 80.3% in the Past Year: Is the Stock Worth Buying Now?",
+      "url": "https://finnhub.io/api/news?id=24ac1aac1df6ab942a8f9d1b35923ec43355901cad390152b956d24e797d6c91"
+    },
+    {
+      "date": "2026-05-15",
+      "source": "Yahoo",
+      "headline": "Par Pacific Shares Plunge 13% as Q1 Earnings Miss Estimates",
+      "url": "https://finnhub.io/api/news?id=b69aa2d3a72c37ef4ad190f6ba61ac7d2ca651c976921fe6d1af67907889d832"
+    },
+    {
+      "date": "2026-05-15",
+      "source": "Yahoo",
+      "headline": "Stocks Slide as Inflation Fears Lift Bond Yields",
+      "url": "https://finnhub.io/api/news?id=46451b998037c30cc52774dc694b77b07800bfef67d72944bbf9034b5dcb38f5"
+    },
+    {
+      "date": "2026-05-14",
+      "source": "SeekingAlpha",
+      "headline": "Phillips 66: Entering The Next Refining Up-Cycle",
+      "url": "https://finnhub.io/api/news?id=ef7f32769b900d4d6caba7711723f10c2598aa04bb901d31b75fea784a03c2d2"
+    },
+    {
+      "date": "2026-05-14",
+      "source": "Benzinga",
+      "headline": "Trump's Trading Disclosure Shows Activity In Nvidia, AMD, Microsoft, Oracle And Other Major Stocks",
+      "url": "https://finnhub.io/api/news?id=ec32ca8013d8fc3c91c62c50ebeef925c5c2be070a6b7c1b81bf7ab5872503f1"
+    },
+    {
+      "date": "2026-05-14",
+      "source": "Yahoo",
+      "headline": "What Are Wall Street Analysts' Target Price for Valero Energy Stock?",
+      "url": "https://finnhub.io/api/news?id=744c7cd98c21ed8da3e04f48def6aff53fbed7c9f0d76229bb6b5f0fea3f9164"
+    },
+    {
+      "date": "2026-05-13",
+      "source": "Yahoo",
+      "headline": "Jim Cramer Says \u201cValero Will Print Money for You\u201d",
+      "url": "https://finnhub.io/api/news?id=2630c09ed026a55a39303d4d348c29ac9ad0ed07be0568d105090457d3853397"
+    },
+    {
+      "date": "2026-05-13",
+      "source": "Yahoo",
+      "headline": "Wall Street Bulls Look Optimistic About Valero Energy (VLO): Should You Buy?",
+      "url": "https://finnhub.io/api/news?id=07b7bfacbb29afb83e7021066567d8f64e42970318a6a50de590f54160438db1"
+    },
+    {
+      "date": "2026-05-13",
+      "source": "Yahoo",
+      "headline": "2026 black swans: war, private credit, and AI",
+      "url": "https://finnhub.io/api/news?id=ada1b4247e173173821e5a15a9c0256455a607b993003c28193b3dd9b61864e8"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "ChartMill",
+      "headline": "Valero Energy Corp. (NYSE:VLO) Shows Strong High-Growth Momentum and Favorable Technical Setup",
+      "url": "https://finnhub.io/api/news?id=bede69dd7ddaa96cf7301ef02b5f5e6d60d345ff5890f98527746fbcc36baab9"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "Finnhub",
+      "headline": "180 Million Barrels of Utah Oil Sands Resource Under Development by Sky Quarry",
+      "url": "https://finnhub.io/api/news?id=21df5222c5853f0c40f94baabdccf32d3028a1c3d293b1b5e35f237635c51483"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "ChartMill",
+      "headline": "Chips Push the S&P 500 to 7,400, Supercycle or the Last Act of a Bubble?",
+      "url": "https://finnhub.io/api/news?id=0254dbea09e8b79cd07ca314218a491c90985378a4403005097622f40fad872e"
+    },
+    {
+      "date": "2026-05-11",
+      "source": "CNBC",
+      "headline": "Stocks making the biggest moves midday: Corning, Qualcomm, Wendy\u2019s, Trade Desk & more",
+      "url": "https://finnhub.io/api/news?id=454b36f9cdffa1060a06b1dfe4407d251132a8e0d1dd05b00cb81696a2ea6667"
+    },
+    {
+      "date": "2026-05-11",
+      "source": "Benzinga",
+      "headline": "Forget The Trump TACO Trade\u2014The NACHO Trade Has Diesel Knocking On $6",
+      "url": "https://finnhub.io/api/news?id=774109faf6b8ddefb3dc2f80e882e3369bc21e427de96e1fd6778d9a627a87da"
+    },
+    {
+      "date": "2026-05-11",
+      "source": "CNBC",
+      "headline": "Stocks making the biggest moves premarket: Moderna, Lumentum, Intel, monday.com & more",
+      "url": "https://finnhub.io/api/news?id=00098de2117c928d0b5179be23b8e58d3bbe61f79828718b2f4736564866f9b2"
+    }
+  ],
+  "ZBH": [
+    {
+      "date": "2026-05-16",
+      "source": "Yahoo",
+      "headline": "Why Zimmer Biomet (ZBH) Stock Is Up Today",
+      "url": "https://finnhub.io/api/news?id=b32551dd2601f3877968b0b3c352be68655af8968fdc791301712fcf52b0129e"
+    },
+    {
+      "date": "2026-05-15",
+      "source": "Yahoo",
+      "headline": "What Are Wall Street Analysts' Target Price for Zimmer Biomet Stock?",
+      "url": "https://finnhub.io/api/news?id=d7b768cfec99952da1dd64bf705a7417cabee2dae88173de06a0ed3c0e815331"
+    },
+    {
+      "date": "2026-05-15",
+      "source": "Yahoo",
+      "headline": "Zimmer Biomet (ZBH) Valuation Check After Announcing Expanded US$1b Share Repurchase Plan",
+      "url": "https://finnhub.io/api/news?id=af6c0ae808be957e1c13b37c68f04724c70a262653ae05e925b609c386765c36"
+    },
+    {
+      "date": "2026-05-14",
+      "source": "Yahoo",
+      "headline": "Can ISRG's da Vinci 5 Momentum Sustain Procedure and Utilization Gains?",
+      "url": "https://finnhub.io/api/news?id=1b46acfd641e05c171032477cc4a5934639c1172ff9a1d2da74b419af4963707"
+    },
+    {
+      "date": "2026-05-14",
+      "source": "Yahoo",
+      "headline": "Jim Cramer Discusses the Performance of Danaher and Its Peers",
+      "url": "https://finnhub.io/api/news?id=4513e1fcf62c131d6db40260cfe6940672d792f464d07603432a9a5359f1519c"
+    },
+    {
+      "date": "2026-05-13",
+      "source": "Yahoo",
+      "headline": "3 Out-of-Favor Stocks We Approach with Caution",
+      "url": "https://finnhub.io/api/news?id=5e0c443b3409116e4c174d46a72a04b388d6ef9fe7eaa7ac0979782589c4d501"
+    },
+    {
+      "date": "2026-05-13",
+      "source": "SeekingAlpha",
+      "headline": "Zimmer Biomet Holdings, Inc. (ZBH) Presents at Bank of America Global Healthcare Conference 2026 Transcript",
+      "url": "https://finnhub.io/api/news?id=e5a3bcb8ebaa0bd1aff9a2dd20d5da34227492cf1c7eb2a71a7f37ecf5a6d6dc"
+    },
+    {
+      "date": "2026-05-13",
+      "source": "Finnhub",
+      "headline": "Transcript : Zimmer Biomet Holdings, Inc. Presents at Bank of America Global Healthcare Conference 2026, May-13-2026 08",
+      "url": "https://finnhub.io/api/news?id=d26aa22e4a94544524ba55d433c3dfc1e69942aa40e342be49b92cd4e91cd717"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "ChartMill",
+      "headline": "These S&P500 stocks are moving in today's session",
+      "url": "https://finnhub.io/api/news?id=4f53eaa024d01e0e416cf199068999d46e7237daa188765587f027247a015851"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "ChartMill",
+      "headline": "Which S&P500 stocks are moving on Tuesday?",
+      "url": "https://finnhub.io/api/news?id=92a49644e55f6f5807845394812109a2453e59dc26c7a89e6f6e822c7611ecf7"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "Yahoo",
+      "headline": "Zimmer Biomet Increases Share Repurchase Expectations -- Up to $1 Billion by Year End",
+      "url": "https://finnhub.io/api/news?id=f6086b72c019120251f04a67308557de07433f1e10326e04dbbb7fa217e703e0"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "Benzinga",
+      "headline": "Jim Cramer Warns This Market Is Far More Brutal Than Dot-Com Bubble Era: 'The Difference Between Now And 1999 Is...'",
+      "url": "https://finnhub.io/api/news?id=52954136d4aca059a6ddfe2a742bec5c96867a7bd773a1172f857044bf8546ec"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "Benzinga",
+      "headline": "Zimmer Biomet Increases Its 2026 Share Buyback Target By $250M To $1B",
+      "url": "https://finnhub.io/api/news?id=41e13208cb2d5aef4aef413d1f733d3806fad2dea59467b31b7f13e0cc49f26a"
+    },
+    {
+      "date": "2026-05-11",
+      "source": "CNBC",
+      "headline": "Jim Cramer on the current market: Hated companies are over-hated, and the loved ones are over-loved",
+      "url": "https://finnhub.io/api/news?id=9ebc22911a3869fa65ec68d9e0bcb6e6973c9753acc15748002dcf40447ae74b"
+    },
+    {
+      "date": "2026-05-11",
+      "source": "SeekingAlpha",
+      "headline": "Boston Scientific: Poised To Rebound With The Healthcare Sector, But When?",
+      "url": "https://finnhub.io/api/news?id=e13f76b0fdde7dde2ddd91110e0c03012c07b26fe0a8b68469d2a5dda52d0520"
+    },
+    {
+      "date": "2026-05-11",
+      "source": "Yahoo",
+      "headline": "Investors Can Find Comfort In Zimmer Biomet Holdings' (NYSE:ZBH) Earnings Quality",
+      "url": "https://finnhub.io/api/news?id=c7c71c390e94d9f3222bf732f4d94cb0a6bf0714766e468a5b83a7641bdfe8c1"
+    },
+    {
+      "date": "2026-05-10",
+      "source": "SeekingAlpha",
+      "headline": "Moat Strategies Join Tech-Led April Rebound",
+      "url": "https://finnhub.io/api/news?id=ed6b8a37b8e2797fce05638f1924b246a84cc25378f2ff87c387855ad851762c"
+    }
+  ],
   "SMCI": [
     {
       "date": "2026-05-17",
@@ -1111,220 +1325,6 @@
       "source": "ChartMill",
       "headline": "Most active S&P500 stocks in Thursday's session",
       "url": "https://finnhub.io/api/news?id=6d706c62677ba861cd17ffd2aae3002634c606cd077bead020b5f09be103fe1f"
-    }
-  ],
-  "ZBH": [
-    {
-      "date": "2026-05-16",
-      "source": "Yahoo",
-      "headline": "Why Zimmer Biomet (ZBH) Stock Is Up Today",
-      "url": "https://finnhub.io/api/news?id=b32551dd2601f3877968b0b3c352be68655af8968fdc791301712fcf52b0129e"
-    },
-    {
-      "date": "2026-05-15",
-      "source": "Yahoo",
-      "headline": "What Are Wall Street Analysts' Target Price for Zimmer Biomet Stock?",
-      "url": "https://finnhub.io/api/news?id=d7b768cfec99952da1dd64bf705a7417cabee2dae88173de06a0ed3c0e815331"
-    },
-    {
-      "date": "2026-05-15",
-      "source": "Yahoo",
-      "headline": "Zimmer Biomet (ZBH) Valuation Check After Announcing Expanded US$1b Share Repurchase Plan",
-      "url": "https://finnhub.io/api/news?id=af6c0ae808be957e1c13b37c68f04724c70a262653ae05e925b609c386765c36"
-    },
-    {
-      "date": "2026-05-14",
-      "source": "Yahoo",
-      "headline": "Can ISRG's da Vinci 5 Momentum Sustain Procedure and Utilization Gains?",
-      "url": "https://finnhub.io/api/news?id=1b46acfd641e05c171032477cc4a5934639c1172ff9a1d2da74b419af4963707"
-    },
-    {
-      "date": "2026-05-14",
-      "source": "Yahoo",
-      "headline": "Jim Cramer Discusses the Performance of Danaher and Its Peers",
-      "url": "https://finnhub.io/api/news?id=4513e1fcf62c131d6db40260cfe6940672d792f464d07603432a9a5359f1519c"
-    },
-    {
-      "date": "2026-05-13",
-      "source": "Yahoo",
-      "headline": "3 Out-of-Favor Stocks We Approach with Caution",
-      "url": "https://finnhub.io/api/news?id=5e0c443b3409116e4c174d46a72a04b388d6ef9fe7eaa7ac0979782589c4d501"
-    },
-    {
-      "date": "2026-05-13",
-      "source": "SeekingAlpha",
-      "headline": "Zimmer Biomet Holdings, Inc. (ZBH) Presents at Bank of America Global Healthcare Conference 2026 Transcript",
-      "url": "https://finnhub.io/api/news?id=e5a3bcb8ebaa0bd1aff9a2dd20d5da34227492cf1c7eb2a71a7f37ecf5a6d6dc"
-    },
-    {
-      "date": "2026-05-13",
-      "source": "Finnhub",
-      "headline": "Transcript : Zimmer Biomet Holdings, Inc. Presents at Bank of America Global Healthcare Conference 2026, May-13-2026 08",
-      "url": "https://finnhub.io/api/news?id=d26aa22e4a94544524ba55d433c3dfc1e69942aa40e342be49b92cd4e91cd717"
-    },
-    {
-      "date": "2026-05-12",
-      "source": "ChartMill",
-      "headline": "These S&P500 stocks are moving in today's session",
-      "url": "https://finnhub.io/api/news?id=4f53eaa024d01e0e416cf199068999d46e7237daa188765587f027247a015851"
-    },
-    {
-      "date": "2026-05-12",
-      "source": "ChartMill",
-      "headline": "Which S&P500 stocks are moving on Tuesday?",
-      "url": "https://finnhub.io/api/news?id=92a49644e55f6f5807845394812109a2453e59dc26c7a89e6f6e822c7611ecf7"
-    },
-    {
-      "date": "2026-05-12",
-      "source": "Yahoo",
-      "headline": "Zimmer Biomet Increases Share Repurchase Expectations -- Up to $1 Billion by Year End",
-      "url": "https://finnhub.io/api/news?id=f6086b72c019120251f04a67308557de07433f1e10326e04dbbb7fa217e703e0"
-    },
-    {
-      "date": "2026-05-12",
-      "source": "Benzinga",
-      "headline": "Jim Cramer Warns This Market Is Far More Brutal Than Dot-Com Bubble Era: 'The Difference Between Now And 1999 Is...'",
-      "url": "https://finnhub.io/api/news?id=52954136d4aca059a6ddfe2a742bec5c96867a7bd773a1172f857044bf8546ec"
-    },
-    {
-      "date": "2026-05-12",
-      "source": "Benzinga",
-      "headline": "Zimmer Biomet Increases Its 2026 Share Buyback Target By $250M To $1B",
-      "url": "https://finnhub.io/api/news?id=41e13208cb2d5aef4aef413d1f733d3806fad2dea59467b31b7f13e0cc49f26a"
-    },
-    {
-      "date": "2026-05-11",
-      "source": "CNBC",
-      "headline": "Jim Cramer on the current market: Hated companies are over-hated, and the loved ones are over-loved",
-      "url": "https://finnhub.io/api/news?id=9ebc22911a3869fa65ec68d9e0bcb6e6973c9753acc15748002dcf40447ae74b"
-    },
-    {
-      "date": "2026-05-11",
-      "source": "SeekingAlpha",
-      "headline": "Boston Scientific: Poised To Rebound With The Healthcare Sector, But When?",
-      "url": "https://finnhub.io/api/news?id=e13f76b0fdde7dde2ddd91110e0c03012c07b26fe0a8b68469d2a5dda52d0520"
-    },
-    {
-      "date": "2026-05-11",
-      "source": "Yahoo",
-      "headline": "Investors Can Find Comfort In Zimmer Biomet Holdings' (NYSE:ZBH) Earnings Quality",
-      "url": "https://finnhub.io/api/news?id=c7c71c390e94d9f3222bf732f4d94cb0a6bf0714766e468a5b83a7641bdfe8c1"
-    },
-    {
-      "date": "2026-05-10",
-      "source": "SeekingAlpha",
-      "headline": "Moat Strategies Join Tech-Led April Rebound",
-      "url": "https://finnhub.io/api/news?id=ed6b8a37b8e2797fce05638f1924b246a84cc25378f2ff87c387855ad851762c"
-    }
-  ],
-  "VLO": [
-    {
-      "date": "2026-05-16",
-      "source": "SeekingAlpha",
-      "headline": "Investors Brace For Blockbuster Nvidia Earnings Next Week",
-      "url": "https://finnhub.io/api/news?id=7415bee0b718b75faaef9d0c3e07ae4cec17f435ae9baa992be37e18a43b112f"
-    },
-    {
-      "date": "2026-05-15",
-      "source": "Yahoo",
-      "headline": "Does Valero (VLO) Dividend and Director Grants Clarify Its Long\u2011Term Capital Allocation Priorities?",
-      "url": "https://finnhub.io/api/news?id=6acc98eca76d3be68558d031721ba3a32a4de073a11d09e3edbbc2e6bb8bb9f0"
-    },
-    {
-      "date": "2026-05-15",
-      "source": "Yahoo",
-      "headline": "Stocks Settle Sharply Lower as Bond Yields Jump on Inflation Fears",
-      "url": "https://finnhub.io/api/news?id=e0f4d68a52f7e6c1e24096702828260d3751aa40ad8cc335246fa1cc077203d2"
-    },
-    {
-      "date": "2026-05-15",
-      "source": "Yahoo",
-      "headline": "Valero Jumps 80.3% in the Past Year: Is the Stock Worth Buying Now?",
-      "url": "https://finnhub.io/api/news?id=24ac1aac1df6ab942a8f9d1b35923ec43355901cad390152b956d24e797d6c91"
-    },
-    {
-      "date": "2026-05-15",
-      "source": "Yahoo",
-      "headline": "Par Pacific Shares Plunge 13% as Q1 Earnings Miss Estimates",
-      "url": "https://finnhub.io/api/news?id=b69aa2d3a72c37ef4ad190f6ba61ac7d2ca651c976921fe6d1af67907889d832"
-    },
-    {
-      "date": "2026-05-15",
-      "source": "Yahoo",
-      "headline": "Stocks Slide as Inflation Fears Lift Bond Yields",
-      "url": "https://finnhub.io/api/news?id=46451b998037c30cc52774dc694b77b07800bfef67d72944bbf9034b5dcb38f5"
-    },
-    {
-      "date": "2026-05-14",
-      "source": "SeekingAlpha",
-      "headline": "Phillips 66: Entering The Next Refining Up-Cycle",
-      "url": "https://finnhub.io/api/news?id=ef7f32769b900d4d6caba7711723f10c2598aa04bb901d31b75fea784a03c2d2"
-    },
-    {
-      "date": "2026-05-14",
-      "source": "Benzinga",
-      "headline": "Trump's Trading Disclosure Shows Activity In Nvidia, AMD, Microsoft, Oracle And Other Major Stocks",
-      "url": "https://finnhub.io/api/news?id=ec32ca8013d8fc3c91c62c50ebeef925c5c2be070a6b7c1b81bf7ab5872503f1"
-    },
-    {
-      "date": "2026-05-14",
-      "source": "Yahoo",
-      "headline": "What Are Wall Street Analysts' Target Price for Valero Energy Stock?",
-      "url": "https://finnhub.io/api/news?id=744c7cd98c21ed8da3e04f48def6aff53fbed7c9f0d76229bb6b5f0fea3f9164"
-    },
-    {
-      "date": "2026-05-13",
-      "source": "Yahoo",
-      "headline": "Jim Cramer Says \u201cValero Will Print Money for You\u201d",
-      "url": "https://finnhub.io/api/news?id=2630c09ed026a55a39303d4d348c29ac9ad0ed07be0568d105090457d3853397"
-    },
-    {
-      "date": "2026-05-13",
-      "source": "Yahoo",
-      "headline": "Wall Street Bulls Look Optimistic About Valero Energy (VLO): Should You Buy?",
-      "url": "https://finnhub.io/api/news?id=07b7bfacbb29afb83e7021066567d8f64e42970318a6a50de590f54160438db1"
-    },
-    {
-      "date": "2026-05-13",
-      "source": "Yahoo",
-      "headline": "2026 black swans: war, private credit, and AI",
-      "url": "https://finnhub.io/api/news?id=ada1b4247e173173821e5a15a9c0256455a607b993003c28193b3dd9b61864e8"
-    },
-    {
-      "date": "2026-05-12",
-      "source": "ChartMill",
-      "headline": "Valero Energy Corp. (NYSE:VLO) Shows Strong High-Growth Momentum and Favorable Technical Setup",
-      "url": "https://finnhub.io/api/news?id=bede69dd7ddaa96cf7301ef02b5f5e6d60d345ff5890f98527746fbcc36baab9"
-    },
-    {
-      "date": "2026-05-12",
-      "source": "Finnhub",
-      "headline": "180 Million Barrels of Utah Oil Sands Resource Under Development by Sky Quarry",
-      "url": "https://finnhub.io/api/news?id=21df5222c5853f0c40f94baabdccf32d3028a1c3d293b1b5e35f237635c51483"
-    },
-    {
-      "date": "2026-05-12",
-      "source": "ChartMill",
-      "headline": "Chips Push the S&P 500 to 7,400, Supercycle or the Last Act of a Bubble?",
-      "url": "https://finnhub.io/api/news?id=0254dbea09e8b79cd07ca314218a491c90985378a4403005097622f40fad872e"
-    },
-    {
-      "date": "2026-05-11",
-      "source": "CNBC",
-      "headline": "Stocks making the biggest moves midday: Corning, Qualcomm, Wendy\u2019s, Trade Desk & more",
-      "url": "https://finnhub.io/api/news?id=454b36f9cdffa1060a06b1dfe4407d251132a8e0d1dd05b00cb81696a2ea6667"
-    },
-    {
-      "date": "2026-05-11",
-      "source": "Benzinga",
-      "headline": "Forget The Trump TACO Trade\u2014The NACHO Trade Has Diesel Knocking On $6",
-      "url": "https://finnhub.io/api/news?id=774109faf6b8ddefb3dc2f80e882e3369bc21e427de96e1fd6778d9a627a87da"
-    },
-    {
-      "date": "2026-05-11",
-      "source": "CNBC",
-      "headline": "Stocks making the biggest moves premarket: Moderna, Lumentum, Intel, monday.com & more",
-      "url": "https://finnhub.io/api/news?id=00098de2117c928d0b5179be23b8e58d3bbe61f79828718b2f4736564866f9b2"
     }
   ],
   "TENB": [
@@ -1466,6 +1466,12 @@
   "VST": [
     {
       "date": "2026-05-17",
+      "source": "Yahoo",
+      "headline": "Industry Analysts Just Upgraded Their Vistra Corp. (NYSE:VST) Revenue Forecasts By 24%",
+      "url": "https://finnhub.io/api/news?id=dccfaf2fc6568857ed7109073e29733758c635a6621f352f6c16498418980f6c"
+    },
+    {
+      "date": "2026-05-17",
       "source": "SeekingAlpha",
       "headline": "This May Be My Favorite 9% Yield + Growth Dividend Combo",
       "url": "https://finnhub.io/api/news?id=f3dff5547b07224bca1e49e3b13b9bc8390f688cf651beea6cd2aa80f85b957c"
@@ -1577,43 +1583,8 @@
       "source": "Benzinga",
       "headline": "Why Silver, Power And Chemicals Will Be The Next Micron Trade, Top AI Expert Says",
       "url": "https://finnhub.io/api/news?id=b92c3e590a799a30e262cd78f81bfc4e924ffb3bacd7729561f12da71dfa1b0e"
-    },
-    {
-      "date": "2026-05-11",
-      "source": "SeekingAlpha",
-      "headline": "AI Has A Power Problem, And Vistra Owns The Answer",
-      "url": "https://finnhub.io/api/news?id=6f8f528cda14ed55e74ab75b4bf23ec05b97588c84ff0b2bff8722653dc97c6a"
     }
   ],
-  "SAN.PA": [
-    {
-      "date": "2026-05-10",
-      "source": "Benzinga",
-      "headline": "Consumer Tech News (May 4- 8): Big Tech Gain On AI Momentum, Pentagon Awards $500M AI Contract & More",
-      "url": "https://finnhub.io/api/news?id=53c6a72287f5290412c8761d714aabc8ebe73b6bd11ac951a7deeebcec27fc68"
-    }
-  ],
-  "QRVO": [
-    {
-      "date": "2026-05-15",
-      "source": "SeekingAlpha",
-      "headline": "Qorvo: The Recovery Is Proven, The Merger Is Pending- Here's What Investors Need To Weigh",
-      "url": "https://finnhub.io/api/news?id=299fb81ccecf51533617618ae1fd4f80462275eb2778badc70cd864e634585f9"
-    },
-    {
-      "date": "2026-05-12",
-      "source": "SeekingAlpha",
-      "headline": "Dirty SOX",
-      "url": "https://finnhub.io/api/news?id=37dcc29b2a886ac3fe95a79f5e12fa49cd8c146d3c2be0cf1407a99336604aca"
-    },
-    {
-      "date": "2026-05-11",
-      "source": "Benzinga",
-      "headline": "5 Stock Picks Last Week From Wall Street's Most Accurate Analysts",
-      "url": "https://finnhub.io/api/news?id=09dbda303bc578b4166c5a3e3e80a5b08155ac4d55c3ebc519128e67567d881d"
-    }
-  ],
-  "VWS.CO": [],
   "TXT": [
     {
       "date": "2026-05-17",
@@ -1694,7 +1665,186 @@
       "url": "https://finnhub.io/api/news?id=83ee3c6d5b28f21f6d2b94b2bbc54a450c48a1cf847b3c412d47f340ac781b53"
     }
   ],
+  "CNC": [
+    {
+      "date": "2026-05-15",
+      "source": "Yahoo",
+      "headline": "Here's Why Investors Should Hold On to Cigna Stock for Now",
+      "url": "https://finnhub.io/api/news?id=077184325ae5934ec8e4d5b5b9395e8d1be606185fd34eac134e347c53857900"
+    },
+    {
+      "date": "2026-05-14",
+      "source": "Fintel",
+      "headline": "Centene (CNC) Price Target Increased by 23.07% to 57.73",
+      "url": "https://finnhub.io/api/news?id=0d10f2751dea13f8c4c52b0612280c6f6aefaa070b85e5a3dbd8cb4558f8605b"
+    },
+    {
+      "date": "2026-05-13",
+      "source": "Yahoo",
+      "headline": "AppLovin and 6 More Stock Picks by Einhorn and Other Hedge Fund Managers",
+      "url": "https://finnhub.io/api/news?id=ad6129f7fffea767c1210cb6d2a92cda0d1a72fad411c55cc1ae881643e07c5d"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "Yahoo",
+      "headline": "A Look At Centene (CNC) Valuation After Strong Q1 Results And Higher 2026 Guidance",
+      "url": "https://finnhub.io/api/news?id=0ecb9bd45b0117d9645182d8d691b914ece9c65d0f89b8d538f78db007afd01a"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "Yahoo",
+      "headline": "Is Centene Corporation (CNC) One of the Best Healthcare Stocks to Buy for the Long Term?",
+      "url": "https://finnhub.io/api/news?id=555f587e2ac00e09569304cfb4bd36a70aced2b7b176ca6858f5664fea52e349"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "Yahoo",
+      "headline": "Stocks Settle Mixed on Tech Weakness and Inflation Pressures",
+      "url": "https://finnhub.io/api/news?id=addab5695f1c362a91c7ba50bfda1ad3dd800a6f80cd18f6ce323ca829a4e275"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "CNBC",
+      "headline": "This economy is bigger than just the data center trade, says Jim Cramer",
+      "url": "https://finnhub.io/api/news?id=61e36f635ca7d39fa34363da25f1245318e8db146bb9055ef13b6c688fb4e25d"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "ChartMill",
+      "headline": "These S&P500 stocks are moving in today's session",
+      "url": "https://finnhub.io/api/news?id=4f53eaa024d01e0e416cf199068999d46e7237daa188765587f027247a015851"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "Yahoo",
+      "headline": "Coordinated Care and Seattle Seahawks Host Youth Mental Health Summit",
+      "url": "https://finnhub.io/api/news?id=5d593b19eaf99c8c982b568cee51c49e86f40efd2004146f3353133e94112d43"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "CNBC",
+      "headline": "David Einhorn: Looking for misunderstood stocks like Victoria's Secret",
+      "url": "https://finnhub.io/api/news?id=a202225a663c159fc5a5ea336a7f3541538e91461ca83d94c47846944b8eed50"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "Yahoo",
+      "headline": "Will UnitedHealth's New Optum Rx Model Boost PBM Pricing Transparency?",
+      "url": "https://finnhub.io/api/news?id=5ef77b40644f509624e3ffe42b6403b501bb9bb5502a3d43db5fb5cdd5488c63"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "Yahoo",
+      "headline": "1 Cash-Producing Stock Worth Investigating and 2 Facing Challenges",
+      "url": "https://finnhub.io/api/news?id=6ff725b73a35904963a4084a1ef310aa260180562d91d816383197577a254833"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "Benzinga",
+      "headline": "10 Health Care Stocks Whale Activity In Today's Session",
+      "url": "https://finnhub.io/api/news?id=b2239259d8cb31132c1ed3831d1830b02c2f87d17d77b9be15468d11c781d892"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "Yahoo",
+      "headline": "Superior HealthPlan Awards $100,000 in Grants to 10 Community-based Organizations in Texas",
+      "url": "https://finnhub.io/api/news?id=14d07adadad385ab2b3721a5d8f314405267548d3dfd8ca787dadf9bccfea29f"
+    }
+  ],
+  "QRVO": [
+    {
+      "date": "2026-05-15",
+      "source": "SeekingAlpha",
+      "headline": "Qorvo: The Recovery Is Proven, The Merger Is Pending- Here's What Investors Need To Weigh",
+      "url": "https://finnhub.io/api/news?id=299fb81ccecf51533617618ae1fd4f80462275eb2778badc70cd864e634585f9"
+    },
+    {
+      "date": "2026-05-12",
+      "source": "SeekingAlpha",
+      "headline": "Dirty SOX",
+      "url": "https://finnhub.io/api/news?id=37dcc29b2a886ac3fe95a79f5e12fa49cd8c146d3c2be0cf1407a99336604aca"
+    },
+    {
+      "date": "2026-05-11",
+      "source": "Benzinga",
+      "headline": "5 Stock Picks Last Week From Wall Street's Most Accurate Analysts",
+      "url": "https://finnhub.io/api/news?id=09dbda303bc578b4166c5a3e3e80a5b08155ac4d55c3ebc519128e67567d881d"
+    }
+  ],
+  "VWS.CO": [],
   "NVDA": [
+    {
+      "date": "2026-05-17",
+      "source": "Yahoo",
+      "headline": "Kiplinger\u2019s May 2026 Letter Says Yields From 3% to 13% Are Available Right Now Despite Iran War Uncertainty",
+      "url": "https://finnhub.io/api/news?id=3ee4ac58496d59f70d3af94a786ea1e6973678c792e121d52f7740e204a4c971"
+    },
+    {
+      "date": "2026-05-17",
+      "source": "Yahoo",
+      "headline": "1 Brilliant Energy Stock to Buy Now and Hold for the Long Term",
+      "url": "https://finnhub.io/api/news?id=a446240e1e1b61e21c8eafb599d6d08a7c8b124fd69376803460c699ba03a68b"
+    },
+    {
+      "date": "2026-05-17",
+      "source": "Yahoo",
+      "headline": "Think $151 Billion Is Expensive for Golden Dome? Try $1.2 Trillion.",
+      "url": "https://finnhub.io/api/news?id=bd864bc5ebedc4ee2f409e70bf0302050bc0240fa241201d7d066afd9371698f"
+    },
+    {
+      "date": "2026-05-17",
+      "source": "Yahoo",
+      "headline": "Dow Jones Futures: Nvidia Due As Yields, Oil Prices Pressure Rally; What To Do Now",
+      "url": "https://finnhub.io/api/news?id=cfce3a810322689753ef2a836427eaeb716649070b5ff0355e97dd5c44d0ef17"
+    },
+    {
+      "date": "2026-05-17",
+      "source": "Yahoo",
+      "headline": "Jim Cramer on NVIDIA: \u201cThere Would Be No AI Revolution Without Jensen Huang\u201d",
+      "url": "https://finnhub.io/api/news?id=ca1854fc9831be04a4825e587319738e0f8ad2eacd660eb1112c249b2b5d8832"
+    },
+    {
+      "date": "2026-05-17",
+      "source": "Yahoo",
+      "headline": "Skyworks Solutions, IPG Photonics, and Lam Research Shares Are Soaring, What You Need To Know",
+      "url": "https://finnhub.io/api/news?id=39edc120006f44d3c2adf1205f6963aebf50dad303201fff14b753dd8afb28e5"
+    },
+    {
+      "date": "2026-05-17",
+      "source": "Yahoo",
+      "headline": "Will SpaceX Spend Its IPO Billions on Real Estate?",
+      "url": "https://finnhub.io/api/news?id=bf52facc71cbcfdc0e24eb2745ff3654643845bb694a0af61ed6315eebaa8e08"
+    },
+    {
+      "date": "2026-05-17",
+      "source": "Yahoo",
+      "headline": "My Top 2 Consumer Staples Stocks for May 2026",
+      "url": "https://finnhub.io/api/news?id=6bd12c2a2e2250a0d7c4bee59c880e7b7180d4b02e757073a3d47d84a90bf4b7"
+    },
+    {
+      "date": "2026-05-17",
+      "source": "Yahoo",
+      "headline": "Nvidia (NVDA) Stock Is Up, What You Need To Know",
+      "url": "https://finnhub.io/api/news?id=e9add4d83f0e7f092107b94e5f88ad0f0058c5bbb6c8c7eb8be4c00909d95b00"
+    },
+    {
+      "date": "2026-05-17",
+      "source": "Yahoo",
+      "headline": "Nvidia is So Cheap That It\u2019ll Be a Bargain Even if It Doubles",
+      "url": "https://finnhub.io/api/news?id=3c58d837090dfc3aea4976d37b4c249a7430dfb4cd94bc27f520994b95847228"
+    },
+    {
+      "date": "2026-05-17",
+      "source": "Yahoo",
+      "headline": "Forget the Senior Deduction. The Other OBBBA Tax Breaks Most Workers Are Missing.",
+      "url": "https://finnhub.io/api/news?id=ba5ee0e9213d811b6e6e801666b8f803691d48ce4d87a1097342455941a008f0"
+    },
+    {
+      "date": "2026-05-17",
+      "source": "Yahoo",
+      "headline": "Is a SpaceX-Tesla Merger Elon Musk's Endgame? Here Are 4 Factors Investors Need to Consider.",
+      "url": "https://finnhub.io/api/news?id=a737b15c27801796925e44bba2f6d83e2af48c73ff80188e91fd0c532b086980"
+    },
     {
       "date": "2026-05-17",
       "source": "Yahoo",
@@ -1742,78 +1892,6 @@
       "source": "Yahoo",
       "headline": "These 2 Nvidia-Backed Stocks Look Like Genius Investments",
       "url": "https://finnhub.io/api/news?id=c51b07a9e85014f3431994581fdbd50f305ac028776725c6999bf918da9ec7f7"
-    },
-    {
-      "date": "2026-05-17",
-      "source": "Yahoo",
-      "headline": "Billionaire Bill Miller Beat the S&P 500 for 15 Consecutive Years. Here Are His Fund's Top 3 Ultra-High-Yield Dividend Stocks Now.",
-      "url": "https://finnhub.io/api/news?id=88d79a85546e28a1d760671290f528f1c507508eb873e3576f66a5c8e352c2a5"
-    },
-    {
-      "date": "2026-05-17",
-      "source": "Yahoo",
-      "headline": "What to Expect in Markets This Week: Nvidia Earnings Are the Main Event, but Walmart's Results Are Coming Too",
-      "url": "https://finnhub.io/api/news?id=3dda8d60b1063a342b5c39fa41edb0c3c8e49989626c9e1d0e7d59e1b3308358"
-    },
-    {
-      "date": "2026-05-17",
-      "source": "Yahoo",
-      "headline": "3 Dividend Stocks That Are Quietly Crushing the Market",
-      "url": "https://finnhub.io/api/news?id=ebdead937a21474e8c564135a36c40702a8e849074ed35a2c205bda44018be52"
-    },
-    {
-      "date": "2026-05-17",
-      "source": "Yahoo",
-      "headline": "Here's Why Venture Global Stock Soared 24.3% This Week",
-      "url": "https://finnhub.io/api/news?id=97183ff797f9e86e4ce1e17a42de7ef4bf467770c81c71c478a5e89bda3744bf"
-    },
-    {
-      "date": "2026-05-17",
-      "source": "Yahoo",
-      "headline": "New Fed Chair Kevin Warsh Wants to Blow Up the Playbook That's Kept Stocks Rising for 15 Years. Here's What Investors Should Do Now.",
-      "url": "https://finnhub.io/api/news?id=e8c8fb87e8bb7376c0613c4dd5e51a7051a58b0ec469f8bc4b9ff51fbc6ef426"
-    },
-    {
-      "date": "2026-05-17",
-      "source": "SeekingAlpha",
-      "headline": "Wall Street Week Ahead",
-      "url": "https://finnhub.io/api/news?id=72615f517e6d588937e7e448c077766629c78f100660cd06fc784239475a6d36"
-    },
-    {
-      "date": "2026-05-17",
-      "source": "SeekingAlpha",
-      "headline": "Nvidia's Earnings Could Pop The Options Bubble",
-      "url": "https://finnhub.io/api/news?id=c1bef42e1dea251534363c7a5c495dfdde5d21a44a57672878e902b523ee5c08"
-    },
-    {
-      "date": "2026-05-17",
-      "source": "Yahoo",
-      "headline": "Is It Too Late to Buy Broadcom Stock?",
-      "url": "https://finnhub.io/api/news?id=882cb49e39b0fde2c385304e74b7495f9b4511b6d43265778c3e6773729ac191"
-    },
-    {
-      "date": "2026-05-17",
-      "source": "Yahoo",
-      "headline": "Prediction: This Quantum Computing Stock Will Be Up More Than 20% by the End of 2026",
-      "url": "https://finnhub.io/api/news?id=7150668e8c4005f59bd5817c527ae3f6a2ea8e9bfd86af911caf8f51bfe87ca4"
-    },
-    {
-      "date": "2026-05-17",
-      "source": "Yahoo",
-      "headline": "Analyst Predicts Nvidia Stock Should Be 42% Higher",
-      "url": "https://finnhub.io/api/news?id=c95ab6e455ff1e415144204ec2e227741b143de76781c0414a79e270ad890e1f"
-    },
-    {
-      "date": "2026-05-17",
-      "source": "Yahoo",
-      "headline": "Up 231%, Is RTX Proving Why It Was a Mistake for Honeywell to Replace RTX in the Dow Jones Industrial Average?",
-      "url": "https://finnhub.io/api/news?id=63c8839026f9b4abdd65f5e6378a6975ee75e35d9fcf7a8d06889601854f672b"
-    },
-    {
-      "date": "2026-05-17",
-      "source": "Yahoo",
-      "headline": "Why Coherent (COHR) Is Up 14.1% After Strong Q3 Results And Expanded NVIDIA AI Partnership",
-      "url": "https://finnhub.io/api/news?id=f17ccc87d0cd7a048350ec642be2d0ec3325608fecefaf1c9c08b600e45179f3"
     }
   ],
   "TSM": [

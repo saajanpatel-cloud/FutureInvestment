@@ -201,12 +201,7 @@ def patch_section_copy(doc: str) -> str:
 
 
 def patch_proposed_table_css(doc: str) -> str:
-    doc = doc.replace(
-        "table.proposed-shares td:nth-child(5),\n"
-        "    table.proposed-shares th:nth-child(5) { min-width: 20rem; max-width: 48rem; white-space: normal; line-height: 1.45; }",
-        "table.proposed-shares td:nth-child(5),\n"
-        "    table.proposed-shares th:nth-child(5) { min-width: 6rem; white-space: nowrap; }",
-    )
+    """No-op: column layout owned by fi_embed_shortlist_proposed.py (Tier column)."""
     return doc
 
 

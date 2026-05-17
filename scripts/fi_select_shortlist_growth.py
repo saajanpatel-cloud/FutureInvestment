@@ -1049,6 +1049,9 @@ def main() -> None:
             )
         )
     )
+    from fi_embed_shortlist_proposed import sort_tickers_by_theme_then_symbol
+
+    display_tickers = sort_tickers_by_theme_then_symbol(picked, man_pre)
     OUT_TXT.write_text(
         "\n".join(
             [
@@ -1056,7 +1059,7 @@ def main() -> None:
                 "# Dashboard / rubric subset (data-report-core). Regenerate rows: fi_rubric_html_rows.py + fi_embed_single_screen.py + fi_tag_rubric_report_core.py",
                 "",
             ]
-            + picked
+            + display_tickers
             + [""]
         ),
         encoding="utf-8",

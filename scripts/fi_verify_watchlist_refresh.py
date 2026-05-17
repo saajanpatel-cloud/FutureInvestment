@@ -294,17 +294,23 @@ def main() -> int:
         compp = W / "universe_composite_rank.csv"
         suru = W / "scenario_results_universe.csv"
         if rankp.is_file() and suru.is_file():
-            if suru.stat().st_mtime + 15 < rankp.stat().st_mtime:
+            if suru.stat().st_size < 100:
                 warns.append(
-                    "scenario_results_universe.csv is older than universe_valuation_rank.csv — "
-                    "re-run fi_scenarios on scenario_assumptions_universe.csv before trusting rank."
+                    "scenario_results_universe.csv looks empty — re-run fi_scenarios on "
+                    "scenario_assumptions_universe.csv"
+                )
+            elif rankp.stat().st_mtime + 15 < suru.stat().st_mtime:
+                warns.append(
+                    "universe_valuation_rank.csv is older than scenario_results_universe.csv — "
+                    "re-run fi_rank_universe.py after fi_scenarios."
                 )
         if memo.get("composite_five_signal") and not compp.is_file():
             warns.append("composite_five_signal memo but missing universe_composite_rank.csv")
-        elif compp.is_file() and suru.is_file():
-            if suru.stat().st_mtime + 15 < compp.stat().st_mtime:
+        elif compp.is_file() and rankp.is_file():
+            if compp.stat().st_mtime + 15 < rankp.stat().st_mtime:
                 warns.append(
-                    "universe CSVs older than universe_composite_rank.csv — re-run full universe pass."
+                    "universe_composite_rank.csv is older than universe_valuation_rank.csv — "
+                    "re-run fi_composite_universe_rank.py"
                 )
 
     txt_list = load_core_tickers_txt(CORE_TXT)
@@ -486,12 +492,46 @@ def main() -> int:
             warns.append("FINNHUB_BY_TICKER missing — re-run fi_embed_value_js.py after fi_finnhub_context.py")
         elif "var CORE_TICKERS" not in html:
             warns.append("CORE_TICKERS missing — re-run fi_embed_value_js.py")
-        if 'id="monitor"' not in html and 'id="stock-deep-dive"' in html:
-            errors.append("Monitor section still id=stock-deep-dive — re-run fi_embed_deep_dive_layout.py")
+        if 'id="stock-deep-dive"' in html:
+            errors.append("Monitor split from deep-dive — re-run fi_restructure_monitor_html.py")
+        toc_monitor = len(
+            re.findall(r'<li>\s*<a href="#monitor">Monitor</a>\s*</li>', html, flags=re.IGNORECASE)
+        )
+        if toc_monitor > 1:
+            warns.append("Duplicate Monitor TOC links — re-run fi_restructure_monitor_html.py")
         if "<!-- FI_MARKET_CONTEXT_EMBED_START -->" in html:
             warns.append(
                 "Legacy aggregate Finnhub embed still present — re-run fi_embed_single_screen.py"
             )
+
+        dd_m = re.search(
+            r'<select id="dd-ticker">\s*\n([\s\S]*?)\n\s*</select>',
+            html,
+            flags=re.IGNORECASE,
+        )
+        if dd_m:
+            dd_opts = [
+                x.upper()
+                for x in re.findall(r'<option value="([A-Z0-9.\-]+)">', dd_m.group(1))
+                if x.strip()
+            ]
+            if dd_opts:
+                if set(dd_opts) != set_js:
+                    errors.append(
+                        f"Monitor Select stock dropdown has {len(dd_opts)} names but core shortlist has "
+                        f"{len(set_js)} — re-run fi_embed_deep_dive_runtime.py after fi_select_shortlist_growth.py"
+                    )
+                else:
+                    try:
+                        from fi_embed_core import load_core_tickers_display_order
+
+                        if dd_opts != load_core_tickers_display_order():
+                            errors.append(
+                                "Monitor dropdown order does not match Research shortlist table — "
+                                "re-run fi_embed_deep_dive_runtime.py"
+                            )
+                    except Exception as ex:
+                        warns.append(f"Could not verify dd-ticker order: {ex}")
 
     if not EXAMPLE.is_file():
         warns.append(f"Missing {EXAMPLE.relative_to(ROOT)} (copy step from refresh?)")

@@ -62,7 +62,8 @@ When the user references **Future Impact** or this sleeve: read **`research/sour
 - **Narrative / reader order:** **`SINGLE_SCREEN_REPORT.html`** section order is **unchanged** (snapshot → universe → rubric → shortlist → valuation blocks, etc.); only the **data** feeding those sections updates. Selection can be valuation-first **without** reordering the HTML story.
 - **End state:** Script finishes with **`fi_verify_watchlist_refresh.py`** and **`fi_verify_report_core.py`**. Reply with verifier **OK** lines, **`shortlist_n`**, path to **`research/watchlists/SINGLE_SCREEN_REPORT.html`**, and any **WARN** lines.
 - **Order gotcha:** DCF grids are rebuilt by **`fi_embed_dcf_grids.py`** from core tickers only (not patch-in-place on stale HTML).
-- **PDF:** Not part of default refresh. Run **`./scripts/html_to_pdf.sh`** only when the user wants an updated **`docs/SINGLE_SCREEN_REPORT.pdf`**.
+- **Executive Summary:** Regenerated each refresh via **`fi_embed_executive_summary.py`** from `core-shortlist.json`, model CSVs, and `selection_memo.shortlist_delta` (adds/drops vs prior).
+- **PDF:** Not part of default refresh. Run **`./scripts/html_to_pdf.sh`** only when the user wants an updated **`docs/SINGLE_SCREEN_REPORT.pdf`** (embeds run first, including Executive Summary).
 
 ### Shortlist policy (encoded + product intent)
 

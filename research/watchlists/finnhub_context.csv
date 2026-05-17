@@ -1,26 +1,26 @@
 ticker,finnhub_symbol,analyst_skew,insider_mspr,news_7d,next_earnings,context_line,last_updated
-MU,MU,buy-heavy,no data,20,last 2026-03-31,Most analysts lean buy · Heavy news week: 20 stories · Last earnings: 31 Mar 2026,2026-05-17T12:38:18Z
-B,B,buy-heavy,neutral MSPR 0,17,last 2026-03-31,Most analysts lean buy · Insider trading looked balanced recently · 17 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T12:38:19Z
-PSX,PSX,mixed,bullish MSPR 100,16,last 2026-03-31,Analyst views are mixed · Insiders bought more than they sold recently · 16 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T12:38:20Z
-MPC,MPC,mixed,bullish MSPR 100,17,last 2026-03-31,Analyst views are mixed · Insiders bought more than they sold recently · 17 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T12:38:21Z
-FSLR,FSLR,buy-heavy,bearish MSPR -100,20,last 2026-03-31,Most analysts lean buy · Insiders sold more than they bought recently · Heavy news week: 20 stories · Last earnings: 31 Mar 2026,2026-05-17T12:38:22Z
-CVS,CVS,buy-heavy,bullish MSPR 100,20,last 2026-03-31,Most analysts lean buy · Insiders bought more than they sold recently · Heavy news week: 20 stories · Last earnings: 31 Mar 2026,2026-05-17T12:38:23Z
-PFE,PFE,mixed,bullish MSPR 100,20,last 2026-03-31,Analyst views are mixed · Insiders bought more than they sold recently · Heavy news week: 20 stories · Last earnings: 31 Mar 2026,2026-05-17T12:38:24Z
-EOG,EOG,mixed,bullish MSPR 100,15,last 2026-03-31,Analyst views are mixed · Insiders bought more than they sold recently · 15 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T12:38:25Z
-PATH,PATH,sell-heavy,bearish MSPR -100,12,last 2026-03-31,Most analysts lean sell · Insiders sold more than they bought recently · 12 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T12:38:25Z
-GEN,GEN,mixed,neutral MSPR -13,5,last 2026-03-31,Analyst views are mixed · Insider trading looked balanced recently · 5 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T12:38:26Z
-SMCI,SMCI,mixed,neutral MSPR -20,20,last 2026-03-31,Analyst views are mixed · Insider trading looked balanced recently · Heavy news week: 20 stories · Last earnings: 31 Mar 2026,2026-05-17T12:38:27Z
-ZBH,ZBH,mixed,neutral MSPR -10,17,last 2026-03-31,Analyst views are mixed · Insider trading looked balanced recently · 17 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T12:38:28Z
-VLO,VLO,mixed,neutral MSPR 13,18,last 2026-03-31,Analyst views are mixed · Insider trading looked balanced recently · 18 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T12:38:29Z
-TENB,TENB,mixed,bearish MSPR -36,2,last 2026-03-31,Analyst views are mixed · Insiders sold more than they bought recently · 2 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T12:38:30Z
-QUBT,QUBT,buy-heavy,bullish MSPR 100,20,last 2026-03-31,Most analysts lean buy · Insiders bought more than they sold recently · Heavy news week: 20 stories · Last earnings: 31 Mar 2026,2026-05-17T12:38:31Z
-VST,VST,buy-heavy,bearish MSPR -100,20,last 2026-03-31,Most analysts lean buy · Insiders sold more than they bought recently · Heavy news week: 20 stories · Last earnings: 31 Mar 2026,2026-05-17T12:38:32Z
-SAN.PA,SAN,buy-heavy,no data,1,last 2026-03-31,Most analysts lean buy · 1 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T12:38:32Z
-QRVO,QRVO,sell-heavy,bearish MSPR -100,3,last 2026-03-31,Most analysts lean sell · Insiders sold more than they bought recently · 3 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T12:38:33Z
-VWS.CO,VWS,no data,no data,0,no data,Quiet news week,2026-05-17T12:38:34Z
-TXT,TXT,mixed,bullish MSPR 100,13,last 2026-03-31,Analyst views are mixed · Insiders bought more than they sold recently · 13 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T12:38:35Z
-NVDA,NVDA,buy-heavy,bearish MSPR -100,20,last 2026-03-31,Most analysts lean buy · Insiders sold more than they bought recently · Heavy news week: 20 stories · Last earnings: 31 Mar 2026,2026-05-17T12:38:36Z
-TSM,TSM,buy-heavy,no data,20,last 2026-03-31,Most analysts lean buy · Heavy news week: 20 stories · Last earnings: 31 Mar 2026,2026-05-17T12:38:37Z
-PLAB,PLAB,buy-heavy,bearish MSPR -100,2,last 2026-03-31,Most analysts lean buy · Insiders sold more than they bought recently · 2 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T12:38:38Z
-CRUS,CRUS,buy-heavy,bullish MSPR 28,6,last 2026-03-31,Most analysts lean buy · Insiders bought more than they sold recently · 6 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T12:38:39Z
-DIOD,DIOD,mixed,bearish MSPR -100,3,last 2026-03-31,Analyst views are mixed · Insiders sold more than they bought recently · 3 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T12:38:40Z
+MU,MU,buy-heavy,no data,20,last 2026-03-31,Most analysts lean buy · Heavy news week: 20 stories · Last earnings: 31 Mar 2026,2026-05-17T15:46:33Z
+B,B,buy-heavy,neutral MSPR 0,17,last 2026-03-31,Most analysts lean buy · Insider trading looked balanced recently · 17 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T15:46:34Z
+PSX,PSX,mixed,bullish MSPR 100,16,last 2026-03-31,Analyst views are mixed · Insiders bought more than they sold recently · 16 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T15:46:34Z
+MPC,MPC,mixed,bullish MSPR 100,17,last 2026-03-31,Analyst views are mixed · Insiders bought more than they sold recently · 17 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T15:46:35Z
+FSLR,FSLR,buy-heavy,bearish MSPR -100,20,last 2026-03-31,Most analysts lean buy · Insiders sold more than they bought recently · Heavy news week: 20 stories · Last earnings: 31 Mar 2026,2026-05-17T15:46:36Z
+CVS,CVS,buy-heavy,bullish MSPR 100,20,last 2026-03-31,Most analysts lean buy · Insiders bought more than they sold recently · Heavy news week: 20 stories · Last earnings: 31 Mar 2026,2026-05-17T15:46:37Z
+PFE,PFE,mixed,bullish MSPR 100,20,last 2026-03-31,Analyst views are mixed · Insiders bought more than they sold recently · Heavy news week: 20 stories · Last earnings: 31 Mar 2026,2026-05-17T15:46:38Z
+EOG,EOG,mixed,bullish MSPR 100,15,last 2026-03-31,Analyst views are mixed · Insiders bought more than they sold recently · 15 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T15:46:39Z
+PATH,PATH,sell-heavy,bearish MSPR -100,12,last 2026-03-31,Most analysts lean sell · Insiders sold more than they bought recently · 12 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T15:46:40Z
+GEN,GEN,mixed,neutral MSPR -13,5,last 2026-03-31,Analyst views are mixed · Insider trading looked balanced recently · 5 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T15:46:41Z
+VLO,VLO,mixed,neutral MSPR 13,18,last 2026-03-31,Analyst views are mixed · Insider trading looked balanced recently · 18 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T15:46:42Z
+ZBH,ZBH,mixed,neutral MSPR -10,17,last 2026-03-31,Analyst views are mixed · Insider trading looked balanced recently · 17 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T15:46:43Z
+SMCI,SMCI,mixed,neutral MSPR -20,20,last 2026-03-31,Analyst views are mixed · Insider trading looked balanced recently · Heavy news week: 20 stories · Last earnings: 31 Mar 2026,2026-05-17T15:46:44Z
+TENB,TENB,mixed,bearish MSPR -36,2,last 2026-03-31,Analyst views are mixed · Insiders sold more than they bought recently · 2 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T15:46:44Z
+QUBT,QUBT,buy-heavy,bullish MSPR 100,20,last 2026-03-31,Most analysts lean buy · Insiders bought more than they sold recently · Heavy news week: 20 stories · Last earnings: 31 Mar 2026,2026-05-17T15:46:45Z
+VST,VST,buy-heavy,bearish MSPR -100,20,last 2026-03-31,Most analysts lean buy · Insiders sold more than they bought recently · Heavy news week: 20 stories · Last earnings: 31 Mar 2026,2026-05-17T15:46:46Z
+TXT,TXT,mixed,bullish MSPR 100,13,last 2026-03-31,Analyst views are mixed · Insiders bought more than they sold recently · 13 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T15:46:47Z
+CNC,CNC,sell-heavy,bearish MSPR -100,14,last 2026-03-31,Most analysts lean sell · Insiders sold more than they bought recently · 14 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T15:46:48Z
+QRVO,QRVO,sell-heavy,bearish MSPR -100,3,last 2026-03-31,Most analysts lean sell · Insiders sold more than they bought recently · 3 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T15:46:49Z
+VWS.CO,VWS,no data,no data,0,no data,Quiet news week,2026-05-17T15:46:50Z
+NVDA,NVDA,buy-heavy,bearish MSPR -100,20,last 2026-03-31,Most analysts lean buy · Insiders sold more than they bought recently · Heavy news week: 20 stories · Last earnings: 31 Mar 2026,2026-05-17T15:46:51Z
+TSM,TSM,buy-heavy,no data,20,last 2026-03-31,Most analysts lean buy · Heavy news week: 20 stories · Last earnings: 31 Mar 2026,2026-05-17T15:46:52Z
+PLAB,PLAB,buy-heavy,bearish MSPR -100,2,last 2026-03-31,Most analysts lean buy · Insiders sold more than they bought recently · 2 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T15:46:52Z
+CRUS,CRUS,buy-heavy,bullish MSPR 28,6,last 2026-03-31,Most analysts lean buy · Insiders bought more than they sold recently · 6 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T15:46:53Z
+DIOD,DIOD,mixed,bearish MSPR -100,3,last 2026-03-31,Analyst views are mixed · Insiders sold more than they bought recently · 3 news stories in the past week · Last earnings: 31 Mar 2026,2026-05-17T15:46:54Z

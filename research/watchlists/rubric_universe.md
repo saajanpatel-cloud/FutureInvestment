@@ -1,6 +1,6 @@
 # FutureInvestment: indicative snapshot
 
-Generated (UTC): `2026-05-17T12:25:43Z`
+Generated (UTC): `2026-05-17T15:33:45Z`
 
 **Not investment advice.** yfinance + optional Stooq/FMP price backfill; verify with filings.
 
@@ -17,7 +17,7 @@ Generated (UTC): `2026-05-17T12:25:43Z`
 | ADYEN |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | https://www.sec.gov/edgar/searchedgar/companysearch.html?q=ADYEN |  | yfinance (indicative) |
 | AEHR | Aehr Test Systems | USD | NCM | EQUITY | Technology | Semiconductor Equipment & Materials | 3129598720.0 | 3102712832.0 |  | 663.3333 | 22.190008 | -0.25226 | -0.437 |  | 99.5 | 108.75 | 8.31 |  |  | https://www.sec.gov/edgar/searchedgar/companysearch.html?q=AEHR |  | yfinance (indicative) |
 | AFRM | Affirm Holdings, Inc. | USD | NMS | EQUITY | Financial Services | Credit Services | 22043023360.0 | 29364772864.0 | 59.83636 | 17.261229 | 5.825295 | 0.09629 | 0.326 | 35.293 | 65.82 | 100.0 | 42.095 |  |  | https://www.sec.gov/edgar/searchedgar/companysearch.html?q=AFRM |  | yfinance (indicative) |
-| A | Agilent Technologies, Inc. | USD | NYQ | EQUITY | Healthcare | Diagnostics & Research | 31566675968.0 | 33358678016.0 | 24.603523 | 16.970165 | 4.571124 | 0.18259 | 0.07 | -0.036 | 111.699997 | 160.27 | 107.07 |  |  | https://www.sec.gov/edgar/searchedgar/companysearch.html?q=A |  | yfinance (indicative) |
+| A | Agilent Technologies, Inc. | USD | NYQ | EQUITY | Healthcare | Diagnostics & Research | 31566675968.0 | 33358678016.0 | 24.603523 | 16.99565 | 4.571124 | 0.18259 | 0.07 | -0.036 | 111.699997 | 160.27 | 107.07 |  |  | https://www.sec.gov/edgar/searchedgar/companysearch.html?q=A |  | yfinance (indicative) |
 | ABNB | Airbnb, Inc. | USD | NMS | EQUITY | Consumer Cyclical | Travel Services | 78847131648.0 | 69376131072.0 | 32.802467 | 21.977133 | 10.351411 | 0.19902 | 0.179 | 0.06 | 132.850006 | 147.25 | 110.81 |  |  | https://www.sec.gov/edgar/searchedgar/companysearch.html?q=ABNB |  | yfinance (indicative) |
 | AIR.PA | AIRBUS SE | EUR | PAR | EQUITY | Industrials | Aerospace & Defense | 132002398208.0 | 130884411392.0 | 26.447948 | 19.495474 | 5.059288 | 0.06913 | -0.066 | -0.265 | 167.679993 | 221.3 | 154.08 |  |  | https://www.sec.gov/edgar/searchedgar/companysearch.html?q=AIR.PA | https://www.google.com/search?q=AIR.PA%20investor%20relations%20annual%20report | yfinance (indicative) |
 | EADSY | Airbus SE | USD | PNK | EQUITY | Industrials | Aerospace & Defense | 152186945536.0 | 36928737280.0 | 25.983871 | 20.538166 | 5.001806 | 0.06913 | -0.066 | -0.265 | 48.330002 | 64.35 | 44.0 |  |  | https://www.sec.gov/edgar/searchedgar/companysearch.html?q=EADSY |  | yfinance (indicative) |

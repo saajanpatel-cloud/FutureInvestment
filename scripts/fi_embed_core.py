@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv
+import json
 import re
 from pathlib import Path
 
@@ -15,6 +16,20 @@ PRIOR_JSON = W / "_shortlist_prior.json"
 
 
 def load_core_tickers() -> list[str]:
+    """Canonical core shortlist: core-shortlist.json first, then report_core_tickers.txt."""
+    if CORE_JSON.is_file():
+        try:
+            data = json.loads(CORE_JSON.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            data = {}
+        items = data.get("items") or []
+        out = [
+            (it.get("ticker") or "").strip().upper()
+            for it in items
+            if isinstance(it, dict) and (it.get("ticker") or "").strip()
+        ]
+        if out:
+            return out
     out: list[str] = []
     if not CORE_TXT.is_file():
         return out
@@ -24,6 +39,28 @@ def load_core_tickers() -> list[str]:
             continue
         out.append(s.upper())
     return out
+
+
+def load_manifest_map() -> dict[str, dict[str, str]]:
+    man = W / "universe_manifest.csv"
+    if not man.is_file():
+        return {}
+    with man.open(encoding="utf-8", newline="") as f:
+        return {
+            (r.get("ticker") or "").strip().upper(): r
+            for r in csv.DictReader(f)
+            if (r.get("ticker") or "").strip()
+        }
+
+
+def load_core_tickers_display_order() -> list[str]:
+    """Same ordering as Research shortlist table and Monitor dropdown (theme, then ticker)."""
+    from fi_embed_shortlist_proposed import sort_tickers_by_theme_then_symbol
+
+    core = load_core_tickers()
+    if not core:
+        return []
+    return sort_tickers_by_theme_then_symbol(core, load_manifest_map())
 
 
 def load_csv_index(path: Path, key: str = "ticker") -> dict[str, dict[str, str]]:
