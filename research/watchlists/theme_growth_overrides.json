@@ -1,0 +1,16 @@
+{
+  "catalysts": [
+    {
+      "id": "spacex_ipo_2026-06",
+      "headline": "SpaceX IPO (~Jun 2026) — sector sentiment",
+      "beneficiary_tickers": ["RKLB", "ASTS", "IRDM", "PL", "SPIR", "BKSY", "KTOS", "RDW", "VOYG", "MDA.TO"],
+      "linkage_note": "Indirect: launch services, satcom, EO, defence — not SpaceX equity."
+    },
+    {
+      "id": "us_quantum_programs",
+      "headline": "US government quantum funding / grants",
+      "beneficiary_tickers": ["IONQ", "RGTI", "QBTS", "QUBT", "INFQ"],
+      "linkage_note": "Grant revenue can be lumpy; dilution risk remains."
+    }
+  ]
+}

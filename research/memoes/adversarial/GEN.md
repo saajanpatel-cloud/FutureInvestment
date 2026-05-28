@@ -1,6 +1,6 @@
 # Adversarial pack — GEN
 
-**Not investment advice.** Generated 2026-05-17 (heuristic).
+**Not investment advice.** Generated 2026-05-28 (heuristic).
 
 **Verdict:** pass · **Shortlist gate:** pass
 

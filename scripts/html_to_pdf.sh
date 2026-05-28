@@ -25,7 +25,9 @@ echo "Syncing dashboard HTML from latest watchlist artifacts…" >&2
 "$PY" scripts/fi_embed_qualitative_core.py >&2 || true
 "$PY" scripts/fi_embed_value_tables.py >&2 || true
 "$PY" scripts/fi_embed_value_js.py >&2 || true
+"$PY" scripts/fi_patch_dashboard_ui.py >&2 || true
 "$PY" scripts/fi_embed_decide_matrix.py >&2 || true
+"$PY" scripts/fi_embed_appendix_ticker_pages.py >&2 || true
 "$PY" scripts/fi_embed_shortlist_changelog.py >&2 || true
 "$PY" scripts/fi_embed_executive_summary.py >&2 || true
 "$PY" scripts/fi_embed_deep_dive_runtime.py >&2 || true
@@ -34,11 +36,13 @@ echo "Syncing dashboard HTML from latest watchlist artifacts…" >&2
 if [ -f research/watchlists/dcf_sensitivity.csv ]; then
   "$PY" scripts/fi_embed_dcf_grids.py >&2 || true
 fi
+"$PY" scripts/fi_normalize_pdf_print_css.py >&2 || true
 
 mkdir -p "$DOCS"
 # virtual-time-budget lets inline JS (SCENARIOS, filters) finish before paint-to-PDF
 "$CHROME" --headless=new --disable-gpu --no-pdf-header-footer \
   --run-all-compositor-stages-before-draw \
-  --virtual-time-budget=15000 \
+  --virtual-time-budget=45000 \
   --print-to-pdf="$PDF" "file://$HTML"
+python3 scripts/fi_pdf_prune_blank_pages.py "$PDF" >&2 || true
 echo "$PDF"

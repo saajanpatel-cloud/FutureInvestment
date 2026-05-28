@@ -1,6 +1,6 @@
 # Adversarial pack — COHU
 
-**Not investment advice.** Generated 2026-05-17 (heuristic).
+**Not investment advice.** Generated 2026-05-28 (heuristic).
 
 **Verdict:** watch · **Shortlist gate:** reject_seat
 
@@ -8,8 +8,8 @@
 
 - Theme linkage is weak: name sits in quantum sleeve but revenue is not primarily quantum compute [soft]
 - Seat policy prefers pure-play quantum listings over adjacent semi equipment [soft]
+- Valuation stretch vs growth — multiple compression if growth decelerates [soft]
 - Commercial revenue for the headline theme remains early or uneven — timing risk [soft]
-- Second-order customer or capex dependency not fully visible in snapshot [soft]
 
 ## Pre-mortem
 

@@ -66,14 +66,25 @@ DD_CSS = """
       margin: 0.5rem 0 1rem;
       max-width: 52rem;
     }
+    .dd-file-protocol-note {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0.35rem 0 0.5rem;
+      padding: 0.45rem 0.65rem;
+      border-left: 3px solid var(--accent);
+      background: rgba(99,102,241,0.08);
+    }
+    .dd-news-scroll-hint { font-size: 0.82rem; margin: 0.25rem 0 0.35rem; }
     .dd-news-table-wrap {
-      max-height: 7.5rem;
+      max-height: 6.5rem;
       overflow-y: auto;
       margin: 0.35rem 0 0.75rem;
       border: 1px solid var(--line);
       border-radius: 6px;
     }
-    .dd-news-table { width: 100%; font-size: 0.82rem; border-collapse: collapse; }
+    .dd-news-table { width: 100%; table-layout: fixed; font-size: 0.82rem; border-collapse: collapse; }
+    .dd-peer-table { table-layout: fixed; }
+    .dd-news-table td.dd-news-headline { word-break: break-word; }
     .dd-news-table th, .dd-news-table td {
       padding: 0.3rem 0.45rem;
       border-bottom: 1px solid var(--line);
@@ -160,13 +171,97 @@ def remove_quality_movers_html(doc: str) -> str:
     )
 
 
+CHART_SCREEN_CSS = """
+    #monitor .dd-chart-block {
+      margin: 0.75rem 0 1.25rem;
+    }
+    #monitor #dd-tv-chart-container {
+      display: block !important;
+      width: 100%;
+      min-height: 400px;
+      height: 400px;
+      visibility: visible !important;
+      overflow: hidden;
+    }
+    #monitor #dd-tv-chart-container iframe {
+      display: block !important;
+      width: 100% !important;
+      min-height: 400px !important;
+      height: 400px !important;
+      visibility: visible !important;
+      border: 0;
+    }
+    .dd-chart-loading,
+    .dd-chart-fallback {
+      margin: 0;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    .dd-offline-chart {
+      padding: 0.75rem 1rem 1rem;
+      height: 100%;
+      box-sizing: border-box;
+    }
+    .dd-offline-note {
+      margin: 0 0 0.75rem;
+      font-size: 0.82rem;
+    }
+    .dd-offline-track {
+      position: relative;
+      height: 120px;
+      margin-top: 2.5rem;
+      border-radius: 6px;
+      background: linear-gradient(90deg, rgba(248,113,113,0.15), rgba(148,163,184,0.12), rgba(52,211,153,0.15));
+    }
+    .dd-offline-bar {
+      position: absolute;
+      left: 2%;
+      right: 2%;
+      top: 50%;
+      height: 4px;
+      margin-top: -2px;
+      border-radius: 2px;
+      background: var(--line);
+    }
+    .dd-offline-lbl {
+      position: absolute;
+      top: 0;
+      transform: translateX(-50%);
+      font-size: 0.72rem;
+      white-space: nowrap;
+      color: var(--muted);
+    }
+    .dd-offline-bear { color: #f87171; }
+    .dd-offline-base { top: auto; bottom: 0; color: var(--text); font-weight: 600; }
+    .dd-offline-bull { color: #34d399; }
+    .dd-offline-spot {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0.2rem 0.45rem;
+      border-radius: 4px;
+      background: var(--accent, #3b82f6);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 600;
+      z-index: 2;
+    }
+"""
+
+
 def inject_dd_css(doc: str) -> str:
-    if ".dd-news-table-wrap" in doc:
-        return doc
-    anchor = "    #monitor #dd-content .dcf-wrap .dcf-so-what {"
-    if anchor not in doc:
-        anchor = "    #monitor {"
-    return doc.replace(anchor, DD_CSS + "\n" + anchor, 1)
+    if ".dd-news-table-wrap" not in doc:
+        anchor = "    #monitor #dd-content .dcf-wrap .dcf-so-what {"
+        if anchor not in doc:
+            anchor = "    #monitor {"
+        doc = doc.replace(anchor, DD_CSS + "\n" + anchor, 1)
+    if "#monitor .dd-chart-block {" not in doc:
+        anchor = "    #monitor #dd-content .dcf-wrap .dcf-so-what {"
+        if anchor not in doc:
+            anchor = "    #monitor {"
+        doc = doc.replace(anchor, CHART_SCREEN_CSS + "\n" + anchor, 1)
+    return doc
 
 
 def inject_print_css(doc: str) -> str:
@@ -189,9 +284,8 @@ def patch_section_copy(doc: str) -> str:
         "risk metrics, Monte Carlo distribution, and adversarial review combined into a single page."
     )
     new_purpose = (
-        "Pick any universe name for a narrative-first brief: rubric, scenario/risk/DCF/Monte Carlo "
-        "with explainers under each chart, Finnhub headlines, and thesis discipline. "
-        "Core shortlist names get full models; others show a stub until selected onto the sleeve."
+        "Pick any core shortlist name for a full executive report with model charts and "
+        "company-specific narrative. Re-run the pipeline to refresh prose and numbers."
     )
     doc = doc.replace(old_purpose, new_purpose)
     doc = doc.replace("#stock-deep-dive", "#monitor")

@@ -16,7 +16,8 @@ import sys
 from pathlib import Path
 
 from fi_embed_chart_ticker_core import load_exchanges, tv_symbol
-from fi_embed_core import HTML, W, load_core_tickers, load_csv_index
+from fi_embed_core import HTML, W, load_csv_index
+from fi_portfolio_tickers import load_decide_union
 from fi_narrative import format_verdict_summary, research_status_label, rubric_total, ri
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -384,14 +385,17 @@ def build_data_vars(tickers: list[str]) -> str:
         verdict = format_verdict_summary(rb, scen.get(t), mc.get(t), risk.get(t), it)
         if len(verdict) > 320:
             verdict = verdict[:317] + "…"
-        tier = "Tier 2"
-        tot = rubric_total(rb)
-        if tot is not None:
-            if tot >= 20:
-                tier = "Tier 1"
-            elif tot <= 12:
-                tier = "Tier 3"
-        color = "var(--accent)" if tier == "Tier 1" else ("var(--warn)" if tier == "Tier 3" else "var(--fg)")
+        try:
+            ct = int(it.get("conviction_tier") or 0)
+            tier = f"Tier {ct}" if 1 <= ct <= 4 else "Tier 2"
+        except (TypeError, ValueError):
+            tier = "Tier 2"
+        if tier == "Tier 1":
+            color = "var(--accent)"
+        elif tier == "Tier 4":
+            color = "var(--warn)"
+        else:
+            color = "var(--fg)"
         sowhat_lines.append(
             f"    {js_str(t)}: {{tier:{js_str(tier)},color:{js_str(color)},text:{js_str(verdict)}}},"
         )
@@ -509,7 +513,11 @@ def patch_dropdown(doc: str) -> str:
 
 
 def main() -> None:
-    tickers = load_core_tickers()
+    tickers = load_decide_union()
+    if not tickers:
+        from fi_embed_core import load_core_tickers
+
+        tickers = load_core_tickers()
     if not tickers:
         print("No core tickers", file=sys.stderr)
         sys.exit(2)

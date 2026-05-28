@@ -1,0 +1,571 @@
+{
+  "as_of": "2026-05-28",
+  "themes": {
+    "ai": {
+      "demand_driver": "Hyperscaler and enterprise AI capex \u2014 accelerators, HBM, networking, foundry capacity.",
+      "cycle_position": "mid build-out",
+      "recent_theme_headlines": [
+        "Will SpaceX Spend Its IPO Billions on Real Estate?"
+      ]
+    },
+    "energy": {
+      "demand_driver": "Power demand from AI data centres, grid build-out, and conventional energy cash flows.",
+      "cycle_position": "mid build-out",
+      "recent_theme_headlines": []
+    },
+    "cyber": {
+      "demand_driver": "Platform consolidation and breach-driven security spend.",
+      "cycle_position": "mid build-out",
+      "recent_theme_headlines": []
+    },
+    "auto": {
+      "demand_driver": "Automation, aerospace/defence programmes, and reshoring capex.",
+      "cycle_position": "mid build-out",
+      "recent_theme_headlines": []
+    },
+    "health": {
+      "demand_driver": "Procedure volume and pipeline-driven biotech/pharma revenue.",
+      "cycle_position": "mid build-out",
+      "recent_theme_headlines": []
+    },
+    "quantum": {
+      "demand_driver": "Government programmes, commercial pilots, and space/launch cadence \u2014 often pre-profit.",
+      "cycle_position": "mid build-out",
+      "recent_theme_headlines": []
+    },
+    "fintech": {
+      "demand_driver": "Payments volume and rate-sensitive balances.",
+      "cycle_position": "mid build-out",
+      "recent_theme_headlines": []
+    }
+  },
+  "tickers": {
+    "CRUS": {
+      "theme_slug": "ai",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Audio and high-precision mixed-signal for consumer and auto \u00b7 Latest revenue pace about +6% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 8.85,
+      "within_theme_rank": 10
+    },
+    "DIOD": {
+      "theme_slug": "ai",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Discrete and analog components \u2014 broad cyclical semi \u00b7 Latest revenue pace about +22% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 11.67,
+      "within_theme_rank": 7
+    },
+    "MU": {
+      "theme_slug": "ai",
+      "linkage_tier": "direct",
+      "growth_mechanism": "High-bandwidth memory and DRAM for AI servers \u00b7 Revenue tied to theme spend if backlog/contracts convert. \u00b7 Latest revenue pace about +196% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 18.67,
+      "within_theme_rank": 1
+    },
+    "NVDA": {
+      "theme_slug": "ai",
+      "linkage_tier": "direct",
+      "growth_mechanism": "AI accelerators and data-centre GPU exposure \u00b7 Revenue tied to theme spend if backlog/contracts convert. \u00b7 Latest revenue pace about +85% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [
+        "Will SpaceX Spend Its IPO Billions on Real Estate?"
+      ],
+      "growth_capture_score": 17.89,
+      "within_theme_rank": 2
+    },
+    "PLAB": {
+      "theme_slug": "ai",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Photomasks \u2014 lithography consumables \u00b7 Latest revenue pace about +6% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 8.87,
+      "within_theme_rank": 9
+    },
+    "SMCI": {
+      "theme_slug": "ai",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "AI server assembly and rack integration \u2014 high growth but governance risks \u00b7 Latest revenue pace about +123% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 17.6,
+      "within_theme_rank": 3
+    },
+    "TSM": {
+      "theme_slug": "ai",
+      "linkage_tier": "direct",
+      "growth_mechanism": "Foundry monopoly on advanced nodes 3nm and 2nm \u00b7 Revenue tied to theme spend if backlog/contracts convert. \u00b7 Latest revenue pace about +35% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 13.36,
+      "within_theme_rank": 4
+    },
+    "GEN": {
+      "theme_slug": "cyber",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Consumer and enterprise security brands rollup \u00b7 Latest revenue pace about +27% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 11.95,
+      "within_theme_rank": 1
+    },
+    "PATH": {
+      "theme_slug": "cyber",
+      "linkage_tier": "direct",
+      "growth_mechanism": "RPA plus process mining \u2014 enterprise automation \u00b7 Revenue tied to theme spend if backlog/contracts convert. \u00b7 Latest revenue pace about +14% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 10.28,
+      "within_theme_rank": 2
+    },
+    "WDAY": {
+      "theme_slug": "cyber",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Workday HCM and financials cloud ERP \u00b7 Latest revenue pace about +13% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 9.27,
+      "within_theme_rank": 3
+    },
+    "EOG": {
+      "theme_slug": "energy",
+      "linkage_tier": "direct",
+      "growth_mechanism": "Premier shale operator \u2014 returns over growth \u00b7 Revenue tied to theme spend if backlog/contracts convert. \u00b7 Latest revenue pace about +16% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 10.32,
+      "within_theme_rank": 4
+    },
+    "FSLR": {
+      "theme_slug": "energy",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Utility-scale thin-film solar modules \u00b7 Latest revenue pace about +24% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 11.78,
+      "within_theme_rank": 3
+    },
+    "MPC": {
+      "theme_slug": "energy",
+      "linkage_tier": "direct",
+      "growth_mechanism": "Refining and midstream logistics \u2014 crack spread exposure \u00b7 Revenue tied to theme spend if backlog/contracts convert. \u00b7 Latest revenue pace about +9% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 9.96,
+      "within_theme_rank": 5
+    },
+    "NDX1.DE": {
+      "theme_slug": "energy",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Nordex wind turbine manufacturer (Xetra) \u00b7 Latest revenue pace about +52% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 15.13,
+      "within_theme_rank": 1
+    },
+    "PSX": {
+      "theme_slug": "energy",
+      "linkage_tier": "direct",
+      "growth_mechanism": "Phillips 66 refining plus midstream CPChem \u00b7 Revenue tied to theme spend if backlog/contracts convert. \u00b7 Latest revenue pace about +7% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 9.88,
+      "within_theme_rank": 6
+    },
+    "VLO": {
+      "theme_slug": "energy",
+      "linkage_tier": "direct",
+      "growth_mechanism": "Independent refiner \u2014 renewable diesel projects \u00b7 Revenue tied to theme spend if backlog/contracts convert. \u00b7 Latest revenue pace about +7% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 9.85,
+      "within_theme_rank": 7
+    },
+    "VWS.CO": {
+      "theme_slug": "energy",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Wind turbine manufacturer \u2014 global leader (Copenhagen) \u00b7 Latest revenue pace about +14% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 9.25,
+      "within_theme_rank": 8
+    },
+    "CI": {
+      "theme_slug": "health",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Cigna Evernorth pharmacy benefits mix \u00b7 Latest revenue pace about +317% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 17.6,
+      "within_theme_rank": 1
+    },
+    "CVS": {
+      "theme_slug": "health",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Retail pharmacy plus Aetna \u2014 reimbursement pressure \u00b7 Latest revenue pace about +6% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 8.84,
+      "within_theme_rank": 3
+    },
+    "PFE": {
+      "theme_slug": "health",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Post-COVID oncology pipeline rebuild \u2014 execution risk \u00b7 Latest revenue pace about +5% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 8.8,
+      "within_theme_rank": 4
+    },
+    "REGN": {
+      "theme_slug": "health",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Dupixent franchise Libtayo and obesity pipeline \u2014 net cash fortress \u00b7 Latest revenue pace about +19% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 9.49,
+      "within_theme_rank": 2
+    },
+    "B": {
+      "theme_slug": "auto",
+      "linkage_tier": "direct",
+      "growth_mechanism": "Barrick Mining \u2014 gold and copper producer (NYSE: B) \u00b7 Revenue tied to theme spend if backlog/contracts convert. \u00b7 Latest revenue pace about +67% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 16.97,
+      "within_theme_rank": 1
+    },
+    "TXT": {
+      "theme_slug": "auto",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Bell aviation plus industrial and Textron Systems \u00b7 Latest revenue pace about +12% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 9.09,
+      "within_theme_rank": 5
+    },
+    "ZBH": {
+      "theme_slug": "auto",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Zimmer Biomed \u2014 robotics knee mix \u00b7 Latest revenue pace about +9% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 9.0,
+      "within_theme_rank": 6
+    },
+    "QUBT": {
+      "theme_slug": "quantum",
+      "linkage_tier": "sentiment_only",
+      "growth_mechanism": "Quantum computing micro-cap hardware \u00b7 Price may move on theme beta without proportional revenue. \u00b7 Latest revenue pace about +9364% YoY \u2014 confirm in filings.",
+      "growth_quality": "narrative_only",
+      "recent_catalysts": [
+        "Grant revenue can be lumpy; dilution risk remains."
+      ],
+      "growth_capture_score": 15.97,
+      "within_theme_rank": 7
+    },
+    "ASTS": {
+      "theme_slug": "quantum",
+      "linkage_tier": "direct",
+      "growth_mechanism": "AST SpaceMobile \u2014 direct-to-cell satellite broadband \u00b7 Revenue tied to theme spend if backlog/contracts convert. \u00b7 Latest revenue pace about +1952% YoY \u2014 confirm in filings.",
+      "growth_quality": "cyclical_peak_risk",
+      "recent_catalysts": [
+        "Indirect: launch services, satcom, EO, defence \u2014 not SpaceX equity."
+      ],
+      "growth_capture_score": 18.43,
+      "within_theme_rank": 1
+    },
+    "FLY": {
+      "theme_slug": "auto",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Firefly Aerospace \u2014 launch and space systems (post-IPO) \u00b7 Latest revenue pace about +45% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 14.67,
+      "within_theme_rank": 3
+    },
+    "IRDM": {
+      "theme_slug": "quantum",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Iridium \u2014 LEO voice and IoT constellation \u00b7 Latest revenue pace about +2% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [
+        "Indirect: launch services, satcom, EO, defence \u2014 not SpaceX equity."
+      ],
+      "growth_capture_score": 6.46,
+      "within_theme_rank": 17
+    },
+    "MDA.TO": {
+      "theme_slug": "quantum",
+      "linkage_tier": "direct",
+      "growth_mechanism": "MDA Space \u2014 satellite systems and robotics (TSX) \u00b7 Revenue tied to theme spend if backlog/contracts convert. \u00b7 Latest revenue pace about +32% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [
+        "Indirect: launch services, satcom, EO, defence \u2014 not SpaceX equity."
+      ],
+      "growth_capture_score": 13.08,
+      "within_theme_rank": 10
+    },
+    "PL": {
+      "theme_slug": "quantum",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Planet Labs \u2014 daily Earth observation data \u00b7 Latest revenue pace about +41% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [
+        "Indirect: launch services, satcom, EO, defence \u2014 not SpaceX equity."
+      ],
+      "growth_capture_score": 14.62,
+      "within_theme_rank": 9
+    },
+    "SSIT.L": {
+      "theme_slug": "quantum",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Seraphim Space Investment Trust \u2014 UK space CEF (LSE)",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 8.47,
+      "within_theme_rank": 12
+    },
+    "SPIR": {
+      "theme_slug": "quantum",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Spire Global \u2014 space-based data and analytics \u00b7 Latest revenue pace about -27% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [
+        "Indirect: launch services, satcom, EO, defence \u2014 not SpaceX equity."
+      ],
+      "growth_capture_score": 2.92,
+      "within_theme_rank": 18
+    },
+    "STM": {
+      "theme_slug": "ai",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "European semiconductor \u2014 auto industrial IoT power (NYSE) \u00b7 Latest revenue pace about +23% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 11.71,
+      "within_theme_rank": 6
+    },
+    "BKSY": {
+      "theme_slug": "quantum",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "BlackSky \u2014 geospatial intelligence satellites \u00b7 Latest revenue pace about -30% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [
+        "Indirect: launch services, satcom, EO, defence \u2014 not SpaceX equity."
+      ],
+      "growth_capture_score": 2.72,
+      "within_theme_rank": 19
+    },
+    "LUNR": {
+      "theme_slug": "quantum",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Intuitive Machines \u2014 lunar lander programs \u00b7 Latest revenue pace about +194% YoY \u2014 confirm in filings.",
+      "growth_quality": "cyclical_peak_risk",
+      "recent_catalysts": [],
+      "growth_capture_score": 17.4,
+      "within_theme_rank": 4
+    },
+    "RDW": {
+      "theme_slug": "auto",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Space systems integrator \u2014 NASA and defense missions \u00b7 Latest revenue pace about +58% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [
+        "Indirect: launch services, satcom, EO, defence \u2014 not SpaceX equity."
+      ],
+      "growth_capture_score": 15.33,
+      "within_theme_rank": 2
+    },
+    "SATL": {
+      "theme_slug": "quantum",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Satellogic \u2014 EO constellation operator \u00b7 Latest revenue pace about +80% YoY \u2014 confirm in filings.",
+      "growth_quality": "cyclical_peak_risk",
+      "recent_catalysts": [],
+      "growth_capture_score": 16.42,
+      "within_theme_rank": 6
+    },
+    "AVIO.MI": {
+      "theme_slug": "quantum",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Avio \u2014 space propulsion and launch systems (Borsa Italiana)",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 8.47,
+      "within_theme_rank": 13
+    },
+    "ETL.PA": {
+      "theme_slug": "quantum",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Eutelsat \u2014 satellite communications and GEO/LEO (Paris)",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 8.4,
+      "within_theme_rank": 14
+    },
+    "KTOS": {
+      "theme_slug": "auto",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Unmanned systems and C5ISR \u2014 defense tech integrator \u00b7 Latest revenue pace about +23% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [
+        "Indirect: launch services, satcom, EO, defence \u2014 not SpaceX equity."
+      ],
+      "growth_capture_score": 11.63,
+      "within_theme_rank": 4
+    },
+    "SIDU": {
+      "theme_slug": "quantum",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Sidus Space \u2014 small satellite and space services microcap \u00b7 Latest revenue pace about +51% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 14.97,
+      "within_theme_rank": 8
+    },
+    "VOYG": {
+      "theme_slug": "quantum",
+      "linkage_tier": "direct",
+      "growth_mechanism": "Voyager Technologies \u2014 defense and space systems \u00b7 Revenue tied to theme spend if backlog/contracts convert. \u00b7 Latest revenue pace about +2% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [
+        "Indirect: launch services, satcom, EO, defence \u2014 not SpaceX equity."
+      ],
+      "growth_capture_score": 7.37,
+      "within_theme_rank": 16
+    },
+    "VST": {
+      "theme_slug": "energy",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Nuclear and gas fleet benefiting from AI-driven power demand \u00b7 Latest revenue pace about +43% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 14.77,
+      "within_theme_rank": 2
+    },
+    "RKLB": {
+      "theme_slug": "quantum",
+      "linkage_tier": "direct",
+      "growth_mechanism": "Rocket Lab \u2014 launch and space systems \u00b7 Revenue tied to theme spend if backlog/contracts convert. \u00b7 Latest revenue pace about +63% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [
+        "Indirect: launch services, satcom, EO, defence \u2014 not SpaceX equity."
+      ],
+      "growth_capture_score": 16.74,
+      "within_theme_rank": 5
+    },
+    "RGTI": {
+      "theme_slug": "quantum",
+      "linkage_tier": "direct",
+      "growth_mechanism": "Superconducting quantum systems \u2014 minimal revenue \u00b7 Revenue tied to theme spend if backlog/contracts convert. \u00b7 Latest revenue pace about +199% YoY \u2014 confirm in filings.",
+      "growth_quality": "cyclical_peak_risk",
+      "recent_catalysts": [
+        "Grant revenue can be lumpy; dilution risk remains."
+      ],
+      "growth_capture_score": 18.43,
+      "within_theme_rank": 2
+    },
+    "QBTS": {
+      "theme_slug": "quantum",
+      "linkage_tier": "direct",
+      "growth_mechanism": "D-Wave annealing and quantum systems \u00b7 Revenue tied to theme spend if backlog/contracts convert. \u00b7 Latest revenue pace about -81% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [
+        "Grant revenue can be lumpy; dilution risk remains."
+      ],
+      "growth_capture_score": 1.19,
+      "within_theme_rank": 20
+    },
+    "IONQ": {
+      "theme_slug": "quantum",
+      "linkage_tier": "direct",
+      "growth_mechanism": "Trapped-ion quantum hardware \u2014 largest cash runway in pure-play quantum \u00b7 Revenue tied to theme spend if backlog/contracts convert. \u00b7 Latest revenue pace about +755% YoY \u2014 confirm in filings.",
+      "growth_quality": "cyclical_peak_risk",
+      "recent_catalysts": [
+        "Grant revenue can be lumpy; dilution risk remains."
+      ],
+      "growth_capture_score": 18.37,
+      "within_theme_rank": 3
+    },
+    "GFS": {
+      "theme_slug": "ai",
+      "linkage_tier": "direct",
+      "growth_mechanism": "GlobalFoundries \u2014 specialty and mature-node foundry \u00b7 Revenue tied to theme spend if backlog/contracts convert. \u00b7 Latest revenue pace about +3% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 7.62,
+      "within_theme_rank": 12
+    },
+    "AVGO": {
+      "theme_slug": "ai",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Networking and custom silicon for AI and cloud \u00b7 Latest revenue pace about +29% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 12.01,
+      "within_theme_rank": 5
+    },
+    "TENB": {
+      "theme_slug": "cyber",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Exposure management and vulnerability scanning \u00b7 Latest revenue pace about +10% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 9.05,
+      "within_theme_rank": 4
+    },
+    "QTUM": {
+      "theme_slug": "quantum",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "WisdomTree Quantum Computing ETF \u2014 basket exposure",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 8.37,
+      "within_theme_rank": 15
+    },
+    "INFQ": {
+      "theme_slug": "quantum",
+      "linkage_tier": "direct",
+      "growth_mechanism": "Infleqtion \u2014 quantum sensing and computing hardware \u00b7 Revenue tied to theme spend if backlog/contracts convert.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [
+        "Grant revenue can be lumpy; dilution risk remains."
+      ],
+      "growth_capture_score": 9.4,
+      "within_theme_rank": 11
+    },
+    "QRVO": {
+      "theme_slug": "ai",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "RF connectivity and defense/aerospace semi exposure \u00b7 Latest revenue pace about -7% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 4.08,
+      "within_theme_rank": 13
+    },
+    "SMH": {
+      "theme_slug": "ai",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "VanEck Semiconductor ETF \u2014 semi sector basket",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 8.37,
+      "within_theme_rank": 11
+    },
+    "MRVL": {
+      "theme_slug": "ai",
+      "linkage_tier": "picks_shovels",
+      "growth_mechanism": "Custom AI silicon and high-speed networking ASICs \u00b7 Latest revenue pace about +22% YoY \u2014 confirm in filings.",
+      "growth_quality": "sustainable",
+      "recent_catalysts": [],
+      "growth_capture_score": 11.6,
+      "within_theme_rank": 8
+    }
+  }
+}

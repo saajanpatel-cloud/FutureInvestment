@@ -7,20 +7,30 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from fi_embed_executive_summary import build_inner, tier_from_total
+from fi_embed_executive_summary import build_inner, by_tier_from_items, conviction_tier_for_item
 
 
 class TestExecutiveSummary(unittest.TestCase):
-    def test_tier_from_total(self):
-        self.assertEqual(tier_from_total(18), 1)
-        self.assertEqual(tier_from_total(15), 2)
-        self.assertEqual(tier_from_total(10), 3)
+    def test_conviction_tier_from_item(self):
+        self.assertEqual(conviction_tier_for_item({"conviction_tier": 1}), 1)
+        self.assertEqual(conviction_tier_for_item({"conviction_tier": 4}), 4)
+        self.assertEqual(conviction_tier_for_item({}), 2)
+
+    def test_by_tier_four_buckets(self):
+        items = {
+            "A": {"conviction_tier": 1, "composite_rank": "1"},
+            "B": {"conviction_tier": 2, "composite_rank": "8"},
+            "C": {"conviction_tier": 4, "composite_rank": "20"},
+        }
+        by = by_tier_from_items(["A", "B", "C"], items)
+        self.assertEqual(by[1], ["A"])
+        self.assertEqual(by[4], ["C"])
 
     def test_baseline_in_lead(self):
         doc = {
             "as_of": "2026-05-17",
             "shortlist_n": 1,
-            "items": [{"ticker": "NVDA", "theme": "ai", "why_this_name": "AI GPUs"}],
+            "items": [{"ticker": "NVDA", "theme": "ai", "conviction_tier": 1, "composite_rank": "3", "why_this_name": "AI GPUs"}],
             "selection_memo": {
                 "method": "Test.",
                 "shortlist_delta": {"baseline_established": True},
@@ -30,22 +40,23 @@ class TestExecutiveSummary(unittest.TestCase):
         inner = build_inner(doc, stats)
         self.assertIn("first saved baseline", inner.lower())
 
-    def test_build_inner_has_delta(self):
+    def test_build_inner_four_tier_table(self):
         doc = {
             "as_of": "2026-05-17",
             "shortlist_n": 2,
             "items": [
-                {"ticker": "NVDA", "theme": "ai", "why_this_name": "AI GPUs"},
-                {"ticker": "MU", "theme": "ai", "why_this_name": "Memory"},
+                {"ticker": "NVDA", "theme": "ai", "conviction_tier": 1, "composite_rank": "2", "why_this_name": "AI GPUs"},
+                {"ticker": "MU", "theme": "ai", "conviction_tier": 4, "composite_rank": "50", "why_this_name": "Memory"},
             ],
             "selection_memo": {
                 "method": "Test composite.",
+                "conviction_tier_note": "Quartile test.",
                 "shortlist_delta": {
                     "baseline_established": False,
                     "prior_as_of": "2026-05-10",
-                    "added": [{"ticker": "MU", "theme": "ai", "composite_rank": "1", "rubric_total": 20, "reason_label": "Pick"}],
+                    "added": [],
                     "dropped": [],
-                    "unchanged_count": 1,
+                    "unchanged_count": 2,
                 },
             },
         }
@@ -71,10 +82,10 @@ class TestExecutiveSummary(unittest.TestCase):
                 "fi_embed_executive_summary.RISK", root / "missing.csv"
             ):
                 inner = build_inner(doc, stats)
-        self.assertIn("added", inner.lower())
-        self.assertIn("MU", inner)
-        self.assertIn("NVDA", inner)
-        self.assertIn("100", inner)
+        self.assertIn("Tier 4", inner)
+        self.assertIn("composite rank #2", inner)
+        self.assertIn("Tier 4 (lowest composite quartile", inner)
+        self.assertIn("top quartile on five-signal composite", inner)
 
 
 if __name__ == "__main__":

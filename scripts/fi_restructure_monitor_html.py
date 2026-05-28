@@ -23,6 +23,10 @@ PRINT_TOC_DD = re.compile(
     r"\s*<li><a href=\"#stock-deep-dive\">Stock deep-dive</a></li>\s*",
     re.I,
 )
+DUP_MONITOR_AFTER_APPENDIX = re.compile(
+    r'(<a href="#appendix">Appendix</a>\s*)\s*<a href="#monitor">Monitor</a>\s*',
+    re.I,
+)
 
 
 def main() -> None:
@@ -35,6 +39,9 @@ def main() -> None:
         changed = True
     if PRINT_TOC_DD.search(doc):
         doc = PRINT_TOC_DD.sub("\n", doc, count=1)
+        changed = True
+    if DUP_MONITOR_AFTER_APPENDIX.search(doc):
+        doc = DUP_MONITOR_AFTER_APPENDIX.sub(r"\1", doc, count=1)
         changed = True
 
     dd_match = DEEP_DIVE_SECTION.search(doc)

@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-05-17T15:58:54.285612+00:00",
+  "updated_at": "2026-05-28T08:23:24.880555+00:00",
   "packs": {
     "ACMR": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -14,8 +14,8 @@
       "bear_bullets": [
         "Theme linkage is weak: name sits in quantum sleeve but revenue is not primarily quantum compute [soft]",
         "Seat policy prefers pure-play quantum listings over adjacent semi equipment [soft]",
-        "Commercial revenue for the headline theme remains early or uneven \u2014 timing risk [soft]",
-        "Second-order customer or capex dependency not fully visible in snapshot [soft]"
+        "Valuation stretch vs growth \u2014 multiple compression if growth decelerates [soft]",
+        "Commercial revenue for the headline theme remains early or uneven \u2014 timing risk [soft]"
       ],
       "premortem": "If this is a poor outcome in five years, the likely reason is the theme pays off too late or never at scale.",
       "rebuttal": [
@@ -33,8 +33,8 @@
     },
     "AEHR": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -64,8 +64,8 @@
     },
     "AMGN": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -93,8 +93,8 @@
     },
     "APLD": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -123,14 +123,14 @@
     },
     "ARQQ": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
       "linkage_grade": "strong",
       "quantum_pure": true,
-      "seat_score": 95,
+      "seat_score": 94,
       "bear_bullets": [
         "Commercial revenue for the headline theme remains early or uneven \u2014 timing risk [soft]",
         "Second-order customer or capex dependency not fully visible in snapshot [soft]",
@@ -150,12 +150,12 @@
         "Material guidance cut vs consensus on revenue or margins",
         "Loss of key government or cloud partner contract disclosed in filings"
       ],
-      "seat_rationale": "ARQQ: gate=pass, quantum_pure=True, seat_score=95, linkage=strong"
+      "seat_rationale": "ARQQ: gate=pass, quantum_pure=True, seat_score=94, linkage=strong"
     },
     "ASTS": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -184,8 +184,8 @@
     },
     "B": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -213,8 +213,8 @@
     },
     "BEAM": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -243,8 +243,8 @@
     },
     "BIIB": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -272,8 +272,8 @@
     },
     "BKSY": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -283,8 +283,9 @@
       "bear_bullets": [
         "Theme linkage is weak: name sits in quantum sleeve but revenue is not primarily quantum compute [soft]",
         "Seat policy prefers pure-play quantum listings over adjacent semi equipment [soft]",
-        "Commercial revenue for the headline theme remains early or uneven \u2014 timing risk [soft]",
-        "Second-order customer or capex dependency not fully visible in snapshot [soft]"
+        "Elevated tail-risk score on rubric (regulation, concentration, or governance) [soft]",
+        "Growth momentum weak \u2014 thesis may depend on optionality that never monetizes [soft]",
+        "Commercial revenue for the headline theme remains early or uneven \u2014 timing risk [soft]"
       ],
       "premortem": "If this is a poor outcome in five years, the likely reason is the theme pays off too late or never at scale.",
       "rebuttal": [
@@ -302,8 +303,8 @@
     },
     "BRKS": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -332,8 +333,8 @@
     },
     "CAMT": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -343,8 +344,9 @@
       "bear_bullets": [
         "Theme linkage is weak: name sits in quantum sleeve but revenue is not primarily quantum compute [soft]",
         "Seat policy prefers pure-play quantum listings over adjacent semi equipment [soft]",
-        "Commercial revenue for the headline theme remains early or uneven \u2014 timing risk [soft]",
-        "Second-order customer or capex dependency not fully visible in snapshot [soft]"
+        "Elevated tail-risk score on rubric (regulation, concentration, or governance) [soft]",
+        "Growth momentum weak \u2014 thesis may depend on optionality that never monetizes [soft]",
+        "Commercial revenue for the headline theme remains early or uneven \u2014 timing risk [soft]"
       ],
       "premortem": "If this is a poor outcome in five years, the likely reason is the theme pays off too late or never at scale.",
       "rebuttal": [
@@ -362,8 +364,8 @@
     },
     "CHKP": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -391,8 +393,8 @@
     },
     "CNC": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -420,8 +422,8 @@
     },
     "COHU": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -431,8 +433,8 @@
       "bear_bullets": [
         "Theme linkage is weak: name sits in quantum sleeve but revenue is not primarily quantum compute [soft]",
         "Seat policy prefers pure-play quantum listings over adjacent semi equipment [soft]",
-        "Commercial revenue for the headline theme remains early or uneven \u2014 timing risk [soft]",
-        "Second-order customer or capex dependency not fully visible in snapshot [soft]"
+        "Valuation stretch vs growth \u2014 multiple compression if growth decelerates [soft]",
+        "Commercial revenue for the headline theme remains early or uneven \u2014 timing risk [soft]"
       ],
       "premortem": "If this is a poor outcome in five years, the likely reason is the theme pays off too late or never at scale.",
       "rebuttal": [
@@ -450,8 +452,8 @@
     },
     "CRSP": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -480,24 +482,24 @@
     },
     "CRUS": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
       "linkage_grade": "mixed",
       "quantum_pure": false,
-      "seat_score": 70,
+      "seat_score": 72,
       "bear_bullets": [
-        "Elevated tail-risk score on rubric (regulation, concentration, or governance) [soft]",
-        "Growth momentum weak \u2014 thesis may depend on optionality that never monetizes [soft]",
+        "Macro or cycle turns against the name [soft]",
+        "Execution miss vs guidance [soft]",
         "Second-order customer or capex dependency not fully visible in snapshot [soft]",
         "Second-order customer or capex dependency not fully visible in snapshot [soft]"
       ],
       "premortem": "If this is a poor outcome in five years, the likely reason is growth stalls or the multiple resets lower.",
       "rebuttal": [
         {
-          "bear": "Elevated tail-risk score on rubric (regulation, concentration, or governance) [soft]",
+          "bear": "Macro or cycle turns against the name [soft]",
           "response": "rebuttal",
           "note": "Verify in 10-K/10-Q before sizing"
         }
@@ -505,12 +507,12 @@
       "kill_criteria": [
         "Material guidance cut vs consensus on revenue or margins"
       ],
-      "seat_rationale": "CRUS: gate=pass, quantum_pure=False, seat_score=70, linkage=mixed"
+      "seat_rationale": "CRUS: gate=pass, quantum_pure=False, seat_score=72, linkage=mixed"
     },
     "CVS": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -538,14 +540,14 @@
     },
     "DIOD": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
       "linkage_grade": "mixed",
       "quantum_pure": false,
-      "seat_score": 71,
+      "seat_score": 72,
       "bear_bullets": [
         "Macro or cycle turns against the name [soft]",
         "Execution miss vs guidance [soft]",
@@ -563,12 +565,12 @@
       "kill_criteria": [
         "Material guidance cut vs consensus on revenue or margins"
       ],
-      "seat_rationale": "DIOD: gate=pass, quantum_pure=False, seat_score=71, linkage=mixed"
+      "seat_rationale": "DIOD: gate=pass, quantum_pure=False, seat_score=72, linkage=mixed"
     },
     "DVN": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "watch",
@@ -625,8 +627,8 @@
     },
     "EDIT": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -685,8 +687,8 @@
     },
     "ENEL.MI": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "watch",
@@ -714,8 +716,8 @@
     },
     "ENGI.PA": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "watch",
@@ -743,8 +745,8 @@
     },
     "EOG": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -772,8 +774,8 @@
     },
     "ET": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -801,8 +803,8 @@
     },
     "FANG": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -830,8 +832,8 @@
     },
     "FORM": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -860,8 +862,8 @@
     },
     "FRSH": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -889,8 +891,8 @@
     },
     "FSLR": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -918,8 +920,8 @@
     },
     "GEN": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -947,14 +949,14 @@
     },
     "GMAB.CO": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
       "linkage_grade": "mixed",
       "quantum_pure": false,
-      "seat_score": 71,
+      "seat_score": 70,
       "bear_bullets": [
         "Macro or cycle turns against the name [soft]",
         "Execution miss vs guidance [soft]",
@@ -972,12 +974,12 @@
       "kill_criteria": [
         "Material guidance cut vs consensus on revenue or margins"
       ],
-      "seat_rationale": "GMAB.CO: gate=pass, quantum_pure=False, seat_score=71, linkage=mixed"
+      "seat_rationale": "GMAB.CO: gate=pass, quantum_pure=False, seat_score=70, linkage=mixed"
     },
     "GSAT": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "watch",
       "shortlist_gate": "reject_seat",
@@ -1006,8 +1008,8 @@
     },
     "GSK": {
       "workflow_e_complete": true,
-      "as_of": "2026-05-17",
-      "earnings_mtime": 1779032421.6745968,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
       "source": "heuristic",
       "verdict": "pass",
       "shortlist_gate": "pass",
@@ -3322,11 +3324,216 @@
         "Material guidance cut vs consensus on revenue or margins"
       ],
       "seat_rationale": "TSM: gate=pass, quantum_pure=False, seat_score=71, linkage=mixed"
+    },
+    "ALGN": {
+      "workflow_e_complete": true,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
+      "source": "heuristic",
+      "verdict": "pass",
+      "shortlist_gate": "pass",
+      "linkage_grade": "mixed",
+      "quantum_pure": false,
+      "seat_score": 71,
+      "bear_bullets": [
+        "Macro or cycle turns against the name [soft]",
+        "Execution miss vs guidance [soft]",
+        "Second-order customer or capex dependency not fully visible in snapshot [soft]",
+        "Second-order customer or capex dependency not fully visible in snapshot [soft]"
+      ],
+      "premortem": "If this is a poor outcome in five years, the likely reason is growth stalls or the multiple resets lower.",
+      "rebuttal": [
+        {
+          "bear": "Macro or cycle turns against the name [soft]",
+          "response": "rebuttal",
+          "note": "Verify in 10-K/10-Q before sizing"
+        }
+      ],
+      "kill_criteria": [
+        "Material guidance cut vs consensus on revenue or margins"
+      ],
+      "seat_rationale": "ALGN: gate=pass, quantum_pure=False, seat_score=71, linkage=mixed"
+    },
+    "AVGO": {
+      "workflow_e_complete": true,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
+      "source": "heuristic",
+      "verdict": "pass",
+      "shortlist_gate": "pass",
+      "linkage_grade": "mixed",
+      "quantum_pure": false,
+      "seat_score": 71,
+      "bear_bullets": [
+        "Macro or cycle turns against the name [soft]",
+        "Execution miss vs guidance [soft]",
+        "Second-order customer or capex dependency not fully visible in snapshot [soft]",
+        "Second-order customer or capex dependency not fully visible in snapshot [soft]"
+      ],
+      "premortem": "If this is a poor outcome in five years, the likely reason is growth stalls or the multiple resets lower.",
+      "rebuttal": [
+        {
+          "bear": "Macro or cycle turns against the name [soft]",
+          "response": "rebuttal",
+          "note": "Verify in 10-K/10-Q before sizing"
+        }
+      ],
+      "kill_criteria": [
+        "Material guidance cut vs consensus on revenue or margins"
+      ],
+      "seat_rationale": "AVGO: gate=pass, quantum_pure=False, seat_score=71, linkage=mixed"
+    },
+    "AVIO.MI": {
+      "workflow_e_complete": true,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
+      "source": "heuristic",
+      "verdict": "watch",
+      "shortlist_gate": "reject_seat",
+      "linkage_grade": "weak",
+      "quantum_pure": false,
+      "seat_score": 15,
+      "bear_bullets": [
+        "Theme linkage is weak: name sits in quantum sleeve but revenue is not primarily quantum compute [soft]",
+        "Seat policy prefers pure-play quantum listings over adjacent semi equipment [soft]",
+        "Commercial revenue for the headline theme remains early or uneven \u2014 timing risk [soft]",
+        "Second-order customer or capex dependency not fully visible in snapshot [soft]"
+      ],
+      "premortem": "If this is a poor outcome in five years, the likely reason is the theme pays off too late or never at scale.",
+      "rebuttal": [
+        {
+          "bear": "Theme linkage is weak: name sits in quantum sleeve but revenue is not primarily quantum compute [soft]",
+          "response": "risk",
+          "note": "Verify in 10-K/10-Q before sizing"
+        }
+      ],
+      "kill_criteria": [
+        "Two consecutive quarters of cash burn acceleration without funded runway through 2027",
+        "Material guidance cut vs consensus on revenue or margins"
+      ],
+      "seat_rationale": "AVIO.MI: gate=reject_seat, quantum_pure=False, seat_score=15, linkage=weak"
+    },
+    "CI": {
+      "workflow_e_complete": true,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
+      "source": "heuristic",
+      "verdict": "pass",
+      "shortlist_gate": "pass",
+      "linkage_grade": "mixed",
+      "quantum_pure": false,
+      "seat_score": 73,
+      "bear_bullets": [
+        "Macro or cycle turns against the name [soft]",
+        "Execution miss vs guidance [soft]",
+        "Second-order customer or capex dependency not fully visible in snapshot [soft]",
+        "Second-order customer or capex dependency not fully visible in snapshot [soft]"
+      ],
+      "premortem": "If this is a poor outcome in five years, the likely reason is growth stalls or the multiple resets lower.",
+      "rebuttal": [
+        {
+          "bear": "Macro or cycle turns against the name [soft]",
+          "response": "rebuttal",
+          "note": "Verify in 10-K/10-Q before sizing"
+        }
+      ],
+      "kill_criteria": [
+        "Material guidance cut vs consensus on revenue or margins"
+      ],
+      "seat_rationale": "CI: gate=pass, quantum_pure=False, seat_score=73, linkage=mixed"
+    },
+    "ETL.PA": {
+      "workflow_e_complete": true,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
+      "source": "heuristic",
+      "verdict": "watch",
+      "shortlist_gate": "reject_seat",
+      "linkage_grade": "weak",
+      "quantum_pure": false,
+      "seat_score": 15,
+      "bear_bullets": [
+        "Theme linkage is weak: name sits in quantum sleeve but revenue is not primarily quantum compute [soft]",
+        "Seat policy prefers pure-play quantum listings over adjacent semi equipment [soft]",
+        "Commercial revenue for the headline theme remains early or uneven \u2014 timing risk [soft]",
+        "Second-order customer or capex dependency not fully visible in snapshot [soft]"
+      ],
+      "premortem": "If this is a poor outcome in five years, the likely reason is the theme pays off too late or never at scale.",
+      "rebuttal": [
+        {
+          "bear": "Theme linkage is weak: name sits in quantum sleeve but revenue is not primarily quantum compute [soft]",
+          "response": "risk",
+          "note": "Verify in 10-K/10-Q before sizing"
+        }
+      ],
+      "kill_criteria": [
+        "Two consecutive quarters of cash burn acceleration without funded runway through 2027",
+        "Material guidance cut vs consensus on revenue or margins"
+      ],
+      "seat_rationale": "ETL.PA: gate=reject_seat, quantum_pure=False, seat_score=15, linkage=weak"
+    },
+    "FLY": {
+      "workflow_e_complete": true,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
+      "source": "heuristic",
+      "verdict": "pass",
+      "shortlist_gate": "pass",
+      "linkage_grade": "mixed",
+      "quantum_pure": false,
+      "seat_score": 68,
+      "bear_bullets": [
+        "Macro or cycle turns against the name [soft]",
+        "Execution miss vs guidance [soft]",
+        "Second-order customer or capex dependency not fully visible in snapshot [soft]",
+        "Second-order customer or capex dependency not fully visible in snapshot [soft]"
+      ],
+      "premortem": "If this is a poor outcome in five years, the likely reason is growth stalls or the multiple resets lower.",
+      "rebuttal": [
+        {
+          "bear": "Macro or cycle turns against the name [soft]",
+          "response": "rebuttal",
+          "note": "Verify in 10-K/10-Q before sizing"
+        }
+      ],
+      "kill_criteria": [
+        "Material guidance cut vs consensus on revenue or margins"
+      ],
+      "seat_rationale": "FLY: gate=pass, quantum_pure=False, seat_score=68, linkage=mixed"
+    },
+    "GFS": {
+      "workflow_e_complete": true,
+      "as_of": "2026-05-28",
+      "earnings_mtime": 1779956236.7016299,
+      "source": "heuristic",
+      "verdict": "pass",
+      "shortlist_gate": "pass",
+      "linkage_grade": "mixed",
+      "quantum_pure": false,
+      "seat_score": 69,
+      "bear_bullets": [
+        "Elevated tail-risk score on rubric (regulation, concentration, or governance) [soft]",
+        "Growth momentum weak \u2014 thesis may depend on optionality that never monetizes [soft]",
+        "Second-order customer or capex dependency not fully visible in snapshot [soft]",
+        "Second-order customer or capex dependency not fully visible in snapshot [soft]"
+      ],
+      "premortem": "If this is a poor outcome in five years, the likely reason is growth stalls or the multiple resets lower.",
+      "rebuttal": [
+        {
+          "bear": "Elevated tail-risk score on rubric (regulation, concentration, or governance) [soft]",
+          "response": "rebuttal",
+          "note": "Verify in 10-K/10-Q before sizing"
+        }
+      ],
+      "kill_criteria": [
+        "Material guidance cut vs consensus on revenue or margins"
+      ],
+      "seat_rationale": "GFS: gate=pass, quantum_pure=False, seat_score=69, linkage=mixed"
     }
   },
   "meta": {
-    "last_run_reviewed": 1,
+    "last_run_reviewed": 40,
     "last_run_failed": [],
-    "batch_size": 1
+    "batch_size": 40
   }
 }

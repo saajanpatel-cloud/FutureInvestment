@@ -42,6 +42,45 @@ MC = W / "monte_carlo_results.csv"
 RISK = W / "risk_metrics.csv"
 DCF = W / "dcf_sensitivity.csv"
 OVERRIDES = W / "company_overrides.json"
+GROWTH_LENS = W / "theme_growth_lens.json"
+
+
+def load_growth_lens() -> dict[str, dict]:
+    if not GROWTH_LENS.is_file():
+        return {}
+    try:
+        doc = json.loads(GROWTH_LENS.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+    return doc.get("tickers") or {}
+
+
+def apply_growth_lens(it: dict, t: str, lens_by: dict[str, dict]) -> None:
+    row = lens_by.get(t)
+    if not row:
+        return
+    mech = (row.get("growth_mechanism") or "").strip()
+    qual = (row.get("growth_quality") or "").strip()
+    tier = (row.get("linkage_tier") or "").strip()
+    rank = row.get("within_theme_rank")
+    cats = row.get("recent_catalysts") or []
+    parts: list[str] = []
+    if tier:
+        parts.append(f"Growth linkage: {tier.replace('_', ' ')}")
+    if mech:
+        parts.append(mech)
+    if qual:
+        parts.append(f"Growth quality flag: {qual.replace('_', ' ')}")
+    if rank is not None:
+        parts.append(f"Within-theme growth rank #{rank}")
+    if cats:
+        parts.append("Recent catalysts: " + "; ".join(str(c) for c in cats[:2]))
+    if not parts:
+        return
+    suffix = " · ".join(parts)
+    w = (it.get("qual_watch") or "").strip()
+    it["qual_watch"] = (w + " · " + suffix) if w else suffix
+    it["growth_lens"] = row
 
 
 def load_csv_map(path: Path, key: str) -> dict[str, dict[str, str]]:
@@ -130,6 +169,7 @@ def main() -> None:
         ov = json.loads(OVERRIDES.read_text(encoding="utf-8"))
 
     adversarial_packs = load_packs()
+    lens_by = load_growth_lens()
 
     tickers = [(it.get("ticker") or "").strip().upper() for it in items if it.get("ticker")]
     weights = load_theme_weights()
@@ -166,6 +206,7 @@ def main() -> None:
         it["qual_bear"] = bear
         it["qual_watch"] = watch
         it["alloc_pct"] = allocs.get(t, "")
+        apply_growth_lens(it, t, lens_by)
 
         pack = adversarial_packs.get(t)
         if pack_complete(pack):

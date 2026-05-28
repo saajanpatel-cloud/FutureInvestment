@@ -10,9 +10,13 @@ from __future__ import annotations
 import html as html_module
 import json
 import re
+import subprocess
 import sys
 
-from fi_embed_core import HTML, load_core_tickers_display_order, load_manifest_map
+from fi_dd_viz_blocks import VIZ_BLOCKS
+from fi_embed_core import HTML, ROOT, load_manifest_map
+from fi_portfolio_tickers import load_decide_union_display_order, load_shortlist
+from fi_embed_draft_deep_dive_runtime import build_stock_deep_dive_render
 from fi_embed_shortlist_proposed import load_short_names
 
 MARK_S = "  /* FI_DEEP_DIVE_RUNTIME_START */"
@@ -25,8 +29,14 @@ HELPERS = r"""
   }
   function paras(text) {
     if (!text || text === "—") return '<p class="muted">—</p>';
-    var parts = String(text).split(" · ");
-    if (parts.length <= 1) return "<p>" + esc(text) + "</p>";
+    var s = String(text);
+    if (s.indexOf("\n\n") >= 0) {
+      return s.split(/\n\n+/).map(function (c) {
+        return "<p>" + esc(c.trim()) + "</p>";
+      }).join("");
+    }
+    var parts = s.split(" · ");
+    if (parts.length <= 1 || parts.length <= 4) return "<p>" + esc(s) + "</p>";
     return parts.map(function (p) { return "<p>" + esc(p.trim()) + "</p>"; }).join("");
   }
   function signalList(items, cls) {
@@ -53,34 +63,134 @@ HELPERS = r"""
     var t = a.getAttribute("data-ticker");
     if (t) openDeepDive(t);
   });
-  window.loadDdChart = function () {
-    var container = document.getElementById("dd-tv-chart-container");
-    var ddSel = document.getElementById("dd-ticker");
-    if (!container || !ddSel || !ddSel.value) return;
-    var sym = (typeof TV_MAP !== "undefined" && TV_MAP[ddSel.value]) || ("NASDAQ:" + ddSel.value);
+  function scheduleDdChart(ticker, chartId) {
+    if (typeof window.loadDdChart !== "function") return;
+    var t = ticker;
+    var cid = chartId || "dd-tv-chart-container";
+    requestAnimationFrame(function () { window.loadDdChart(t, cid); });
+    setTimeout(function () { window.loadDdChart(t, cid); }, 200);
+    setTimeout(function () { window.loadDdChart(t, cid); }, 1200);
+  }
+  function mountTvScriptEmbed(container, sym, theme) {
     container.innerHTML = "";
-    var isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     var widgetDiv = document.createElement("div");
     widgetDiv.className = "tradingview-widget-container";
-    widgetDiv.style.cssText = "height:100%;width:100%";
-    var innerDiv = document.createElement("motion");
+    widgetDiv.style.cssText = "height:400px;width:100%;";
+    var innerDiv = document.createElement("div");
     innerDiv.className = "tradingview-widget-container__widget";
-    innerDiv.style.cssText = "height:100%;width:100%";
+    innerDiv.style.cssText = "height:100%;width:100%;";
     widgetDiv.appendChild(innerDiv);
     var script = document.createElement("script");
     script.type = "text/javascript";
     script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
     script.async = true;
     script.textContent = JSON.stringify({
-      autosize: true, symbol: sym, interval: "D", timezone: "Europe/London",
-      theme: isDark ? "dark" : "light", style: "1", locale: "en",
-      hide_top_toolbar: false, hide_legend: false, allow_symbol_change: false,
-      save_image: false, calendar: false, support_host: "https://www.tradingview.com"
+      autosize: true,
+      symbol: sym,
+      interval: "D",
+      timezone: "Europe/London",
+      theme: theme,
+      style: "1",
+      locale: "en",
+      hide_top_toolbar: false,
+      hide_legend: false,
+      allow_symbol_change: false,
+      save_image: false,
+      calendar: false,
+      support_host: "https://www.tradingview.com"
     });
     widgetDiv.appendChild(script);
     container.appendChild(widgetDiv);
+  }
+  function mountDdOfflineChart(container, ticker) {
+    var s = (typeof SCENARIOS !== "undefined") ? SCENARIOS[ticker] : null;
+    if (!s) return false;
+    var spot = s.price, bear = s.bear.price, base = s.base.price, bull = s.bull.price;
+    var lo = Math.min(spot, bear, base, bull) * 0.92;
+    var hi = Math.max(spot, bear, base, bull) * 1.08;
+    var span = hi - lo || 1;
+    function pct(v) { return Math.max(2, Math.min(98, ((v - lo) / span) * 100)); }
+    var tvUrl = "https://www.tradingview.com/chart/?symbol=" + encodeURIComponent(
+      (typeof TV_MAP !== "undefined" && TV_MAP[ticker]) || ("NASDAQ:" + ticker)
+    );
+    container.innerHTML =
+      '<div class="dd-offline-chart" role="img" aria-label="Scenario price range for ' + esc(ticker) + '">' +
+      '<p class="muted dd-offline-note">Scenario prices from our model (works offline). Live candles: ' +
+      '<a href="' + esc(tvUrl) + '" target="_blank" rel="noopener">TradingView</a>.</p>' +
+      '<div class="dd-offline-track">' +
+      '<span class="dd-offline-lbl dd-offline-bear" style="left:' + pct(bear) + '%">Bear $' + fmt(bear) + '</span>' +
+      '<span class="dd-offline-lbl dd-offline-base" style="left:' + pct(base) + '%">Base $' + fmt(base) + '</span>' +
+      '<span class="dd-offline-lbl dd-offline-bull" style="left:' + pct(bull) + '%">Bull $' + fmt(bull) + '</span>' +
+      '<span class="dd-offline-spot" style="left:' + pct(spot) + '%" title="Spot">$' + fmt(spot) + '</span>' +
+      '<span class="dd-offline-bar"></span>' +
+      '</div></div>';
+    return true;
+  }
+  function mountTvLiveChart(container, sym, theme, t) {
+    var tvUrl = "https://www.tradingview.com/chart/?symbol=" + encodeURIComponent(sym) + "&theme=" + theme;
+    var frameId = "dd-tv-" + String(t).replace(/[^A-Za-z0-9._-]/g, "_");
+    var qs = [
+      "frameElementId=" + encodeURIComponent(frameId),
+      "symbol=" + encodeURIComponent(sym),
+      "interval=D",
+      "timezone=" + encodeURIComponent("Europe/London"),
+      "theme=" + theme,
+      "style=1",
+      "locale=en",
+      "hide_top_toolbar=0",
+      "hide_legend=0",
+      "allow_symbol_change=0",
+      "saveimage=0",
+      "calendar=0",
+      "support_host=" + encodeURIComponent("https://www.tradingview.com")
+    ].join("&");
+    container.innerHTML = "";
+    var wrap = document.createElement("div");
+    wrap.className = "dd-tv-live-wrap";
+    var iframe = document.createElement("iframe");
+    iframe.id = frameId;
+    iframe.title = "Price chart — " + sym;
+    iframe.src = "https://s.tradingview.com/widgetembed/?" + qs;
+    iframe.style.cssText = "width:100%;height:400px;min-height:400px;border:0;display:block;background:var(--card);";
+    iframe.setAttribute("allowtransparency", "true");
+    iframe.setAttribute("scrolling", "no");
+    iframe.setAttribute("allow", "fullscreen");
+    wrap.appendChild(iframe);
+    container.appendChild(wrap);
+    return tvUrl;
+  }
+  function tvChartLooksLive(container) {
+    var iframe = container.querySelector("iframe");
+    if (!iframe) return false;
+    try {
+      var doc = iframe.contentDocument || (iframe.contentWindow && iframe.contentWindow.document);
+      if (doc && doc.body && doc.body.childNodes.length > 0) return true;
+    } catch (e) { /* cross-origin — assume loaded if iframe has size */ }
+    return iframe.offsetWidth > 40 && iframe.offsetHeight > 80;
+  }
+  window.loadDdChart = function (ticker, chartId) {
+    var cid = chartId || "dd-tv-chart-container";
+    var container = document.getElementById(cid);
+    var ddSel = document.getElementById("dd-ticker");
+    var t = ticker || (ddSel && ddSel.value);
+    if (!container || !t) return;
+    var sym = (typeof TV_MAP !== "undefined" && TV_MAP[t]) || ("NASDAQ:" + t);
+    var isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var theme = isDark ? "dark" : "light";
+    if (location.protocol === "file:") {
+      mountDdOfflineChart(container, t);
+      return;
+    }
+    mountTvScriptEmbed(container, sym, theme);
+    setTimeout(function () {
+      if (tvChartLooksLive(container)) return;
+      mountTvLiveChart(container, sym, theme, t);
+      setTimeout(function () {
+        if (!tvChartLooksLive(container)) mountDdOfflineChart(container, t);
+      }, 3200);
+    }, 2200);
   };
-""".replace('createElement("motion")', 'createElement("div")')
+"""
 
 NARRATIVE_TAIL = r"""
     html += '<div class="dd-narrative">';
@@ -116,45 +226,14 @@ NARRATIVE_TAIL = r"""
       html += '</div>';
     });
     html += '</div>';
-    if (typeof PEERS_BY_THEME !== "undefined" && m.theme_slug && PEERS_BY_THEME[m.theme_slug]) {
-      html += '<div class="dd-section-title">Peers on this shortlist</div>';
-      html += '<table class="dd-peer-table print-table-rubric"><thead><tr><th>Ticker</th><th>Rubric</th><th>Wtd upside</th><th>Deep dive</th></tr></thead><tbody>';
-      PEERS_BY_THEME[m.theme_slug].forEach(function (row) {
-        var hl = row.ticker === ticker ? ' class="dd-peer-current"' : "";
-        html += "<tr" + hl + "><td><strong>" + esc(row.ticker) + "</strong></td><td>" + esc(row.rubric) + "</td><td>" + esc(row.wt) + "</td><td>";
-        if (row.ticker !== ticker) html += '<a href="#" class="dd-jump" data-ticker="' + esc(row.ticker) + '">Open</a>';
-        else html += "—";
-        html += "</td></tr>";
-      });
-      html += "</tbody></table>";
-    }
-    var fh = (typeof FINNHUB_BY_TICKER !== "undefined" && FINNHUB_BY_TICKER[ticker]) ? FINNHUB_BY_TICKER[ticker] : null;
-    if (fh) {
-      html += '<div class="dd-section-title">Finnhub context</div>';
-      html += '<p class="dd-finnhub-line">' + esc(fh.context_line || "") + '</p>';
-      html += '<p class="dd-finnhub-meta muted">Analyst skew: ' + esc(fh.analyst_skew) + ' · Insider MSPR: ' + esc(fh.insider_mspr) + ' · News (7d): ' + esc(fh.news_7d) + ' · Next earnings: ' + esc(fh.next_earnings) + '</p>';
-      if (fh.articles && fh.articles.length) {
-        html += '<div class="dd-news-table-wrap"><table class="dd-news-table"><thead><tr><th>Date</th><th>Headline</th><th>Source</th></tr></thead><tbody>';
-        fh.articles.slice(0, 8).forEach(function (a) {
-          var dt = (a.datetime || a.published || "").slice(0, 10);
-          var head = a.headline || a.title || "—";
-          var src = a.source || "—";
-          var url = a.url || a.link || "";
-          html += "<tr><td>" + esc(dt) + "</td><td>";
-          if (url) html += '<a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(head) + "</a>";
-          else html += esc(head);
-          html += "</td><td>" + esc(src) + "</td></tr>";
-        });
-        html += "</tbody></table></div>";
-      }
-    }
+    html += renderDdVizBlocks(ticker, { parts: ["peers", "finnhub"], newsMaxArticles: 8, newsScrollHint: true });
     html += '<div class="dd-section-title">Adversarial summary</div>';
     html += '<div class="adv-cards">';
     html += '<div class="adv-card"><div class="adv-title" style="color:#34d399;">Bull case</div><div class="adv-body">' + esc(adv.bull) + '</div></div>';
     html += '<div class="adv-card"><div class="adv-title" style="color:#f87171;">Bear case</div><motion class="adv-body">' + esc(adv.bear) + '</div></div>';
     html += '<div class="adv-card"><div class="adv-title" style="color:var(--warn);">Kill criteria</div><div class="adv-body">' + esc(adv.kill) + '</div></div>';
-    html += '</motion>';
-""".replace("<motion", "<div").replace("</motion>", "</div>")
+    html += '</div>';
+"""
 
 
 def display_names_for(tickers: list[str], man: dict[str, dict[str, str]]) -> dict[str, str]:
@@ -172,15 +251,31 @@ def display_names_for(tickers: list[str], man: dict[str, dict[str, str]]) -> dic
     return names
 
 
-def patch_dd_select_html(doc: str, tickers: list[str], names: dict[str, str]) -> str:
-    """Server-rendered options so the dropdown matches the shortlist before JS runs."""
+def patch_dd_select_html(
+    doc: str,
+    shortlist: list[str],
+    extra: list[str],
+    names: dict[str, str],
+) -> str:
+    """Server-rendered options: composite shortlist, then personal holdings."""
     lines = ['          <option value="">Select a stock…</option>\n']
-    for t in tickers:
-        nm = html_module.escape(names.get(t, t))
-        lines.append(
-            f'          <option value="{html_module.escape(t)}">'
-            f"{html_module.escape(t)} — {nm}</option>\n"
-        )
+
+    def opts(group: list[str]) -> None:
+        for t in group:
+            nm = html_module.escape(names.get(t, t))
+            lines.append(
+                f'          <option value="{html_module.escape(t)}">'
+                f"{html_module.escape(t)} — {nm}</option>\n"
+            )
+
+    if shortlist:
+        lines.append('          <optgroup label="Composite shortlist">\n')
+        opts(shortlist)
+        lines.append("          </optgroup>\n")
+    if extra:
+        lines.append('          <optgroup label="Personal holdings">\n')
+        opts(extra)
+        lines.append("          </optgroup>\n")
     inner = "".join(lines)
     pat = re.compile(
         r'(<select id="dd-ticker">\s*\n)([\s\S]*?)(\n\s*</select>)',
@@ -240,6 +335,7 @@ PICKER = r"""
   function routeFromHash() {
     var h = (location.hash || "").replace(/^#/, "");
     if (h.indexOf("monitor-") === 0) openDeepDive(h.slice(8));
+    else if (h.indexOf("draft-") === 0) openDeepDive(h.slice(6));
   }
   ddSel.addEventListener("change", function () {
     var ticker = ddSel.value;
@@ -247,11 +343,12 @@ PICKER = r"""
     if (!ticker) { if (container) container.innerHTML = ""; return; }
     if (typeof CORE_TICKERS !== "undefined" && CORE_TICKERS.size && !CORE_TICKERS.has(ticker))
       renderMonitorStub(ticker, container);
-    else renderDeepDive(ticker, container);
+    else {
+      renderDeepDive(ticker, container);
+      scheduleDdChart(ticker);
+    }
     location.hash = "monitor-" + ticker;
   });
-  window.addEventListener("hashchange", routeFromHash);
-  routeFromHash();
 """
 
 
@@ -317,10 +414,17 @@ def patch_render(render: str) -> str:
             re.DOTALL,
         )
     render = adv_pat.sub(NARRATIVE_TAIL + "\n", render, count=1)
+    render = re.sub(
+        r"    /\* 3\. Scenario range chart \*/[\s\S]*?"
+        r"(    html \+= '<div class=\"dd-narrative\">';)",
+        '    html += renderDdVizBlocks(ticker, { parts: ["scenario", "risk", "dcf", "mc"] });\n\n\\1',
+        render,
+        count=1,
+    )
     render = render.replace(
         "    el.innerHTML = html;\n  }",
         "    el.innerHTML = html;\n"
-        "    if (typeof window.loadDdChart === 'function') window.loadDdChart();\n"
+        "    scheduleDdChart(ticker);\n"
         "  }",
     )
     return render
@@ -334,8 +438,8 @@ FMT_HELPERS_PAT = re.compile(
 
 RENDER_PAT = re.compile(
     r"  function renderDeepDive\(ticker, el\) \{[\s\S]*?"
-    r"(?:    el\.innerHTML = html;\n"
-    r"    if \(typeof window\.loadDdChart === 'function'\) window\.loadDdChart\(\);\n)?"
+    r"    el\.innerHTML = html;\n"
+    r"(?:    if \(typeof window\.loadDdChart === 'function'\) window\.loadDdChart\(\);\n)?"
     r"  \}\n",
     re.MULTILINE,
 )
@@ -352,13 +456,41 @@ RUNTIME_BLOCK_PAT = re.compile(
     re.MULTILINE,
 )
 MIN_RENDER_LEN = 800
+BASELINE_RENDER_REF = "70c9434:research/watchlists/SINGLE_SCREEN_REPORT.html"
+
+
+def _render_is_valid(render: str | None) -> bool:
+    return bool(
+        render
+        and len(render) >= MIN_RENDER_LEN
+        and "el.innerHTML = html" in render
+        and "Scenario range" in render
+    )
 
 
 def _extract_render_and_fmt(block: str) -> tuple[str | None, str]:
     render_m = RENDER_PAT.search(block)
-    if not render_m or len(render_m.group(0)) < MIN_RENDER_LEN:
+    if not _render_is_valid(render_m.group(0) if render_m else None):
         return None, ""
     fmt_m = FMT_HELPERS_PAT.search(block[: render_m.start()])
+    return render_m.group(0), (fmt_m.group(0) if fmt_m else "")
+
+
+def _fallback_render_from_baseline() -> tuple[str, str]:
+    """Recover full renderDeepDive when the marked block was truncated in-place."""
+    try:
+        raw = subprocess.check_output(
+            ["git", "show", BASELINE_RENDER_REF],
+            cwd=ROOT,
+            text=True,
+            stderr=subprocess.DEVNULL,
+        )
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return "", ""
+    render_m = RENDER_PAT.search(raw)
+    if not _render_is_valid(render_m.group(0) if render_m else None):
+        return "", ""
+    fmt_m = FMT_HELPERS_PAT.search(raw[: render_m.start()])
     return render_m.group(0), (fmt_m.group(0) if fmt_m else "")
 
 
@@ -372,9 +504,12 @@ def _strip_legacy_picker(block: str) -> str:
 
 
 def main() -> None:
-    tickers = load_core_tickers_display_order()
+    tickers = load_decide_union_display_order()
+    sl_set = set(load_shortlist())
+    sl = [t for t in tickers if t in sl_set]
+    extra = [t for t in tickers if t not in sl_set]
     if not tickers:
-        print("No core tickers for Monitor dropdown", file=sys.stderr)
+        print("No tickers for Monitor dropdown", file=sys.stderr)
         sys.exit(2)
     man = load_manifest_map()
     names = display_names_for(tickers, man)
@@ -424,15 +559,27 @@ def main() -> None:
                     legacy_m = rt2
                     legacy_tail = ""
 
-    if not render_src:
-        print("Could not find Monitor runtime block (picker + renderDeepDive)", file=sys.stderr)
+    if not fmt_helpers and marked_m:
+        _, fmt_helpers = _extract_render_and_fmt(marked_m.group(0))
+    if not fmt_helpers:
+        _, fmt_helpers = _fallback_render_from_baseline()
+
+    if not (marked_m or legacy_m):
+        print("Could not find Monitor runtime block (picker)", file=sys.stderr)
         sys.exit(2)
 
-    patched = patch_render(render_src)
+    if not replace_marked and not replace_legacy:
+        replace_marked = bool(marked_m)
+        replace_legacy = bool(legacy_m) and not marked_m
+    render_body = build_stock_deep_dive_render()
     init = (
-        "  if (ddSel.options.length > 1 && !ddSel.value) {\n"
+        "  window.addEventListener(\"hashchange\", routeFromHash);\n"
+        "  var _h0 = (location.hash || \"\").replace(/^#/, \"\");\n"
+        "  if (_h0.indexOf(\"monitor-\") === 0 || _h0.indexOf(\"draft-\") === 0) {\n"
+        "    routeFromHash();\n"
+        "  } else if (ddSel.options.length > 1) {\n"
         "    ddSel.selectedIndex = 1;\n"
-        "    ddSel.dispatchEvent(new Event('change'));\n"
+        "    ddSel.dispatchEvent(new Event(\"change\"));\n"
         "  }\n"
     )
     new_block = (
@@ -440,8 +587,9 @@ def main() -> None:
         f"{core_ticker_order_js(tickers)}"
         f"{PICKER}\n"
         f"{HELPERS}\n"
+        f"{VIZ_BLOCKS}\n"
         f"{fmt_helpers}\n"
-        f"{patched}"
+        f"{render_body}"
         f"{init}"
         f"{MARK_E}\n"
     )
@@ -458,9 +606,12 @@ def main() -> None:
         print("Could not apply Monitor runtime patch", file=sys.stderr)
         sys.exit(2)
 
-    doc = patch_dd_select_html(doc, tickers, names)
+    doc = patch_dd_select_html(doc, sl, extra, names)
     HTML.write_text(doc, encoding="utf-8")
-    print(f"Patched Monitor dropdown ({len(tickers)} core tickers) + runtime JS")
+    print(
+        f"Patched Monitor dropdown ({len(sl)} shortlist + {len(extra)} portfolio) + runtime JS",
+        file=sys.stderr,
+    )
 
 
 if __name__ == "__main__":

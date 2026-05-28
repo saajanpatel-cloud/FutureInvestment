@@ -755,6 +755,56 @@ def format_explain_market_context(fh_line: str, earnings: str) -> str:
     return format_section_prose(parts, 1000)
 
 
+def format_at_a_glance_prose(
+    ticker: str,
+    profile: dict[str, str],
+    rub: dict[str, str],
+    scen: dict[str, str] | None,
+    mc: dict[str, str] | None,
+    fh_row: dict[str, str] | None,
+    item: dict[str, Any],
+    *,
+    dcf_mid: tuple[float, float] | None = None,
+) -> str:
+    """Company-specific opening paragraph for DRAFT At a glance (no bullet chains)."""
+    name = (profile.get("long_name") or profile.get("name") or ticker).strip()
+    parts: list[str] = [f"{ticker} ({name}) is on the core shortlist."]
+    why = (item.get("why_this_name") or "").strip()
+    if why:
+        parts.append(why[:400])
+    tot = rubric_total(rub)
+    if tot:
+        parts.append(f"Our rubric scores the name {tot}/24.")
+    if scen:
+        try:
+            wt = float(scen.get("weighted_upside") or 0)
+            parts.append(f"Scenario-weighted upside is about {wt:+.0f}% vs spot.")
+        except (TypeError, ValueError):
+            pass
+    if mc:
+        try:
+            cur = float(mc.get("current_price") or 0)
+            med = float(mc.get("median_price") or 0)
+            if cur > 0:
+                parts.append(f"Monte Carlo median implies {(med / cur - 1) * 100:+.0f}% vs spot.")
+        except (TypeError, ValueError):
+            pass
+    if dcf_mid and dcf_mid[1]:
+        parts.append(f"Mid-grid DCF sensitivity reads {dcf_mid[1]:+.0f}% vs spot.")
+    fh = fh_row or {}
+    a = analyst_phrase((fh.get("analyst_skew") or "").strip())
+    if a:
+        parts.append(a + ".")
+    ins = insider_phrase((fh.get("insider_mspr") or fh.get("insider_label") or "").strip())
+    if ins:
+        parts.append(ins + ".")
+    earn = item.get("earnings") if isinstance(item.get("earnings"), dict) else {}
+    yoy = human_yoy(earn if earn else {})
+    if yoy:
+        parts.append(yoy + ".")
+    return format_section_prose(parts, 1200)
+
+
 def format_at_a_glance(
     sw_tier: str,
     scen: dict[str, str] | None,
@@ -805,6 +855,69 @@ def dcf_mid_from_rows(rows: list[dict[str, str]]) -> tuple[float, float] | None:
     return None
 
 
+def summarize_financial_history(ticker: str, rows: list[dict[str, str]]) -> dict[str, str]:
+    """Five-year annual trend summary for draft executive reports."""
+    t_rows = [r for r in rows if (r.get("ticker") or "").strip().upper() == ticker.upper()]
+    if not t_rows:
+        return {
+            "summary": "Limited annual history in the data pull — verify revenue and cash flow in SEC filings.",
+            "trend_label": "unknown",
+        }
+    t_rows.sort(key=lambda r: int(r.get("year") or 0))
+
+    def col(key: str) -> list[float]:
+        out: list[float] = []
+        for r in t_rows:
+            v = safe_float(r.get(key))
+            if v is not None:
+                out.append(v)
+        return out
+
+    rev = col("revenue")
+    ni = col("net_income")
+    fcf = col("free_cash_flow")
+    roe = col("roe_pct")
+    parts: list[str] = []
+    if len(rev) >= 2 and rev[0] > 0:
+        cagr = (rev[-1] / rev[0]) ** (1 / max(len(rev) - 1, 1)) - 1
+        parts.append(f"Revenue moved from about {_fmt_big(rev[0])} to {_fmt_big(rev[-1])} ({cagr:+.0%} CAGR over {len(rev)-1}y)")
+    if len(ni) >= 2:
+        parts.append(
+            f"Net income {'rose' if ni[-1] > ni[0] else 'fell'} from {_fmt_big(ni[0])} to {_fmt_big(ni[-1])}"
+        )
+    if len(fcf) >= 2:
+        parts.append(f"Free cash flow {'improved' if fcf[-1] > fcf[0] else 'weakened'} over the window")
+    if roe:
+        parts.append(f"Return on equity recently near {roe[-1]:.0f}%")
+    strengthening = 0
+    weakening = 0
+    if len(rev) >= 2:
+        strengthening += int(rev[-1] > rev[0])
+        weakening += int(rev[-1] < rev[0])
+    if len(ni) >= 2:
+        strengthening += int(ni[-1] > ni[0])
+        weakening += int(ni[-1] < ni[0])
+    if strengthening > weakening:
+        label = "strengthening"
+    elif weakening > strengthening:
+        label = "weakening"
+    else:
+        label = "mixed"
+    summary = join_bullets(parts, 900) if parts else "Annual trends need manual review in filings."
+    return {"summary": summary, "trend_label": label}
+
+
+def _fmt_big(v: float) -> str:
+    av = abs(v)
+    if av >= 1e12:
+        return f"${v/1e12:.1f}T"
+    if av >= 1e9:
+        return f"${v/1e9:.1f}B"
+    if av >= 1e6:
+        return f"${v/1e6:.0f}M"
+    return f"${v:,.0f}"
+
+
 def format_deep_dive_sections(
     *,
     item: dict[str, Any],
@@ -844,12 +957,11 @@ def format_deep_dive_sections(
         except (TypeError, ValueError):
             pass
     tot = rubric_total(rub)
-    tier = "Tier 2"
-    if tot is not None:
-        if tot >= 20:
-            tier = "Tier 1"
-        elif tot <= 12:
-            tier = "Tier 3"
+    try:
+        ct = int(item.get("conviction_tier") or 0)
+        tier = f"Tier {ct}" if 1 <= ct <= 4 else "Tier 2"
+    except (TypeError, ValueError):
+        tier = "Tier 2"
     fh_earn = (fh_row or {}).get("next_earnings") or ""
 
     sections = {

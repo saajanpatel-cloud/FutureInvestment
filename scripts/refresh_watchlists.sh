@@ -59,6 +59,11 @@ if [ "${FI_SKIP_ADVERSARIAL:-}" != "1" ]; then
   "$PY" scripts/fi_adversarial_review.py || echo "WARN: fi_adversarial_review had failures — see stderr" >&2
 fi
 "$PY" scripts/fi_select_shortlist_growth.py
+"$PY" scripts/fi_merge_portfolio_shortlist.py
+"$PY" -c "from fi_portfolio_tickers import write_union_file; write_union_file()" || true
+if [ "${FI_SKIP_GROWTH_LENS:-}" != "1" ]; then
+  "$PY" scripts/fi_theme_growth_lens.py || echo "WARN: fi_theme_growth_lens failed" >&2
+fi
 "$PY" scripts/fi_sync_scenario_assumptions_from_core.py
 
 "$PY" scripts/fi_scenarios.py --assumptions research/watchlists/scenario_assumptions.csv \
@@ -74,12 +79,26 @@ fi
   --csv research/watchlists/dcf_sensitivity.csv \
   --html research/watchlists/dcf_sensitivity_fragment.html || true
 
-"$PY" scripts/fi_finnhub_context.py --tickers-file "$CORE_TXT" \
+UNION_TXT="research/watchlists/report_decide_union.txt"
+if [ ! -f "$UNION_TXT" ]; then
+  "$PY" -c "from fi_portfolio_tickers import write_union_file; write_union_file()"
+fi
+FINNHUB_TICKERS="${UNION_TXT}"
+if [ ! -s "$FINNHUB_TICKERS" ]; then
+  FINNHUB_TICKERS="$CORE_TXT"
+fi
+"$PY" scripts/fi_finnhub_context.py --tickers-file "$FINNHUB_TICKERS" \
   --csv research/watchlists/finnhub_context.csv \
   --html research/watchlists/finnhub_context_fragment.html \
   --news-json research/watchlists/finnhub_news.json || true
 "$PY" scripts/fi_company_profile.py || true
 "$PY" scripts/fi_enrich_core_shortlist.py
+if [ "${FI_SKIP_DRAFT_REPORT:-}" != "1" ]; then
+  export FI_DRAFT_TICKERS="${FI_DRAFT_TICKERS:-decide_union}"
+  "$PY" scripts/fi_financial_history.py || echo "WARN: fi_financial_history failed" >&2
+  "$PY" scripts/fi_draft_stock_report.py || echo "WARN: fi_draft_stock_report failed" >&2
+fi
+"$PY" scripts/fi_patch_dashboard_ui.py || true
 "$PY" scripts/fi_rubric_html_rows.py --manifest "$MAN" \
   --scores research/watchlists/rubric_scores.csv \
   > research/watchlists/_rubric_table_rows.inc.html
@@ -97,7 +116,11 @@ fi
 "$PY" scripts/fi_embed_deep_dive_layout.py
 "$PY" scripts/fi_embed_deep_dive_select.py
 "$PY" scripts/fi_restructure_monitor_html.py
+"$PY" scripts/fi_embed_draft_section.py || true
+"$PY" scripts/fi_embed_draft_layout.py || true
+"$PY" scripts/fi_embed_draft_deep_dive_runtime.py || true
 "$PY" scripts/fi_embed_decide_matrix.py
+"$PY" scripts/fi_embed_appendix_ticker_pages.py || true
 "$PY" scripts/fi_embed_shortlist_changelog.py
 "$PY" scripts/fi_embed_executive_summary.py
 if [ -f research/watchlists/dcf_sensitivity.csv ]; then

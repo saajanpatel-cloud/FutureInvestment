@@ -68,6 +68,8 @@ PS_TICKERS: frozenset[str] = frozenset(
         "QUBT",
         "APLD",
         "QBTS",
+        "INFQ",
+        "RGTI",
     }
 )
 
@@ -212,7 +214,12 @@ def main() -> int:
         print(f"Missing {args.core}", file=sys.stderr)
         return 2
 
-    core = load_core(args.core)
+    try:
+        from fi_portfolio_tickers import PORTFOLIO_CSV, load_decide_union
+
+        core = load_decide_union() if PORTFOLIO_CSV.is_file() else load_core(args.core)
+    except ImportError:
+        core = load_core(args.core)
     if not core:
         print("No tickers in core file", file=sys.stderr)
         return 2

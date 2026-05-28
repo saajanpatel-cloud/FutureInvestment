@@ -18,8 +18,7 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-from fi_embed_executive_summary import tier_from_total
-from fi_narrative import rubric_total
+from fi_conviction_tier import tier_label
 from fi_theme_targets import load_theme_weights
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -133,10 +132,15 @@ def load_rubric() -> dict[str, dict[str, str]]:
         return {(r.get("ticker") or "").strip().upper(): r for r in csv.DictReader(f)}
 
 
-def tier_cell(ticker: str, rub_by: dict[str, dict[str, str]]) -> str:
-    tot = rubric_total(rub_by.get(ticker) or {})
-    n = tier_from_total(tot)
-    label = f"Tier {n}"
+def tier_cell(ticker: str, shortlist_items: dict[str, dict]) -> str:
+    it = shortlist_items.get(ticker) or {}
+    try:
+        n = int(it.get("conviction_tier") or 2)
+    except (TypeError, ValueError):
+        n = 2
+    if n < 1 or n > 4:
+        n = 2
+    label = tier_label(n)
     return f'<td class="shortlist-tier shortlist-tier-{n}">{html.escape(label)}</td>'
 
 
@@ -239,7 +243,7 @@ def build_proposed_tbody(
             f"              <td><strong>{html.escape(t)}</strong></td>\n"
             f"              <td>{html.escape(company)}</td>\n"
             f"              <td>{html.escape(theme)}</td>\n"
-            f"              {tier_cell(t, rub_by)}\n"
+            f"              {tier_cell(t, items)}\n"
             f"              <td>{html.escape(allocs[i])}</td>\n"
             f"              <td>{dd_link(t)}</td>\n"
             "            </tr>"
@@ -307,7 +311,8 @@ def patch_proposed_table_css(doc: str) -> str:
         "    table.proposed-shares th:nth-child(6) { min-width: 5.5rem; white-space: nowrap; }\n"
         "    .shortlist-tier-1 { font-weight: 600; color: var(--accent); }\n"
         "    .shortlist-tier-2 { color: var(--fg); }\n"
-        "    .shortlist-tier-3 { color: var(--warn); font-weight: 600; }"
+        "    .shortlist-tier-3 { color: var(--fg); }\n"
+        "    .shortlist-tier-4 { color: var(--warn); font-weight: 600; }"
     )
     if old_screen in doc:
         doc = doc.replace(old_screen, new_screen, 1)

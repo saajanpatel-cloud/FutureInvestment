@@ -15,6 +15,13 @@ from pathlib import Path
 
 from fi_embed_core import CORE_JSON, CORE_TXT, HTML, load_core_tickers
 
+try:
+    from fi_portfolio_tickers import PORTFOLIO_CSV, load_decide_union, load_shortlist
+except ImportError:
+    PORTFOLIO_CSV = None  # type: ignore
+    load_decide_union = None  # type: ignore
+    load_shortlist = None  # type: ignore
+
 ROOT = Path(__file__).resolve().parents[1]
 W = ROOT / "research" / "watchlists"
 COMPOSITE = W / "universe_composite_rank.csv"
@@ -91,10 +98,15 @@ def main() -> int:
     _ = args
 
     core = load_core_tickers()
+    if PORTFOLIO_CSV and PORTFOLIO_CSV.is_file() and load_decide_union:
+        union = load_decide_union()
+        if union:
+            core = union
     if not core:
         print("FAIL: no core tickers in report_core_tickers.txt", file=sys.stderr)
         return 2
     core_set = set(core)
+    shortlist_set = set(load_shortlist()) if load_shortlist and PORTFOLIO_CSV and PORTFOLIO_CSV.is_file() else core_set
     html = HTML.read_text(encoding="utf-8")
     errors: list[str] = []
     warns: list[str] = []
@@ -139,13 +151,49 @@ def main() -> int:
     if "Quality movers" in html:
         errors.append("shortlist: Quality movers block still present")
 
+    def _csv_tickers(name: str) -> set[str]:
+        p = W / name
+        if not p.is_file():
+            return set()
+        import csv
+
+        with p.open(encoding="utf-8", newline="") as f:
+            return {
+                (r.get("ticker") or "").strip().upper()
+                for r in csv.DictReader(f)
+                if (r.get("ticker") or "").strip()
+            }
+
+    scen_have = _csv_tickers("scenario_results.csv")
+    risk_have = _csv_tickers("risk_metrics.csv")
+    mc_have = _csv_tickers("monte_carlo_results.csv")
+    dcf_have = _csv_tickers("dcf_sensitivity.csv")
+
     for label, found in checks:
         if not found and label.endswith("js"):
             warns.append(f"{label}: object not found (embed may be skipped)")
             continue
-        missing = core_set - found
+        effective = shortlist_set if label == "proposed-shares" else core_set
+        missing = effective - found
+        if label == "scenario table" and scen_have:
+            missing = missing & scen_have
+        elif label == "risk scroll" and risk_have:
+            missing = missing & risk_have
+        elif label == "monte-carlo table" and mc_have:
+            missing = missing & mc_have
+        elif "SCENARIOS" in label and scen_have:
+            missing = missing & scen_have
+        elif "RISK" in label and risk_have:
+            missing = missing & risk_have
+        elif "MC" in label and mc_have:
+            missing = missing & mc_have
+        elif "DCF" in label and dcf_have:
+            missing = missing & dcf_have
         if missing:
-            errors.append(f"{label}: missing {sorted(missing)}")
+            errors.append(f"{label}: missing {sorted(missing)[:12]}")
+        no_data = (effective - found) - missing
+        if no_data and label.endswith("js"):
+            warns.append(f"{label}: no model row for {sorted(no_data)[:8]}")
         stale = (found & STALE_WATCH) - core_set
         if stale:
             errors.append(f"{label}: stale non-core {sorted(stale)}")

@@ -317,15 +317,34 @@ def main() -> int:
     set_txt = set(txt_list)
     set_js = set(tickers_json)
 
+    portfolio_merged = int(data.get("portfolio_merged_n") or 0)
+    try:
+        from fi_portfolio_tickers import portfolio_only as _portfolio_only
+
+        json_extra = set(_portfolio_only())
+    except ImportError:
+        json_extra = set_js - set_txt
+
     if set_txt != set_js:
-        errors.append(
-            f"Ticker mismatch: report_core_tickers.txt ({sorted(set_txt - set_js) or len(set_txt)} names) "
-            f"vs core-shortlist.json ({sorted(set_js - set_txt) or len(set_js)} names). "
-            f"symmetric diff: txt-only={sorted(set_txt - set_js)} json-only={sorted(set_js - set_txt)}"
-        )
+        txt_only = set_txt - set_js
+        json_only = set_js - set_txt
+        if portfolio_merged and txt_only == set() and json_only == json_extra:
+            pass
+        else:
+            errors.append(
+                f"Ticker mismatch: report_core_tickers.txt ({len(set_txt)} names) "
+                f"vs core-shortlist.json ({len(set_js)} names). "
+                f"txt-only={sorted(txt_only)[:8]} json-only={sorted(json_only)[:8]}"
+            )
 
     n_meta = data.get("shortlist_n")
-    if n_meta is not None and int(n_meta) != len(tickers_json):
+    if n_meta is not None and portfolio_merged:
+        if int(n_meta) + portfolio_merged != len(tickers_json):
+            errors.append(
+                f"shortlist_n={n_meta} + portfolio_merged_n={portfolio_merged} "
+                f"!= items ({len(tickers_json)})"
+            )
+    elif n_meta is not None and int(n_meta) != len(tickers_json):
         errors.append(f"shortlist_n={n_meta} but items has {len(tickers_json)} tickers")
 
     missing_fields: list[str] = []
@@ -411,9 +430,15 @@ def main() -> int:
         html_rows = proposed_shares_row_count(html)
         if html_rows < 0:
             errors.append("SINGLE_SCREEN_REPORT.html: could not find proposed-shares print table")
-        elif html_rows != len(tickers_json):
+        elif portfolio_merged and n_meta is not None and html_rows != int(n_meta):
             errors.append(
-                f"SINGLE_SCREEN shortlist table has {html_rows} data rows; core-shortlist has {len(tickers_json)} — re-run fi_embed_shortlist_proposed.py"
+                f"SINGLE_SCREEN shortlist table has {html_rows} data rows; expected shortlist_n={n_meta} "
+                "— re-run fi_embed_shortlist_proposed.py"
+            )
+        elif not portfolio_merged and html_rows != len(tickers_json):
+            errors.append(
+                f"SINGLE_SCREEN shortlist table has {html_rows} data rows; core-shortlist has {len(tickers_json)} "
+                "— re-run fi_embed_shortlist_proposed.py"
             )
         core_mtime = CORE_JSON.stat().st_mtime
         html_mtime = HTML.stat().st_mtime
@@ -431,21 +456,58 @@ def main() -> int:
                     break
 
         dm_rows = decide_matrix_row_count(html)
-        if dm_rows >= 0 and dm_rows != len(tickers_json):
+        try:
+            from fi_portfolio_tickers import load_decide_union, portfolio_only
+
+            union_n = len(load_decide_union())
+            expect_dm = union_n + (1 if portfolio_only() else 0)
+        except ImportError:
+            union_n = len(tickers_json)
+            expect_dm = len(tickers_json)
+        if dm_rows >= 0 and dm_rows != expect_dm:
             errors.append(
-                f"SINGLE_SCREEN Decide matrix has {dm_rows} data rows; core-shortlist has {len(tickers_json)} "
-                "— re-run fi_embed_decide_matrix.py"
+                f"SINGLE_SCREEN Decide matrix has {dm_rows} rows; expected {expect_dm} "
+                "(union + optional separator) — re-run fi_embed_decide_matrix.py"
             )
+        if "decide-portfolio-separator" not in html and portfolio_only():
+            warns.append("Decide matrix missing portfolio separator row — re-run fi_embed_decide_matrix.py")
+        if "appendix-company-research" not in html:
+            warns.append("Appendix B missing — re-run fi_embed_appendix_ticker_pages.py")
+        elif "appendix-ticker-page" not in html:
+            warns.append("Appendix B has no ticker pages — re-run fi_embed_appendix_ticker_pages.py")
 
         scen_path = W / "scenario_assumptions.csv"
         scen_set = scenario_assumption_tickers(scen_path)
-        if scen_set and set_js != scen_set:
+        core_set = set_js
+        try:
+            from fi_portfolio_tickers import load_decide_union, PORTFOLIO_CSV
+
+            if PORTFOLIO_CSV.is_file():
+                core_set = set(load_decide_union())
+        except ImportError:
+            pass
+        if scen_set and core_set != scen_set:
             errors.append(
                 "scenario_assumptions.csv ticker set does not match report_core_tickers / core-shortlist.json — "
                 "run python3 scripts/fi_sync_scenario_assumptions_from_core.py (then fi_scenarios / fi_monte_carlo / "
                 "fi_risk_metrics as needed). "
-                f"scenario_only={sorted(scen_set - set_js)[:8]} core_only={sorted(set_js - scen_set)[:8]}"
+                f"scenario_only={sorted(scen_set - core_set)[:8]} core_only={sorted(core_set - scen_set)[:8]}"
             )
+
+        try:
+            from fi_portfolio_tickers import load_portfolio, PORTFOLIO_CSV
+
+            if PORTFOLIO_CSV.is_file() and RUB.is_file():
+                rub_t = {
+                    (r.get("ticker") or "").strip().upper()
+                    for r in csv.DictReader(RUB.open(encoding="utf-8"))
+                    if (r.get("ticker") or "").strip()
+                }
+                for t in load_portfolio():
+                    if t not in rub_t:
+                        warns.append(f"portfolio {t}: no rubric row — run full refresh / fi_score_rubric")
+        except ImportError:
+            pass
 
         val_scen = table_ticker_set(
             html,
@@ -454,10 +516,23 @@ def main() -> int:
         if val_scen:
             missing_val = set_js - val_scen
             extra_val = val_scen - set_js
-            if missing_val:
+            scen_have: set[str] = set()
+            scen_res = W / "scenario_results.csv"
+            if scen_res.is_file():
+                with scen_res.open(encoding="utf-8", newline="") as sf:
+                    scen_have = {
+                        (r.get("ticker") or "").strip().upper()
+                        for r in csv.DictReader(sf)
+                        if (r.get("ticker") or "").strip()
+                    }
+            if scen_have and (missing_val & scen_have):
                 errors.append(
-                    f"Value scenario table missing core tickers: {sorted(missing_val)[:6]} — "
-                    "re-run fi_embed_value_tables.py"
+                    f"Value scenario table missing rows for modeled tickers: "
+                    f"{sorted(missing_val & scen_have)[:6]} — re-run fi_embed_value_tables.py"
+                )
+            if missing_val - scen_have:
+                warns.append(
+                    f"No scenario_results row (skipped model): {sorted(missing_val - scen_have)[:8]}"
                 )
             for t in sorted(extra_val)[:5]:
                 warns.append(f"Value scenario table has non-core ticker {t} (stale row?)")
@@ -466,10 +541,14 @@ def main() -> int:
         if js_keys:
             missing_js = set_js - js_keys
             extra_js = js_keys - set_js
-            if missing_js:
+            if scen_have and (missing_js & scen_have):
                 errors.append(
-                    f"SCENARIOS JS missing core tickers: {sorted(missing_js)[:6]} — "
+                    f"SCENARIOS JS missing modeled tickers: {sorted(missing_js & scen_have)[:6]} — "
                     "re-run fi_embed_value_js.py"
+                )
+            if missing_js - scen_have:
+                warns.append(
+                    f"SCENARIOS JS absent (no scenario model): {sorted(missing_js - scen_have)[:8]}"
                 )
             for t in sorted(extra_js)[:5]:
                 warns.append(f"SCENARIOS JS has non-core ticker {t}")
@@ -504,6 +583,22 @@ def main() -> int:
                 "Legacy aggregate Finnhub embed still present — re-run fi_embed_single_screen.py"
             )
 
+        if "FI_DEEP_DIVE_RUNTIME_START" in html:
+            dd_rt = re.search(
+                r"/\* FI_DEEP_DIVE_RUNTIME_START \*/([\s\S]*?)/\* FI_DEEP_DIVE_RUNTIME_END \*/",
+                html,
+            )
+            if dd_rt:
+                block = dd_rt.group(1)
+                if "function renderDeepDive" not in block:
+                    errors.append(
+                        "Monitor renderDeepDive missing — re-run fi_embed_deep_dive_runtime.py"
+                    )
+                elif "el.innerHTML = html" not in block or "Scenario range" not in block:
+                    errors.append(
+                        "Monitor renderDeepDive truncated — re-run fi_embed_deep_dive_runtime.py"
+                    )
+
         dd_m = re.search(
             r'<select id="dd-ticker">\s*\n([\s\S]*?)\n\s*</select>',
             html,
@@ -523,15 +618,86 @@ def main() -> int:
                     )
                 else:
                     try:
-                        from fi_embed_core import load_core_tickers_display_order
+                        from fi_portfolio_tickers import load_decide_union_display_order
 
-                        if dd_opts != load_core_tickers_display_order():
+                        if dd_opts != load_decide_union_display_order():
                             errors.append(
-                                "Monitor dropdown order does not match Research shortlist table — "
+                                "Monitor dropdown order does not match decide union — "
                                 "re-run fi_embed_deep_dive_runtime.py"
                             )
                     except Exception as ex:
                         warns.append(f"Could not verify dd-ticker order: {ex}")
+
+        try:
+            from fi_draft_common import load_draft_tickers
+
+            pilot = load_draft_tickers()
+        except ImportError:
+            pilot = ["NVDA"]
+        if 'id="draft-stock-deep-dive"' in html:
+            errors.append(
+                "Legacy DRAFT section still in HTML — re-run fi_embed_draft_section.py"
+            )
+        if "function renderDeepDive" not in html:
+            errors.append("renderDeepDive missing — re-run fi_embed_deep_dive_runtime.py")
+        if "var DRAFT_REPORT" not in html:
+            errors.append("DRAFT_REPORT JS missing — re-run fi_embed_draft_deep_dive_runtime.py")
+        else:
+            try:
+                from fi_embed_draft_deep_dive_runtime import (
+                    draft_js_has_raw_string_newlines,
+                    extract_draft_js_from_html,
+                )
+
+                draft_blob = extract_draft_js_from_html(html)
+                if draft_blob and draft_js_has_raw_string_newlines(draft_blob):
+                    errors.append(
+                        "DRAFT_REPORT has broken JS string literals (raw newlines) — "
+                        "re-run fi_embed_draft_deep_dive_runtime.py"
+                    )
+            except ImportError:
+                pass
+        by_item = {(it.get("ticker") or "").strip().upper(): it for it in items}
+        try:
+            from fi_portfolio_tickers import load_shortlist as _load_sl
+
+            draft_check_tickers = _load_sl()
+        except ImportError:
+            draft_check_tickers = pilot
+        for t in draft_check_tickers:
+            if t not in by_item:
+                continue
+            dr = (by_item.get(t) or {}).get("draft_report") or {}
+            sec = dr.get("sections") or {}
+            if not sec.get("verdict"):
+                errors.append(
+                    f"{t} missing draft_report.sections.verdict — run fi_draft_stock_report.py"
+                )
+            pz = dr.get("price_zones") or {}
+            if pz.get("buy_low") is None and pz.get("buy_high") is None:
+                errors.append(f"{t} missing draft_report.price_zones — run fi_draft_stock_report.py")
+            glance = (sec.get("at_a_glance") or "")
+            if "Heuristic draft" in glance:
+                errors.append(f"{t} at_a_glance still has heuristic banner — re-run fi_draft_stock_report.py")
+        for t in pilot:
+            if t in draft_check_tickers:
+                continue
+            dr = (by_item.get(t) or {}).get("draft_report") or {}
+            if not dr:
+                warns.append(
+                    f"{t} (portfolio-only): no draft_report — optional FI_DRAFT_TICKERS=decide_union run"
+                )
+        if "draft-self-check" in html and "function renderDeepDive" in html:
+            rt_m = re.search(
+                r"function renderDeepDive\(ticker, el\) \{[\s\S]*?\n  \}",
+                html,
+            )
+            if rt_m and "draft-self-check" in rt_m.group(0):
+                errors.append(
+                    "renderDeepDive still renders analyst self-check — re-run fi_embed_deep_dive_runtime.py"
+                )
+        if "function renderDdVizBlocks" not in html:
+            errors.append("renderDdVizBlocks missing — re-run fi_embed_deep_dive_runtime.py")
 
     if not EXAMPLE.is_file():
         warns.append(f"Missing {EXAMPLE.relative_to(ROOT)} (copy step from refresh?)")

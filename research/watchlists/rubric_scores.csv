@@ -1,482 +1,490 @@
 ticker,growth,margins,balance_sheet,durability,tail_risks,valuation,note,filing_review_as_of,review_depth
-MMM,2,5,3,3,4,4,"Industrial materials — litigation and spin focus · Revenue up 1% year-on-year · Gross margin 41%, operating margin 23%",2026-05-17,auto
-AOS,1,5,3,3,4,4,"Water heaters and boilers — residential cycle · Revenue down 2% year-on-year · Gross margin 39%, operating margin 17%",2026-05-17,auto
-ABB,3,3,3,3,3,3,Robotics drives and electrification technology (NYSE),2026-05-17,auto
-ABT,3,5,3,3,3,4,"Devices plus diagnostics — Libre and structural heart · Revenue up 8% year-on-year · Gross margin 56%, operating margin 12%",2026-05-17,auto
-IBE.MC,1,5,3,4,5,4,"Worlds largest renewables operator by capacity (Madrid) · Revenue down 46% year-on-year · Gross margin 53%, operating margin 22%",2026-05-17,auto
-ACMR,3,5,5,4,3,3,"ACM Research China WFE — geopolitical listing risk · Revenue up 9% year-on-year · Gross margin 41%, operating margin 9%",2026-05-17,auto
-ADBE,3,5,4,4,3,5,"Creative and document AI — Firefly monetisation · Revenue up 12% year-on-year · Gross margin 90%, operating margin 38%",2026-05-17,auto
-AMD,4,5,4,4,3,3,"CPUs GPUs and AI data-centre share story · Revenue up 34% year-on-year · Gross margin 54%, operating margin 17%",2026-05-17,auto
-ADYEN,3,3,3,3,3,3,Adyen — unified commerce payments EU,2026-05-17,auto
-AEHR,1,1,4,4,5,1,"Aehr wafer-level burn-in for SiC reliability · Revenue down 44% year-on-year · Gross margin 33%, operating margin -41%",2026-05-17,auto
-AFRM,4,5,3,3,3,4,"BNPL — credit loss and funding cost sensitivity · Revenue up 33% year-on-year · Gross margin 66%, operating margin 19%",2026-05-17,auto
-A,3,5,3,3,3,4,"Agilent instruments and diagnostics services · Revenue up 7% year-on-year · Gross margin 53%, operating margin 20%",2026-05-17,auto
-ABNB,3,5,4,3,3,3,"Travel marketplace — supply and regulation · Revenue up 18% year-on-year · Gross margin 78%, operating margin 3%",2026-05-17,auto
-AIR.PA,1,5,4,3,4,4,"Aerospace and defence — commercial and military aircraft (Euronext Paris) · Revenue down 7% year-on-year · Gross margin 12%, operating margin 1%",2026-05-17,auto
-EADSY,1,5,4,3,4,3,"Airbus ADR — commercial jet backlog and helicopter mix · Revenue down 7% year-on-year · Gross margin 12%, operating margin 1%",2026-05-17,auto
-AIXA.DE,1,1,4,4,5,2,"MOCVD deposition for compound semiconductors (Xetra) · Revenue down 74% year-on-year · Gross margin 18%, operating margin -38%",2026-05-17,auto
-ALFA.ST,1,5,3,3,4,3,"Heat transfer separation and fluid handling (Stockholm) · Revenue down 13% year-on-year · Gross margin 39%, operating margin 17%",2026-05-17,auto
-BABA,2,5,4,4,4,4,"China cloud and commerce — regulatory overhang · Revenue up 2% year-on-year · Gross margin 40%, operating margin 7%",2026-05-17,auto
-ALGN,3,3,4,3,3,4,Align Invisalign — consumer discretionary sensitivity · Revenue up 5% year-on-year,2026-05-17,auto
-ALLE,3,5,3,3,3,4,"Allegion security hardware — commercial doors · Revenue up 10% year-on-year · Gross margin 44%, operating margin 19%",2026-05-17,auto
-AOSL,1,5,4,4,4,3,"Power discretes and small-signal — diversified semi · Revenue down 1% year-on-year · Gross margin 21%, operating margin -9%",2026-05-17,auto
-AMZN,3,5,3,4,3,3,"AWS and retail — hyperscaler capex and AI services optionality · Revenue up 17% year-on-year · Gross margin 52%, operating margin 13%",2026-05-17,auto
-AEP,3,5,3,4,3,4,"Regulated utility — transmission investment · Revenue up 10% year-on-year · Gross margin 58%, operating margin 23%",2026-05-17,auto
-AWK,3,5,3,4,3,4,"Regulated water utility — infrastructure replacement · Revenue up 6% year-on-year · Gross margin 59%, operating margin 32%",2026-05-17,auto
-AME,3,5,3,3,3,3,"Ametek precision instruments and power · Revenue up 11% year-on-year · Gross margin 37%, operating margin 27%",2026-05-17,auto
-AMGN,3,5,3,3,3,4,"Biosimilars Repatha and MariTide GLP-1 pipeline — high leverage · Revenue up 6% year-on-year · Gross margin 68%, operating margin 31%",2026-05-17,auto
-AMKR,4,5,4,4,3,3,"Advanced chip packaging and test — 2.5D and 3D stacking · Revenue up 27% year-on-year · Gross margin 14%, operating margin 6%",2026-05-17,auto
-APH,5,5,3,3,3,3,"Interconnect for harsh environments — data centre cabling · Revenue up 58% year-on-year · Gross margin 37%, operating margin 26%",2026-05-17,auto
-ADI,4,5,3,4,3,3,"High-performance analog and mixed signal for data paths · Revenue up 30% year-on-year · Gross margin 65%, operating margin 33%",2026-05-17,auto
-ANGO,3,5,4,3,3,3,"AngioDynamics — med devices vascular access · Revenue up 9% year-on-year · Gross margin 53%, operating margin -8%",2026-05-17,auto
-APLD,5,5,3,3,3,3,"HPC and data-centre hosting — AI-adjacent play · Revenue up 139% year-on-year · Gross margin 42%, operating margin -20%",2026-05-17,auto
-AMAT,1,5,4,4,4,3,"Deposition etch and broad process equipment · Revenue down 2% year-on-year · Gross margin 49%, operating margin 30%",2026-05-17,auto
-APP,5,5,3,3,3,3,"AppLovin — mobile ad tech and AI · Revenue up 59% year-on-year · Gross margin 89%, operating margin 78%",2026-05-17,auto
-ARGX.BR,5,5,4,2,3,3,"Autoimmune biotech — Vyvgart (Brussels — also NASDAQ) · Revenue up 64% year-on-year · Gross margin 91%, operating margin 30%",2026-05-17,auto
-ANET,4,5,4,3,3,3,"Data-centre switching for AI clusters · Revenue up 35% year-on-year · Gross margin 62%, operating margin 43%",2026-05-17,auto
-ARM,4,3,4,4,3,1,Chip architecture licensing for AI inference across all devices · Revenue up 26% year-on-year,2026-05-17,auto
-ARQQ,3,3,5,4,3,3,Quantum encryption software small cap,2026-05-17,auto
-ARRY,1,1,3,3,5,5,"Utility-scale solar tracking — revenue declining; thesis under pressure · Revenue down 18% year-on-year · Gross margin 9%, operating margin -21%",2026-05-17,auto
-ASM.AS,3,5,4,4,3,3,"ALD and CVD deposition equipment for advanced chips (Amsterdam) · Revenue up 7% year-on-year · Gross margin 53%, operating margin 32%",2026-05-17,auto
-ASML,3,5,4,4,3,3,"EUV lithography monopoly — every advanced chip passes through ASML · Revenue up 13% year-on-year · Gross margin 53%, operating margin 36%",2026-05-17,auto
-ASTS,5,1,4,3,3,3,"AST SpaceMobile — direct-to-cell satellite broadband · Revenue up 2731% year-on-year · Gross margin 46%, operating margin -133%",2026-05-17,auto
-ALAB,5,5,4,4,3,1,"AI data centre connectivity — PCIe retimers and smart cable modules · Revenue up 93% year-on-year · Gross margin 76%, operating margin 20%",2026-05-17,auto
-AZN,3,5,3,3,3,3,"Oncology and immunology pipeline — UK-listed dual NYSE (NASDAQ ADR) · Revenue up 13% year-on-year · Gross margin 82%, operating margin 28%",2026-05-17,auto
-ATRO,3,5,3,3,3,3,"Astronics — aircraft lighting and power distribution · Revenue up 15% year-on-year · Gross margin 33%, operating margin 15%",2026-05-17,auto
-T,2,5,2,3,4,5,"Telco — fibre and wireless cash flow · Revenue up 4% year-on-year · Gross margin 56%, operating margin 18%",2026-05-17,auto
-ATCO-A.ST,1,5,3,3,4,3,"Compressors vacuum and power tools — Swedish industrial (Stockholm) · Revenue down 12% year-on-year · Gross margin 42%, operating margin 20%",2026-05-17,auto
-TEAM,4,5,3,4,3,4,"Atlassian — dev collaboration software · Revenue up 32% year-on-year · Gross margin 85%, operating margin -3%",2026-05-17,auto
-ATO,3,5,3,4,3,4,"Texas gas distribution — rate base growth · Revenue up 14% year-on-year · Gross margin 61%, operating margin 38%",2026-05-17,auto
-ACLS,1,5,4,4,4,3,"Axcelis ion implant equipment for WFE · Revenue down 6% year-on-year · Gross margin 47%, operating margin 15%",2026-05-17,auto
-BANB.SW,3,3,3,2,3,3,Peptide CDMO — critical GLP-1 supply chain node (Swiss),2026-05-17,auto
-BAESY,3,3,3,3,3,4,UK defense prime — electronic systems and US exposure,2026-05-17,auto
-BA.L,3,3,3,3,3,4,Defence electronics cyber and space systems (LSE),2026-05-17,auto
-BKR,2,5,3,3,4,3,"LNG equipment and OFS diversification · Revenue up 2% year-on-year · Gross margin 23%, operating margin 12%",2026-05-17,auto
-BAC,3,3,4,3,3,5,Consumer and commercial bank — rate sensitivity · Revenue up 7% year-on-year,2026-05-17,auto
-B,5,5,4,3,3,5,"Barnes aerospace and automation components · Revenue up 65% year-on-year · Gross margin 55%, operating margin 50%",2026-05-17,auto
-BAX,2,5,2,3,4,5,"MedSurg and pharmaceuticals hospital supply chain · Revenue up 3% year-on-year · Gross margin 33%, operating margin 2%",2026-05-17,auto
-BESI.AS,3,3,4,4,3,2,Die bonding and advanced packaging equipment (Amsterdam) · Revenue up 6% year-on-year,2026-05-17,auto
-BEAM,5,1,5,2,3,3,Base editing — delivery and pipeline · Revenue up 325% year-on-year · Operating margin -338%,2026-05-17,auto
-BRK-B,1,5,5,3,4,3,Conglomerate — insurance float and industrials · Revenue down 9% year-on-year · Operating margin 15%,2026-05-17,auto
-TECH,1,3,3,2,4,3,Bio-Techne reagents — biologics tools recurring · Revenue down 0% year-on-year,2026-05-17,auto
-BIIB,2,5,3,3,4,5,"Neuroscience and biosimilars — Leqembi and franchise resets · Revenue up 2% year-on-year · Gross margin 73%, operating margin 19%",2026-05-17,auto
-BNTX,1,1,5,2,5,3,"BioNTech oncology plus Pfizer partnership economics · Revenue down 35% year-on-year · Gross margin 40%, operating margin -574%",2026-05-17,auto
-BLK,4,3,3,3,3,4,Asset management — ETF and aladdin platform · Revenue up 23% year-on-year,2026-05-17,auto
-BKSY,3,5,3,3,3,3,"BlackSky — geospatial intelligence satellites · Revenue up 16% year-on-year · Gross margin 73%, operating margin -12%",2026-05-17,auto
-BE,5,5,3,3,3,1,"Fuel cells and electrolyzers — cash burn risk · Revenue up 130% year-on-year · Gross margin 30%, operating margin 10%",2026-05-17,auto
-BA,3,5,3,3,3,2,"Commercial aerospace duopoly — delivery ramp and balance sheet · Revenue up 14% year-on-year · Gross margin 11%, operating margin 2%",2026-05-17,auto
-BKNG,3,5,3,3,3,4,Online travel — take rate and alternative accommodation · Revenue up 16% year-on-year · Operating margin 23%,2026-05-17,auto
-BSX,3,5,3,3,3,4,"Structural heart devices WATCHMAN and cardiology tech · Revenue up 12% year-on-year · Gross margin 69%, operating margin 21%",2026-05-17,auto
-BP,3,5,3,3,3,5,"Integrated oil — transition spend and yield · Revenue up 11% year-on-year · Gross margin 24%, operating margin 15%",2026-05-17,auto
-BMY,2,5,3,3,4,5,"Oncology IO — patent cliffs and M&A · Revenue up 3% year-on-year · Gross margin 70%, operating margin 29%",2026-05-17,auto
-BRKS,3,3,3,3,3,3,Brooks automation cryogenics and vacuum,2026-05-17,auto
-AVGO,4,5,3,4,3,3,"Networking and custom silicon for AI and cloud · Revenue up 29% year-on-year · Gross margin 68%, operating margin 45%",2026-05-17,auto
-BIP,3,5,1,4,4,3,"Brookfield Infrastructure — toll roads utilities pipelines · Revenue up 17% year-on-year · Gross margin 27%, operating margin 25%",2026-05-17,auto
-BEP,1,5,1,4,5,3,"Brookfield Renewable yieldCo — hydro wind solar mix · Revenue down 4% year-on-year · Gross margin 49%, operating margin 8%",2026-05-17,auto
-BWXT,4,5,3,3,3,2,"Naval reactors and nuclear components — defense mix · Revenue up 26% year-on-year · Gross margin 23%, operating margin 10%",2026-05-17,auto
-CDNS,3,5,3,4,3,2,"EDA software duopoly — essential for chip design complexity · Revenue up 19% year-on-year · Gross margin 85%, operating margin 29%",2026-05-17,auto
-CCJ,3,5,4,2,3,1,"Uranium mining and nuclear fuel supply — long-term contracts · Revenue up 7% year-on-year · Gross margin 36%, operating margin 19%",2026-05-17,auto
-CAMT,3,5,4,4,3,2,"Camtek inspection for advanced packaging · Revenue up 9% year-on-year · Gross margin 50%, operating margin 25%",2026-05-17,auto
-CNI,1,5,3,3,4,4,"Canadian National — precision railroading · Revenue down 1% year-on-year · Gross margin 40%, operating margin 35%",2026-05-17,auto
-CP,1,5,3,3,4,4,"Canadian Pacific Kansas City merger synergies · Revenue down 2% year-on-year · Gross margin 34%, operating margin 34%",2026-05-17,auto
-AFX.DE,3,5,3,3,3,4,"Ophthalmic surgical devices and microsurgery (Xetra) · Revenue up 8% year-on-year · Gross margin 53%, operating margin 11%",2026-05-17,auto
-CCL,3,5,3,3,3,5,"Cruise recovery — leverage and yields · Revenue up 6% year-on-year · Gross margin 36%, operating margin 10%",2026-05-17,auto
-CARR,2,5,3,3,4,3,"HVAC and refrigeration — heat pump tailwind · Revenue up 2% year-on-year · Gross margin 23%, operating margin 4%",2026-05-17,auto
-CAT,3,3,3,3,3,3,Heavy machinery and services attach · Revenue up 18% year-on-year,2026-05-17,auto
-CNC,3,5,5,3,3,4,"Centene Medicaid exposure — state budget cycles · Revenue up 7% year-on-year · Gross margin 11%, operating margin 4%",2026-05-17,auto
-CNA.L,3,3,5,4,3,4,British Gas parent — UK retail energy and nuclear (LSE),2026-05-17,auto
-LEU,1,3,5,2,4,2,Uranium conversion and HALEU — policy sensitive · Revenue down 4% year-on-year,2026-05-17,auto
-CBRS,3,3,4,4,3,1,Ciber / verify — IT services and security,2026-05-17,auto
-SCHW,3,3,5,3,3,4,Retail brokerage — rate on cash balances · Revenue up 19% year-on-year,2026-05-17,auto
-CHKP,2,5,4,4,4,5,"Mature firewall and subscription security — cash generative · Revenue up 5% year-on-year · Gross margin 85%, operating margin 28%",2026-05-17,auto
-LNG,4,5,3,3,3,4,"Cheniere LNG export tolling — long-term contracts · Revenue up 23% year-on-year · Gross margin 72%, operating margin 70%",2026-05-17,auto
-CVX,1,3,3,3,4,4,Integrated oil — cash returns and LNG optionality · Revenue down 5% year-on-year,2026-05-17,auto
-CRUS,2,5,4,4,4,4,"Audio and high-precision mixed-signal for consumer and auto · Revenue up 4% year-on-year · Gross margin 53%, operating margin 26%",2026-05-17,auto
-NET,4,3,4,4,3,1,Edge security CDN and zero-trust networking — developer ecosystem · Revenue up 34% year-on-year,2026-05-17,auto
-CME,3,5,3,3,3,3,"Derivatives clearing — vol and rates volume · Revenue up 14% year-on-year · Gross margin 88%, operating margin 70%",2026-05-17,auto
-CGNX,3,5,4,3,3,2,"Machine vision for factory automation — deep learning edge · Revenue up 10% year-on-year · Gross margin 66%, operating margin 14%",2026-05-17,auto
-COHR,3,5,3,3,3,2,"Optical interconnects and transceivers for AI data centre fabrics · Revenue up 17% year-on-year · Gross margin 37%, operating margin 12%",2026-05-17,auto
-COHU,4,5,4,4,3,3,"Cohu handler and test interface equipment · Revenue up 29% year-on-year · Gross margin 46%, operating margin -8%",2026-05-17,auto
-COIN,1,5,4,3,5,2,"Crypto exchange — regulatory and volume cyclicality · Revenue down 31% year-on-year · Gross margin 70%, operating margin 1%",2026-05-17,auto
-COLO-B.CO,2,5,3,3,4,4,"Ostomy continence and wound care devices (Copenhagen) · Revenue up 1% year-on-year · Gross margin 67%, operating margin 26%",2026-05-17,auto
-CMCSA,3,5,2,3,4,5,"Cable broadband — capital return focus · Revenue up 5% year-on-year · Gross margin 65%, operating margin 13%",2026-05-17,auto
-CFLT,4,5,4,4,3,2,"Streaming data platform — real-time pipelines · Revenue up 21% year-on-year · Gross margin 75%, operating margin -32%",2026-05-17,auto
-COP,1,5,3,3,4,4,"US shale plus Alaska — production growth discipline · Revenue down 5% year-on-year · Gross margin 27%, operating margin 21%",2026-05-17,auto
-ED,3,5,3,4,3,4,"NYC-centric wires — dense load pocket · Revenue up 9% year-on-year · Gross margin 51%, operating margin 13%",2026-05-17,auto
-CEG,3,5,3,4,3,4,"Independent power and nuclear-heavy angle · Revenue up 13% year-on-year · Gross margin 16%, operating margin 13%",2026-05-17,auto
-CRWV,5,3,3,4,3,3,CoreWeave — GPU cloud for AI workloads · Revenue up 110% year-on-year,2026-05-17,auto
-GLW,4,5,3,3,3,2,"Corning — optical fibre and display glass for DC builds · Revenue up 20% year-on-year · Gross margin 37%, operating margin 15%",2026-05-17,auto
-CPNG,3,5,4,4,3,3,"Korea e-commerce — logistics and margin path · Revenue up 8% year-on-year · Gross margin 27%, operating margin -3%",2026-05-17,auto
-CRSP,3,1,5,2,3,3,"CRISPR — sickle cell and oncology · Gross margin -4495%, operating margin -13025%",2026-05-17,auto
-CRWD,4,5,4,4,3,1,"Endpoint and cloud workload protection leader · Revenue up 23% year-on-year · Gross margin 76%, operating margin 1%",2026-05-17,auto
-CSX,2,5,3,3,4,3,"Eastern rail — industrial and intermodal · Revenue up 2% year-on-year · Gross margin 36%, operating margin 36%",2026-05-17,auto
-CMI,2,5,3,3,4,3,"Cummins engines plus Accelera hydrogen bet · Revenue up 3% year-on-year · Gross margin 27%, operating margin 12%",2026-05-17,auto
-CVS,3,5,3,3,3,5,"Retail pharmacy plus Aetna — reimbursement pressure · Revenue up 6% year-on-year · Gross margin 16%, operating margin 5%",2026-05-17,auto
-CYBR,3,3,3,3,3,3,Privileged access management — identity security,2026-05-17,auto
-QBTS,3,1,4,3,3,3,"D-Wave annealing and quantum systems · Revenue up 19% year-on-year · Gross margin 65%, operating margin -1266%",2026-05-17,auto
-DHR,2,5,3,3,4,4,"Life sciences tools plus industrial diagnostics · Revenue up 4% year-on-year · Gross margin 60%, operating margin 23%",2026-05-17,auto
-DSY.PA,1,5,4,4,4,4,"3DEXPERIENCE industrial software platform (Euronext Paris) · Revenue down 4% year-on-year · Gross margin 84%, operating margin 23%",2026-05-17,auto
-DDOG,4,5,4,4,3,1,"Observability and cloud security telemetry · Revenue up 32% year-on-year · Gross margin 79%, operating margin 1%",2026-05-17,auto
-SRE,1,5,3,4,4,4,"Sempra — LNG and California utilities · Revenue down 0% year-on-year · Gross margin 49%, operating margin 28%",2026-05-17,auto
-DE,3,5,3,3,3,3,"Agricultural equipment and precision ag software · Revenue up 13% year-on-year · Gross margin 33%, operating margin 14%",2026-05-17,auto
-DAL,3,5,3,3,3,5,"Airline — corporate travel and fleet · Revenue up 13% year-on-year · Gross margin 19%, operating margin 3%",2026-05-17,auto
-DEMANT.CO,3,3,3,3,3,4,Hearing aids and audiological instruments (Copenhagen),2026-05-17,auto
-DNN,2,1,3,2,4,3,ISR uranium developer — pre-production · Revenue up 4% year-on-year · Operating margin -1879%,2026-05-17,auto
-XRAY,2,5,2,3,4,5,"Dentsply Sirona dental equipment — channel inventory · Revenue up 0% year-on-year · Gross margin 49%, operating margin 3%",2026-05-17,auto
-DVN,1,5,3,3,4,5,"Delaware Basin oil — variable dividend framework · Revenue down 6% year-on-year · Gross margin 24%, operating margin 20%",2026-05-17,auto
-DXCM,3,5,4,3,3,3,"Continuous glucose monitoring — G7 and Stelo platforms · Revenue up 15% year-on-year · Gross margin 63%, operating margin 21%",2026-05-17,auto
-FANG,2,5,3,3,4,5,"Permian pure-play — shareholder returns focus · Revenue up 4% year-on-year · Gross margin 38%, operating margin 36%",2026-05-17,auto
-DIOD,3,5,4,4,3,3,"Discrete and analog components — broad cyclical semi · Revenue up 15% year-on-year · Gross margin 31%, operating margin 3%",2026-05-17,auto
-D,4,5,2,4,4,4,"Dominion — Virginia data centre load · Revenue up 23% year-on-year · Gross margin 44%, operating margin 27%",2026-05-17,auto
-DASH,4,5,4,4,3,3,"DoorDash — delivery take-rate and ads · Revenue up 33% year-on-year · Gross margin 51%, operating margin 5%",2026-05-17,auto
-DOV,3,5,3,3,3,4,"Diversified industrial pumps and fueling · Revenue up 10% year-on-year · Gross margin 39%, operating margin 15%",2026-05-17,auto
-DRX.L,3,3,3,4,3,4,UK biomass and flexible generation (LSE),2026-05-17,auto
-DUK,3,5,2,4,4,4,"Large regulated electric footprint · Revenue up 11% year-on-year · Gross margin 49%, operating margin 26%",2026-05-17,auto
-DT,3,5,4,4,3,4,"Dynatrace observability — enterprise APM · Revenue up 18% year-on-year · Gross margin 81%, operating margin 14%",2026-05-17,auto
-ETN,3,5,3,3,3,3,"Electrical gear and power management for data centres · Revenue up 17% year-on-year · Gross margin 36%, operating margin 16%",2026-05-17,auto
-SATS,1,5,3,3,4,3,"EchoStar / satellite connectivity — verify segment mix · Revenue down 4% year-on-year · Gross margin 29%, operating margin 10%",2026-05-17,auto
-EIX,3,5,1,4,4,5,"California utility — wildfire mitigation · Revenue up 8% year-on-year · Gross margin 52%, operating margin 26%",2026-05-17,auto
-EDIT,1,1,5,2,5,3,Gene editing — ocular and liver · Revenue down 19% year-on-year · Operating margin -57%,2026-05-17,auto
-EDPR.LS,3,5,3,4,3,3,"EDP Renovaveis — pure-play renewables developer (Lisbon) · Gross margin 84%, operating margin -34%",2026-05-17,auto
-EDP.LS,2,5,2,4,4,4,"Portuguese utility and renewables (Lisbon) · Revenue up 0% year-on-year · Gross margin 34%, operating margin 15%",2026-05-17,auto
-EW,3,3,4,3,3,3,Transcatheter heart valves TAVR leader — structural growth · Revenue up 13% year-on-year,2026-05-17,auto
-ESTC,3,5,4,4,3,4,"Search analytics security SIEM competitor set · Revenue up 18% year-on-year · Gross margin 76%, operating margin 0%",2026-05-17,auto
-ESLT,3,5,3,3,3,2,"Elbit Systems — defense electronics Israel and export · Revenue up 11% year-on-year · Gross margin 25%, operating margin 10%",2026-05-17,auto
-EA,2,3,4,3,4,3,Video games — live services · Revenue up 1% year-on-year,2026-05-17,auto
-ELV,2,5,4,3,4,4,Anthem rebrand — commercial and gov mix · Revenue up 3% year-on-year · Operating margin 5%,2026-05-17,auto
-LLY,5,5,3,3,3,3,"GLP-1 dominance (Mounjaro/Zepbound) and oncology pipeline · Revenue up 56% year-on-year · Gross margin 82%, operating margin 49%",2026-05-17,auto
-EMR,2,5,3,3,4,4,"Automation and climate-industrial mix · Revenue up 3% year-on-year · Gross margin 53%, operating margin 20%",2026-05-17,auto
-ENB,3,5,2,3,4,3,"Canadian midstream — Mainline tolls · Revenue up 6% year-on-year · Gross margin 33%, operating margin 17%",2026-05-17,auto
-ENEL.MI,1,5,3,4,4,4,"Italian utility and renewables developer (Milan) · Revenue down 1% year-on-year · Gross margin 34%, operating margin 9%",2026-05-17,auto
-UUUU,5,1,4,2,3,1,"ISR uranium plus rare earths optionality · Revenue up 112% year-on-year · Gross margin 40%, operating margin -41%",2026-05-17,auto
-ET,4,5,2,3,4,4,"Midstream pipelines; check UK ISA tax treatment · Revenue up 30% year-on-year · Gross margin 17%, operating margin 9%",2026-05-17,auto
-ENGI.PA,3,3,2,4,4,4,French utility gas and renewables (Euronext Paris),2026-05-17,auto
-ENPH,1,5,4,3,5,3,"Residential solar inverters — cycle downturn hit hard · Revenue down 21% year-on-year · Gross margin 35%, operating margin -9%",2026-05-17,auto
-ENTG,3,5,3,4,3,3,"Materials purity for wafer fabs and advanced packaging · Revenue up 5% year-on-year · Gross margin 47%, operating margin 17%",2026-05-17,auto
-EPD,1,3,3,3,4,4,MLP — NGL exports and storage · Revenue down 3% year-on-year,2026-05-17,auto
-EOG,3,5,3,3,3,5,"Premier shale operator — returns over growth · Revenue up 16% year-on-year · Gross margin 66%, operating margin 37%",2026-05-17,auto
-EPIR.ST,3,3,3,3,3,3,Mining equipment automation and digital services (Stockholm),2026-05-17,auto
-EQNR,1,5,3,3,4,5,"Norway state oil — dividend policy · Revenue down 5% year-on-year · Gross margin 44%, operating margin 32%",2026-05-17,auto
-WTRG,3,5,2,4,4,4,"Essential utilities water gas electric bundle · Revenue up 16% year-on-year · Gross margin 51%, operating margin 32%",2026-05-17,auto
-ES,3,5,2,4,4,4,"New England utility — offshore wind stakes · Revenue up 13% year-on-year · Gross margin 82%, operating margin 21%",2026-05-17,auto
-MRAM,3,5,4,4,3,1,"Everspin MRAM — persistent memory niche · Revenue up 13% year-on-year · Gross margin 53%, operating margin -18%",2026-05-17,auto
-EXAS,4,5,3,3,3,1,"Exact Sciences CRC screening — guideline adoption · Revenue up 23% year-on-year · Gross margin 70%, operating margin -9%",2026-05-17,auto
-EXC,1,3,2,4,5,4,Nuclear-heavy utility — PJM exposure · Revenue down 1% year-on-year,2026-05-17,auto
-EXPE,3,5,4,3,3,5,"OTA — B2B and loyalty recovery · Revenue up 11% year-on-year · Gross margin 90%, operating margin 15%",2026-05-17,auto
-FAST,3,5,3,3,3,3,"Fastenal vending and onsite inventory · Revenue up 12% year-on-year · Gross margin 45%, operating margin 20%",2026-05-17,auto
-FDX,3,3,3,3,3,4,Express and freight — DRIVE cost program · Revenue up 7% year-on-year,2026-05-17,auto
-FI,3,3,3,3,3,3,Fiserv — merchant acquiring and issuer processing,2026-05-17,auto
-FIS,3,5,2,3,4,5,"Banking and capital markets technology · Revenue up 8% year-on-year · Gross margin 38%, operating margin 19%",2026-05-17,auto
-FLY,5,1,4,3,3,3,"Fly Leasing / verify ticker — aircraft lessor exposure · Revenue up 45% year-on-year · Gross margin 22%, operating margin -118%",2026-05-17,auto
-FSLR,4,5,4,3,3,5,"Utility-scale thin-film solar modules · Revenue up 24% year-on-year · Gross margin 47%, operating margin 33%",2026-05-17,auto
-FE,3,5,2,4,4,4,"Transmission investment story — regulatory lag risk · Revenue up 12% year-on-year · Gross margin 62%, operating margin 20%",2026-05-17,auto
-FLEX,3,3,3,3,3,3,EMS / JDM manufacturing for hyperscale and networking gear · Revenue up 8% year-on-year,2026-05-17,auto
-FLS,1,5,3,3,4,4,"Flowserve pumps valves — energy capex cycle · Revenue down 7% year-on-year · Gross margin 36%, operating margin 11%",2026-05-17,auto
-FLNC,3,5,3,4,3,1,"Grid-scale battery storage systems — growing but unprofitable · Revenue up 8% year-on-year · Gross margin 10%, operating margin -8%",2026-05-17,auto
-FORM,4,5,4,4,3,2,"Semi probe cards; quantum test equipment niche · Revenue up 32% year-on-year · Gross margin 38%, operating margin 10%",2026-05-17,auto
-FTNT,3,5,4,4,3,2,"Network security appliances SD-WAN and SASE · Revenue up 15% year-on-year · Gross margin 80%, operating margin 33%",2026-05-17,auto
-FTV,3,5,3,3,3,4,"Fortive industrial instrumentation and healthcare diagnostics spin mix · Revenue up 8% year-on-year · Gross margin 63%, operating margin 18%",2026-05-17,auto
-FRSH,3,5,5,4,3,5,"Freshservice / ITSM cloud — SMB upmarket · Revenue up 14% year-on-year · Gross margin 86%, operating margin 18%",2026-05-17,auto
-FCEL,5,1,4,3,3,3,"Fuel cells — stationary power niche · Revenue up 61% year-on-year · Gross margin -19%, operating margin -86%",2026-05-17,auto
-GE,4,5,3,3,3,3,"Aerospace engines and power — LEAP cycle and services mix · Revenue up 25% year-on-year · Gross margin 31%, operating margin 19%",2026-05-17,auto
-GEV,3,5,4,3,3,2,"Gas turbines wind and grid equipment — $163B backlog from GE spinoff · Revenue up 16% year-on-year · Gross margin 19%, operating margin 2%",2026-05-17,auto
-GEA.DE,3,3,3,3,3,3,Process engineering and food automation (Xetra),2026-05-17,auto
-GEN,4,5,3,4,3,5,"Consumer and enterprise security brands rollup · Revenue up 26% year-on-year · Gross margin 78%, operating margin 36%",2026-05-17,auto
-GNRC,3,5,3,3,3,3,"Backup generators — outage and grid fragility · Revenue up 12% year-on-year · Gross margin 39%, operating margin 11%",2026-05-17,auto
-GD,3,5,3,3,3,4,"Gulfstream plus combat systems shipbuilding · Revenue up 10% year-on-year · Gross margin 16%, operating margin 11%",2026-05-17,auto
-GMAB.CO,5,5,3,2,3,4,"Antibody engineering platform — bispecific and ADC (Copenhagen) · Revenue up 42% year-on-year · Gross margin 92%, operating margin 23%",2026-05-17,auto
-GILD,2,5,3,3,4,4,"HIV and liver — cell therapy option · Revenue up 5% year-on-year · Gross margin 80%, operating margin 38%",2026-05-17,auto
-DNA,1,1,3,2,5,3,"Ginkgo cell engineering — revenue quality debate · Revenue down 49% year-on-year · Gross margin 84%, operating margin -367%",2026-05-17,auto
-GPN,1,3,2,3,5,5,Global Payments — Genius and B2B software · Revenue down 23% year-on-year,2026-05-17,auto
-GSAT,3,5,3,3,3,1,"Globalstar — satellite IoT and Apple partnership · Revenue up 18% year-on-year · Gross margin 62%, operating margin -0%",2026-05-17,auto
-GS,3,3,5,3,3,4,Investment bank — trading and advisory cycle · Revenue up 14% year-on-year,2026-05-17,auto
-GGG,2,5,4,3,4,3,"Graco fluid handling pumps — industrial coatings · Revenue up 2% year-on-year · Gross margin 52%, operating margin 26%",2026-05-17,auto
-GSK,2,5,3,3,4,5,"Vaccines HIV franchise and specialty pharma (NYSE ADR) · Revenue up 2% year-on-year · Gross margin 75%, operating margin 30%",2026-05-17,auto
-HAL,1,5,3,3,4,4,"Oilfield services pressure pumping — cycle leverage · Revenue down 0% year-on-year · Gross margin 14%, operating margin 13%",2026-05-17,auto
-HLMA.L,3,3,3,3,3,2,Safety environmental and health sensors (LSE),2026-05-17,auto
-HEI.A,3,3,3,3,3,3,Heico — aerospace aftermarket parts and acquisitions,2026-05-17,auto
-HES,3,3,3,3,3,3,Guyana growth — Chevron merger,2026-05-17,auto
-HEXA-B.ST,1,5,3,3,5,4,"Measurement sensors and geospatial — Swedish (Stockholm) · Revenue down 33% year-on-year · Gross margin 63%, operating margin 24%",2026-05-17,auto
-HXL,3,5,3,3,3,3,"Carbon fibre composites for aerospace structures · Revenue up 10% year-on-year · Gross margin 27%, operating margin 11%",2026-05-17,auto
-HIK.L,3,3,3,3,3,5,Generics injectables and branded pharma — UK-listed (LSE),2026-05-17,auto
-HLT,3,5,3,3,3,3,"Premium hotels — fee stream and pipeline · Revenue up 9% year-on-year · Gross margin 29%, operating margin 23%",2026-05-17,auto
-HOLX,2,5,3,3,4,4,"Diagnostics imaging and surgical women's health · Revenue up 3% year-on-year · Gross margin 56%, operating margin 23%",2026-05-17,auto
-HON,2,5,3,3,4,4,"Controls and diversified industrial automation · Revenue up 2% year-on-year · Gross margin 39%, operating margin 19%",2026-05-17,auto
-HUBS,4,5,4,4,3,4,"HubSpot — SMB CRM and marketing · Revenue up 23% year-on-year · Gross margin 83%, operating margin 3%",2026-05-17,auto
-HUM,4,5,5,3,3,4,Medicare Advantage star ratings risk · Revenue up 23% year-on-year · Operating margin 5%,2026-05-17,auto
-HII,3,5,3,3,3,4,"US Navy shipbuilding — carrier submarine backlog · Revenue up 13% year-on-year · Gross margin 13%, operating margin 5%",2026-05-17,auto
-ICHR,1,3,3,4,4,3,Fluid delivery systems for semiconductor manufacturing · Revenue down 4% year-on-year,2026-05-17,auto
-IEX,3,5,3,3,3,3,"IDEX precision pumps and dispensing · Revenue up 9% year-on-year · Gross margin 45%, operating margin 20%",2026-05-17,auto
-ITW,2,3,3,3,4,3,Diversified industrial components · Revenue up 4% year-on-year,2026-05-17,auto
-ILMN,2,5,3,3,4,3,"Sequencing installed base — consumable pull-through · Revenue up 5% year-on-year · Gross margin 66%, operating margin 19%",2026-05-17,auto
-IMI.L,3,3,3,3,3,4,Flow control and automation for critical processes (LSE),2026-05-17,auto
-IMO,2,5,3,3,4,4,"Canadian refining and upstream · Revenue up 2% year-on-year · Gross margin 13%, operating margin 10%",2026-05-17,auto
-PI,1,5,3,4,4,2,"Wireless power and GaN — consumer and industrial · Revenue down 0% year-on-year · Gross margin 49%, operating margin -20%",2026-05-17,auto
-INDI,1,1,3,4,4,3,"indie Semiconductor auto edge — ADAS content · Revenue down 0% year-on-year · Gross margin 37%, operating margin -57%",2026-05-17,auto
-IFX.DE,3,5,3,4,3,3,"Power semiconductors for AI auto and industrial (Xetra) · Revenue up 7% year-on-year · Gross margin 40%, operating margin 11%",2026-05-17,auto
-IR,3,5,3,3,3,4,"Industrial compressors and tools · Revenue up 8% year-on-year · Gross margin 43%, operating margin 17%",2026-05-17,auto
-INOD,4,5,4,3,3,2,"Data engineering / AI data prep software microcap · Revenue up 22% year-on-year · Gross margin 38%, operating margin 15%",2026-05-17,auto
-PODD,4,5,3,3,3,4,"Omnipod insulin pump ecosystem — Mobi next generation · Revenue up 34% year-on-year · Gross margin 69%, operating margin 16%",2026-05-17,auto
-INTC,3,5,3,4,3,1,"CPU and foundry turnaround — AI PC and custom silicon option · Revenue up 7% year-on-year · Gross margin 39%, operating margin 7%",2026-05-17,auto
-NTLA,5,1,5,2,3,3,CRISPR gene editing — in vivo programs · Revenue up 79% year-on-year · Operating margin -429%,2026-05-17,auto
-ICE,3,5,3,3,3,4,"Exchanges and data — mortgage tech · Revenue up 14% year-on-year · Gross margin 61%, operating margin 47%",2026-05-17,auto
-IBM,3,5,3,3,3,4,"Services plus small quantum research franchise · Revenue up 9% year-on-year · Gross margin 56%, operating margin 14%",2026-05-17,auto
-INTU,3,5,3,4,3,4,"SMB tax and accounting AI assistants · Revenue up 17% year-on-year · Gross margin 78%, operating margin 18%",2026-05-17,auto
-LUNR,1,1,3,3,5,3,"Intuitive Machines — lunar lander programs · Revenue down 21% year-on-year · Gross margin 16%, operating margin -76%",2026-05-17,auto
-ISRG,4,5,4,3,3,2,"Da Vinci and Ion robotic surgery systems — procedure growth · Revenue up 23% year-on-year · Gross margin 66%, operating margin 31%",2026-05-17,auto
-IONQ,5,1,4,3,3,1,"Trapped-ion quantum hardware — largest cash runway in pure-play quantum · Revenue up 429% year-on-year · Gross margin 30%, operating margin -369%",2026-05-17,auto
-IQE.L,3,3,3,4,3,3,Compound semiconductor wafers — photonics and quantum (LSE),2026-05-17,auto
-IREN,5,5,3,3,3,1,"Bitcoin miner pivoting to AI data centre power · Revenue up 59% year-on-year · Gross margin 60%, operating margin -46%",2026-05-17,auto
-IRDM,2,5,3,3,4,3,"Iridium — LEO voice and IoT constellation · Revenue up 2% year-on-year · Gross margin 71%, operating margin 23%",2026-05-17,auto
-ITT,3,3,3,3,3,3,Motion flow control — defense and industrial · Revenue up 13% year-on-year,2026-05-17,auto
-JBL,4,5,3,3,3,3,"EMS diversified — AI server and appliance builds · Revenue up 23% year-on-year · Gross margin 9%, operating margin 5%",2026-05-17,auto
-JD,2,5,5,4,4,5,"China retail logistics and health spin · Revenue up 2% year-on-year · Gross margin 16%, operating margin -1%",2026-05-17,auto
-JNJ,3,5,3,3,3,4,"Pharma medtech consumer diversified — patent cliffs matter · Revenue up 10% year-on-year · Gross margin 66%, operating margin 27%",2026-05-17,auto
-JCI,3,3,3,3,3,3,Building controls and OpenBlue smart buildings · Revenue up 7% year-on-year,2026-05-17,auto
-JPM,3,3,5,3,3,4,Money centre bank — NII and investment banking · Revenue up 10% year-on-year,2026-05-17,auto
-KMI,3,5,3,3,3,3,"Natural gas pipelines — fee-based cash flows · Revenue up 14% year-on-year · Gross margin 51%, operating margin 30%",2026-05-17,auto
-KION.DE,3,3,3,3,3,3,Forklift warehouse automation and supply chain (Xetra),2026-05-17,auto
-KLAC,3,5,3,4,3,2,"Process control and inspection in WFE · Revenue up 11% year-on-year · Gross margin 61%, operating margin 41%",2026-05-17,auto
-KNEBV.HE,1,5,4,3,4,3,"Elevators escalators and maintenance services (Helsinki) · Revenue down 9% year-on-year · Gross margin 14%, operating margin 10%",2026-05-17,auto
-KTOS,4,5,4,3,3,2,"Unmanned systems and C5ISR — defense tech integrator · Revenue up 22% year-on-year · Gross margin 24%, operating margin 3%",2026-05-17,auto
-KLIC,4,5,4,4,3,3,"Kulicke & Soffa wire bond packaging equipment · Revenue up 20% year-on-year · Gross margin 50%, operating margin 9%",2026-05-17,auto
-KULR,1,1,4,3,5,3,"Thermal management for batteries and space hardware · Revenue down 15% year-on-year · Gross margin -27%, operating margin -550%",2026-05-17,auto
-LHX,3,5,3,3,3,3,"Defense electronics post-L3Harris merger integration · Revenue up 12% year-on-year · Gross margin 24%, operating margin 11%",2026-05-17,auto
-LH,3,5,3,3,3,4,"LabCorp diagnostics plus drug development · Revenue up 6% year-on-year · Gross margin 29%, operating margin 11%",2026-05-17,auto
-LRCX,4,5,4,4,3,2,"Wafer fabrication equipment (WFE) · Revenue up 24% year-on-year · Gross margin 50%, operating margin 35%",2026-05-17,auto
-LSCC,5,5,4,4,3,2,"Low-power FPGAs for edge and industrial acceleration · Revenue up 42% year-on-year · Gross margin 69%, operating margin 16%",2026-05-17,auto
-LR.PA,2,5,3,3,4,3,"Electrical infrastructure for data centres and grids (Euronext Paris) · Revenue up 5% year-on-year · Gross margin 51%, operating margin 19%",2026-05-17,auto
-LDOS,2,5,3,3,4,5,"Leidos — defense IT and engineering services · Revenue up 4% year-on-year · Gross margin 17%, operating margin 12%",2026-05-17,auto
-LDO.MI,1,5,3,3,5,4,"Italian defence helicopters electronics and cyber (Milan) · Revenue down 22% year-on-year · Gross margin 10%, operating margin 6%",2026-05-17,auto
-LWLG,5,1,4,3,3,3,"Lightwave Logic — photonic polymers for interconnect · Revenue up 595% year-on-year · Gross margin 99%, operating margin -3186%",2026-05-17,auto
-LECO,3,5,3,3,3,3,"Lincoln Electric welding automation · Revenue up 12% year-on-year · Gross margin 36%, operating margin 17%",2026-05-17,auto
-LMT,2,5,3,3,4,4,"Defense prime — missiles space and aero structures · Revenue up 0% year-on-year · Gross margin 12%, operating margin 11%",2026-05-17,auto
-LONN.SW,3,3,3,3,3,3,CDMO for biotech and pharma manufacturing (Swiss),2026-05-17,auto
-LITE,5,5,3,3,3,2,"Lumentum — optical components for AI networking · Revenue up 90% year-on-year · Gross margin 44%, operating margin 22%",2026-05-17,auto
-MPC,3,5,3,3,3,5,"Refining and midstream logistics — crack spread exposure · Revenue up 9% year-on-year · Gross margin 6%, operating margin 3%",2026-05-17,auto
-MAR,2,3,3,3,4,3,Hotel franchisor — net rooms growth · Revenue up 4% year-on-year,2026-05-17,auto
-MRVL,4,5,3,4,3,3,"Custom AI silicon and high-speed networking ASICs · Revenue up 22% year-on-year · Gross margin 52%, operating margin 19%",2026-05-17,auto
-MTZ,4,5,3,3,3,2,"Infrastructure and clean energy construction — fastest growing EPC · Revenue up 34% year-on-year · Gross margin 12%, operating margin 4%",2026-05-17,auto
-MXL,5,5,3,4,3,2,"Broadband and connectivity mixed-signal — DOCSIS and fiber · Revenue up 43% year-on-year · Gross margin 58%, operating margin -12%",2026-05-17,auto
-MDT,3,5,3,3,3,4,"Medtronic devices — GLP-1 overhang on obesity devices · Revenue up 9% year-on-year · Gross margin 64%, operating margin 18%",2026-05-17,auto
-MEL.BR,3,3,3,3,3,3,Automotive and industrial sensor ICs (Brussels),2026-05-17,auto
-MELI,5,5,3,4,3,3,"MercadoLibre — commerce and fintech flywheel · Revenue up 45% year-on-year · Gross margin 43%, operating margin 10%",2026-05-17,auto
-MRK,2,5,3,3,4,5,"Keytruda franchise duration — oncology concentration · Revenue up 5% year-on-year · Gross margin 74%, operating margin -20%",2026-05-17,auto
-HOLO,3,3,5,3,3,3,Micro-cap hardware; highly speculative,2026-05-17,auto
-MU,5,5,4,4,3,5,"High-bandwidth memory and DRAM for AI servers · Revenue up 196% year-on-year · Gross margin 74%, operating margin 68%",2026-05-17,auto
-MVIS,1,1,3,3,5,3,"MicroVision lidar MEMS — speculative liquidity · Revenue down 86% year-on-year · Gross margin -7221%, operating margin -12542%",2026-05-17,auto
-MRNA,5,1,5,2,3,3,"mRNA platform vaccines and therapeutics — binary pipeline risk · Revenue up 264% year-on-year · Gross margin -146%, operating margin -357%",2026-05-17,auto
-MOH,1,5,5,3,4,3,"Molina Medicaid pure-play — regulatory cap · Revenue down 3% year-on-year · Gross margin 9%, operating margin 2%",2026-05-17,auto
-MNTS,4,1,5,3,3,3,"Momentus — in-space transportation — high dilution risk · Revenue up 27% year-on-year · Gross margin 100%, operating margin -2446%",2026-05-17,auto
-MNDY,4,5,5,4,3,4,"Monday work OS — workflow automation with security posture · Revenue up 25% year-on-year · Gross margin 89%, operating margin 1%",2026-05-17,auto
-MDB,4,5,4,4,3,2,"Document database — developer-led adoption · Revenue up 27% year-on-year · Gross margin 73%, operating margin 0%",2026-05-17,auto
-MPWR,4,5,4,4,3,2,"Power management ICs for AI server racks and GPUs · Revenue up 26% year-on-year · Gross margin 55%, operating margin 30%",2026-05-17,auto
-MCO,3,5,3,3,3,3,"Moody's — ratings cycle and KYC analytics · Revenue up 8% year-on-year · Gross margin 74%, operating margin 46%",2026-05-17,auto
-MS,3,3,5,3,3,4,Wealth management — AUM and banking · Revenue up 17% year-on-year,2026-05-17,auto
-MPLX,2,5,3,3,4,5,"Marathon midstream — dropdown MLP · Revenue up 2% year-on-year · Gross margin 44%, operating margin 46%",2026-05-17,auto
-MSCI,3,5,3,3,3,3,"Indexes and ESG analytics — subscription model · Revenue up 14% year-on-year · Gross margin 83%, operating margin 54%",2026-05-17,auto
-NGG,3,3,3,4,3,4,UK and US electricity and gas transmission grid operator (NYSE ADR),2026-05-17,auto
-NVTS,1,1,4,4,5,3,"Navitas — GaN power ICs for data centre and EV · Revenue down 39% year-on-year · Gross margin 38%, operating margin -318%",2026-05-17,auto
-NCC.L,3,3,3,4,3,3,UK cyber consulting and managed security (LSE),2026-05-17,auto
-NBIS,5,1,3,4,3,1,"Nebius — AI cloud GPU infrastructure spin narrative · Revenue up 501% year-on-year · Gross margin 70%, operating margin -110%",2026-05-17,auto
-NEOEN.PA,3,3,3,3,3,3,French renewable energy developer solar wind storage (Euronext Paris),2026-05-17,auto
-NEP,3,3,3,3,3,3,NextEra Energy Partners renewables dropdown story,2026-05-17,auto
-NFLX,3,5,3,3,3,3,"Streaming — content ROI and ad tier · Revenue up 16% year-on-year · Gross margin 52%, operating margin 32%",2026-05-17,auto
-NEX.PA,3,3,3,3,3,4,Power and fibre optic cables — electrification play (Euronext Paris),2026-05-17,auto
-NEE,3,5,3,4,3,3,"Regulated utility and renewables developer · Revenue up 7% year-on-year · Gross margin 59%, operating margin 29%",2026-05-17,auto
-LASR,5,5,4,4,3,1,"Luminar lidar — auto OEM design-in path · Revenue up 71% year-on-year · Gross margin 31%, operating margin -6%",2026-05-17,auto
-NDX1.DE,5,3,4,3,3,4,Nordex wind turbine manufacturer (Xetra) · Revenue up 52% year-on-year,2026-05-17,auto
-NOD.OL,4,5,4,4,3,2,"Ultra-low power wireless chip design for IoT (Oslo) · Revenue up 28% year-on-year · Gross margin 52%, operating margin 5%",2026-05-17,auto
-NDSN,3,5,3,3,3,3,"Nordson precision dispensing and industrial coatings · Revenue up 9% year-on-year · Gross margin 55%, operating margin 25%",2026-05-17,auto
-NSC,2,5,3,3,4,3,"East coast rail — service recovery · Revenue up 0% year-on-year · Gross margin 34%, operating margin 33%",2026-05-17,auto
-NOC,2,5,3,3,4,4,"Defense prime — bombers UAVs and space · Revenue up 4% year-on-year · Gross margin 20%, operating margin 10%",2026-05-17,auto
-NOV,1,5,3,3,4,4,"Offshore rig equipment — cycle leverage · Revenue down 2% year-on-year · Gross margin 18%, operating margin 2%",2026-05-17,auto
-NVMI,3,5,4,4,3,2,"Metrology for advanced packaging and CMP process control · Revenue up 14% year-on-year · Gross margin 58%, operating margin 27%",2026-05-17,auto
-NVS,1,5,3,3,4,4,"Radioligand and neuroscience pipeline · Revenue down 1% year-on-year · Gross margin 74%, operating margin 31%",2026-05-17,auto
-NOVN.SW,1,5,3,3,4,4,"Diversified pharma pipeline — cardiovascular oncology neuro (Swiss) · Revenue down 1% year-on-year · Gross margin 74%, operating margin 31%",2026-05-17,auto
-NVAX,5,5,5,2,3,3,"Novavax vaccine platform — funding and execution · Revenue up 67% year-on-year · Gross margin 85%, operating margin 10%",2026-05-17,auto
-NVO,4,5,3,3,3,4,"GLP-1 agonist leader Ozempic and Wegovy — LLY rival (NYSE ADR) · Revenue up 24% year-on-year · Gross margin 86%, operating margin 62%",2026-05-17,auto
-NRG,3,3,2,4,4,5,Retail power plus generation — merchant spread · Revenue up 14% year-on-year,2026-05-17,auto
-NU,5,3,5,3,3,5,LatAm neobank — Brazil and Mexico expansion · Revenue up 49% year-on-year,2026-05-17,auto
-SMR,1,1,5,3,5,3,"SMR developer — licensing and power purchase risk · Revenue down 95% year-on-year · Gross margin -3%, operating margin -4022%",2026-05-17,auto
-NVDA,5,5,4,4,3,4,"AI accelerators and data-centre GPU exposure · Revenue up 73% year-on-year · Gross margin 75%, operating margin 65%",2026-05-17,auto
-OXY,1,5,3,3,4,4,"Permian operator plus carbon capture narrative · Revenue down 8% year-on-year · Gross margin 36%, operating margin 18%",2026-05-17,auto
-OKLO,3,3,5,4,3,3,Advanced fission developer — milestone equity story,2026-05-17,auto
-OKTA,3,5,4,4,3,4,"Identity and access management · Revenue up 12% year-on-year · Gross margin 78%, operating margin 7%",2026-05-17,auto
-ON,2,5,3,4,4,3,"Power discretes and SiC for electrification and DC systems · Revenue up 5% year-on-year · Gross margin 39%, operating margin 18%",2026-05-17,auto
-ONDAS,3,3,3,3,3,3,Ondas — autonomous systems and rail wireless,2026-05-17,auto
-OKE,3,5,3,3,3,4,"NGL fractionation and midstream services · Revenue up 20% year-on-year · Gross margin 23%, operating margin 15%",2026-05-17,auto
-ONTO,3,5,4,4,3,3,"Onto metrology and inspection for advanced nodes · Revenue up 10% year-on-year · Gross margin 50%, operating margin 13%",2026-05-17,auto
-ORCL,4,5,3,4,3,3,"OCI GPU cloud and database AI workloads · Revenue up 22% year-on-year · Gross margin 65%, operating margin 33%",2026-05-17,auto
-ORSTED.CO,4,5,3,4,3,4,"Offshore wind global leader (Copenhagen) · Revenue up 39% year-on-year · Gross margin 36%, operating margin 28%",2026-05-17,auto
-OTIS,3,5,3,3,3,4,"Elevators service moat — China mix · Revenue up 6% year-on-year · Gross margin 30%, operating margin 15%",2026-05-17,auto
-OXIG.L,3,3,4,3,3,3,Cryogenics and quantum components — enabling hardware (LSE),2026-05-17,auto
-PACB,3,1,3,3,3,3,"Long-read sequencing — competitive pressure · Revenue up 14% year-on-year · Gross margin 37%, operating margin -92%",2026-05-17,auto
-PCG,3,5,1,4,4,5,"PG&E — California load and safety · Revenue up 15% year-on-year · Gross margin 40%, operating margin 21%",2026-05-17,auto
-PD,2,5,4,4,4,5,"PagerDuty incident response — SRE tooling · Revenue up 3% year-on-year · Gross margin 86%, operating margin 4%",2026-05-17,auto
-PLTR,5,5,4,4,3,1,"Gov and enterprise AI platforms — contract wins and margins · Revenue up 85% year-on-year · Gross margin 87%, operating margin 46%",2026-05-17,auto
-PANW,3,5,4,4,3,1,"Enterprise firewall and cloud security platform consolidation · Revenue up 15% year-on-year · Gross margin 74%, operating margin 15%",2026-05-17,auto
-PH,3,5,3,3,3,3,"Hydraulics and motion control — aerospace exposure · Revenue up 11% year-on-year · Gross margin 37%, operating margin 21%",2026-05-17,auto
-PYPL,3,5,3,3,3,5,"Payments scale — margin and take-rate recovery · Revenue up 7% year-on-year · Gross margin 46%, operating margin 19%",2026-05-17,auto
-PDD,3,5,5,4,3,5,"Temur — cross-border commerce growth · Revenue up 12% year-on-year · Gross margin 55%, operating margin 21%",2026-05-17,auto
-PNR,2,5,3,3,4,4,"Pentair water treatment and pool equipment · Revenue up 3% year-on-year · Gross margin 42%, operating margin 23%",2026-05-17,auto
-PFE,3,5,3,3,3,5,"Post-COVID oncology pipeline rebuild — execution risk · Revenue up 5% year-on-year · Gross margin 75%, operating margin 29%",2026-05-17,auto
-PSX,3,5,3,3,3,5,"Phillips 66 refining plus midstream CPChem · Revenue up 7% year-on-year · Gross margin 9%, operating margin 0%",2026-05-17,auto
-PLAB,3,5,5,4,3,3,"Photomasks — lithography consumables · Revenue up 6% year-on-year · Gross margin 35%, operating margin 24%",2026-05-17,auto
-PL,5,5,4,3,3,3,"Planet Labs — daily Earth observation data · Revenue up 41% year-on-year · Gross margin 54%, operating margin -41%",2026-05-17,auto
-PLUG,3,1,3,3,3,3,"Hydrogen — cash burn and green H2 · Revenue up 18% year-on-year · Gross margin 2%, operating margin -48%",2026-05-17,auto
-POWI,1,5,4,4,4,2,"Power conversion ICs — efficiency regulation tailwind · Revenue down 2% year-on-year · Gross margin 53%, operating margin 9%",2026-05-17,auto
-PPL,2,5,3,4,4,4,"Kentucky and Pennsylvania wires · Revenue up 3% year-on-year · Gross margin 40%, operating margin 21%",2026-05-17,auto
-PRY.MI,3,5,3,3,3,3,"Submarine and power cables for grid buildout (Milan) · Revenue up 12% year-on-year · Gross margin 35%, operating margin 6%",2026-05-17,auto
-QRVO,3,3,3,4,3,5,RF connectivity and defense/aerospace semi exposure · Revenue up 8% year-on-year,2026-05-17,auto
-QCOM,1,5,3,4,4,4,"Handset RF plus AI edge inference — licensing mix · Revenue down 3% year-on-year · Gross margin 54%, operating margin 22%",2026-05-17,auto
-QLYS,3,5,4,4,3,5,"Vulnerability management SaaS · Revenue up 10% year-on-year · Gross margin 83%, operating margin 35%",2026-05-17,auto
-PWR,4,5,3,3,3,2,"Grid construction and electrical infrastructure — licensed labor moat · Revenue up 26% year-on-year · Gross margin 14%, operating margin 4%",2026-05-17,auto
-QUBT,5,1,5,3,3,3,"Quantum computing micro-cap hardware · Revenue up 219% year-on-year · Gross margin -49%, operating margin -11220%",2026-05-17,auto
-QS,3,3,5,3,3,3,Solid-state battery — technical milestone risk,2026-05-17,auto
-DGX,3,5,3,3,3,4,"Quest Diagnostics lab volumes — pricing · Revenue up 9% year-on-year · Gross margin 33%, operating margin 14%",2026-05-17,auto
-RMBS,3,5,4,4,3,3,"Memory interface IP and chips — HBM ecosystem adjacency · Revenue up 8% year-on-year · Gross margin 80%, operating margin 34%",2026-05-17,auto
-RXRX,1,1,5,2,5,3,"Recursion AI drug discovery — compute spend · Revenue down 57% year-on-year · Gross margin -98%, operating margin -2039%",2026-05-17,auto
-RDW,5,1,4,3,3,3,"Space systems integrator — NASA and defense missions · Revenue up 56% year-on-year · Gross margin 10%, operating margin -43%",2026-05-17,auto
-REGN,3,5,4,2,3,4,"Dupixent franchise Libtayo and obesity pipeline — net cash fortress · Revenue up 19% year-on-year · Gross margin 81%, operating margin 21%",2026-05-17,auto
-RSW.L,3,3,4,3,3,3,Precision measurement and additive manufacturing (LSE),2026-05-17,auto
-RSG,2,5,3,3,4,3,"Waste collection pricing — route density · Revenue up 2% year-on-year · Gross margin 42%, operating margin 20%",2026-05-17,auto
-RMD,3,5,4,3,3,4,"ResMed sleep apnea devices — GLP-1 competitive readthrough · Revenue up 11% year-on-year · Gross margin 62%, operating margin 35%",2026-05-17,auto
-RHM.DE,1,5,3,3,5,3,"German defence vehicles and ammunition — fastest growing (Xetra) · Revenue down 31% year-on-year · Gross margin 52%, operating margin 40%",2026-05-17,auto
-RGTI,1,1,4,3,5,3,"Superconducting quantum systems — minimal revenue · Revenue down 18% year-on-year · Gross margin 35%, operating margin -1210%",2026-05-17,auto
-HOOD,3,5,4,3,3,3,"Retail brokerage and crypto trading · Revenue up 15% year-on-year · Gross margin 81%, operating margin 39%",2026-05-17,auto
-RBLX,4,5,4,3,3,3,"Roblox — UGC platform engagement · Revenue up 39% year-on-year · Gross margin 80%, operating margin -20%",2026-05-17,auto
-ROG.SW,3,3,3,3,3,4,Diagnostics and oncology pharma — global leader (Swiss),2026-05-17,auto
-RKLB,4,5,4,3,3,3,"Rocket Lab — launch and space systems · Revenue up 36% year-on-year · Gross margin 38%, operating margin -28%",2026-05-17,auto
-ROK,3,5,3,3,3,3,"Factory automation PLCs and industrial software · Revenue up 12% year-on-year · Gross margin 50%, operating margin 21%",2026-05-17,auto
-RR.L,3,3,4,3,3,3,Small modular nuclear reactors and aerospace engines (LSE),2026-05-17,auto
-ROP,3,5,3,4,3,4,"Roper software rollup — niche vertical SaaS · Revenue up 11% year-on-year · Gross margin 69%, operating margin 27%",2026-05-17,auto
-RCL,3,5,3,3,3,4,"Cruise — pricing power post-pandemic · Revenue up 11% year-on-year · Gross margin 50%, operating margin 26%",2026-05-17,auto
-RTX,3,5,3,3,3,3,"Pratt engines plus Raytheon missiles mix · Revenue up 9% year-on-year · Gross margin 21%, operating margin 12%",2026-05-17,auto
-RWE.DE,1,5,3,4,5,4,"German utility pivoting to renewables (Xetra) · Revenue down 47% year-on-year · Gross margin 63%, operating margin -22%",2026-05-17,auto
-SPGI,3,5,3,3,3,4,"Ratings and market data — Mobility spin · Revenue up 10% year-on-year · Gross margin 70%, operating margin 44%",2026-05-17,auto
-SAF.PA,3,3,4,3,3,3,Aerospace engines and equipment — CFM International (Euronext Paris),2026-05-17,auto
-CRM,3,5,3,4,3,5,"Enterprise AI agents on CRM data cloud · Revenue up 12% year-on-year · Gross margin 78%, operating margin 19%",2026-05-17,auto
-005930.KS,4,5,4,3,3,5,"Samsung — memory and foundry · Revenue up 24% year-on-year · Gross margin 47%, operating margin 21%",2026-05-17,auto
-SAND.ST,1,5,3,3,4,3,"Machining tools mining equipment and digital (Stockholm) · Revenue down 5% year-on-year · Gross margin 40%, operating margin 17%",2026-05-17,auto
-SAN.PA,3,5,3,3,3,5,"French pharma — rare disease vaccines consumer (Euronext Paris) · Revenue up 6% year-on-year · Gross margin 72%, operating margin 20%",2026-05-17,auto
-SNY,3,5,3,3,3,5,"Vaccines and immunology — Dupixent partner · Revenue up 6% year-on-year · Gross margin 72%, operating margin 20%",2026-05-17,auto
-SAP,3,5,4,4,3,4,"Enterprise ERP and cloud — European software · Revenue up 6% year-on-year · Gross margin 73%, operating margin 29%",2026-05-17,auto
-SRPT,1,1,3,2,5,5,"Sarepta gene therapy — regulatory binary · Revenue down 33% year-on-year · Gross margin 10%, operating margin -93%",2026-05-17,auto
-SRT3.DE,1,5,3,3,4,3,"Lab equipment and bioprocessing — pharma supply chain (Xetra) · Revenue down 1% year-on-year · Gross margin 46%, operating margin 17%",2026-05-17,auto
-SATL,5,1,3,3,3,3,"Satellogic — EO constellation operator · Revenue up 94% year-on-year · Gross margin 80%, operating margin -114%",2026-05-17,auto
-SU.PA,3,3,3,3,3,3,Energy management and industrial automation — global leader (Euronext Paris),2026-05-17,auto
-SDGR,1,5,5,3,4,3,"Schrodinger — physics-based drug design · Revenue down 1% year-on-year · Gross margin 66%, operating margin -20%",2026-05-17,auto
-SE,4,5,4,4,3,4,"Sea Limited — gaming and Shopee fintech · Revenue up 38% year-on-year · Gross margin 44%, operating margin 8%",2026-05-17,auto
-LAES,3,3,5,4,3,3,Post-quantum and semiconductor security angle,2026-05-17,auto
-YSN.DE,3,3,4,4,3,3,German IT security for public sector and critical infra (Xetra),2026-05-17,auto
-SMTC,3,5,3,4,3,2,"Semtech LoRa plus signal integrity — mixed cycles · Revenue up 9% year-on-year · Gross margin 50%, operating margin 10%",2026-05-17,auto
-S,4,5,4,4,3,2,"Endpoint AI security — growth narrative unprofitable · Revenue up 20% year-on-year · Gross margin 73%, operating margin -29%",2026-05-17,auto
-NOW,4,5,4,4,3,4,"ServiceNow workflow and GRC digitization · Revenue up 22% year-on-year · Gross margin 75%, operating margin 13%",2026-05-17,auto
-SHEL,1,5,3,3,4,5,"LNG and chemicals — capital framework · Revenue down 3% year-on-year · Gross margin 11%, operating margin 5%",2026-05-17,auto
-SHOP,4,5,4,4,3,2,"Commerce platform — merchant solutions · Revenue up 34% year-on-year · Gross margin 49%, operating margin 16%",2026-05-17,auto
-SIDU,1,1,4,3,5,3,"Sidus Space — small satellite and space services microcap · Revenue down 29% year-on-year · Gross margin -296%, operating margin -1878%",2026-05-17,auto
-SIE.DE,2,5,3,3,4,3,"Digital Industries factory automation and smart infrastructure (Xetra) · Revenue up 4% year-on-year · Gross margin 40%, operating margin 13%",2026-05-17,auto
-ENR.DE,3,5,4,3,3,3,"Grid transformers offshore wind and gas turbines (Xetra) · Revenue up 8% year-on-year · Gross margin 22%, operating margin 9%",2026-05-17,auto
-SLAB,4,5,4,4,3,2,"IoT MCUs and mesh — industrial connectivity · Revenue up 20% year-on-year · Gross margin 59%, operating margin -8%",2026-05-17,auto
-SITM,5,5,4,4,3,1,"MEMS timing — precision clocks for comms and DC · Revenue up 88% year-on-year · Gross margin 59%, operating margin -4%",2026-05-17,auto
-SWKS,1,5,4,4,4,4,"RF front-end modules — handset cyclicality vs content gains · Revenue down 1% year-on-year · Gross margin 41%, operating margin 6%",2026-05-17,auto
-SLB,2,5,3,3,4,4,"OFSP digital drilling international mix · Revenue up 3% year-on-year · Gross margin 15%, operating margin 12%",2026-05-17,auto
-SN.L,3,3,3,3,3,5,Surgical devices orthopaedics and wound management (LSE),2026-05-17,auto
-SMIN.L,3,3,3,3,3,3,Detection threat and contraband screening (LSE),2026-05-17,auto
-SNOW,4,5,4,4,3,1,"Data cloud — governance and sharing workloads · Revenue up 30% year-on-year · Gross margin 67%, operating margin -25%",2026-05-17,auto
-SOFI,5,3,4,3,3,4,Digital bank — member growth and NIM · Revenue up 43% year-on-year,2026-05-17,auto
-SOITEC.PA,3,3,3,3,3,3,SOI wafers for RF power and photonics (Euronext Paris),2026-05-17,auto
-SEDG,5,5,4,3,3,2,"Solar inverters — inventory and competition · Revenue up 41% year-on-year · Gross margin 22%, operating margin -15%",2026-05-17,auto
-SLDP,1,1,5,3,5,3,"Solid-state battery developer · Revenue down 42% year-on-year · Gross margin -128%, operating margin -1031%",2026-05-17,auto
-6758.T,2,5,4,3,4,4,"Sony Japan listing — verify local ticker · Revenue up 1% year-on-year · Gross margin 28%, operating margin 14%",2026-05-17,auto
-SONY,2,5,5,3,4,4,"Sony — gaming and sensors · Revenue up 1% year-on-year · Gross margin 28%, operating margin 14%",2026-05-17,auto
-SO,3,5,3,4,3,4,"Regulated Southeast electric utility · Revenue up 8% year-on-year · Gross margin 46%, operating margin 24%",2026-05-17,auto
-LUV,3,5,3,3,3,5,"Domestic leisure airline — cost advantage · Revenue up 13% year-on-year · Gross margin 19%, operating margin 5%",2026-05-17,auto
-SPX.L,3,3,3,3,3,4,Spirax Group — steam thermal and peristaltic pumps (LSE),2026-05-17,auto
-SPIR,1,1,4,3,5,4,"Spire Global — space-based data and analytics · Revenue down 45% year-on-year · Gross margin 41%, operating margin -128%",2026-05-17,auto
-SQ,3,3,3,3,3,3,Block — seller ecosystem and bitcoin optionality,2026-05-17,auto
-SSE.L,3,3,3,4,3,4,UK renewables developer and regulated network operator (LSE),2026-05-17,auto
-SWK,2,5,3,3,4,4,"Stanley Black & Decker tools — margin reset · Revenue up 3% year-on-year · Gross margin 30%, operating margin 6%",2026-05-17,auto
-STEM,1,5,3,4,5,3,"Battery storage software — project finance · Revenue down 16% year-on-year · Gross margin 49%, operating margin -18%",2026-05-17,auto
-STM,4,5,4,4,3,3,"European semiconductor — auto industrial IoT power (NYSE) · Revenue up 23% year-on-year · Gross margin 34%, operating margin 3%",2026-05-17,auto
-STMN.SW,3,3,4,3,3,3,Dental implants and digital dentistry (Swiss),2026-05-17,auto
-SYK,3,5,3,3,3,4,"Mako robotic surgery and orthopedic device install base · Revenue up 11% year-on-year · Gross margin 65%, operating margin 25%",2026-05-17,auto
-SU,3,5,3,3,3,4,"Canadian integrated — oil sands and refining · Revenue up 16% year-on-year · Gross margin 49%, operating margin 19%",2026-05-17,auto
-RUN,5,5,1,3,4,4,"Residential solar — loan and attach · Revenue up 43% year-on-year · Gross margin 30%, operating margin -6%",2026-05-17,auto
-SMCI,5,3,3,3,3,5,AI server assembly and rack integration — high growth but governance risks · Revenue up 123% year-on-year,2026-05-17,auto
-SWTX,3,3,3,3,3,3,SpringWorks oncology rare disease — trial readouts,2026-05-17,auto
-SXS.L,3,3,3,3,3,3,Precision instrumentation and controls (LSE),2026-05-17,auto
-SNPS,5,5,3,4,3,3,"EDA and design software for chip complexity · Revenue up 66% year-on-year · Gross margin 74%, operating margin 13%",2026-05-17,auto
-TMUS,3,5,3,3,3,4,"US wireless share gains — integration synergies · Revenue up 11% year-on-year · Gross margin 62%, operating margin 19%",2026-05-17,auto
-TSM,4,3,5,4,3,3,Foundry monopoly on advanced nodes 3nm and 2nm · Revenue up 20% year-on-year,2026-05-17,auto
-TTWO,4,5,3,3,3,3,"Take-Two — GTA pipeline · Revenue up 25% year-on-year · Gross margin 56%, operating margin -2%",2026-05-17,auto
-TRGP,1,5,3,3,4,3,"Gathering and processing Permian Delaware · Revenue down 10% year-on-year · Gross margin 31%, operating margin 21%",2026-05-17,auto
-TRP,3,5,2,3,4,3,"Gas pipelines and power — Bruce Power · Revenue up 7% year-on-year · Gross margin 53%, operating margin 48%",2026-05-17,auto
-FTI,3,5,3,3,3,3,"Subsea — offshore wind and oil · Revenue up 12% year-on-year · Gross margin 23%, operating margin 14%",2026-05-17,auto
-TDOC,1,5,3,3,4,3,"Teladoc virtual care — profitability path · Revenue down 2% year-on-year · Gross margin 68%, operating margin -8%",2026-05-17,auto
-TDY,3,5,3,3,3,3,"Teledyne imaging instruments and defense · Revenue up 8% year-on-year · Gross margin 43%, operating margin 19%",2026-05-17,auto
-TSAT,1,5,2,3,5,3,"Telesat — LEO constellation development · Revenue down 27% year-on-year · Gross margin 93%, operating margin 7%",2026-05-17,auto
-TENB,3,5,3,4,3,5,"Exposure management and vulnerability scanning · Revenue up 10% year-on-year · Gross margin 78%, operating margin 4%",2026-05-17,auto
-TER,5,5,4,4,3,2,"Semiconductor test duopoly plus Universal Robots collaborative robotics · Revenue up 87% year-on-year · Gross margin 61%, operating margin 37%",2026-05-17,auto
-TXN,3,5,3,4,3,3,"Analog and embedded semis — broad industrial + auto exposure · Revenue up 19% year-on-year · Gross margin 58%, operating margin 38%",2026-05-17,auto
-TXT,3,5,3,3,3,4,"Bell aviation plus industrial and Textron Systems · Revenue up 12% year-on-year · Gross margin 18%, operating margin 6%",2026-05-17,auto
-HO.PA,3,3,3,3,3,4,Defence electronics radar and cybersecurity systems (Euronext Paris),2026-05-17,auto
-CI,2,3,3,3,4,5,Cigna Evernorth pharmacy benefits mix · Revenue up 5% year-on-year,2026-05-17,auto
-TTD,3,5,4,3,3,5,"Programmatic ads — CTV growth · Revenue up 12% year-on-year · Gross margin 74%, operating margin 10%",2026-05-17,auto
-WISE,3,3,3,3,3,2,Wise — cross-border transfers and hold,2026-05-17,auto
-TMO,3,5,3,3,3,4,"Life sciences tools and instruments — essential but heavily leveraged · Revenue up 6% year-on-year · Gross margin 40%, operating margin 17%",2026-05-17,auto
-TTE,2,5,3,3,4,5,"European major — LNG and renewables · Revenue up 3% year-on-year · Gross margin 38%, operating margin 21%",2026-05-17,auto
-TT,3,5,3,3,3,3,"HVAC and commercial climate systems · Revenue up 6% year-on-year · Gross margin 35%, operating margin 16%",2026-05-17,auto
-RIG,3,5,3,3,3,3,"Offshore drilling — day rates · Revenue up 19% year-on-year · Gross margin 87%, operating margin 26%",2026-05-17,auto
-TRMB,1,5,3,3,4,4,"Precision agriculture and construction positioning tech · Revenue down 1% year-on-year · Gross margin 72%, operating margin 22%",2026-05-17,auto
-TTMI,4,5,3,3,3,3,"PCB fabrication for networking and compute boards · Revenue up 30% year-on-year · Gross margin 21%, operating margin 9%",2026-05-17,auto
-TWST,3,5,4,3,3,3,"Twist Bioscience — DNA synthesis · Revenue up 19% year-on-year · Gross margin 52%, operating margin -35%",2026-05-17,auto
-UBER,3,5,3,4,3,4,"Mobility and delivery — profitability and autonomy · Revenue up 14% year-on-year · Gross margin 45%, operating margin 15%",2026-05-17,auto
-UCB.BR,3,3,4,2,3,4,Neurology and immunology pharma — Bimzelx (Brussels),2026-05-17,auto
-PATH,3,5,5,4,3,5,"RPA plus process mining — enterprise automation · Revenue up 14% year-on-year · Gross margin 85%, operating margin 17%",2026-05-17,auto
-UNP,2,5,3,3,4,4,"Western US rail — pricing and efficiency · Revenue up 3% year-on-year · Gross margin 45%, operating margin 40%",2026-05-17,auto
-UAL,3,5,2,3,4,5,"Airline — transatlantic and Pacific mix · Revenue up 11% year-on-year · Gross margin 25%, operating margin 4%",2026-05-17,auto
-UPS,1,3,3,3,4,4,Parcel logistics — yield and union contract · Revenue down 3% year-on-year,2026-05-17,auto
-UNH,2,5,3,3,4,4,"UnitedHealthcare plus Optum vertical integration · Revenue up 2% year-on-year · Gross margin 23%, operating margin 8%",2026-05-17,auto
-U,3,1,3,4,3,3,"Unity — game engine and ads · Revenue up 17% year-on-year · Gross margin 31%, operating margin -69%",2026-05-17,auto
-OLED,1,5,4,3,4,4,"Universal display materials — OLED emitter chemistry · Revenue down 14% year-on-year · Gross margin 75%, operating margin 30%",2026-05-17,auto
-UEIC,1,5,3,3,5,5,"Universal remotes and smart home control chips · Revenue down 21% year-on-year · Gross margin 30%, operating margin 1%",2026-05-17,auto
-URG,1,1,4,2,5,3,"ISR uranium producer — small cap volatility · Revenue down 54% year-on-year · Gross margin 14%, operating margin -172%",2026-05-17,auto
-UEC,1,1,4,2,5,3,"US ISR uranium developer — spot price leverage · Revenue down 59% year-on-year · Gross margin 50%, operating margin -116%",2026-05-17,auto
-VAL,1,5,3,3,5,4,"Offshore drilling — fleet quality · Revenue down 25% year-on-year · Gross margin 11%, operating margin 6%",2026-05-17,auto
-VLO,3,5,3,3,3,4,"Independent refiner — renewable diesel projects · Revenue up 7% year-on-year · Gross margin 6%, operating margin 5%",2026-05-17,auto
-VMI,3,5,3,3,3,4,"Valmont infrastructure irrigation poles · Revenue up 6% year-on-year · Gross margin 31%, operating margin 15%",2026-05-17,auto
-VAT.SW,3,3,3,3,3,3,Vacuum valves for semiconductor fabs — monopoly niche (Swiss),2026-05-17,auto
-VEEV,3,5,5,3,3,4,"Cloud software for pharma and life sciences — quality SaaS compounder · Revenue up 16% year-on-year · Gross margin 74%, operating margin 29%",2026-05-17,auto
-VZ,2,5,2,3,4,5,"Wireless duopoly — dividend yield play · Revenue up 3% year-on-year · Gross margin 60%, operating margin 24%",2026-05-17,auto
-VRTX,3,5,4,2,3,3,"Cystic fibrosis franchise and pipeline diversification into pain · Revenue up 8% year-on-year · Gross margin 87%, operating margin 38%",2026-05-17,auto
-VRT,4,5,3,3,3,2,"Power and cooling for AI racks and data centres · Revenue up 30% year-on-year · Gross margin 38%, operating margin 16%",2026-05-17,auto
-VERV,3,3,3,3,3,3,Cardiovascular gene editing,2026-05-17,auto
-VWS.CO,3,5,4,3,3,4,"Wind turbine manufacturer — global leader (Copenhagen) · Revenue up 14% year-on-year · Gross margin 12%, operating margin 3%",2026-05-17,auto
-VSAT,2,5,3,3,4,1,"Viasat — satellite broadband and Inmarsat integration · Revenue up 3% year-on-year · Gross margin 33%, operating margin 2%",2026-05-17,auto
-SPCE,1,1,3,3,5,3,"Suborbital tourism — cash burn and commercialization risk · Revenue down 27% year-on-year · Gross margin -5746%, operating margin -19483%",2026-05-17,auto
-VSH,3,5,3,4,3,3,"Diodes resistors inductors — passive components · Revenue up 12% year-on-year · Gross margin 20%, operating margin 2%",2026-05-17,auto
-VPG,3,5,4,3,3,2,"Vishay precision foil resistors — metrology niche · Revenue up 11% year-on-year · Gross margin 37%, operating margin 2%",2026-05-17,auto
-VST,5,5,3,4,3,4,"Nuclear and gas fleet benefiting from AI-driven power demand · Revenue up 43% year-on-year · Gross margin 43%, operating margin 27%",2026-05-17,auto
-VOYG,3,3,3,3,3,3,Voyager Technologies — defense and space systems,2026-05-17,auto
-DIS,3,3,3,3,3,4,Media parks and streaming — ESPN option · Revenue up 5% year-on-year,2026-05-17,auto
-WM,2,5,3,3,4,3,"Waste — landfill gas and recycling · Revenue up 3% year-on-year · Gross margin 41%, operating margin 18%",2026-05-17,auto
-WAT,3,3,3,3,3,3,Waters — biologics QA and LC-MS · Revenue up 7% year-on-year,2026-05-17,auto
-WSO,1,3,4,3,4,3,HVAC distribution scale — North America residential mix · Revenue down 10% year-on-year,2026-05-17,auto
-WEC,3,3,3,4,3,4,Regulated electric and gas utility · Revenue up 11% year-on-year,2026-05-17,auto
-WFC,3,3,1,3,4,5,Retail bank turnaround — expense and asset cap · Revenue up 6% year-on-year,2026-05-17,auto
-WES,3,5,3,3,3,4,"Western Midstream — Permian G&P · Revenue up 11% year-on-year · Gross margin 74%, operating margin 28%",2026-05-17,auto
-WAB,3,5,3,3,3,3,"Wabtec rail and freight electronics · Revenue up 13% year-on-year · Gross margin 36%, operating margin 18%",2026-05-17,auto
-WMB,1,5,3,3,4,3,"Gas gathering and processing — Gulf exposure · Revenue down 1% year-on-year · Gross margin 62%, operating margin 38%",2026-05-17,auto
-WOLF,3,1,3,4,3,3,"SiC substrates and devices — EV and power switching · Gross margin -46%, operating margin -81%",2026-05-17,auto
-WWD,4,5,3,3,3,3,"Woodward aircraft and industrial actuation controls · Revenue up 23% year-on-year · Gross margin 29%, operating margin 15%",2026-05-17,auto
-WDAY,3,5,4,4,3,5,"Workday HCM and financials cloud ERP · Revenue up 15% year-on-year · Gross margin 76%, operating margin 12%",2026-05-17,auto
-WS1V.HE,3,3,3,3,3,3,WithSecure endpoint and cloud security — formerly F-Secure (Helsinki),2026-05-17,auto
-XFAB.PA,2,1,3,4,4,3,"Specialty analog and mixed-signal foundry (Euronext Paris) · Revenue up 4% year-on-year · Gross margin 16%, operating margin -0%",2026-05-17,auto
-XEL,2,5,2,4,4,4,"Regulated electric utility and grid · Revenue up 3% year-on-year · Gross margin 45%, operating margin 18%",2026-05-17,auto
-XYL,2,5,3,3,4,4,"Xylem water infrastructure — acquisition synergies · Revenue up 3% year-on-year · Gross margin 38%, operating margin 13%",2026-05-17,auto
-ZBRA,3,5,3,3,3,4,"Zebra mobile computing and RFID tracking · Revenue up 11% year-on-year · Gross margin 47%, operating margin 15%",2026-05-17,auto
-ZI,3,3,3,3,3,3,ZoomInfo go-to-market data — privacy/reg risk,2026-05-17,auto
-ZBH,3,5,3,3,3,5,"Zimmer Biomed — robotics knee mix · Revenue up 9% year-on-year · Gross margin 72%, operating margin 19%",2026-05-17,auto
-ZS,4,5,4,4,3,2,"Zero-trust SSE and SASE cloud security · Revenue up 26% year-on-year · Gross margin 77%, operating margin -6%",2026-05-17,auto
+MMM,2,5,3,3,4,4,"Industrial materials — litigation and spin focus · Revenue up 1% year-on-year · Gross margin 41%, operating margin 23%",2026-05-28,auto
+AOS,1,5,3,3,4,4,"Water heaters and boilers — residential cycle · Revenue down 2% year-on-year · Gross margin 39%, operating margin 17%",2026-05-28,auto
+ABB,3,3,3,3,3,3,Robotics drives and electrification technology (NYSE),2026-05-28,auto
+ABT,3,5,3,3,3,4,"Devices plus diagnostics — Libre and structural heart · Revenue up 8% year-on-year · Gross margin 56%, operating margin 12%",2026-05-28,auto
+IBE.MC,1,5,3,4,5,4,"Worlds largest renewables operator by capacity (Madrid) · Revenue down 46% year-on-year · Gross margin 53%, operating margin 22%",2026-05-28,auto
+ACMR,4,5,5,4,3,2,"ACM Research China WFE — geopolitical listing risk · Revenue up 34% year-on-year · Gross margin 46%, operating margin 16%",2026-05-28,auto
+ADBE,3,5,4,4,3,5,"Creative and document AI — Firefly monetisation · Revenue up 12% year-on-year · Gross margin 90%, operating margin 38%",2026-05-28,auto
+AMD,4,5,4,4,3,2,"CPUs GPUs and AI data-centre share story · Revenue up 38% year-on-year · Gross margin 53%, operating margin 14%",2026-05-28,auto
+ADYEN,3,3,3,3,3,3,Adyen — unified commerce payments EU,2026-05-28,auto
+AEHR,1,1,4,4,5,1,"Aehr wafer-level burn-in for SiC reliability · Revenue down 44% year-on-year · Gross margin 33%, operating margin -41%",2026-05-28,auto
+AFRM,4,5,3,3,3,4,"BNPL — credit loss and funding cost sensitivity · Revenue up 33% year-on-year · Gross margin 66%, operating margin 19%",2026-05-28,auto
+A,3,5,3,3,3,4,"Agilent instruments and diagnostics services · Revenue up 7% year-on-year · Gross margin 53%, operating margin 20%",2026-05-28,auto
+ABNB,3,5,4,3,3,3,"Travel marketplace — supply and regulation · Revenue up 18% year-on-year · Gross margin 78%, operating margin 3%",2026-05-28,auto
+AIR.PA,1,5,4,3,4,3,"Aerospace and defence — commercial and military aircraft (Euronext Paris) · Revenue down 7% year-on-year · Gross margin 12%, operating margin 1%",2026-05-28,auto
+EADSY,1,5,4,3,4,3,"Airbus ADR — commercial jet backlog and helicopter mix · Revenue down 7% year-on-year · Gross margin 12%, operating margin 1%",2026-05-28,auto
+AIXA.DE,1,1,4,4,5,2,"MOCVD deposition for compound semiconductors (Xetra) · Revenue down 74% year-on-year · Gross margin 18%, operating margin -38%",2026-05-28,auto
+ALFA.ST,1,5,3,3,4,3,"Heat transfer separation and fluid handling (Stockholm) · Revenue down 13% year-on-year · Gross margin 39%, operating margin 17%",2026-05-28,auto
+BABA,2,1,4,4,4,4,"China cloud and commerce — regulatory overhang · Revenue up 3% year-on-year · Gross margin 35%, operating margin -0%",2026-05-28,auto
+ALGN,3,5,4,3,3,4,"Align Invisalign — consumer discretionary sensitivity · Revenue up 6% year-on-year · Gross margin 71%, operating margin 17%",2026-05-28,auto
+ALLE,3,5,3,3,3,4,"Allegion security hardware — commercial doors · Revenue up 10% year-on-year · Gross margin 44%, operating margin 19%",2026-05-28,auto
+AOSL,1,5,4,4,4,3,"Power discretes and small-signal — diversified semi · Revenue down 1% year-on-year · Gross margin 21%, operating margin -9%",2026-05-28,auto
+AMZN,3,5,3,4,3,3,"AWS and retail — hyperscaler capex and AI services optionality · Revenue up 17% year-on-year · Gross margin 52%, operating margin 13%",2026-05-28,auto
+AEP,3,5,3,4,3,4,"Regulated utility — transmission investment · Revenue up 10% year-on-year · Gross margin 58%, operating margin 23%",2026-05-28,auto
+AWK,3,5,3,4,3,4,"Regulated water utility — infrastructure replacement · Revenue up 6% year-on-year · Gross margin 59%, operating margin 32%",2026-05-28,auto
+AME,3,5,3,3,3,3,"Ametek precision instruments and power · Revenue up 11% year-on-year · Gross margin 37%, operating margin 27%",2026-05-28,auto
+AMGN,3,5,3,3,3,4,"Biosimilars Repatha and MariTide GLP-1 pipeline — high leverage · Revenue up 6% year-on-year · Gross margin 68%, operating margin 31%",2026-05-28,auto
+AMKR,4,5,4,4,3,3,"Advanced chip packaging and test — 2.5D and 3D stacking · Revenue up 27% year-on-year · Gross margin 14%, operating margin 6%",2026-05-28,auto
+APH,5,5,3,3,3,3,"Interconnect for harsh environments — data centre cabling · Revenue up 58% year-on-year · Gross margin 37%, operating margin 26%",2026-05-28,auto
+ADI,4,5,3,4,3,3,"High-performance analog and mixed signal for data paths · Revenue up 37% year-on-year · Gross margin 67%, operating margin 38%",2026-05-28,auto
+ANGO,3,5,4,3,3,3,"AngioDynamics — med devices vascular access · Revenue up 9% year-on-year · Gross margin 53%, operating margin -8%",2026-05-28,auto
+APLD,5,5,3,3,3,3,"HPC and data-centre hosting — AI-adjacent play · Revenue up 139% year-on-year · Gross margin 42%, operating margin -20%",2026-05-28,auto
+AMAT,3,5,4,4,3,3,"Deposition etch and broad process equipment · Revenue up 11% year-on-year · Gross margin 50%, operating margin 32%",2026-05-28,auto
+APP,5,5,3,3,3,3,"AppLovin — mobile ad tech and AI · Revenue up 59% year-on-year · Gross margin 89%, operating margin 78%",2026-05-28,auto
+ARGX.BR,5,5,4,2,3,3,"Autoimmune biotech — Vyvgart (Brussels — also NASDAQ) · Revenue up 64% year-on-year · Gross margin 91%, operating margin 30%",2026-05-28,auto
+ANET,4,5,4,3,3,3,"Data-centre switching for AI clusters · Revenue up 35% year-on-year · Gross margin 62%, operating margin 43%",2026-05-28,auto
+ARM,4,5,4,4,3,1,"Chip architecture licensing for AI inference across all devices · Revenue up 20% year-on-year · Gross margin 98%, operating margin 30%",2026-05-28,auto
+ARQQ,3,3,4,4,3,3,Quantum encryption software small cap,2026-05-28,auto
+ARRY,1,5,3,3,5,5,"Utility-scale solar tracking — revenue declining; thesis under pressure · Revenue down 26% year-on-year · Gross margin 28%, operating margin 2%",2026-05-28,auto
+ASM.AS,3,5,4,4,3,3,"ALD and CVD deposition equipment for advanced chips (Amsterdam) · Revenue up 7% year-on-year · Gross margin 53%, operating margin 32%",2026-05-28,auto
+ASML,3,5,4,4,3,3,"EUV lithography monopoly — every advanced chip passes through ASML · Revenue up 13% year-on-year · Gross margin 53%, operating margin 36%",2026-05-28,auto
+ASTS,5,1,4,3,3,3,"AST SpaceMobile — direct-to-cell satellite broadband · Revenue up 1952% year-on-year · Gross margin 21%, operating margin -1014%",2026-05-28,auto
+ALAB,5,5,4,4,3,1,"AI data centre connectivity — PCIe retimers and smart cable modules · Revenue up 93% year-on-year · Gross margin 76%, operating margin 20%",2026-05-28,auto
+AZN,3,5,3,3,3,3,"Oncology and immunology pipeline — UK-listed dual NYSE (NASDAQ ADR) · Revenue up 13% year-on-year · Gross margin 82%, operating margin 28%",2026-05-28,auto
+ATRO,3,5,3,3,3,3,"Astronics — aircraft lighting and power distribution · Revenue up 12% year-on-year · Gross margin 33%, operating margin 12%",2026-05-28,auto
+T,2,5,2,3,4,5,"Telco — fibre and wireless cash flow · Revenue up 4% year-on-year · Gross margin 56%, operating margin 18%",2026-05-28,auto
+ATCO-A.ST,1,5,3,3,4,3,"Compressors vacuum and power tools — Swedish industrial (Stockholm) · Revenue down 12% year-on-year · Gross margin 42%, operating margin 20%",2026-05-28,auto
+TEAM,4,5,3,4,3,4,"Atlassian — dev collaboration software · Revenue up 32% year-on-year · Gross margin 85%, operating margin -3%",2026-05-28,auto
+ATO,2,5,3,4,4,4,"Texas gas distribution — rate base growth · Revenue up 1% year-on-year · Gross margin 56%, operating margin 39%",2026-05-28,auto
+AVIO.MI,3,5,5,3,3,1,"Avio — space propulsion and launch systems (Borsa Italiana) · Gross margin 1234%, operating margin 60%",2026-05-28,auto
+ACLS,2,5,4,4,4,3,"Axcelis ion implant equipment for WFE · Revenue up 3% year-on-year · Gross margin 41%, operating margin 4%",2026-05-28,auto
+BANB.SW,3,3,3,2,3,3,Peptide CDMO — critical GLP-1 supply chain node (Swiss),2026-05-28,auto
+BAESY,3,3,3,3,3,3,UK defense prime — electronic systems and US exposure,2026-05-28,auto
+BA.L,3,3,3,3,3,3,Defence electronics cyber and space systems (LSE),2026-05-28,auto
+BKR,2,5,3,3,4,3,"LNG equipment and OFS diversification · Revenue up 2% year-on-year · Gross margin 23%, operating margin 12%",2026-05-28,auto
+BAC,3,3,4,3,3,5,Consumer and commercial bank — rate sensitivity · Revenue up 7% year-on-year,2026-05-28,auto
+B,5,5,4,3,3,5,"Barrick Mining — gold and copper producer (NYSE: B) · Revenue up 67% year-on-year · Gross margin 60%, operating margin 57%",2026-05-28,auto
+BAX,2,5,2,3,4,5,"MedSurg and pharmaceuticals hospital supply chain · Revenue up 3% year-on-year · Gross margin 33%, operating margin 2%",2026-05-28,auto
+BESI.AS,4,5,4,4,3,2,"Die bonding and advanced packaging equipment (Amsterdam) · Revenue up 21% year-on-year · Gross margin 63%, operating margin 35%",2026-05-28,auto
+BEAM,5,1,5,2,3,3,Base editing — delivery and pipeline · Revenue up 325% year-on-year · Operating margin -338%,2026-05-28,auto
+BRK-B,1,5,5,3,4,3,Conglomerate — insurance float and industrials · Revenue down 9% year-on-year · Operating margin 15%,2026-05-28,auto
+TECH,1,5,3,2,4,3,"Bio-Techne reagents — biologics tools recurring · Revenue down 2% year-on-year · Gross margin 67%, operating margin 24%",2026-05-28,auto
+BIIB,2,5,3,3,4,5,"Neuroscience and biosimilars — Leqembi and franchise resets · Revenue up 2% year-on-year · Gross margin 73%, operating margin 19%",2026-05-28,auto
+BNTX,1,1,5,2,5,3,"BioNTech oncology plus Pfizer partnership economics · Revenue down 35% year-on-year · Gross margin 40%, operating margin -568%",2026-05-28,auto
+BLK,4,5,3,3,3,4,"Asset management — ETF and aladdin platform · Revenue up 27% year-on-year · Gross margin 48%, operating margin 34%",2026-05-28,auto
+BKSY,1,1,3,3,5,3,"BlackSky — geospatial intelligence satellites · Revenue down 30% year-on-year · Gross margin 65%, operating margin -89%",2026-05-28,auto
+BE,5,5,3,3,3,1,"Fuel cells and electrolyzers — cash burn risk · Revenue up 130% year-on-year · Gross margin 30%, operating margin 10%",2026-05-28,auto
+BA,3,5,3,3,3,2,"Commercial aerospace duopoly — delivery ramp and balance sheet · Revenue up 14% year-on-year · Gross margin 11%, operating margin 2%",2026-05-28,auto
+BKNG,3,5,3,3,3,4,Online travel — take rate and alternative accommodation · Revenue up 16% year-on-year · Operating margin 23%,2026-05-28,auto
+BSX,3,5,3,3,3,4,"Structural heart devices WATCHMAN and cardiology tech · Revenue up 12% year-on-year · Gross margin 69%, operating margin 21%",2026-05-28,auto
+BP,3,5,3,3,3,5,"Integrated oil — transition spend and yield · Revenue up 11% year-on-year · Gross margin 24%, operating margin 15%",2026-05-28,auto
+BMY,2,5,3,3,4,5,"Oncology IO — patent cliffs and M&A · Revenue up 3% year-on-year · Gross margin 70%, operating margin 29%",2026-05-28,auto
+BRKS,3,3,3,3,3,3,Brooks automation cryogenics and vacuum,2026-05-28,auto
+AVGO,4,5,3,4,3,3,"Networking and custom silicon for AI and cloud · Revenue up 29% year-on-year · Gross margin 68%, operating margin 45%",2026-05-28,auto
+BIP,3,5,1,4,4,3,"Brookfield Infrastructure — toll roads utilities pipelines · Revenue up 17% year-on-year · Gross margin 27%, operating margin 25%",2026-05-28,auto
+BEP,1,5,1,4,5,3,"Brookfield Renewable yieldCo — hydro wind solar mix · Revenue down 4% year-on-year · Gross margin 49%, operating margin 8%",2026-05-28,auto
+BWXT,4,5,3,3,3,2,"Naval reactors and nuclear components — defense mix · Revenue up 26% year-on-year · Gross margin 23%, operating margin 10%",2026-05-28,auto
+CDNS,3,5,3,4,3,2,"EDA software duopoly — essential for chip design complexity · Revenue up 19% year-on-year · Gross margin 85%, operating margin 29%",2026-05-28,auto
+CCJ,3,5,4,2,3,1,"Uranium mining and nuclear fuel supply — long-term contracts · Revenue up 7% year-on-year · Gross margin 36%, operating margin 19%",2026-05-28,auto
+CAMT,2,5,4,4,4,2,"Camtek inspection for advanced packaging · Revenue up 3% year-on-year · Gross margin 50%, operating margin 22%",2026-05-28,auto
+CNI,1,5,3,3,4,4,"Canadian National — precision railroading · Revenue down 1% year-on-year · Gross margin 40%, operating margin 35%",2026-05-28,auto
+CP,1,5,3,3,4,3,"Canadian Pacific Kansas City merger synergies · Revenue down 2% year-on-year · Gross margin 34%, operating margin 34%",2026-05-28,auto
+AFX.DE,3,5,3,3,3,4,"Ophthalmic surgical devices and microsurgery (Xetra) · Revenue up 8% year-on-year · Gross margin 53%, operating margin 11%",2026-05-28,auto
+CCL,3,5,3,3,3,5,"Cruise recovery — leverage and yields · Revenue up 6% year-on-year · Gross margin 36%, operating margin 10%",2026-05-28,auto
+CARR,2,5,3,3,4,3,"HVAC and refrigeration — heat pump tailwind · Revenue up 2% year-on-year · Gross margin 23%, operating margin 4%",2026-05-28,auto
+CAT,4,5,3,3,3,3,"Heavy machinery and services attach · Revenue up 22% year-on-year · Gross margin 33%, operating margin 18%",2026-05-28,auto
+CNC,3,5,5,3,3,4,"Centene Medicaid exposure — state budget cycles · Revenue up 7% year-on-year · Gross margin 11%, operating margin 4%",2026-05-28,auto
+CNA.L,3,3,5,4,3,4,British Gas parent — UK retail energy and nuclear (LSE),2026-05-28,auto
+LEU,2,5,5,2,4,2,"Uranium conversion and HALEU — policy sensitive · Revenue up 5% year-on-year · Gross margin 41%, operating margin 1%",2026-05-28,auto
+CBRS,3,3,4,4,3,1,Ciber / verify — IT services and security,2026-05-28,auto
+CFLT,3,3,3,3,3,3,Streaming data platform — real-time pipelines,2026-05-28,auto
+SCHW,3,3,5,3,3,5,Retail brokerage — rate on cash balances · Revenue up 16% year-on-year,2026-05-28,auto
+CHKP,2,5,4,4,4,5,"Mature firewall and subscription security — cash generative · Revenue up 5% year-on-year · Gross margin 85%, operating margin 28%",2026-05-28,auto
+LNG,3,1,3,3,3,5,"Cheniere LNG export tolling — long-term contracts · Revenue up 8% year-on-year · Gross margin -57%, operating margin -59%",2026-05-28,auto
+CVX,2,5,3,3,4,4,"Integrated oil — cash returns and LNG optionality · Revenue up 3% year-on-year · Gross margin 28%, operating margin 7%",2026-05-28,auto
+CRUS,3,5,4,4,3,4,"Audio and high-precision mixed-signal for consumer and auto · Revenue up 6% year-on-year · Gross margin 53%, operating margin 20%",2026-05-28,auto
+NET,4,5,4,4,3,1,"Edge security CDN and zero-trust networking — developer ecosystem · Revenue up 34% year-on-year · Gross margin 71%, operating margin -10%",2026-05-28,auto
+CME,3,5,3,3,3,3,"Derivatives clearing — vol and rates volume · Revenue up 14% year-on-year · Gross margin 88%, operating margin 70%",2026-05-28,auto
+CGNX,4,5,4,3,3,2,"Machine vision for factory automation — deep learning edge · Revenue up 24% year-on-year · Gross margin 71%, operating margin 22%",2026-05-28,auto
+COHR,4,5,3,3,3,2,"Optical interconnects and transceivers for AI data centre fabrics · Revenue up 21% year-on-year · Gross margin 38%, operating margin 13%",2026-05-28,auto
+COHU,4,5,4,4,3,2,"Cohu handler and test interface equipment · Revenue up 29% year-on-year · Gross margin 46%, operating margin -8%",2026-05-28,auto
+COIN,1,5,4,3,5,2,"Crypto exchange — regulatory and volume cyclicality · Revenue down 31% year-on-year · Gross margin 70%, operating margin 1%",2026-05-28,auto
+COLO-B.CO,2,5,3,3,4,4,"Ostomy continence and wound care devices (Copenhagen) · Revenue up 1% year-on-year · Gross margin 67%, operating margin 26%",2026-05-28,auto
+CMCSA,3,5,2,3,4,5,"Cable broadband — capital return focus · Revenue up 5% year-on-year · Gross margin 65%, operating margin 13%",2026-05-28,auto
+COP,1,5,3,3,4,4,"US shale plus Alaska — production growth discipline · Revenue down 5% year-on-year · Gross margin 27%, operating margin 21%",2026-05-28,auto
+ED,3,5,3,4,3,4,"NYC-centric wires — dense load pocket · Revenue up 6% year-on-year · Gross margin 55%, operating margin 24%",2026-05-28,auto
+CEG,5,5,3,4,3,3,"Independent power and nuclear-heavy angle · Revenue up 64% year-on-year · Gross margin 27%, operating margin 20%",2026-05-28,auto
+CRWV,5,5,3,4,3,3,"CoreWeave — GPU cloud for AI workloads · Revenue up 112% year-on-year · Gross margin 66%, operating margin -7%",2026-05-28,auto
+GLW,4,5,3,3,3,2,"Corning — optical fibre and display glass for DC builds · Revenue up 20% year-on-year · Gross margin 37%, operating margin 15%",2026-05-28,auto
+CPNG,3,5,4,4,3,2,"Korea e-commerce — logistics and margin path · Revenue up 8% year-on-year · Gross margin 27%, operating margin -3%",2026-05-28,auto
+CRSP,3,1,5,2,3,3,"CRISPR — sickle cell and oncology · Gross margin -4495%, operating margin -13025%",2026-05-28,auto
+CRWD,4,5,4,4,3,1,"Endpoint and cloud workload protection leader · Revenue up 23% year-on-year · Gross margin 76%, operating margin 1%",2026-05-28,auto
+CSX,2,5,3,3,4,3,"Eastern rail — industrial and intermodal · Revenue up 2% year-on-year · Gross margin 36%, operating margin 36%",2026-05-28,auto
+CMI,2,5,3,3,4,3,"Cummins engines plus Accelera hydrogen bet · Revenue up 3% year-on-year · Gross margin 27%, operating margin 12%",2026-05-28,auto
+CVS,3,5,3,3,3,5,"Retail pharmacy plus Aetna — reimbursement pressure · Revenue up 6% year-on-year · Gross margin 16%, operating margin 5%",2026-05-28,auto
+CYBR,3,3,3,3,3,3,Privileged access management — identity security,2026-05-28,auto
+QBTS,1,1,4,3,5,3,"D-Wave annealing and quantum systems · Revenue down 81% year-on-year · Gross margin 64%, operating margin -1915%",2026-05-28,auto
+DHR,2,5,3,3,4,4,"Life sciences tools plus industrial diagnostics · Revenue up 4% year-on-year · Gross margin 60%, operating margin 23%",2026-05-28,auto
+DSY.PA,1,5,4,4,4,4,"3DEXPERIENCE industrial software platform (Euronext Paris) · Revenue down 4% year-on-year · Gross margin 84%, operating margin 23%",2026-05-28,auto
+DDOG,4,5,4,4,3,1,"Observability and cloud security telemetry · Revenue up 32% year-on-year · Gross margin 79%, operating margin 1%",2026-05-28,auto
+SRE,1,5,3,4,4,4,"Sempra — LNG and California utilities · Revenue down 4% year-on-year · Gross margin 53%, operating margin 30%",2026-05-28,auto
+DE,3,3,3,3,3,3,Agricultural equipment and precision ag software · Revenue up 13% year-on-year,2026-05-28,auto
+QTUM,3,3,3,3,3,2,WisdomTree Quantum Computing ETF — basket exposure,2026-05-28,auto
+DAL,3,5,3,3,3,5,"Airline — corporate travel and fleet · Revenue up 13% year-on-year · Gross margin 19%, operating margin 3%",2026-05-28,auto
+DEMANT.CO,3,3,3,3,3,4,Hearing aids and audiological instruments (Copenhagen),2026-05-28,auto
+DNN,1,1,3,2,5,3,"ISR uranium developer — pre-production · Revenue down 20% year-on-year · Gross margin -32%, operating margin -2061%",2026-05-28,auto
+XRAY,2,5,2,3,4,5,"Dentsply Sirona dental equipment — channel inventory · Revenue up 0% year-on-year · Gross margin 49%, operating margin 3%",2026-05-28,auto
+DVN,1,5,3,3,4,5,"Delaware Basin oil — variable dividend framework · Revenue down 14% year-on-year · Gross margin 12%, operating margin 8%",2026-05-28,auto
+DXCM,3,5,4,3,3,3,"Continuous glucose monitoring — G7 and Stelo platforms · Revenue up 15% year-on-year · Gross margin 63%, operating margin 21%",2026-05-28,auto
+FANG,2,5,3,3,4,5,"Permian pure-play — shareholder returns focus · Revenue up 4% year-on-year · Gross margin 38%, operating margin 36%",2026-05-28,auto
+DIOD,4,5,4,4,3,3,"Discrete and analog components — broad cyclical semi · Revenue up 22% year-on-year · Gross margin 32%, operating margin 5%",2026-05-28,auto
+D,4,5,2,4,4,4,"Dominion — Virginia data centre load · Revenue up 23% year-on-year · Gross margin 44%, operating margin 27%",2026-05-28,auto
+DASH,4,5,4,4,3,3,"DoorDash — delivery take-rate and ads · Revenue up 33% year-on-year · Gross margin 51%, operating margin 5%",2026-05-28,auto
+DOV,3,5,3,3,3,4,"Diversified industrial pumps and fueling · Revenue up 10% year-on-year · Gross margin 39%, operating margin 15%",2026-05-28,auto
+DRX.L,3,3,3,4,3,4,UK biomass and flexible generation (LSE),2026-05-28,auto
+DUK,3,5,2,4,4,4,"Large regulated electric footprint · Revenue up 11% year-on-year · Gross margin 49%, operating margin 26%",2026-05-28,auto
+DT,3,5,4,4,3,4,"Dynatrace observability — enterprise APM · Revenue up 19% year-on-year · Gross margin 81%, operating margin 11%",2026-05-28,auto
+ETN,3,5,3,3,3,3,"Electrical gear and power management for data centres · Revenue up 17% year-on-year · Gross margin 36%, operating margin 16%",2026-05-28,auto
+SATS,1,5,2,3,5,3,"EchoStar / satellite connectivity — verify segment mix · Revenue down 5% year-on-year · Gross margin 31%, operating margin 9%",2026-05-28,auto
+EIX,3,5,1,4,4,5,"California utility — wildfire mitigation · Revenue up 8% year-on-year · Gross margin 52%, operating margin 26%",2026-05-28,auto
+EDIT,1,1,5,2,5,3,Gene editing — ocular and liver · Revenue down 39% year-on-year · Operating margin -883%,2026-05-28,auto
+EDPR.LS,3,5,3,4,3,3,"EDP Renovaveis — pure-play renewables developer (Lisbon) · Gross margin 84%, operating margin -34%",2026-05-28,auto
+EDP.LS,1,5,2,4,5,4,"Portuguese utility and renewables (Lisbon) · Revenue down 1% year-on-year · Gross margin 40%, operating margin 16%",2026-05-28,auto
+EW,3,5,4,3,3,3,"Transcatheter heart valves TAVR leader — structural growth · Revenue up 17% year-on-year · Gross margin 78%, operating margin 31%",2026-05-28,auto
+ESTC,3,5,4,4,3,4,"Search analytics security SIEM competitor set · Revenue up 18% year-on-year · Gross margin 76%, operating margin 0%",2026-05-28,auto
+ESLT,3,5,4,3,3,2,"Elbit Systems — defense electronics Israel and export · Revenue up 15% year-on-year · Gross margin 25%, operating margin 9%",2026-05-28,auto
+EA,3,5,4,3,3,3,"Video games — live services · Revenue up 12% year-on-year · Gross margin 83%, operating margin 27%",2026-05-28,auto
+ELV,2,5,4,3,4,4,Anthem rebrand — commercial and gov mix · Revenue up 3% year-on-year · Operating margin 5%,2026-05-28,auto
+LLY,5,5,3,3,3,3,"GLP-1 dominance (Mounjaro/Zepbound) and oncology pipeline · Revenue up 56% year-on-year · Gross margin 82%, operating margin 49%",2026-05-28,auto
+EMR,2,5,3,3,4,4,"Automation and climate-industrial mix · Revenue up 3% year-on-year · Gross margin 53%, operating margin 20%",2026-05-28,auto
+ENB,4,5,2,3,4,3,"Canadian midstream — Mainline tolls · Revenue up 21% year-on-year · Gross margin 26%, operating margin 14%",2026-05-28,auto
+ENEL.MI,1,5,3,4,4,4,"Italian utility and renewables developer (Milan) · Revenue down 2% year-on-year · Gross margin 56%, operating margin 11%",2026-05-28,auto
+UUUU,5,1,4,2,3,1,"ISR uranium plus rare earths optionality · Revenue up 112% year-on-year · Gross margin 40%, operating margin -41%",2026-05-28,auto
+ET,4,5,2,3,4,4,"Midstream pipelines; check UK ISA tax treatment · Revenue up 32% year-on-year · Gross margin 18%, operating margin 11%",2026-05-28,auto
+ENGI.PA,3,3,2,4,4,4,French utility gas and renewables (Euronext Paris),2026-05-28,auto
+ENPH,1,5,4,3,5,3,"Residential solar inverters — cycle downturn hit hard · Revenue down 21% year-on-year · Gross margin 35%, operating margin -9%",2026-05-28,auto
+ENTG,3,5,3,4,3,3,"Materials purity for wafer fabs and advanced packaging · Revenue up 5% year-on-year · Gross margin 47%, operating margin 17%",2026-05-28,auto
+EPD,1,5,3,3,4,4,"MLP — NGL exports and storage · Revenue down 7% year-on-year · Gross margin 13%, operating margin 13%",2026-05-28,auto
+EOG,3,5,3,3,3,5,"Premier shale operator — returns over growth · Revenue up 16% year-on-year · Gross margin 66%, operating margin 37%",2026-05-28,auto
+EPIR.ST,3,3,3,3,3,3,Mining equipment automation and digital services (Stockholm),2026-05-28,auto
+EQNR,1,5,3,3,4,5,"Norway state oil — dividend policy · Revenue down 5% year-on-year · Gross margin 44%, operating margin 32%",2026-05-28,auto
+WTRG,3,5,2,4,4,4,"Essential utilities water gas electric bundle · Revenue up 10% year-on-year · Gross margin 52%, operating margin 36%",2026-05-28,auto
+ETL.PA,3,3,3,3,3,3,Eutelsat — satellite communications and GEO/LEO (Paris),2026-05-28,auto
+ES,3,5,2,4,4,4,"New England utility — offshore wind stakes · Revenue up 9% year-on-year · Gross margin 89%, operating margin 24%",2026-05-28,auto
+MRAM,3,5,4,4,3,1,"Everspin MRAM — persistent memory niche · Revenue up 13% year-on-year · Gross margin 53%, operating margin -18%",2026-05-28,auto
+EXAS,3,3,3,3,3,3,Exact Sciences CRC screening — guideline adoption,2026-05-28,auto
+EXC,3,5,2,4,4,4,"Nuclear-heavy utility — PJM exposure · Revenue up 8% year-on-year · Gross margin 41%, operating margin 22%",2026-05-28,auto
+EXPE,3,5,4,3,3,5,"OTA — B2B and loyalty recovery · Revenue up 15% year-on-year · Gross margin 89%, operating margin 7%",2026-05-28,auto
+FAST,3,5,3,3,3,3,"Fastenal vending and onsite inventory · Revenue up 12% year-on-year · Gross margin 45%, operating margin 20%",2026-05-28,auto
+FDX,3,5,3,3,3,4,"Express and freight — DRIVE cost program · Revenue up 8% year-on-year · Gross margin 21%, operating margin 7%",2026-05-28,auto
+FI,3,3,3,3,3,3,Fiserv — merchant acquiring and issuer processing,2026-05-28,auto
+FIS,4,5,2,3,4,5,"Banking and capital markets technology · Revenue up 30% year-on-year · Gross margin 34%, operating margin 16%",2026-05-28,auto
+FLY,5,1,4,3,3,3,"Firefly Aerospace — launch and space systems (post-IPO) · Revenue up 45% year-on-year · Gross margin 22%, operating margin -118%",2026-05-28,auto
+FSLR,4,5,4,3,3,5,"Utility-scale thin-film solar modules · Revenue up 24% year-on-year · Gross margin 47%, operating margin 33%",2026-05-28,auto
+FE,3,5,2,4,4,4,"Transmission investment story — regulatory lag risk · Revenue up 12% year-on-year · Gross margin 62%, operating margin 20%",2026-05-28,auto
+FLEX,3,5,3,3,3,3,"EMS / JDM manufacturing for hyperscale and networking gear · Revenue up 17% year-on-year · Gross margin 9%, operating margin 5%",2026-05-28,auto
+FLS,1,5,3,3,4,4,"Flowserve pumps valves — energy capex cycle · Revenue down 7% year-on-year · Gross margin 36%, operating margin 11%",2026-05-28,auto
+FLNC,3,5,3,4,3,1,"Grid-scale battery storage systems — growing but unprofitable · Revenue up 8% year-on-year · Gross margin 10%, operating margin -8%",2026-05-28,auto
+FORM,4,5,4,4,3,2,"Semi probe cards; quantum test equipment niche · Revenue up 32% year-on-year · Gross margin 38%, operating margin 10%",2026-05-28,auto
+FTNT,4,5,4,4,3,2,"Network security appliances SD-WAN and SASE · Revenue up 20% year-on-year · Gross margin 80%, operating margin 31%",2026-05-28,auto
+FTV,3,5,3,3,3,4,"Fortive industrial instrumentation and healthcare diagnostics spin mix · Revenue up 8% year-on-year · Gross margin 63%, operating margin 18%",2026-05-28,auto
+FRSH,3,5,5,4,3,5,"Freshservice / ITSM cloud — SMB upmarket · Revenue up 16% year-on-year · Gross margin 85%, operating margin -4%",2026-05-28,auto
+FCEL,5,1,4,3,3,3,"Fuel cells — stationary power niche · Revenue up 61% year-on-year · Gross margin -19%, operating margin -86%",2026-05-28,auto
+GE,4,5,3,3,3,2,"Aerospace engines and power — LEAP cycle and services mix · Revenue up 25% year-on-year · Gross margin 31%, operating margin 19%",2026-05-28,auto
+GEV,3,5,4,3,3,2,"Gas turbines wind and grid equipment — $163B backlog from GE spinoff · Revenue up 16% year-on-year · Gross margin 19%, operating margin 2%",2026-05-28,auto
+GEA.DE,3,3,3,3,3,3,Process engineering and food automation (Xetra),2026-05-28,auto
+GEN,4,5,3,4,3,5,"Consumer and enterprise security brands rollup · Revenue up 27% year-on-year · Gross margin 78%, operating margin 63%",2026-05-28,auto
+GNRC,3,5,3,3,3,3,"Backup generators — outage and grid fragility · Revenue up 12% year-on-year · Gross margin 39%, operating margin 11%",2026-05-28,auto
+GD,3,5,3,3,3,4,"Gulfstream plus combat systems shipbuilding · Revenue up 10% year-on-year · Gross margin 16%, operating margin 11%",2026-05-28,auto
+GMAB.CO,4,5,3,2,3,4,"Antibody engineering platform — bispecific and ADC (Copenhagen) · Revenue up 25% year-on-year · Gross margin 93%, operating margin 25%",2026-05-28,auto
+GILD,2,5,3,3,4,4,"HIV and liver — cell therapy option · Revenue up 4% year-on-year · Gross margin 79%, operating margin 39%",2026-05-28,auto
+DNA,1,1,3,2,5,3,"Ginkgo cell engineering — revenue quality debate · Revenue down 49% year-on-year · Gross margin 84%, operating margin -367%",2026-05-28,auto
+GPN,5,5,2,3,4,5,"Global Payments — Genius and B2B software · Revenue up 63% year-on-year · Gross margin 57%, operating margin -1%",2026-05-28,auto
+GFS,2,5,4,4,4,3,"GlobalFoundries — specialty and mature-node foundry · Revenue up 3% year-on-year · Gross margin 28%, operating margin 11%",2026-05-28,auto
+GSAT,3,5,3,3,3,1,"Globalstar — satellite IoT and Apple partnership · Revenue up 17% year-on-year · Gross margin 63%, operating margin 12%",2026-05-28,auto
+GS,3,3,5,3,3,4,Investment bank — trading and advisory cycle · Revenue up 14% year-on-year,2026-05-28,auto
+GGG,2,5,4,3,4,3,"Graco fluid handling pumps — industrial coatings · Revenue up 2% year-on-year · Gross margin 52%, operating margin 26%",2026-05-28,auto
+GSK,2,5,3,3,4,5,"Vaccines HIV franchise and specialty pharma (NYSE ADR) · Revenue up 2% year-on-year · Gross margin 75%, operating margin 30%",2026-05-28,auto
+HAL,1,5,3,3,4,4,"Oilfield services pressure pumping — cycle leverage · Revenue down 0% year-on-year · Gross margin 14%, operating margin 13%",2026-05-28,auto
+HLMA.L,3,3,3,3,3,2,Safety environmental and health sensors (LSE),2026-05-28,auto
+HEI.A,3,3,3,3,3,3,Heico — aerospace aftermarket parts and acquisitions,2026-05-28,auto
+HES,3,3,3,3,3,3,Guyana growth — Chevron merger,2026-05-28,auto
+HEXA-B.ST,1,5,3,3,5,4,"Measurement sensors and geospatial — Swedish (Stockholm) · Revenue down 33% year-on-year · Gross margin 63%, operating margin 24%",2026-05-28,auto
+HXL,3,5,3,3,3,3,"Carbon fibre composites for aerospace structures · Revenue up 10% year-on-year · Gross margin 27%, operating margin 11%",2026-05-28,auto
+HIK.L,3,3,3,3,3,5,Generics injectables and branded pharma — UK-listed (LSE),2026-05-28,auto
+HLT,3,5,3,3,3,3,"Premium hotels — fee stream and pipeline · Revenue up 9% year-on-year · Gross margin 29%, operating margin 23%",2026-05-28,auto
+HOLX,2,5,3,3,4,4,"Diagnostics imaging and surgical women's health · Revenue up 3% year-on-year · Gross margin 56%, operating margin 23%",2026-05-28,auto
+HON,2,5,3,3,4,3,"Controls and diversified industrial automation · Revenue up 2% year-on-year · Gross margin 39%, operating margin 19%",2026-05-28,auto
+HUBS,4,5,4,4,3,4,"HubSpot — SMB CRM and marketing · Revenue up 23% year-on-year · Gross margin 83%, operating margin 3%",2026-05-28,auto
+HUM,4,5,5,3,3,4,Medicare Advantage star ratings risk · Revenue up 23% year-on-year · Operating margin 5%,2026-05-28,auto
+HII,3,5,3,3,3,4,"US Navy shipbuilding — carrier submarine backlog · Revenue up 13% year-on-year · Gross margin 13%, operating margin 5%",2026-05-28,auto
+ICHR,2,5,3,4,4,3,"Fluid delivery systems for semiconductor manufacturing · Revenue up 5% year-on-year · Gross margin 13%, operating margin 1%",2026-05-28,auto
+IEX,3,5,3,3,3,3,"IDEX precision pumps and dispensing · Revenue up 9% year-on-year · Gross margin 45%, operating margin 20%",2026-05-28,auto
+ITW,2,5,3,3,4,3,"Diversified industrial components · Revenue up 5% year-on-year · Gross margin 44%, operating margin 25%",2026-05-28,auto
+ILMN,2,5,3,3,4,3,"Sequencing installed base — consumable pull-through · Revenue up 5% year-on-year · Gross margin 66%, operating margin 19%",2026-05-28,auto
+IMI.L,3,3,3,3,3,4,Flow control and automation for critical processes (LSE),2026-05-28,auto
+IMO,2,5,3,3,4,4,"Canadian refining and upstream · Revenue up 2% year-on-year · Gross margin 13%, operating margin 10%",2026-05-28,auto
+PI,1,5,3,4,4,1,"Wireless power and GaN — consumer and industrial · Revenue down 0% year-on-year · Gross margin 49%, operating margin -20%",2026-05-28,auto
+INDI,2,1,3,4,4,2,"indie Semiconductor auto edge — ADAS content · Revenue up 3% year-on-year · Gross margin 38%, operating margin -70%",2026-05-28,auto
+IFX.DE,3,5,3,4,3,3,"Power semiconductors for AI auto and industrial (Xetra) · Revenue up 6% year-on-year · Gross margin 39%, operating margin 12%",2026-05-28,auto
+INFQ,3,1,4,4,3,3,"Infleqtion — quantum sensing and computing hardware · Gross margin 21%, operating margin -355%",2026-05-28,auto
+IR,3,5,3,3,3,4,"Industrial compressors and tools · Revenue up 8% year-on-year · Gross margin 43%, operating margin 17%",2026-05-28,auto
+INOD,5,5,4,3,3,2,"Data engineering / AI data prep software microcap · Revenue up 54% year-on-year · Gross margin 44%, operating margin 19%",2026-05-28,auto
+PODD,4,5,3,3,3,4,"Omnipod insulin pump ecosystem — Mobi next generation · Revenue up 34% year-on-year · Gross margin 69%, operating margin 16%",2026-05-28,auto
+INTC,3,5,3,4,3,1,"CPU and foundry turnaround — AI PC and custom silicon option · Revenue up 7% year-on-year · Gross margin 39%, operating margin 7%",2026-05-28,auto
+NTLA,1,1,5,2,4,3,CRISPR gene editing — in vivo programs · Revenue down 9% year-on-year · Operating margin -668%,2026-05-28,auto
+ICE,3,5,3,3,3,4,"Exchanges and data — mortgage tech · Revenue up 14% year-on-year · Gross margin 61%, operating margin 47%",2026-05-28,auto
+IBM,3,5,3,3,3,4,"Services plus small quantum research franchise · Revenue up 9% year-on-year · Gross margin 56%, operating margin 14%",2026-05-28,auto
+INTU,3,5,3,4,3,5,"SMB tax and accounting AI assistants · Revenue up 10% year-on-year · Gross margin 84%, operating margin 47%",2026-05-28,auto
+LUNR,5,1,3,3,3,3,"Intuitive Machines — lunar lander programs · Revenue up 194% year-on-year · Gross margin 15%, operating margin -21%",2026-05-28,auto
+ISRG,4,5,4,3,3,2,"Da Vinci and Ion robotic surgery systems — procedure growth · Revenue up 23% year-on-year · Gross margin 66%, operating margin 31%",2026-05-28,auto
+IONQ,5,1,4,3,3,1,"Trapped-ion quantum hardware — largest cash runway in pure-play quantum · Revenue up 755% year-on-year · Gross margin 24%, operating margin -420%",2026-05-28,auto
+IQE.L,3,3,3,4,3,3,Compound semiconductor wafers — photonics and quantum (LSE),2026-05-28,auto
+IREN,1,2,3,3,4,1,"Bitcoin miner pivoting to AI data centre power · Revenue down 0% year-on-year · Gross margin 65%, operating margin -64%",2026-05-28,auto
+IRDM,2,5,3,3,4,2,"Iridium — LEO voice and IoT constellation · Revenue up 2% year-on-year · Gross margin 71%, operating margin 23%",2026-05-28,auto
+ITT,4,5,3,3,3,3,"Motion flow control — defense and industrial · Revenue up 33% year-on-year · Gross margin 35%, operating margin 12%",2026-05-28,auto
+JBL,4,5,3,3,3,3,"EMS diversified — AI server and appliance builds · Revenue up 23% year-on-year · Gross margin 9%, operating margin 5%",2026-05-28,auto
+JD,2,5,5,4,4,5,"China retail logistics and health spin · Revenue up 5% year-on-year · Gross margin 17%, operating margin 1%",2026-05-28,auto
+JNJ,3,5,3,3,3,4,"Pharma medtech consumer diversified — patent cliffs matter · Revenue up 10% year-on-year · Gross margin 66%, operating margin 27%",2026-05-28,auto
+JCI,3,5,3,3,3,3,"Building controls and OpenBlue smart buildings · Revenue up 8% year-on-year · Gross margin 37%, operating margin 14%",2026-05-28,auto
+JPM,3,3,5,3,3,4,Money centre bank — NII and investment banking · Revenue up 10% year-on-year,2026-05-28,auto
+KMI,3,5,3,3,3,3,"Natural gas pipelines — fee-based cash flows · Revenue up 14% year-on-year · Gross margin 51%, operating margin 30%",2026-05-28,auto
+KION.DE,3,3,3,3,3,3,Forklift warehouse automation and supply chain (Xetra),2026-05-28,auto
+KLAC,3,5,3,4,3,2,"Process control and inspection in WFE · Revenue up 11% year-on-year · Gross margin 61%, operating margin 41%",2026-05-28,auto
+KNEBV.HE,1,5,4,3,4,3,"Elevators escalators and maintenance services (Helsinki) · Revenue down 9% year-on-year · Gross margin 14%, operating margin 10%",2026-05-28,auto
+KTOS,4,5,4,3,3,2,"Unmanned systems and C5ISR — defense tech integrator · Revenue up 23% year-on-year · Gross margin 24%, operating margin 2%",2026-05-28,auto
+KLIC,5,5,4,4,3,3,"Kulicke & Soffa wire bond packaging equipment · Revenue up 50% year-on-year · Gross margin 49%, operating margin 16%",2026-05-28,auto
+KULR,5,1,4,3,3,3,"Thermal management for batteries and space hardware · Revenue up 98% year-on-year · Gross margin 29%, operating margin -152%",2026-05-28,auto
+LHX,3,5,3,3,3,3,"Defense electronics post-L3Harris merger integration · Revenue up 12% year-on-year · Gross margin 24%, operating margin 11%",2026-05-28,auto
+LH,3,5,3,3,3,4,"LabCorp diagnostics plus drug development · Revenue up 6% year-on-year · Gross margin 29%, operating margin 11%",2026-05-28,auto
+LRCX,4,5,4,4,3,2,"Wafer fabrication equipment (WFE) · Revenue up 24% year-on-year · Gross margin 50%, operating margin 35%",2026-05-28,auto
+LSCC,5,5,4,4,3,1,"Low-power FPGAs for edge and industrial acceleration · Revenue up 42% year-on-year · Gross margin 69%, operating margin 16%",2026-05-28,auto
+LR.PA,2,5,3,3,4,3,"Electrical infrastructure for data centres and grids (Euronext Paris) · Revenue up 5% year-on-year · Gross margin 51%, operating margin 19%",2026-05-28,auto
+LDOS,2,5,3,3,4,5,"Leidos — defense IT and engineering services · Revenue up 4% year-on-year · Gross margin 17%, operating margin 12%",2026-05-28,auto
+LDO.MI,1,5,3,3,5,4,"Italian defence helicopters electronics and cyber (Milan) · Revenue down 22% year-on-year · Gross margin 10%, operating margin 6%",2026-05-28,auto
+LWLG,4,1,4,3,3,3,"Lightwave Logic — photonic polymers for interconnect · Revenue up 27% year-on-year · Gross margin 95%, operating margin -23058%",2026-05-28,auto
+LECO,3,5,3,3,3,3,"Lincoln Electric welding automation · Revenue up 12% year-on-year · Gross margin 36%, operating margin 17%",2026-05-28,auto
+LMT,2,5,3,3,4,4,"Defense prime — missiles space and aero structures · Revenue up 0% year-on-year · Gross margin 12%, operating margin 11%",2026-05-28,auto
+LONN.SW,3,3,3,3,3,3,CDMO for biotech and pharma manufacturing (Swiss),2026-05-28,auto
+LITE,5,5,3,3,3,2,"Lumentum — optical components for AI networking · Revenue up 90% year-on-year · Gross margin 44%, operating margin 22%",2026-05-28,auto
+MPC,3,5,3,3,3,5,"Refining and midstream logistics — crack spread exposure · Revenue up 9% year-on-year · Gross margin 6%, operating margin 3%",2026-05-28,auto
+MAR,3,5,3,3,3,3,"Hotel franchisor — net rooms growth · Revenue up 6% year-on-year · Gross margin 20%, operating margin 16%",2026-05-28,auto
+MRVL,4,5,3,4,3,2,"Custom AI silicon and high-speed networking ASICs · Revenue up 22% year-on-year · Gross margin 52%, operating margin 19%",2026-05-28,auto
+MTZ,4,5,3,3,3,3,"Infrastructure and clean energy construction — fastest growing EPC · Revenue up 34% year-on-year · Gross margin 12%, operating margin 4%",2026-05-28,auto
+MXL,5,5,3,4,3,2,"Broadband and connectivity mixed-signal — DOCSIS and fiber · Revenue up 43% year-on-year · Gross margin 58%, operating margin -12%",2026-05-28,auto
+MDA.TO,4,5,3,3,3,2,"MDA Space — satellite systems and robotics (TSX) · Revenue up 32% year-on-year · Gross margin 25%, operating margin 9%",2026-05-28,auto
+MDT,3,5,3,3,3,4,"Medtronic devices — GLP-1 overhang on obesity devices · Revenue up 9% year-on-year · Gross margin 64%, operating margin 18%",2026-05-28,auto
+MEL.BR,3,3,3,3,3,3,Automotive and industrial sensor ICs (Brussels),2026-05-28,auto
+MELI,5,5,3,4,3,3,"MercadoLibre — commerce and fintech flywheel · Revenue up 49% year-on-year · Gross margin 44%, operating margin 7%",2026-05-28,auto
+MRK,2,5,3,3,4,4,"Keytruda franchise duration — oncology concentration · Revenue up 5% year-on-year · Gross margin 74%, operating margin -20%",2026-05-28,auto
+HOLO,3,3,5,3,3,3,Micro-cap hardware; highly speculative,2026-05-28,auto
+MU,5,5,4,4,3,5,"High-bandwidth memory and DRAM for AI servers · Revenue up 196% year-on-year · Gross margin 74%, operating margin 68%",2026-05-28,auto
+MVIS,5,1,3,3,3,3,"MicroVision lidar MEMS — speculative liquidity · Revenue up 59% year-on-year · Gross margin 39%, operating margin -2523%",2026-05-28,auto
+MRNA,5,1,5,2,3,3,"mRNA platform vaccines and therapeutics — binary pipeline risk · Revenue up 264% year-on-year · Gross margin -146%, operating margin -357%",2026-05-28,auto
+MOH,1,5,5,3,4,4,"Molina Medicaid pure-play — regulatory cap · Revenue down 3% year-on-year · Gross margin 9%, operating margin 2%",2026-05-28,auto
+MNTS,5,1,4,3,3,3,"Momentus — in-space transportation — high dilution risk · Revenue up 898% year-on-year · Gross margin 57%, operating margin -270%",2026-05-28,auto
+MNDY,4,5,5,4,3,4,"Monday work OS — workflow automation with security posture · Revenue up 24% year-on-year · Gross margin 89%, operating margin 6%",2026-05-28,auto
+MDB,4,5,4,4,3,2,"Document database — developer-led adoption · Revenue up 27% year-on-year · Gross margin 73%, operating margin 0%",2026-05-28,auto
+MPWR,4,5,4,4,3,2,"Power management ICs for AI server racks and GPUs · Revenue up 26% year-on-year · Gross margin 55%, operating margin 30%",2026-05-28,auto
+MCO,3,5,3,3,3,3,"Moody's — ratings cycle and KYC analytics · Revenue up 8% year-on-year · Gross margin 74%, operating margin 46%",2026-05-28,auto
+MS,3,3,5,3,3,4,Wealth management — AUM and banking · Revenue up 17% year-on-year,2026-05-28,auto
+MPLX,1,5,3,3,4,5,"Marathon midstream — dropdown MLP · Revenue down 3% year-on-year · Gross margin 40%, operating margin 37%",2026-05-28,auto
+MSCI,3,5,3,3,3,3,"Indexes and ESG analytics — subscription model · Revenue up 14% year-on-year · Gross margin 83%, operating margin 54%",2026-05-28,auto
+NGG,3,3,3,4,3,4,UK and US electricity and gas transmission grid operator (NYSE ADR),2026-05-28,auto
+NVTS,1,1,4,4,5,3,"Navitas — GaN power ICs for data centre and EV · Revenue down 39% year-on-year · Gross margin 38%, operating margin -318%",2026-05-28,auto
+NCC.L,3,3,3,4,3,2,UK cyber consulting and managed security (LSE),2026-05-28,auto
+NBIS,5,5,3,4,3,1,"Nebius — AI cloud GPU infrastructure spin narrative · Revenue up 684% year-on-year · Gross margin 74%, operating margin -32%",2026-05-28,auto
+NEOEN.PA,3,3,3,3,3,3,French renewable energy developer solar wind storage (Euronext Paris),2026-05-28,auto
+NEP,3,3,3,3,3,3,NextEra Energy Partners renewables dropdown story,2026-05-28,auto
+NFLX,3,5,3,3,3,3,"Streaming — content ROI and ad tier · Revenue up 16% year-on-year · Gross margin 52%, operating margin 32%",2026-05-28,auto
+NEX.PA,3,3,3,3,3,4,Power and fibre optic cables — electrification play (Euronext Paris),2026-05-28,auto
+NEE,3,5,3,4,3,4,"Regulated utility and renewables developer · Revenue up 7% year-on-year · Gross margin 59%, operating margin 29%",2026-05-28,auto
+LASR,5,1,4,4,3,1,"Luminar lidar — auto OEM design-in path · Revenue up 55% year-on-year · Gross margin 33%, operating margin -1%",2026-05-28,auto
+NDX1.DE,5,3,4,3,3,4,Nordex wind turbine manufacturer (Xetra) · Revenue up 52% year-on-year,2026-05-28,auto
+NOD.OL,4,5,4,4,3,2,"Ultra-low power wireless chip design for IoT (Oslo) · Revenue up 28% year-on-year · Gross margin 52%, operating margin 5%",2026-05-28,auto
+NDSN,3,5,3,3,3,3,"Nordson precision dispensing and industrial coatings · Revenue up 8% year-on-year · Gross margin 55%, operating margin 27%",2026-05-28,auto
+NSC,2,5,3,3,4,3,"East coast rail — service recovery · Revenue up 0% year-on-year · Gross margin 34%, operating margin 33%",2026-05-28,auto
+NOC,2,5,3,3,4,4,"Defense prime — bombers UAVs and space · Revenue up 4% year-on-year · Gross margin 20%, operating margin 10%",2026-05-28,auto
+NOV,1,5,3,3,4,4,"Offshore rig equipment — cycle leverage · Revenue down 2% year-on-year · Gross margin 18%, operating margin 2%",2026-05-28,auto
+NVMI,3,5,4,4,3,2,"Metrology for advanced packaging and CMP process control · Revenue up 10% year-on-year · Gross margin 58%, operating margin 30%",2026-05-28,auto
+NVS,1,5,3,3,4,4,"Radioligand and neuroscience pipeline · Revenue down 1% year-on-year · Gross margin 74%, operating margin 31%",2026-05-28,auto
+NOVN.SW,1,5,3,3,4,4,"Diversified pharma pipeline — cardiovascular oncology neuro (Swiss) · Revenue down 1% year-on-year · Gross margin 74%, operating margin 31%",2026-05-28,auto
+NVAX,1,5,5,2,5,3,"Novavax vaccine platform — funding and execution · Revenue down 79% year-on-year · Gross margin 78%, operating margin -11%",2026-05-28,auto
+NVO,4,5,3,3,3,4,"GLP-1 agonist leader Ozempic and Wegovy — LLY rival (NYSE ADR) · Revenue up 24% year-on-year · Gross margin 86%, operating margin 62%",2026-05-28,auto
+NRG,3,5,2,4,4,5,"Retail power plus generation — merchant spread · Revenue up 19% year-on-year · Gross margin 14%, operating margin 4%",2026-05-28,auto
+NU,5,3,5,3,3,5,LatAm neobank — Brazil and Mexico expansion · Revenue up 57% year-on-year,2026-05-28,auto
+SMR,1,1,5,3,5,3,"SMR developer — licensing and power purchase risk · Revenue down 96% year-on-year · Gross margin 4%, operating margin -10181%",2026-05-28,auto
+NVDA,5,5,4,4,3,4,"AI accelerators and data-centre GPU exposure · Revenue up 85% year-on-year · Gross margin 75%, operating margin 66%",2026-05-28,auto
+OXY,1,5,3,3,4,4,"Permian operator plus carbon capture narrative · Revenue down 8% year-on-year · Gross margin 36%, operating margin 18%",2026-05-28,auto
+OKLO,3,3,5,4,3,3,Advanced fission developer — milestone equity story,2026-05-28,auto
+OKTA,3,5,4,4,3,3,"Identity and access management · Revenue up 12% year-on-year · Gross margin 78%, operating margin 7%",2026-05-28,auto
+ON,2,5,3,4,4,3,"Power discretes and SiC for electrification and DC systems · Revenue up 5% year-on-year · Gross margin 39%, operating margin 18%",2026-05-28,auto
+ONDAS,3,3,3,3,3,3,Ondas — autonomous systems and rail wireless,2026-05-28,auto
+OKE,3,5,3,3,3,4,"NGL fractionation and midstream services · Revenue up 20% year-on-year · Gross margin 23%, operating margin 15%",2026-05-28,auto
+ONTO,3,5,4,4,3,3,"Onto metrology and inspection for advanced nodes · Revenue up 10% year-on-year · Gross margin 50%, operating margin 13%",2026-05-28,auto
+ORCL,4,5,3,4,3,3,"OCI GPU cloud and database AI workloads · Revenue up 22% year-on-year · Gross margin 65%, operating margin 33%",2026-05-28,auto
+ORSTED.CO,4,5,3,4,3,4,"Offshore wind global leader (Copenhagen) · Revenue up 39% year-on-year · Gross margin 36%, operating margin 28%",2026-05-28,auto
+OTIS,3,5,3,3,3,4,"Elevators service moat — China mix · Revenue up 6% year-on-year · Gross margin 30%, operating margin 15%",2026-05-28,auto
+OXIG.L,3,3,4,3,3,3,Cryogenics and quantum components — enabling hardware (LSE),2026-05-28,auto
+PACB,2,1,3,3,4,3,"Long-read sequencing — competitive pressure · Revenue up 0% year-on-year · Gross margin 35%, operating margin -146%",2026-05-28,auto
+PCG,3,5,1,4,4,5,"PG&E — California load and safety · Revenue up 15% year-on-year · Gross margin 40%, operating margin 21%",2026-05-28,auto
+PD,2,5,4,4,4,5,"PagerDuty incident response — SRE tooling · Revenue up 3% year-on-year · Gross margin 86%, operating margin 4%",2026-05-28,auto
+PLTR,5,5,4,4,3,1,"Gov and enterprise AI platforms — contract wins and margins · Revenue up 85% year-on-year · Gross margin 87%, operating margin 46%",2026-05-28,auto
+PANW,3,5,4,4,3,1,"Enterprise firewall and cloud security platform consolidation · Revenue up 15% year-on-year · Gross margin 74%, operating margin 15%",2026-05-28,auto
+PH,3,5,3,3,3,3,"Hydraulics and motion control — aerospace exposure · Revenue up 11% year-on-year · Gross margin 37%, operating margin 21%",2026-05-28,auto
+PYPL,3,5,3,3,3,5,"Payments scale — margin and take-rate recovery · Revenue up 7% year-on-year · Gross margin 46%, operating margin 19%",2026-05-28,auto
+PDD,3,5,5,4,3,5,"Temur — cross-border commerce growth · Revenue up 12% year-on-year · Gross margin 55%, operating margin 21%",2026-05-28,auto
+PNR,2,5,3,3,4,4,"Pentair water treatment and pool equipment · Revenue up 3% year-on-year · Gross margin 42%, operating margin 23%",2026-05-28,auto
+PFE,3,5,3,3,3,5,"Post-COVID oncology pipeline rebuild — execution risk · Revenue up 5% year-on-year · Gross margin 75%, operating margin 29%",2026-05-28,auto
+PSX,3,5,3,3,3,5,"Phillips 66 refining plus midstream CPChem · Revenue up 7% year-on-year · Gross margin 9%, operating margin 0%",2026-05-28,auto
+PLAB,3,5,5,4,3,3,"Photomasks — lithography consumables · Revenue up 6% year-on-year · Gross margin 35%, operating margin 24%",2026-05-28,auto
+PL,5,5,4,3,3,3,"Planet Labs — daily Earth observation data · Revenue up 41% year-on-year · Gross margin 54%, operating margin -41%",2026-05-28,auto
+PLUG,4,1,3,3,3,3,"Hydrogen — cash burn and green H2 · Revenue up 22% year-on-year · Gross margin -13%, operating margin -64%",2026-05-28,auto
+POWI,2,5,4,4,4,2,"Power conversion ICs — efficiency regulation tailwind · Revenue up 3% year-on-year · Gross margin 53%, operating margin 7%",2026-05-28,auto
+PPL,3,5,3,4,3,4,"Kentucky and Pennsylvania wires · Revenue up 11% year-on-year · Gross margin 44%, operating margin 27%",2026-05-28,auto
+PRY.MI,3,5,3,3,3,3,"Submarine and power cables for grid buildout (Milan) · Revenue up 12% year-on-year · Gross margin 35%, operating margin 6%",2026-05-28,auto
+QRVO,1,5,3,4,4,4,"RF connectivity and defense/aerospace semi exposure · Revenue down 7% year-on-year · Gross margin 49%, operating margin 14%",2026-05-28,auto
+QCOM,1,5,3,4,4,3,"Handset RF plus AI edge inference — licensing mix · Revenue down 3% year-on-year · Gross margin 54%, operating margin 22%",2026-05-28,auto
+QLYS,3,5,4,4,3,5,"Vulnerability management SaaS · Revenue up 10% year-on-year · Gross margin 83%, operating margin 35%",2026-05-28,auto
+PWR,4,5,3,3,3,2,"Grid construction and electrical infrastructure — licensed labor moat · Revenue up 26% year-on-year · Gross margin 14%, operating margin 4%",2026-05-28,auto
+QUBT,5,1,5,3,3,3,"Quantum computing micro-cap hardware · Revenue up 9364% year-on-year · Gross margin -20%, operating margin -557%",2026-05-28,auto
+QS,3,3,4,3,3,3,Solid-state battery — technical milestone risk,2026-05-28,auto
+DGX,3,5,3,3,3,4,"Quest Diagnostics lab volumes — pricing · Revenue up 9% year-on-year · Gross margin 33%, operating margin 14%",2026-05-28,auto
+RMBS,3,5,4,4,3,2,"Memory interface IP and chips — HBM ecosystem adjacency · Revenue up 8% year-on-year · Gross margin 80%, operating margin 34%",2026-05-28,auto
+RXRX,1,1,5,2,5,3,"Recursion AI drug discovery — compute spend · Revenue down 57% year-on-year · Gross margin -98%, operating margin -2039%",2026-05-28,auto
+RDW,5,1,4,3,3,3,"Space systems integrator — NASA and defense missions · Revenue up 58% year-on-year · Gross margin 27%, operating margin -72%",2026-05-28,auto
+REGN,3,5,4,2,3,5,"Dupixent franchise Libtayo and obesity pipeline — net cash fortress · Revenue up 19% year-on-year · Gross margin 81%, operating margin 21%",2026-05-28,auto
+RSW.L,3,3,4,3,3,3,Precision measurement and additive manufacturing (LSE),2026-05-28,auto
+RSG,2,5,3,3,4,3,"Waste collection pricing — route density · Revenue up 3% year-on-year · Gross margin 42%, operating margin 20%",2026-05-28,auto
+RMD,3,5,4,3,3,4,"ResMed sleep apnea devices — GLP-1 competitive readthrough · Revenue up 11% year-on-year · Gross margin 62%, operating margin 35%",2026-05-28,auto
+RHM.DE,1,5,3,3,5,3,"German defence vehicles and ammunition — fastest growing (Xetra) · Revenue down 31% year-on-year · Gross margin 52%, operating margin 40%",2026-05-28,auto
+RGTI,5,1,4,3,3,3,"Superconducting quantum systems — minimal revenue · Revenue up 199% year-on-year · Gross margin 31%, operating margin -590%",2026-05-28,auto
+HOOD,3,5,4,3,3,3,"Retail brokerage and crypto trading · Revenue up 15% year-on-year · Gross margin 81%, operating margin 39%",2026-05-28,auto
+RBLX,4,5,4,3,3,3,"Roblox — UGC platform engagement · Revenue up 39% year-on-year · Gross margin 80%, operating margin -20%",2026-05-28,auto
+RKLB,5,5,4,3,3,3,"Rocket Lab — launch and space systems · Revenue up 63% year-on-year · Gross margin 38%, operating margin -28%",2026-05-28,auto
+ROK,3,5,3,3,3,3,"Factory automation PLCs and industrial software · Revenue up 12% year-on-year · Gross margin 50%, operating margin 21%",2026-05-28,auto
+ROG.SW,3,3,3,3,3,3,Diagnostics and oncology pharma — global leader (Swiss),2026-05-28,auto
+RR.L,3,3,4,3,3,3,Small modular nuclear reactors and aerospace engines (LSE),2026-05-28,auto
+ROP,3,5,3,4,3,4,"Roper software rollup — niche vertical SaaS · Revenue up 11% year-on-year · Gross margin 69%, operating margin 27%",2026-05-28,auto
+RCL,3,5,3,3,3,4,"Cruise — pricing power post-pandemic · Revenue up 11% year-on-year · Gross margin 50%, operating margin 26%",2026-05-28,auto
+RTX,3,5,3,3,3,3,"Pratt engines plus Raytheon missiles mix · Revenue up 9% year-on-year · Gross margin 21%, operating margin 12%",2026-05-28,auto
+RWE.DE,1,5,3,4,5,4,"German utility pivoting to renewables (Xetra) · Revenue down 33% year-on-year · Gross margin 40%, operating margin -3%",2026-05-28,auto
+SPGI,3,5,3,3,3,4,"Ratings and market data — Mobility spin · Revenue up 10% year-on-year · Gross margin 70%, operating margin 44%",2026-05-28,auto
+SAF.PA,3,3,4,3,3,3,Aerospace engines and equipment — CFM International (Euronext Paris),2026-05-28,auto
+CRM,3,5,3,4,3,5,"Enterprise AI agents on CRM data cloud · Revenue up 12% year-on-year · Gross margin 78%, operating margin 19%",2026-05-28,auto
+005930.KS,5,5,4,3,3,5,"Samsung — memory and foundry · Revenue up 69% year-on-year · Gross margin 61%, operating margin 43%",2026-05-28,auto
+SAND.ST,1,5,3,3,4,3,"Machining tools mining equipment and digital (Stockholm) · Revenue down 5% year-on-year · Gross margin 40%, operating margin 17%",2026-05-28,auto
+SAN.PA,3,5,3,3,3,5,"French pharma — rare disease vaccines consumer (Euronext Paris) · Revenue up 6% year-on-year · Gross margin 72%, operating margin 20%",2026-05-28,auto
+SNY,3,5,3,3,3,5,"Vaccines and immunology — Dupixent partner · Revenue up 6% year-on-year · Gross margin 72%, operating margin 20%",2026-05-28,auto
+SAP,3,5,4,4,3,4,"Enterprise ERP and cloud — European software · Revenue up 6% year-on-year · Gross margin 73%, operating margin 29%",2026-05-28,auto
+SRPT,1,5,3,2,4,5,"Sarepta gene therapy — regulatory binary · Revenue down 2% year-on-year · Gross margin 85%, operating margin 49%",2026-05-28,auto
+SRT3.DE,1,5,3,3,4,2,"Lab equipment and bioprocessing — pharma supply chain (Xetra) · Revenue down 1% year-on-year · Gross margin 46%, operating margin 17%",2026-05-28,auto
+SATL,5,1,3,3,3,3,"Satellogic — EO constellation operator · Revenue up 80% year-on-year · Gross margin 76%, operating margin -104%",2026-05-28,auto
+SU.PA,3,3,3,3,3,3,Energy management and industrial automation — global leader (Euronext Paris),2026-05-28,auto
+SDGR,1,1,5,3,4,3,"Schrodinger — physics-based drug design · Revenue down 2% year-on-year · Gross margin 50%, operating margin -83%",2026-05-28,auto
+SE,5,5,4,4,3,4,"Sea Limited — gaming and Shopee fintech · Revenue up 47% year-on-year · Gross margin 44%, operating margin 8%",2026-05-28,auto
+LAES,3,3,5,4,3,3,Post-quantum and semiconductor security angle,2026-05-28,auto
+YSN.DE,3,3,4,4,3,3,German IT security for public sector and critical infra (Xetra),2026-05-28,auto
+SMTC,3,3,3,4,3,2,Semtech LoRa plus signal integrity — mixed cycles · Revenue up 9% year-on-year,2026-05-28,auto
+S,4,5,4,4,3,2,"Endpoint AI security — growth narrative unprofitable · Revenue up 20% year-on-year · Gross margin 73%, operating margin -29%",2026-05-28,auto
+SSIT.L,3,3,3,3,3,5,Seraphim Space Investment Trust — UK space CEF (LSE),2026-05-28,auto
+NOW,4,5,4,4,3,3,"ServiceNow workflow and GRC digitization · Revenue up 22% year-on-year · Gross margin 75%, operating margin 13%",2026-05-28,auto
+SHEL,2,5,3,3,4,5,"LNG and chemicals — capital framework · Revenue up 1% year-on-year · Gross margin 19%, operating margin 15%",2026-05-28,auto
+SHOP,4,5,4,4,3,2,"Commerce platform — merchant solutions · Revenue up 34% year-on-year · Gross margin 49%, operating margin 16%",2026-05-28,auto
+SIDU,5,1,4,3,3,3,"Sidus Space — small satellite and space services microcap · Revenue up 51% year-on-year · Gross margin -292%, operating margin -1522%",2026-05-28,auto
+SIE.DE,1,5,3,3,4,3,"Digital Industries factory automation and smart infrastructure (Xetra) · Revenue down 0% year-on-year · Gross margin 39%, operating margin 14%",2026-05-28,auto
+ENR.DE,2,5,4,3,4,3,"Grid transformers offshore wind and gas turbines (Xetra) · Revenue up 3% year-on-year · Gross margin 22%, operating margin 10%",2026-05-28,auto
+SLAB,4,5,4,4,3,2,"IoT MCUs and mesh — industrial connectivity · Revenue up 20% year-on-year · Gross margin 59%, operating margin -8%",2026-05-28,auto
+SITM,5,5,4,4,3,1,"MEMS timing — precision clocks for comms and DC · Revenue up 88% year-on-year · Gross margin 59%, operating margin -4%",2026-05-28,auto
+SWKS,1,5,4,4,4,4,"RF front-end modules — handset cyclicality vs content gains · Revenue down 1% year-on-year · Gross margin 41%, operating margin 6%",2026-05-28,auto
+SLB,2,5,3,3,4,4,"OFSP digital drilling international mix · Revenue up 3% year-on-year · Gross margin 15%, operating margin 12%",2026-05-28,auto
+SN.L,3,3,3,3,3,4,Surgical devices orthopaedics and wound management (LSE),2026-05-28,auto
+SMIN.L,3,3,3,3,3,3,Detection threat and contraband screening (LSE),2026-05-28,auto
+SNOW,4,5,4,4,3,1,"Data cloud — governance and sharing workloads · Revenue up 30% year-on-year · Gross margin 67%, operating margin -25%",2026-05-28,auto
+SOFI,5,3,4,3,3,3,Digital bank — member growth and NIM · Revenue up 43% year-on-year,2026-05-28,auto
+SOITEC.PA,3,3,3,3,3,3,SOI wafers for RF power and photonics (Euronext Paris),2026-05-28,auto
+SEDG,5,5,4,3,3,2,"Solar inverters — inventory and competition · Revenue up 41% year-on-year · Gross margin 22%, operating margin -15%",2026-05-28,auto
+SLDP,1,1,5,3,5,3,"Solid-state battery developer · Revenue down 59% year-on-year · Gross margin -69%, operating margin -1252%",2026-05-28,auto
+6758.T,2,3,4,3,4,4,Sony Japan listing — verify local ticker · Revenue up 1% year-on-year,2026-05-28,auto
+SONY,2,3,5,3,4,4,Sony — gaming and sensors · Revenue up 1% year-on-year,2026-05-28,auto
+SO,3,5,3,4,3,4,"Regulated Southeast electric utility · Revenue up 8% year-on-year · Gross margin 46%, operating margin 24%",2026-05-28,auto
+LUV,3,5,3,3,3,5,"Domestic leisure airline — cost advantage · Revenue up 13% year-on-year · Gross margin 19%, operating margin 5%",2026-05-28,auto
+SPX.L,3,3,3,3,3,4,Spirax Group — steam thermal and peristaltic pumps (LSE),2026-05-28,auto
+SPIR,1,1,4,3,5,4,"Spire Global — space-based data and analytics · Revenue down 27% year-on-year · Gross margin 40%, operating margin -149%",2026-05-28,auto
+SQ,3,3,3,3,3,3,Block — seller ecosystem and bitcoin optionality,2026-05-28,auto
+SSE.L,3,3,3,4,3,4,UK renewables developer and regulated network operator (LSE),2026-05-28,auto
+SWK,2,5,3,3,4,4,"Stanley Black & Decker tools — margin reset · Revenue up 3% year-on-year · Gross margin 30%, operating margin 6%",2026-05-28,auto
+STEM,1,1,3,4,4,3,"Battery storage software — project finance · Revenue down 11% year-on-year · Gross margin 37%, operating margin -38%",2026-05-28,auto
+STM,4,5,4,4,3,3,"European semiconductor — auto industrial IoT power (NYSE) · Revenue up 23% year-on-year · Gross margin 34%, operating margin 3%",2026-05-28,auto
+STMN.SW,3,3,4,3,3,3,Dental implants and digital dentistry (Swiss),2026-05-28,auto
+SYK,2,5,3,3,4,4,"Mako robotic surgery and orthopedic device install base · Revenue up 3% year-on-year · Gross margin 63%, operating margin 16%",2026-05-28,auto
+SU,3,5,3,3,3,5,"Canadian integrated — oil sands and refining · Revenue up 16% year-on-year · Gross margin 49%, operating margin 19%",2026-05-28,auto
+RUN,5,5,1,3,4,4,"Residential solar — loan and attach · Revenue up 43% year-on-year · Gross margin 30%, operating margin -6%",2026-05-28,auto
+SMCI,5,5,3,3,3,5,"AI server assembly and rack integration — high growth but governance risks · Revenue up 123% year-on-year · Gross margin 10%, operating margin 6%",2026-05-28,auto
+SWTX,3,3,3,3,3,3,SpringWorks oncology rare disease — trial readouts,2026-05-28,auto
+SXS.L,3,3,3,3,3,3,Precision instrumentation and controls (LSE),2026-05-28,auto
+SNPS,5,5,3,4,3,3,"EDA and design software for chip complexity · Revenue up 66% year-on-year · Gross margin 74%, operating margin 13%",2026-05-28,auto
+TMUS,3,5,3,3,3,4,"US wireless share gains — integration synergies · Revenue up 11% year-on-year · Gross margin 62%, operating margin 19%",2026-05-28,auto
+TSM,4,5,5,4,3,3,"Foundry monopoly on advanced nodes 3nm and 2nm · Revenue up 35% year-on-year · Gross margin 66%, operating margin 58%",2026-05-28,auto
+TTWO,3,5,3,3,3,3,"Take-Two — GTA pipeline · Revenue up 6% year-on-year · Gross margin 56%, operating margin 1%",2026-05-28,auto
+TRGP,1,5,3,3,4,3,"Gathering and processing Permian Delaware · Revenue down 10% year-on-year · Gross margin 31%, operating margin 21%",2026-05-28,auto
+TRP,3,5,2,3,4,3,"Gas pipelines and power — Bruce Power · Revenue up 7% year-on-year · Gross margin 53%, operating margin 48%",2026-05-28,auto
+FTI,3,5,3,3,3,4,"Subsea — offshore wind and oil · Revenue up 12% year-on-year · Gross margin 23%, operating margin 14%",2026-05-28,auto
+TDOC,1,5,3,3,4,3,"Teladoc virtual care — profitability path · Revenue down 2% year-on-year · Gross margin 68%, operating margin -8%",2026-05-28,auto
+TDY,3,5,3,3,3,3,"Teledyne imaging instruments and defense · Revenue up 8% year-on-year · Gross margin 43%, operating margin 19%",2026-05-28,auto
+TSAT,1,1,2,3,5,3,Telesat — LEO constellation development · Revenue down 25% year-on-year · Operating margin -93%,2026-05-28,auto
+TENB,3,5,3,4,3,5,"Exposure management and vulnerability scanning · Revenue up 10% year-on-year · Gross margin 78%, operating margin 4%",2026-05-28,auto
+TER,5,5,4,4,3,2,"Semiconductor test duopoly plus Universal Robots collaborative robotics · Revenue up 87% year-on-year · Gross margin 61%, operating margin 37%",2026-05-28,auto
+TXN,3,5,3,4,3,3,"Analog and embedded semis — broad industrial + auto exposure · Revenue up 19% year-on-year · Gross margin 58%, operating margin 38%",2026-05-28,auto
+TXT,3,5,3,3,3,4,"Bell aviation plus industrial and Textron Systems · Revenue up 12% year-on-year · Gross margin 18%, operating margin 6%",2026-05-28,auto
+HO.PA,3,3,3,3,3,4,Defence electronics radar and cybersecurity systems (Euronext Paris),2026-05-28,auto
+CI,5,5,3,3,3,5,"Cigna Evernorth pharmacy benefits mix · Revenue up 317% year-on-year · Gross margin 9%, operating margin 3%",2026-05-28,auto
+TTD,3,5,4,3,3,5,"Programmatic ads — CTV growth · Revenue up 12% year-on-year · Gross margin 74%, operating margin 10%",2026-05-28,auto
+WISE,3,3,3,3,3,2,Wise — cross-border transfers and hold,2026-05-28,auto
+TMO,3,5,3,3,3,4,"Life sciences tools and instruments — essential but heavily leveraged · Revenue up 6% year-on-year · Gross margin 40%, operating margin 17%",2026-05-28,auto
+TTE,2,5,3,3,4,5,"European major — LNG and renewables · Revenue up 3% year-on-year · Gross margin 38%, operating margin 21%",2026-05-28,auto
+TT,3,5,3,3,3,3,"HVAC and commercial climate systems · Revenue up 6% year-on-year · Gross margin 35%, operating margin 16%",2026-05-28,auto
+RIG,3,5,3,3,3,3,"Offshore drilling — day rates · Revenue up 19% year-on-year · Gross margin 87%, operating margin 26%",2026-05-28,auto
+TRMB,3,5,3,3,3,4,"Precision agriculture and construction positioning tech · Revenue up 12% year-on-year · Gross margin 69%, operating margin 16%",2026-05-28,auto
+TTMI,4,5,3,3,3,2,"PCB fabrication for networking and compute boards · Revenue up 30% year-on-year · Gross margin 21%, operating margin 9%",2026-05-28,auto
+TWST,3,5,4,3,3,3,"Twist Bioscience — DNA synthesis · Revenue up 19% year-on-year · Gross margin 52%, operating margin -35%",2026-05-28,auto
+UBER,3,5,3,4,3,4,"Mobility and delivery — profitability and autonomy · Revenue up 14% year-on-year · Gross margin 45%, operating margin 15%",2026-05-28,auto
+UCB.BR,3,3,4,2,3,4,Neurology and immunology pharma — Bimzelx (Brussels),2026-05-28,auto
+PATH,3,5,5,4,3,4,"RPA plus process mining — enterprise automation · Revenue up 14% year-on-year · Gross margin 85%, operating margin 17%",2026-05-28,auto
+UNP,2,5,3,3,4,3,"Western US rail — pricing and efficiency · Revenue up 3% year-on-year · Gross margin 45%, operating margin 40%",2026-05-28,auto
+UAL,3,5,2,3,4,5,"Airline — transatlantic and Pacific mix · Revenue up 11% year-on-year · Gross margin 25%, operating margin 4%",2026-05-28,auto
+UPS,1,5,3,3,4,4,"Parcel logistics — yield and union contract · Revenue down 2% year-on-year · Gross margin 16%, operating margin 6%",2026-05-28,auto
+UNH,2,5,3,3,4,4,"UnitedHealthcare plus Optum vertical integration · Revenue up 2% year-on-year · Gross margin 23%, operating margin 8%",2026-05-28,auto
+U,3,1,3,4,3,3,"Unity — game engine and ads · Revenue up 17% year-on-year · Gross margin 31%, operating margin -69%",2026-05-28,auto
+OLED,1,5,4,3,4,4,"Universal display materials — OLED emitter chemistry · Revenue down 14% year-on-year · Gross margin 75%, operating margin 30%",2026-05-28,auto
+UEIC,1,5,3,3,4,5,"Universal remotes and smart home control chips · Revenue down 14% year-on-year · Gross margin 26%, operating margin -5%",2026-05-28,auto
+URG,3,1,4,2,3,3,"ISR uranium producer — small cap volatility · Gross margin 32%, operating margin -517%",2026-05-28,auto
+UEC,1,1,4,2,5,3,"US ISR uranium developer — spot price leverage · Revenue down 59% year-on-year · Gross margin 50%, operating margin -116%",2026-05-28,auto
+VAL,1,5,3,3,5,4,"Offshore drilling — fleet quality · Revenue down 25% year-on-year · Gross margin 11%, operating margin 6%",2026-05-28,auto
+VLO,3,5,3,3,3,4,"Independent refiner — renewable diesel projects · Revenue up 7% year-on-year · Gross margin 6%, operating margin 5%",2026-05-28,auto
+VMI,3,5,3,3,3,3,"Valmont infrastructure irrigation poles · Revenue up 6% year-on-year · Gross margin 31%, operating margin 15%",2026-05-28,auto
+SMH,3,3,3,3,3,2,VanEck Semiconductor ETF — semi sector basket,2026-05-28,auto
+VAT.SW,3,3,3,3,3,3,Vacuum valves for semiconductor fabs — monopoly niche (Swiss),2026-05-28,auto
+VEEV,3,5,5,3,3,4,"Cloud software for pharma and life sciences — quality SaaS compounder · Revenue up 16% year-on-year · Gross margin 74%, operating margin 29%",2026-05-28,auto
+VZ,2,5,2,3,4,5,"Wireless duopoly — dividend yield play · Revenue up 3% year-on-year · Gross margin 60%, operating margin 24%",2026-05-28,auto
+VRTX,3,5,4,2,3,3,"Cystic fibrosis franchise and pipeline diversification into pain · Revenue up 8% year-on-year · Gross margin 87%, operating margin 38%",2026-05-28,auto
+VRT,4,5,3,3,3,2,"Power and cooling for AI racks and data centres · Revenue up 30% year-on-year · Gross margin 38%, operating margin 16%",2026-05-28,auto
+VERV,3,3,3,3,3,3,Cardiovascular gene editing,2026-05-28,auto
+VWS.CO,3,5,4,3,3,4,"Wind turbine manufacturer — global leader (Copenhagen) · Revenue up 14% year-on-year · Gross margin 12%, operating margin 3%",2026-05-28,auto
+VSAT,2,5,3,3,4,1,"Viasat — satellite broadband and Inmarsat integration · Revenue up 3% year-on-year · Gross margin 33%, operating margin 2%",2026-05-28,auto
+SPCE,1,1,3,3,5,3,"Suborbital tourism — cash burn and commercialization risk · Revenue down 51% year-on-year · Gross margin -12957%, operating margin -28895%",2026-05-28,auto
+VSH,3,5,3,4,3,3,"Diodes resistors inductors — passive components · Revenue up 17% year-on-year · Gross margin 21%, operating margin 3%",2026-05-28,auto
+VPG,3,5,4,3,3,1,"Vishay precision foil resistors — metrology niche · Revenue up 18% year-on-year · Gross margin 39%, operating margin 1%",2026-05-28,auto
+VST,5,5,3,4,3,4,"Nuclear and gas fleet benefiting from AI-driven power demand · Revenue up 43% year-on-year · Gross margin 43%, operating margin 27%",2026-05-28,auto
+VOYG,2,1,3,3,4,3,"Voyager Technologies — defense and space systems · Revenue up 2% year-on-year · Gross margin -4%, operating margin -127%",2026-05-28,auto
+DIS,3,5,3,3,3,4,"Media parks and streaming — ESPN option · Revenue up 7% year-on-year · Gross margin 37%, operating margin 15%",2026-05-28,auto
+WM,2,5,3,3,4,3,"Waste — landfill gas and recycling · Revenue up 3% year-on-year · Gross margin 41%, operating margin 18%",2026-05-28,auto
+WAT,5,5,3,3,3,3,"Waters — biologics QA and LC-MS · Revenue up 91% year-on-year · Gross margin 46%, operating margin -4%",2026-05-28,auto
+WSO,2,5,4,3,4,3,"HVAC distribution scale — North America residential mix · Revenue up 0% year-on-year · Gross margin 28%, operating margin 7%",2026-05-28,auto
+WEC,3,5,3,4,3,4,"Regulated electric and gas utility · Revenue up 9% year-on-year · Gross margin 42%, operating margin 29%",2026-05-28,auto
+WFC,3,3,1,3,4,5,Retail bank turnaround — expense and asset cap · Revenue up 6% year-on-year,2026-05-28,auto
+WES,4,5,3,3,3,5,"Western Midstream — Permian G&P · Revenue up 23% year-on-year · Gross margin 73%, operating margin 41%",2026-05-28,auto
+WAB,3,5,3,3,3,3,"Wabtec rail and freight electronics · Revenue up 13% year-on-year · Gross margin 36%, operating margin 18%",2026-05-28,auto
+WMB,1,5,3,3,4,3,"Gas gathering and processing — Gulf exposure · Revenue down 1% year-on-year · Gross margin 62%, operating margin 38%",2026-05-28,auto
+WOLF,1,1,3,4,5,3,"SiC substrates and devices — EV and power switching · Revenue down 17% year-on-year · Gross margin -27%, operating margin -72%",2026-05-28,auto
+WWD,4,5,3,3,3,3,"Woodward aircraft and industrial actuation controls · Revenue up 23% year-on-year · Gross margin 29%, operating margin 15%",2026-05-28,auto
+WDAY,3,5,4,4,3,5,"Workday HCM and financials cloud ERP · Revenue up 13% year-on-year · Gross margin 76%, operating margin 13%",2026-05-28,auto
+WS1V.HE,3,3,3,3,3,3,WithSecure endpoint and cloud security — formerly F-Secure (Helsinki),2026-05-28,auto
+XFAB.PA,2,1,3,4,4,2,"Specialty analog and mixed-signal foundry (Euronext Paris) · Revenue up 4% year-on-year · Gross margin 16%, operating margin -0%",2026-05-28,auto
+XEL,2,5,3,4,4,4,"Regulated electric utility and grid · Revenue up 3% year-on-year · Gross margin 45%, operating margin 18%",2026-05-28,auto
+XYL,2,5,3,3,4,4,"Xylem water infrastructure — acquisition synergies · Revenue up 3% year-on-year · Gross margin 38%, operating margin 13%",2026-05-28,auto
+ZBRA,3,5,3,3,3,4,"Zebra mobile computing and RFID tracking · Revenue up 14% year-on-year · Gross margin 50%, operating margin 15%",2026-05-28,auto
+ZI,3,3,3,3,3,3,ZoomInfo go-to-market data — privacy/reg risk,2026-05-28,auto
+ZBH,3,5,3,3,3,5,"Zimmer Biomed — robotics knee mix · Revenue up 9% year-on-year · Gross margin 72%, operating margin 19%",2026-05-28,auto
+ZS,4,5,4,4,3,3,"Zero-trust SSE and SASE cloud security · Revenue up 25% year-on-year · Gross margin 77%, operating margin -3%",2026-05-28,auto

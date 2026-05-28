@@ -1,6 +1,6 @@
 # Adversarial pack — GSAT
 
-**Not investment advice.** Generated 2026-05-17 (heuristic).
+**Not investment advice.** Generated 2026-05-28 (heuristic).
 
 **Verdict:** watch · **Shortlist gate:** reject_seat
 

@@ -18,9 +18,10 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from fi_conviction_tier import TIER_LABELS, TIER_SUBLINE
 from fi_embed_core import CORE_JSON, HTML, W, load_csv_index
 from fi_embed_single_screen import THEME_FILTER_SHORT, load_manifest_stats
-from fi_narrative import BULLET, format_verdict_summary, rubric_total, safe_float
+from fi_narrative import BULLET, rubric_total, safe_float
 
 MAN = W / "universe_manifest.csv"
 RISK = W / "risk_metrics.csv"
@@ -70,6 +71,10 @@ EXEC_CSS = """
       font-size: 1rem;
       font-weight: 700;
       letter-spacing: -0.01em;
+    }
+    #executive-summary .exec-tier-subline {
+      margin: 0 0 0.5rem;
+      font-size: 0.82rem;
     }
     #executive-summary .exec-block > h4 {
       margin: 0.85rem 0 0.35rem;
@@ -185,14 +190,33 @@ def theme_label(slug: str) -> str:
     return THEME_FILTER_SHORT.get(s, s.replace("_", " ").title())
 
 
-def tier_from_total(tot: int | None) -> int:
-    if tot is None:
-        return 2
-    if tot >= 18:
-        return 1
-    if tot <= 12:
-        return 3
+def conviction_tier_for_item(item: dict[str, Any]) -> int:
+    try:
+        n = int(item.get("conviction_tier") or 0)
+        if 1 <= n <= 4:
+            return n
+    except (TypeError, ValueError):
+        pass
     return 2
+
+
+def by_tier_from_items(tickers: list[str], items: dict[str, dict]) -> dict[int, list[str]]:
+    by_tier: dict[int, list[str]] = {1: [], 2: [], 3: [], 4: []}
+    for t in tickers:
+        by_tier[conviction_tier_for_item(items.get(t) or {})].append(t)
+    return by_tier
+
+
+def sort_by_composite_rank(sym_list: list[str], items: dict[str, dict]) -> list[str]:
+    def key(t: str) -> tuple[int, str]:
+        it = items.get(t) or {}
+        try:
+            cr = int(float(it.get("composite_rank") or 99999))
+        except (TypeError, ValueError):
+            cr = 99999
+        return (cr, t)
+
+    return sorted(sym_list, key=key)
 
 
 def load_manifest_themes() -> dict[str, str]:
@@ -228,9 +252,12 @@ def load_earnings() -> dict[str, dict[str, str]]:
 def short_method(memo: dict[str, Any]) -> str:
     m = (memo.get("method") or "").strip()
     if not m:
-        return "Five-signal composite pool with theme caps."
-    if len(m) > 200:
-        return m[:197] + "…"
+        m = "Five-signal composite pool with theme caps."
+    note = (memo.get("conviction_tier_note") or "").strip()
+    if note:
+        m = f"{m} {note}"
+    if len(m) > 280:
+        return m[:277] + "…"
     return m
 
 
@@ -264,18 +291,8 @@ def exec_lead(
     core_n: int,
     as_of: str,
 ) -> str:
-    by_tier: dict[int, list[str]] = {1: [], 2: [], 3: []}
-    for t in tickers:
-        by_tier[tier_from_total(rubric_total(rub_by.get(t) or {}))].append(t)
-
-    def sort_upside(sym_list: list[str]) -> list[str]:
-        return sorted(
-            sym_list,
-            key=lambda t: safe_float((scen_by.get(t) or {}).get("weighted_upside")) or -999.0,
-            reverse=True,
-        )
-
-    t1 = sort_upside(by_tier[1])
+    by_tier = by_tier_from_items(tickers, items)
+    t1 = sort_by_composite_rank(by_tier[1], items)
     t1_show = ", ".join(t1[:6]) + (f" (+{len(t1) - 6} more)" if len(t1) > 6 else "")
     theme_by = load_manifest_themes()
     theme_counts: dict[str, int] = {}
@@ -287,10 +304,10 @@ def exec_lead(
     p1 = (
         f"This report’s <strong>{core_n}-name</strong> core shortlist (as of <strong>{_esc(as_of)}</strong>) "
         f"is drawn from a <strong>{stats['uni_n']}-company</strong> thematic universe. "
-        f"<strong>{len(t1)}</strong> names sit in the highest-conviction tier "
-        f"({_esc(t1_show or '—')}). "
+        f"<strong>{len(t1)}</strong> names sit in Tier 1 (top composite-rank quartile within this shortlist: "
+        f"{_esc(t1_show or '—')}). "
         "Selection follows the five-signal composite—scenario, rubric, risk, Monte Carlo, and DCF—"
-        "with theme caps; rubric rank alone does not add or drop names."
+        "with theme caps; conviction tiers use that composite rank, not the rubric scorecard alone."
     )
 
     added = delta.get("added") or []
@@ -338,20 +355,11 @@ def tier_overview_table(
     rub_by: dict,
     scen_by: dict,
 ) -> str:
-    labels = {
-        1: ("Tier 1 — Highest conviction", "var(--accent)"),
-        2: ("Tier 2 — Core watchlist", ""),
-        3: ("Tier 3 / Speculative", "var(--warn)"),
-    }
     rows: list[str] = []
     spotlight: list[str] = []
-    for tier in (1, 2, 3):
-        tickers = sorted(
-            by_tier[tier],
-            key=lambda t: safe_float((scen_by.get(t) or {}).get("weighted_upside")) or -999.0,
-            reverse=True,
-        )
-        label, color = labels[tier]
+    for tier in (1, 2, 3, 4):
+        tickers = sort_by_composite_rank(by_tier[tier], items)
+        label, color = TIER_LABELS[tier]
         color_attr = f' style="color:{color}"' if color else ""
         if not tickers:
             rows.append(
@@ -372,9 +380,13 @@ def tier_overview_table(
                 rub = rub_by.get(t) or {}
                 scen = scen_by.get(t)
                 why = _esc(_short_why(it, 72))
+                it = items.get(t) or {}
+                cr = (it.get("composite_rank") or "").strip()
                 tot = rubric_total(rub)
                 w_up = safe_float((scen or {}).get("weighted_upside"))
                 bits = []
+                if cr:
+                    bits.append(f"composite rank #{cr}")
                 if tot is not None:
                     bits.append(f"scorecard {tot}/24")
                 if w_up is not None:
@@ -437,6 +449,9 @@ def top_reasons(
     bullets.append(
         "Selection uses the five-signal composite with theme caps — rubric rank alone does not add or drop names."
     )
+    bullets.append(
+        "Tier 1 = top quartile on five-signal composite rank within this shortlist (not rubric ≥ 18)."
+    )
     return "<ul>" + "".join(f"<li>{b}</li>" for b in bullets) + "</ul>"
 
 
@@ -447,11 +462,11 @@ def top_risks(
     scen_by: dict,
 ) -> str:
     bullets: list[str] = []
-    tier3 = [t for t in tickers if tier_from_total(rubric_total(rub_by.get(t) or {})) == 3]
-    if tier3:
+    tier4 = [t for t in tickers if conviction_tier_for_item(items.get(t) or {}) == 4]
+    if tier4:
         bullets.append(
-            f"Tier 3 / speculative slots: <strong>{_esc(', '.join(tier3))}</strong> "
-            "— confirm catalysts in the next filing."
+            f"Tier 4 (lowest composite quartile on this shortlist): <strong>{_esc(', '.join(tier4))}</strong> "
+            "— may include theme-seat or cap-driven names; confirm thesis in filings."
         )
 
     disagree = 0
@@ -518,13 +533,12 @@ def build_inner(doc: dict[str, Any], stats: dict, *, as_of: str = "") -> str:
     earn = load_earnings()
     model_n = stats.get("model_n") or 0
 
-    by_tier: dict[int, list[str]] = {1: [], 2: [], 3: []}
-    for t in tickers:
-        by_tier[tier_from_total(rubric_total(rub_by.get(t) or {}))].append(t)
+    by_tier = by_tier_from_items(tickers, items)
 
     overview = (
         '<section class="exec-block" aria-labelledby="exec-overview-h">'
-        '<h3 id="exec-overview-h">Shortlist by conviction tier</h3>'
+        f'<h3 id="exec-overview-h" title="{_esc(TIER_SUBLINE)}">Shortlist by conviction tier</h3>'
+        f'<p class="muted exec-tier-subline">{_esc(TIER_SUBLINE)}</p>'
         + tier_overview_table(by_tier, items, rub_by, scen_by)
         + "</section>"
     )

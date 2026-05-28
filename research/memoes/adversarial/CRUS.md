@@ -1,13 +1,13 @@
 # Adversarial pack — CRUS
 
-**Not investment advice.** Generated 2026-05-17 (heuristic).
+**Not investment advice.** Generated 2026-05-28 (heuristic).
 
 **Verdict:** pass · **Shortlist gate:** pass
 
 ## Bear case
 
-- Elevated tail-risk score on rubric (regulation, concentration, or governance) [soft]
-- Growth momentum weak — thesis may depend on optionality that never monetizes [soft]
+- Macro or cycle turns against the name [soft]
+- Execution miss vs guidance [soft]
 - Second-order customer or capex dependency not fully visible in snapshot [soft]
 - Second-order customer or capex dependency not fully visible in snapshot [soft]
 

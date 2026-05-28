@@ -610,9 +610,11 @@ def main() -> None:
     theme_by: dict[str, str] = {}
     label_by: dict[str, str] = {}
     link_by: dict[str, str] = {}
+    man_by: dict[str, dict[str, str]] = {}
     with MAN.open(encoding="utf-8", newline="") as f:
         for r in csv.DictReader(f):
             t = r["ticker"].strip().upper()
+            man_by[t] = r
             theme_by[t] = r["theme_slug"].strip()
             label_by[t] = r.get("theme_label", "").strip()
             link_by[t] = (r.get("linkage_one_liner") or "").strip()
@@ -986,8 +988,24 @@ def main() -> None:
         caps=caps_budget,
     )
 
+    from fi_conviction_tier import assign_conviction_tiers, rubric_fallback_tiers
+
+    if use_composite and ck:
+        conviction_meta = assign_conviction_tiers(picked, ck)
+        conviction_tier_source = "composite_quartile"
+    else:
+        conviction_meta = rubric_fallback_tiers(picked, rubric_total, rub_by)
+        conviction_tier_source = "rubric_fallback"
+
     memo = {
         "method": method_str,
+        "conviction_tier_source": conviction_tier_source,
+        "conviction_tier_note": (
+            "Conviction tiers 1–4 = quartiles of composite rank within this shortlist "
+            "(five-signal blend; not rubric scorecard)."
+            if conviction_tier_source == "composite_quartile"
+            else "Conviction tiers from rubric fallback (composite rank file missing)."
+        ),
         "shortlist_delta": shortlist_delta,
         "adversarial_pass_n": sum(
             1 for t in picked if adversarial_packs.get(t, {}).get("workflow_e_complete")
@@ -1051,7 +1069,7 @@ def main() -> None:
     )
     from fi_embed_shortlist_proposed import sort_tickers_by_theme_then_symbol
 
-    display_tickers = sort_tickers_by_theme_then_symbol(picked, man_pre)
+    display_tickers = sort_tickers_by_theme_then_symbol(picked, man_by)
     OUT_TXT.write_text(
         "\n".join(
             [
@@ -1083,6 +1101,12 @@ def main() -> None:
         if ck and t in ck:
             cr = (ck[t].get("composite_rank") or "").strip()
             cs = (ck[t].get("composite_score") or "").strip()
+        cm = conviction_meta.get(t, {})
+        conv_tier = int(cm.get("conviction_tier") or 2)
+        if cm.get("composite_rank"):
+            cr = str(cm.get("composite_rank"))
+        if cm.get("composite_score"):
+            cs = str(cm.get("composite_score"))
         notes_val = ""
         if use_composite and cr:
             notes_val = f"composite rank {cr} score {cs}; "
@@ -1101,6 +1125,7 @@ def main() -> None:
                 "ticker": t,
                 "pillar": pillar,
                 "tier": "core",
+                "conviction_tier": conv_tier,
                 "valuation_tier": vt,
                 "valuation_rank": vr,
                 "valuation_score": vs,

@@ -7,6 +7,7 @@ import unittest
 from fi_narrative import (
     BULLET,
     compute_research_status,
+    format_at_a_glance_prose,
     format_deep_dive_sections,
     format_kill,
     format_market_context,
@@ -77,6 +78,21 @@ class TestFiNarrative(unittest.TestCase):
             "adversarial_complete",
         )
         self.assertIn("on file", research_status_label("adversarial_complete").lower())
+
+    def test_at_a_glance_prose_mentions_ticker(self):
+        rub = {"growth": "5", "margins": "4", "balance_sheet": "4", "durability": "4", "tail_risks": "2", "valuation": "3"}
+        out = format_at_a_glance_prose(
+            "NVDA",
+            {"long_name": "NVIDIA Corp", "business_summary": "GPUs"},
+            rub,
+            {"weighted_upside": "30", "price": "100"},
+            {"current_price": "100", "median_price": "130"},
+            {"analyst_skew": "buy-heavy", "insider_mspr": "neutral"},
+            {"why_this_name": "AI leader"},
+        )
+        self.assertIn("NVDA", out)
+        self.assertNotIn("Heuristic draft", out)
+        self.assertNotIn(" · ", out)
 
     def test_deep_dive_sections_keys(self):
         rub = {"growth": "5", "margins": "4", "balance_sheet": "4", "durability": "4", "tail_risks": "2", "valuation": "3"}

@@ -55,7 +55,7 @@ When the user references **Future Impact** or this sleeve: read **`research/sour
 ### Pipelines, order, and verification
 
 - **Default:** `./scripts/refresh_watchlists.sh` from repo root (network; `.venv` auto-detected). **Do not** ask the user to run scripts by hand for routine “update dashboard / shortlist / snapshot” requests—run the pipeline and interpret results.
-- **Compute order (what actually runs):** snapshot + HTML row fragments → **`fi_earnings_pull.py`** (manifest-only) → **`fi_score_rubric_from_financials.py`** (six dims) → **`fi_sync_rubric_from_earnings.py --rewrite-notes`** → **`fi_sync_scenario_assumptions_from_core.py --write-universe`** (`model_tier=full` only) → **universe** scenario + risk + MC + DCF → **`fi_rank_universe.py`** + **`fi_composite_universe_rank.py`** → **`fi_adversarial_review.py`** (Workflow E packs; skip with **`FI_SKIP_ADVERSARIAL=1`**) → **`fi_select_shortlist_growth.py`** (gates pool + quantum seat from packs) → sync **core** assumptions → **core** valuation → **`fi_finnhub_context.py`** → **`fi_enrich_core_shortlist.py`** (merges packs into narratives) → rubric rows → embeds → **`fi_save_shortlist_prior.py`** → **`fi_verify_watchlist_refresh.py`** (earnings/rubric + adversarial pack coverage + `node --check` on Value JS) + **`fi_verify_report_core.py`**.
+- **Compute order (what actually runs):** snapshot + HTML row fragments → **`fi_earnings_pull.py`** (manifest-only) → **`fi_score_rubric_from_financials.py`** (six dims) → **`fi_sync_rubric_from_earnings.py --rewrite-notes`** → **`fi_sync_scenario_assumptions_from_core.py --write-universe`** (`model_tier=full` only) → **universe** scenario + risk + MC + DCF → **`fi_rank_universe.py`** + **`fi_composite_universe_rank.py`** → **`fi_adversarial_review.py`** (Workflow E packs; skip with **`FI_SKIP_ADVERSARIAL=1`**) → **`fi_select_shortlist_growth.py`** (gates pool + quantum seat from packs) → sync **core** assumptions → **core** valuation → **`fi_finnhub_context.py`** → **`fi_enrich_core_shortlist.py`** (merges packs into narratives) → **`fi_financial_history.py`** + **`fi_draft_stock_report.py`** (pilot tickers; skip with **`FI_SKIP_DRAFT_REPORT=1`**) → rubric rows → embeds (incl. **`fi_embed_draft_section.py`**, **`fi_embed_draft_layout.py`**, **`fi_embed_draft_deep_dive_runtime.py`**) → **`fi_save_shortlist_prior.py`** → **`fi_verify_watchlist_refresh.py`** (earnings/rubric + adversarial pack coverage + `node --check` on Value JS) + **`fi_verify_report_core.py`**.
 - **`FI_SKIP_UNIVERSE_VALUATION=1`:** skips the heavy universe pass and `fi_rank_universe`; shortlist falls back to **legacy Borda** unless `universe_valuation_rank.csv` is already populated from a prior full run.
 - **`FI_SKIP_ADVERSARIAL=1`:** skips **`fi_adversarial_review.py`**; shortlist uses existing **`research/watchlists/adversarial_packs.json`** or empty gates (heuristic/LLM packs not refreshed).
 - **Adversarial automation:** **`fi_adversarial_review.py`** writes **`adversarial_packs.json`** (+ optional **`research/memoes/adversarial/{TICKER}.md`**). Batch = theme_only sleeves (quantum/space) ∪ composite pool ∪ prior core, minus fresh complete packs. Uses **`ANTHROPIC_API_KEY`** or **`OPENAI_API_KEY`**; without keys, **heuristic** Workflow E still runs. Cap per run: **`FI_ADVERSARIAL_MAX`** (default 40). Manual polish of narrative only: **`fi_narrative_polish.py`**.
@@ -71,8 +71,18 @@ When the user references **Future Impact** or this sleeve: read **`research/sour
 - **Composite mode** (default when universe models complete): pool ≈60 by **`universe_composite_rank.csv`** — weighted percentiles of scenario, rubric, risk, Monte Carlo, and DCF (`research/watchlists/shortlist_weights.json`); theme caps; tier expansion when **`universe_valuation_rank.csv`** present. Anchors (e.g. **`NVDA`**) can enter pool below cutoff if rubric bar clears.
 - **Valuation-first fallback:** composite CSV absent but valuation rank present — scenario-only pool (older behaviour).
 - **Legacy mode:** rubric pool + four-lens Borda + caps when rank files absent.
+- **Conviction tiers (report UI):** **Tiers 1–4** = quartiles of **`composite_rank` within the core shortlist** (`scripts/fi_conviction_tier.py` → `conviction_tier` on each `core-shortlist.json` item). Regenerated in Executive summary (`fi_embed_executive_summary.py`), shortlist **Tier** column, and Monitor `at_a_glance`. **Not** the rubric scorecard (G+M+BS+D+V−tail). **`valuation_tier`** in `universe_valuation_rank.csv` is separate (scenario upside; shortlist expansion toward 28 names).
 - **Market context (default):** **`fi_finnhub_context.py`** (wired in `refresh_watchlists.sh`) when **`FINNHUB_API_KEY`** is in repo-root **`.env`** ([free registration](https://finnhub.io/register)). Free-tier endpoints: analyst recommendations, insider MSPR, company-news count, earnings dates. Outputs `finnhub_context.csv` + `finnhub_context_fragment.html` → **`market_context`** on core shortlist. **Deprecated:** `fi_sentiment.py` (retail social; Finnhub social-sentiment is premium). **`.env` is gitignored.**
 - **Market-context refresh:** If **`FINNHUB_API_KEY`** is missing, `market_context` rows show the enrich placeholder — check stderr and verifier WARNs; do not block the rest of refresh.
+
+### Portfolio holdings + simplified dashboard (May 2026)
+
+- **`research/watchlists/portfolio_holdings.csv`** — your purchased names (canonical symbols: `MDA.TO`, `ETL.PA`, `SSIT.L`, `INFQ`, etc.).
+- **`fi_merge_portfolio_shortlist.py`** runs after **`fi_select_shortlist_growth.py`** — appends portfolio-only rows to **`core-shortlist.json`** (`source: portfolio`); composite shortlist count stays in **`shortlist_n`**.
+- **Decide union:** **`report_decide_union.txt`** = shortlist ∪ portfolio; used for scenario sync, Finnhub, Value JS, Monitor dropdown, Appendix B.
+- **Screen UI:** Research + Value sections hidden (`.fi-section-hidden`); **Decide** has composite rows, separator, personal holdings, historic risk columns (no Verdict prose).
+- **Growth lens:** **`fi_theme_growth_lens.py`** → **`theme_growth_lens.json`** (per-theme + per-ticker linkage); optional seeds in **`theme_growth_overrides.json`**.
+- **PDF:** **`./scripts/html_to_pdf.sh`** after refresh — Appendix B = one page per union ticker; Monitor hidden in print.
 
 ### Universe tiers (~500 screen / ~350 modelled)
 
@@ -83,7 +93,7 @@ When the user references **Future Impact** or this sleeve: read **`research/sour
 ### Growth = 1 (rubric) — review policy, not auto-swap
 
 - **Growth** on the rubric tracks latest-quarter revenue YoY (mechanical). It is a **signal**, not the whole thesis.
-- **Core shortlist** with Growth=1 **and** Tier 3 / weak composite / bear-dominant scenario: **review for swap** within the same theme at the next quarterly refresh; prefer a higher-growth peer from the pool.
+- **Core shortlist** with Growth=1 **and** conviction Tier 4 / weak composite / bear-dominant scenario: **review for swap** within the same theme at the next quarterly refresh; prefer a higher-growth peer from the pool.
 - **Documented turnaround** (backlog, segment re-acceleration, credible base case): **keep** with an explicit note in Monitor + adversarial pass (`selection_memo.exception` suppresses verifier WARN).
 - **Universe-only** Growth=1: keep on the screen list as comparator or avoid example.
 - **Growth=1 and weak margins/tail** (total ≤ 10): strong **demote** candidate from `model_tier=full` when at cap.
@@ -107,12 +117,21 @@ After **`./scripts/refresh_watchlists.sh`**, the same **core tickers** (20–28)
 | **Value** | Scenario / risk / MC tables (`fi_embed_value_tables.py`); deep-dive JS (`fi_embed_value_js.py`) |
 | **Decide** | Matrix + verdict (`fi_embed_decide_matrix.py`) |
 | **Monitor** | Finnhub context fragment (`fi_finnhub_context.py` + `fi_embed_single_screen.py`) |
+| **DRAFT Stock-Deep Dive** | Pilot narrative executive report (`fi_draft_stock_report.py` → `draft_report` on shortlist JSON; `fi_embed_draft_*`) |
 
 **Changelog:** `selection_memo.shortlist_delta` in **`core-shortlist.json`** + HTML block (`fi_embed_shortlist_changelog.py`). Compares to **`research/watchlists/_shortlist_prior.json`** from the **previous** refresh only.
 
 **Verifier:** `fi_verify_watchlist_refresh.py` fails if any core ticker is missing from the tables above or from `SCENARIOS` JS keys; **WARN** if a core ticker lacks `workflow_e_complete` in **`adversarial_packs.json`** or still has `[Auto stub]` premortem after enrich.
 
 **Still manual (v1):** long qual `<details>` essays under Research; theme pillar copy.
+
+### DRAFT Stock-Deep Dive (pilot)
+
+- **Phase 1:** **`FI_DRAFT_TICKERS=NVDA`** (default). Full narrative + TradingView chart + model buy/sell zones for pilot names only. Section **`#draft-stock-deep-dive`** sits under Monitor; Monitor unchanged.
+- **Phase 2:** set **`FI_DRAFT_TICKERS=core`** (or comma list) to expand after sign-off on layout/tone.
+- **`FI_SKIP_DRAFT_REPORT=1`:** skips **`fi_financial_history.py`** and **`fi_draft_stock_report.py`**.
+- **LLM:** uses **`ANTHROPIC_API_KEY`** or **`OPENAI_API_KEY`**; without keys, heuristic prose still renders for layout QA.
+- **Data:** `research/watchlists/financial_history.csv`, `draft_report` on each pilot item in **`core-shortlist.json`**, optional memo **`research/memoes/draft_reports/{TICKER}.md`**.
 
 ## Commands
 
